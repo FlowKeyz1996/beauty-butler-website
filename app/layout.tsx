@@ -20,7 +20,7 @@ const euclid = localFont({
   weight:"100, 300, 400, 500, 600"
 });
 const euclidlight = localFont({
-  src:"./fonts/Euclid-Circular-A-light.ttf",
+  src:"./fonts/Euclid-Circular-A-Light.ttf",
   variable:"--font-euclid-light",
   weight:"100, 300, 400, 500, 600"
 });
