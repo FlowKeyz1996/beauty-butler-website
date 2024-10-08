@@ -1,0 +1,69 @@
+import { useState } from 'react';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
+
+const HowItWorks: React.FC = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  // Ref for the section we want to observe
+  const sectionRef = useRef(null);
+
+  // Trigger animation when section comes into view
+  const isInView = useInView(sectionRef, { once: true });
+
+  const handlePlay = () => {
+    setIsPlaying(true);
+    const videoElement = document.getElementById('howItWorksVideo') as HTMLVideoElement;
+    videoElement?.play();
+  };
+
+  return (
+    <div
+      ref={sectionRef}
+      className="flex flex-col items-center justify-center my-5 bg-[#8877d8] p-5 h-screen rounded-3xl"
+    >
+      {/* Animate the heading coming from the top when in view */}
+      <motion.h2
+        className="text-4xl font-semibold mb-7 text-white"
+        initial={{ y: -100, opacity: 0 }}
+        animate={isInView ? { y: 0, opacity: 1 } : {}}
+        transition={{ duration: 2, ease: 'easeOut' }}
+      >
+        How It Works
+      </motion.h2>
+
+      {/* Animate the video container sliding in from the left when in view */}
+      <motion.div
+        className="relative w-[70%] h-[60%] rounded-lg my-6 bg-white"
+        initial={{ x: '-100vw', opacity: 0 }}
+        animate={isInView ? { x: 0, opacity: 1 } : {}}
+        transition={{ type: 'spring', duration: 2 }}
+      >
+        <video
+          id="howItWorksVideo"
+          className="w-full h-full object-cover"
+          controls={isPlaying}
+          poster="/path-to-your-poster-image.jpg"
+        >
+          <source src="/path-to-your-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {!isPlaying && (
+          <button
+            onClick={handlePlay}
+            className="absolute inset-0 flex items-center justify-center text-[#8877D8] text-6xl"
+          >
+            &#9654; {/* Play button */}
+          </button>
+        )}
+      </motion.div>
+
+      <button className="bg-white text-[#8877d8] py-4 px-24  rounded-xl font-euclidmedium">
+        Book a Demo
+      </button>
+    </div>
+  );
+};
+
+export default HowItWorks;
