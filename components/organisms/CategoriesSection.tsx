@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import TagHeader from '../atoms/TagjHeader';
+import TagHeader from '../atoms/TagHeader';
 
 interface Category {
   id: number;
@@ -20,7 +20,7 @@ const CategoriesSection: React.FC = () => {
     
     <section className="my-9 py-9 bg-[#f7f7ff]">
       <div className="py-3 mx-auto max-w-[30%] sm:max-w-[80%] lg:max-w-[60%]">
-      <TagHeader text="categories"/>
+      <TagHeader text="Categories"/>
       </div>
       
       {/* Animated Heading (Triggers when section is in view) */}

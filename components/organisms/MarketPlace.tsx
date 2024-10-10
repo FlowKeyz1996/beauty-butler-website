@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
-import TagHeader from '../atoms/TagjHeader';
+import TagHeader from '../atoms/TagHeader';
 
 interface MarketplaceCardProps {
   imageUrl: string;

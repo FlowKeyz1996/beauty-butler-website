@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import TagHeader from '../atoms/TagjHeader';
+import TagHeader from '../atoms/TagHeader';
 
 const FeaturesSection = () => {
   return (

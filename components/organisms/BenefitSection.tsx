@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import TagHeader from '../atoms/TagjHeader';
+import TagHeader from '../atoms/TagHeader';
 
 type TextWithIcon = {
   imgSrc: string;

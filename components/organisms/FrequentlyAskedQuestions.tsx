@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import TagHeader from '../atoms/TagHeader';
 
 type FAQ = {
   question: string;
@@ -30,7 +31,8 @@ const FrequentlyAskedQuestions = () => {
 
   return (
     <div className="max-w-7xl mx-auto p-5 h-screen">
-      <h2 className="text-4xl font-bold text-center mb-24 font-apfelregular">
+      <TagHeader text="Frequently Asked Question"/>
+      <h2 className="text-4xl font-bold text-center mb-24 my-5 font-apfelregular">
         Got questions? We’ve got answers
       </h2>
 
