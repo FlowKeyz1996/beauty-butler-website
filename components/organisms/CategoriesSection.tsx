@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import TagHeader from '../atoms/TagjHeader';
 
 interface Category {
   id: number;
@@ -16,7 +17,12 @@ const categories: Category[] = [
 
 const CategoriesSection: React.FC = () => {
   return (
+    
     <section className="my-9 py-9 bg-[#f7f7ff]">
+      <div className="py-3 mx-auto max-w-[30%] sm:max-w-[80%] lg:max-w-[60%]">
+      <TagHeader text="categories"/>
+      </div>
+      
       {/* Animated Heading (Triggers when section is in view) */}
       <motion.h2
         initial={{ opacity: 0, y: -50 }}
@@ -26,6 +32,7 @@ const CategoriesSection: React.FC = () => {
         
         className="text-5xl font-bold text-center my-5 font-apfelregular"
       >
+       
         Elevating Businesses Like Yours
       </motion.h2>
       <p className="font-euclidlight text-center text-2xl mb-7 text-[#475467]">Your One Stop Shop for Beauty and Wellness</p>

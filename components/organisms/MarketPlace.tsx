@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
+import TagHeader from '../atoms/TagjHeader';
 
 interface MarketplaceCardProps {
   imageUrl: string;
@@ -41,6 +42,7 @@ const MarketplaceCard: React.FC<MarketplaceCardProps> = ({ imageUrl, title, desc
 
       {/* Right Side - Text */}
       <motion.div className=" px-6 max-w-lg" variants={fadeInRightVariants}>
+        <TagHeader text="Our MarketPlace" position="left"/>
         <h2 className="text-4xl font-bold mb-3 font-apfelregular">{title}</h2>
         <p className="text-gray-600 mb-4 text-lg font-euclidlight">{description}</p>
         <button className="bg-[#8878d7] text-white py-4 text-xl font-euclidmedium px-14 my-2 rounded-xl">

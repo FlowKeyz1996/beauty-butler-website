@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import TagHeader from '../atoms/TagjHeader';
 
 type TextWithIcon = {
   imgSrc: string;
@@ -85,7 +86,9 @@ const BenefitSection = () => {
         className="md:w-3/5 w-full h-full flex flex-col space-y-4 mx-5"
       >
         {/* <HeaderTip text="Features"/> */}
-       
+       <div>
+        <TagHeader text="Our Benefit" position='left'/>
+       </div>
         <h2 className="text-4xl font-bold max-w-lg font-apfelregular">Take your beauty business to the next level</h2>
         <p className="text-lg text-gray-600 max-w-lg font-euclidlight">
         Our all-in-one management software automates scheduling, manages customer data, processes payments, and more.

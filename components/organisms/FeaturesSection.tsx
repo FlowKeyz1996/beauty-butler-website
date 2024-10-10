@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
+import TagHeader from '../atoms/TagjHeader';
 
 const FeaturesSection = () => {
   return (
     <div className="flex flex-col md:flex-row justify-between items-center my-10 h-screen px-5 max-w-7xl mx-auto">
       {/* Features Description */}
+      
       <motion.div
         className="md:w-1/2 text-left"
         initial={{ x: -100, opacity: 0 }}
@@ -11,6 +13,7 @@ const FeaturesSection = () => {
         transition={{ duration: 0.5 }}
         viewport={{ once: false, amount: 0.2 }}  
       >
+        <TagHeader text="Features" position="left"/>
         <h2 className="text-5xl tracking-wide  leading-[3.5rem] font-semibold mb-4 font-apfelregular max-w-2xl">
           A full solution to manage <br />and grow your business
         </h2>

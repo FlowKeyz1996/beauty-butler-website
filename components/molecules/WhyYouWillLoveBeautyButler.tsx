@@ -9,34 +9,34 @@ interface CardData {
 
 const cardData: CardData[] = [
   {
-    image: '/path/to/image1.jpg',
-    title: 'Exclusive Products',
-    description: 'Access top-tier beauty products curated just for you.',
+    image: '/whyyouwilllovebeautybutler.svg',
+    title: 'Effortless Booking',
+    description: 'Skip the hassle and schedule your beauty sessions with just a few taps – it’s as easy as 1-2-3.',
   },
   {
-    image: '/path/to/image2.jpg',
-    title: 'Expert Recommendations',
-    description: 'Get beauty tips from industry experts.',
+    image: '/whyyouwilllovebeautybutlertwo.svg',
+    title: 'Expert Beauty Pros',
+    description: 'We’ve partnered with the best salons, spas, and beauty experts to bring you premium services.',
   },
   {
-    image: '/path/to/image3.jpg',
-    title: 'Doorstep Delivery',
-    description: 'Convenient delivery right to your door.',
+    image: '/whyyouwilllovebeautybutlerthree.svg',
+    title: 'Pamper Yourself Anywhere',
+    description: 'Experience top-notch beauty treatments from the comfort of your home, office, or anywhere you choose.',
   },
   {
-    image: '/path/to/image4.jpg',
-    title: 'Personalized Experience',
-    description: 'Tailored beauty routines just for you.',
+    image: '/whyyouwilllovebeautybutlerfour.svg',
+    title: 'Secure Payments',
+    description: 'Hassle-free and secure payments for a smooth, stress-free experience.',
   },
   {
-    image: '/path/to/image5.jpg',
-    title: 'Beauty Insights',
-    description: 'Stay updated with the latest beauty trends.',
+    image: '/whyyouwilllovebeautybutlerfive.svg',
+    title: 'Exclusive Perks & Deals',
+    description: 'Enjoy members-only discounts and perks, including access to our loyalty program.',
   },
   {
-    image: '/path/to/image6.jpg',
-    title: 'Quality Assurance',
-    description: 'Only the best products, guaranteed.',
+    image: '/whyyouwilllovebeautybutlersix.svg',
+    title: 'Safety First',
+    description: 'We’re committed to your safety and we’ll uphold the strictest health and hygiene standards.',
   },
 ];
 
@@ -49,19 +49,24 @@ const WhyYouWillLoveBeautyButler: FC = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="p-5 md:p-10 mt-5 w-full">
-        <h2 className="text-4xl md:text-4xl font-bold my-5 text-center font-apfelregular">
+        <h2 className="text-4xl md:text-4xl font-bold my-20 text-center font-apfelregular">
           Why You Will Love Beauty Butler
         </h2>
-        
 
         {/* Responsive Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {cardData.map((card, index) => (
             <motion.div
               key={index}
-              className={`bg-gray-50 p-5 border-t border-b ${
-                (index % 3 !== 2 && 'border-r') || '' // Add right border to all except last column
-              } ${index % 3 === 0 ? 'border-l-0' : ''} ${index % 3 === 2 ? 'border-r-0' : ''}`} // No left border on the first column and no right border on the last column
+              className={`bg-gray-50 p-5 border border-gray-200 ${
+                index % 3 === 0 ? 'border-l-0' : '' // No left border on the first column
+              } ${
+                index % 3 === 2 ? 'border-r-0' : '' // No right border on the last column
+              } ${
+                index < 3 ? 'border-t-0' : '' // No top border on the first row
+              } ${
+                index >= cardData.length - 3 ? 'border-b-0' : '' // No bottom border on the last row
+              }`}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * index, duration: 0.5 }}
@@ -69,10 +74,10 @@ const WhyYouWillLoveBeautyButler: FC = () => {
               <img
                 src={card.image}
                 alt={card.title}
-                className="w-full h-48 object-cover mb-4"
+                className="w-full h-48 object-contain mb-4"
               />
-              <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
-              <p className="text-gray-600">{card.description}</p>
+              <h3 className="text-xl text-center font-semibold mb-2 font-apfelregular">{card.title}</h3>
+              <p className="text-gray-600 font-euclidlight text-center">{card.description}</p>
             </motion.div>
           ))}
         </div>

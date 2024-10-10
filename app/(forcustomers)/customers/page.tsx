@@ -1,6 +1,7 @@
 "use client";
 import BeautyBuzzyCards from "@/components/molecules/BeautyBuzzCards";
 import BeautyCategories from "@/components/molecules/BeautyCategories";
+import GettingStarted from "@/components/molecules/GettingStarted";
 import WhyYouWillLoveBeautyButler from "@/components/molecules/WhyYouWillLoveBeautyButler";
 import BusinessHeroSection from "@/components/organisms/BusinessHeroSection";
 import Footer from "@/components/organisms/Footer";
@@ -15,6 +16,7 @@ export default function Home() {
      <BusinessHeroSection/>
      <WhyYouWillLoveBeautyButler/>
      <BeautyCategories/>
+     <GettingStarted/>
      <BeautyBuzzyCards/>
      <Footer/>
     </div>
