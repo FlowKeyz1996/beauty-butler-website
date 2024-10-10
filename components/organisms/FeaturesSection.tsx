@@ -31,7 +31,7 @@ const FeaturesSection = () => {
 
       {/* Features Card */}
       <motion.div
-        className="md:w-1/2 bg-[#cccaff] p-6 rounded-lg mt-10 md:mt-0 relative h-[420px] w-[500px] overflow-visible"
+        className="md:w-1/2 bg-[#EDECFF] p-6 rounded-lg mt-10 md:mt-0 relative h-[420px] w-[500px] overflow-visible"
         initial={{ y: -100, opacity: 0 }}  // Start animation from the top for the bigger card
         whileInView={{ y: 0, opacity: 1 }}  // Animate to normal position when in view
         transition={{ duration: 1, delay: 0.3 }}  // Slower transition

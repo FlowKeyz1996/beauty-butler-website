@@ -57,7 +57,7 @@ const GettingStarted: React.FC = () => {
 
         {/* Button */}
         <div className="w-full flex justify-center mt-10">
-  <button className="bg-[#8877D8] flex items-center px-14 py-3 rounded-full shadow-md hover:shadow-lg transition whitespace-nowrap">
+  <button className="bg-[#8877D8] flex items-center px-14 py-3 rounded-xl shadow-md ">
     <img src="/appleandgoogle.svg" alt="Download Icon" className="w-10 h-10 mr-4 fill-current text-white" />
     <span className="font-semibold text-white font-euclidmedium">Download App</span>
   </button>

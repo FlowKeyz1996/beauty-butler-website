@@ -20,7 +20,7 @@ const features: FeatureCard[] = [
 
 const MainFeaturesCards: React.FC = () => {
   return (
-    <div className="container mx-auto px-4 py-8 rounded-xl relative z-10 bottom-43">
+    <div className="container mx-auto px-4 py-8 rounded-xl relative z-10 bottom-43 ">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((feature, index) => (
           <div key={index} className="bg-[#F8F9Fb] shadow-lg rounded-2xl border p-6 flex flex-col items-center justify-between">

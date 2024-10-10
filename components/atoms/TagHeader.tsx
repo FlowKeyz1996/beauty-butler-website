@@ -15,7 +15,7 @@ const TagHeader: React.FC<TagHeaderProps> = ({ text, position = 'center' }) => {
   }
 
   return (
-    <div className={`bg-[#FFE8FA] text-center border border-[#FFE8F] rounded-full items-center flex justify-center py-2 max-w-[90%] sm:max-w-[80%] lg:max-w-[20%] ${alignmentClass}`}>
+    <div className={`bg-[#FFE8FA] text-center border border-[#FFC8F2] rounded-full items-center flex justify-center py-2 max-w-[90%] sm:max-w-[80%] lg:max-w-[20%] ${alignmentClass}`}>
       <p className="font-euclidlight font-semibold text-[#475467]">{text}</p>
     </div>
   );

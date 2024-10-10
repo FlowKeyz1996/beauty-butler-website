@@ -23,16 +23,16 @@ const Footer: React.FC = () => {
         {/* Description Section */}
         <div className="w-full md:w-1/2 flex flex-col items-center md:items-start">
           <h2 className="text-gray-800 text-2xl font-bold mb-4 font-apfelregular">Shape the Future of Beauty, One Idea at a Time!</h2>
-          <p className="text-gray-700 text-center md:text-left mb-4">
-            Hi, I'm a software developer with 8 years of experience and 3 years in web3. I love solving problems and using the right tools for the job!
+          <p className="text-gray-700 text-center md:text-left mb-4 font-euclidlight">
+          Your insights drive our evolution—share your feature requests and help us create the ultimate beauty experience.
           </p>
           {/* Text Area and Button */}
           <textarea
-            className="w-full h-24 p-2 border border-gray-300 rounded-md mb-4 md:w-[80%] lg:w-[90%]"
-            placeholder="Leave a message"
+            className="w-full h-24 p-2 border border-gray-300 rounded-md mb-4 md:w-[80%] font-euclidlight lg:w-[90%]"
+            placeholder=" Tell us the features you’d love to see on Beauty Butler"
           />
-          <div className="w-full flex justify-end">
-            <button className="bg-[#8877D8] text-white px-20 py-2 rounded-md hover:bg-[#6d5fc1] transition-colors duration-300">
+          <div className="w-full flex justify-end mr-3">
+            <button className="bg-[#8877D8] font-euclidmedium text-white px-10 py-3 rounded-xl ">
               Submit
             </button>
           </div>

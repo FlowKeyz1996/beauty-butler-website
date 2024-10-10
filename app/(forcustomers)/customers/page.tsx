@@ -5,6 +5,7 @@ import GettingStarted from "@/components/molecules/GettingStarted";
 import WhyYouWillLoveBeautyButler from "@/components/molecules/WhyYouWillLoveBeautyButler";
 import BusinessHeroSection from "@/components/organisms/BusinessHeroSection";
 import Footer from "@/components/organisms/Footer";
+import FrequentlyAskedQuestions from "@/components/organisms/FrequentlyAskedQuestions";
 import Navbar from "@/components/organisms/Navbar";
 import NavbarOne from "@/components/organisms/NavbarOne";
 import Image from "next/image";
@@ -18,6 +19,7 @@ export default function Home() {
      <BeautyCategories/>
      <GettingStarted/>
      <BeautyBuzzyCards/>
+     <FrequentlyAskedQuestions/>
      <Footer/>
     </div>
   );
