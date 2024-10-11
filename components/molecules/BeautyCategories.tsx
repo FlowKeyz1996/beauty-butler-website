@@ -47,7 +47,7 @@ const BeautyCategories: React.FC = () => {
   return (
     <div className="container mx-auto p-5">
       <header className="text-center my-8 mb-10">
-        <h1 className="text-5xl font-bold leading-10 tracking-normal font-apfelregular">Beauty Treatments At Your Doorstep</h1>
+        <h1 className="text-5xl  leading-10 tracking-normal font-semibold font-apfelregular text-[#101828]">Beauty Treatments At Your Doorstep</h1>
       </header>
 
       <div className="flex justify-center space-x-4 mb-8 font-semibold font-euclidmedium">

@@ -49,8 +49,9 @@ const butlers: Butler[] = [
 const MeetTheButlers: React.FC = () => {
   return (
     <section className="my-24">
-      <div>
-      <h2 className="text-3xl font-bold text-center mb-6 font-apfelregular">Meet The Butlers at Beauty Butler</h2>
+      <div className="flex justify-center items-center">
+        <img src="/meetbutlerheaderimg.svg" alt=""/>
+      <h2 className="text-4xl font-bold text-center mb-6 font-apfelregular tracking-wide">Meet The Butlers at Beauty Butler</h2>
       </div>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 ">

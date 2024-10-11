@@ -29,22 +29,20 @@ const HeroSection: React.FC = () => {
     if (!mounted) return; // Ensure controls.start() runs only after mounting
 
     const sequence = async () => {
-      const direction = textIndex % 2 === 0 ? 100 : -100;
-
       // Fade out current phrase
       await controls.start({
         opacity: 0,
-        y: direction, // Move up or down based on index
+        y: -100, // Move upward for fade out
         transition: { duration: 0.5 },
       });
 
       // Change text after fading out
       setTextIndex((prevIndex) => (prevIndex + 1) % phrases.length);
 
-      // Fade in new phrase
+      // Fade in new phrase from top
       await controls.start({
         opacity: 1,
-        y: 0,
+        y: 0, // Move downward for fade in
         transition: { duration: 0.5 },
       });
     };

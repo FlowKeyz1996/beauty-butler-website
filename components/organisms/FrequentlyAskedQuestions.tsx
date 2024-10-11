@@ -31,8 +31,8 @@ const FrequentlyAskedQuestions = () => {
 
   return (
     <div className="max-w-7xl mx-auto p-5 h-screen">
-      <TagHeader text="Frequently Asked Question"/>
-      <h2 className="text-4xl font-bold text-center mb-24 my-5 font-apfelregular">
+      <TagHeader text="Frequently Asked Questions"/>
+      <h2 className="text-4xl font-bold text-center mb-10 my-5 font-apfelregular">
         Got questions? We’ve got answers
       </h2>
 

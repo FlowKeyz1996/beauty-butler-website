@@ -4,7 +4,7 @@ import React from 'react';
 const ChiefButler: React.FC = () => {
   return (
     <div className="w-full mx-auto  p-6 rounded-t-3xl max-w-6xl my-5">
-      <h2 className="text-4xl font-bold  text-center my-10 py-5 font-apfelregular">Meet the Chief Butler</h2>
+      <h2 className="text-4xl font-bold  text-center my-10 py-5 font-apfelregular tracking-wider">Meet the Chief Butler</h2>
       <div className="flex flex-col md:flex-row justify-center items-start">
         <div className="w-full md:w-1/2 mb-6 md:mb-0">
           <img 

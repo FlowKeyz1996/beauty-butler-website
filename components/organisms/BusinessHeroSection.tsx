@@ -40,7 +40,7 @@ const BusinessHeroSection = () => {
           transition={{ duration: 0.8 }}
         >
           <Image
-            src="/businessheroimg.svg"
+            src="/smallheroone.svg"
             alt="Business Growth"
             width={700}
             height={600}

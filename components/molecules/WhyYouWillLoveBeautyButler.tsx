@@ -48,17 +48,17 @@ const WhyYouWillLoveBeautyButler: FC = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="p-5 md:p-10 mt-5 w-full">
-        <h2 className="text-4xl md:text-4xl font-bold my-20 text-center font-apfelregular">
+      <div className="p-5 md:p-10 mt-5 w-full bg-white">
+        <h2 className="text-4xl md:text-4xl font-bold my-20 text-center text-[#101828] font-apfelregular">
           Why You Will Love Beauty Butler
         </h2>
 
         {/* Responsive Cards Grid */}
-        <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 bg-white gap-0">
           {cardData.map((card, index) => (
             <motion.div
               key={index}
-              className={`bg-gray-50 p-5 border border-gray-200`}
+              className={`bg-white p-5 border border-gray-200 first:border-l-0 last:border-r-0 ${index === 0 || index === 3 ? 'border-l-0' : ''} ${index === 2 || index === 5 ? 'border-r-0' : ''} ${index < 3 ? 'border-t-0' : ''} ${index >= 3 ? 'border-b-0' : ''}`}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * index, duration: 0.5 }}

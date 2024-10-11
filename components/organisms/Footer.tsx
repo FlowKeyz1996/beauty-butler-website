@@ -42,24 +42,30 @@ const Footer: React.FC = () => {
       </motion.div>
 
       {/* Footer content */}
-      <div className="container mx-auto px-4 mt-44 sm:mt-56 w-full items-center">
+      <div className="container mx-auto px-4 mt-44 sm:mt-56 w-[90%] sm:w-[80%] lg:w-[90%] items-center">
         <div className="w-full max-w-6xl mx-auto text-center">
-          <div className="w-full lg:w-[90%] flex items-center justify-center my-10">
+          
+          <div className="w-full lg:w-[90%] my-10">
             {/* Input Field */}
+            <div>
+            <h3 className="text-left ml-32 relative text-3xl font-bold top-12">For beauty tips and updates <span className="font-euclidmedium text-xl font-normal text-[#8FF1EC]">subscribe to our newsletter.</span></h3>
+          </div>
+          <div className=" flex items-center justify-center">
+            <img src="/footerinputimg.svg" alt="footer_input_img"></img>
             <input
               type="email"
-              placeholder="Enter your email"
-              className="flex-grow p-2 border border-gray-300 rounded-l-md focus:outline-none"
+              placeholder="example@mail.com"
+              className="flex-grow p-2  border-t border-b border-gray-300 bg-[#8878D8] font-euclidmedium focus:outline-none"
             />
             {/* Button with White Background */}
-            <button className="bg-white text-[#8877D8] px-4 py-2 border border-[#8877D8] rounded-r-md hover:bg-gray-100 transition-colors duration-300">
+            <button className="bg-white text-[#8877D8] px-9 font-euclidmedium py-2 border border-[#8877D8] rounded-r-xl">
               Subscribe
-            </button>
+            </button></div>
           </div>
           <div className="flex flex-wrap justify-between text-left text-sm space-y-4 lg:space-y-0">
             
             {/* Product Section */}
-            <div className="flex-1">
+            <div className="flex-1 font-euclidmedium">
               <h3 className="font-bold mb-2 font-euclidlight text-[#C2C6e8]">PRODUCT</h3>
               <ul>
                 <li>Customers</li>
@@ -67,28 +73,27 @@ const Footer: React.FC = () => {
               </ul>
             </div>
             {/* Company Section */}
-            <div className="flex-1">
-              <h3 className="font-bold mb-2">COMPANY</h3>
-              <ul>
+            <div className="flex-1 font-euclidmedium">
+              <h3 className="font-bold mb-2  text-[#C2C6e8]">COMPANY</h3>
+              <ul className="font-euclidlight">
                 <li>About Us</li>
                 <li>Blog</li>
               </ul>
             </div>
             {/* Legal Section */}
-            <div className="flex-1">
-              <h3 className="font-bold mb-2">LEGAL</h3>
-              <ul>
+            <div className="flex-1 font-euclidmedium">
+              <h3 className="font-bold mb-2 text-[#C2C6e8]">LEGAL</h3>
+              <ul className="font-euclidlight">
                 <li>Terms and Condition</li>
                 <li>Privacy Policy</li>
               </ul>
             </div>
             {/* Contact Us Section */}
-            <div className="flex-1">
-              <h3 className="font-bold mb-2">CONTACT US</h3>
-              <ul>
+            <div className="flex-1 font-euclidmedium">
+              <h3 className="font-bold mb-2 text-[#C2C6e8]">CONTACT US</h3>
+              <ul className="font-euclidlight">
                 <li>hello@mybeautybutler@gmail.com</li>
-                <li>Support</li>
-                <li>Live Chat</li>
+               
               </ul>
             </div>
           </div>

@@ -23,8 +23,8 @@ const NavbarOne: React.FC = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">
       <div className="container mx-auto px-4 flex justify-between items-center py-4">
-        {/* Logo and Nav Links (with shadow, now taking almost full width) */}
-        <div className="flex justify-between items-center w-full md:w-4/5 shadow-2xl rounded-full p-4 bg-white bg-opacity-100 backdrop-blur-lg border">
+        {/* Logo and Nav Links (with shadow, now taking more width) */}
+        <div className="flex justify-between items-center w-full md:w-5/6 shadow-2xl rounded-full p-4 bg-white bg-opacity-100 backdrop-blur-lg border">
           {/* Logo and Hamburger (on mobile) */}
           <div className="flex items-center justify-between w-full md:w-auto">
             <Link href="/">
@@ -48,12 +48,12 @@ const NavbarOne: React.FC = () => {
           </div>
 
           {/* Nav Links (hidden on mobile) */}
-          <div className={`hidden md:flex space-x-6 gap-6 mx-5 font-euclidmedium text-xl transition-colors duration-300`}>
+          <div className={`hidden md:flex space-x-6 gap-6 mx-5 font-euclidmedium  text-[#475467] text-xl transition-colors duration-300`}>
             <Link href="/features" className={`hover:text-[#FF8AF4]`}>
               Features
             </Link>
             <Link href="/benefit" className={`hover:text-[#FF8AF4]`}>
-              Benefit
+              Benefits
             </Link>
             <Link href="/company" className={`hover:text-[#FF8AF4]`}>
               Company
@@ -67,7 +67,7 @@ const NavbarOne: React.FC = () => {
         {/* Button (outside the shadow div) */}
         <div className="hidden md:block">
           <Link href="/">
-            <button className="bg-[#FFC8F2] text-black p-5 px-7 rounded-xl font-euclid">
+            <button className="bg-[#FFC8F2] text-black p-5 px-7 rounded-2xl ml=5 font-euclid">
               For Business
             </button>
           </Link>

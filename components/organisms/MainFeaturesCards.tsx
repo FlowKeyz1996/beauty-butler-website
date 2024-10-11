@@ -20,7 +20,7 @@ const features: FeatureCard[] = [
 
 const MainFeaturesCards: React.FC = () => {
   return (
-    <div className="container mx-auto px-4 py-8 rounded-xl relative z-10 bottom-43">
+    <div className="container mx-auto px-4 py-8 my-20 rounded-xl relative z-10 bottom-43">
       <div className="flex overflow-x-scroll sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 hide-scroll-bar">
         {features.map((feature, index) => (
           <div 
@@ -32,7 +32,7 @@ const MainFeaturesCards: React.FC = () => {
               <h3 className="text-lg sm:text-2xl lg:text-3xl font-semibold mb-2 text-center text-[#1D2939] font-apfelregular">
                 {feature.title}
               </h3>
-              <p className="text-sm sm:text-base lg:text-lg text-gray-600 text-center font-euclidmedium">
+              <p className="text-sm sm:text-base lg:text-lg text-[#475467] text-center font-euclidlight">
                 {feature.description}
               </p>
             </div>

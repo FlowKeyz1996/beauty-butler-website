@@ -39,7 +39,7 @@ const CategoriesSection: React.FC = () => {
 
       {/* Card and Text Container with Marquee Effect */}
       <motion.div
-        className="flex space-x-6 overflow-hidden"
+        className="flex  overflow-hidden"
         animate={{ x: ['100%', '-100%'] }}
         transition={{ repeat: Infinity, duration: 20, ease: 'linear', repeatType: 'mirror' }}
       >
@@ -47,7 +47,7 @@ const CategoriesSection: React.FC = () => {
           <div key={category.id} className="flex flex-col items-center min-w-[300px]">
             {/* Card */}
             <motion.div
-              className="bg-white rounded-t-full rounded-lf overflow-hidden shadow-lg border-4 border-[#8877D8]" // Added rounded-b-md for bottom corners
+              className="bg-white rounded-t-full rounded-br-2xl rounded-bl-2xl overflow-hidden shadow-lg border-4 border-[#8877D8] w-[220px] h-[70%]" // Added rounded-b-md for bottom corners
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >

@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
               Features
             </Link>
             <Link href="/benefit" className="hover:text-[#FF8AF4]">
-              Benefit
+              Benefits
             </Link>
             <Link href="/company" className="hover:text-[#FF8AF4]">
               Company
