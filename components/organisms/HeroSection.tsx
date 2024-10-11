@@ -69,10 +69,10 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* Text overlay */}
-      <div className="relative top-7 z-10 h-full flex items-center">
-        <div className="text-white p-10 md:p-16 max-w-2xl lg:max-w-4xl">
+      <div className="relative top-7 z-10 h-full flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
+        <div className="text-white px-6 md:px-16 max-w-[90%] md:max-w-2xl lg:max-w-4xl">
           <motion.h1
-            className="text-5xl md:text-6xl font-apfelregular font-bold w-full max-w-[90%] lg:max-w-[80%] xl:max-w-[75%] whitespace-nowrap my-6"
+            className="text-4xl md:text-6xl font-apfelregular font-bold w-full whitespace-nowrap my-6"
             animate={controls}
             initial={{ opacity: 1, y: 0 }}
           >
@@ -80,15 +80,16 @@ const HeroSection: React.FC = () => {
             <span className="text-[#8878D7]">{firstWord}</span>
             {restOfPhrase}
           </motion.h1>
-          <p className="my-4 lg:text-xl md:text-xl font-euclidlight">
-            Empower Your Beauty Business with Beauty Butler.<br></br>Join the platform
-            that brings beauty professionals <br></br>and clients together seamlessly.
+          <p className="my-4 text-lg md:text-xl font-euclidlight">
+            Empower Your Beauty Business with Beauty Butler.<br />Join the platform
+            that brings beauty professionals <br />and clients together seamlessly.
           </p>
-          <button className="mt-8 bg-[#8877D8] font-euclidmedium text-xl  text-white p-20 py-5 rounded-xl">
+          <button className="mt-8 bg-[#8877D8] font-euclidmedium text-xl text-white px-12 py-4 rounded-xl">
             Book a Demo
           </button>
         </div>
       </div>
+
       <div className="absolute bottom-0 left-0 right-0 z-20">
         <Marquee />
       </div>

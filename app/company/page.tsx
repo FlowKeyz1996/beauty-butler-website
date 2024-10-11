@@ -9,7 +9,7 @@ import React from 'react'
 
 function page() {
   return (
-    <div>
+    <div className="w-full overflow-x-hidden">
         <NavbarOne/>
         <SmallHero headerText="Crafting Your Glow" 
         descriptionText="From on-demand bookings to personalized beauty services, 

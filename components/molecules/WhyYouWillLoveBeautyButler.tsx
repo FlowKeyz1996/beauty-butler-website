@@ -54,19 +54,11 @@ const WhyYouWillLoveBeautyButler: FC = () => {
         </h2>
 
         {/* Responsive Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {cardData.map((card, index) => (
             <motion.div
               key={index}
-              className={`bg-gray-50 p-5 border border-gray-200 ${
-                index % 3 === 0 ? 'border-l-0' : '' // No left border on the first column
-              } ${
-                index % 3 === 2 ? 'border-r-0' : '' // No right border on the last column
-              } ${
-                index < 3 ? 'border-t-0' : '' // No top border on the first row
-              } ${
-                index >= cardData.length - 3 ? 'border-b-0' : '' // No bottom border on the last row
-              }`}
+              className={`bg-gray-50 p-5 border border-gray-200`}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * index, duration: 0.5 }}
@@ -76,8 +68,37 @@ const WhyYouWillLoveBeautyButler: FC = () => {
                 alt={card.title}
                 className="w-full h-48 object-contain mb-4"
               />
-              <h3 className="text-xl text-center font-semibold mb-2 font-apfelregular">{card.title}</h3>
-              <p className="text-gray-600 font-euclidlight text-center">{card.description}</p>
+              <h3 className="text-xl text-center font-semibold mb-2 font-apfelregular">
+                {card.title}
+              </h3>
+              <p className="text-gray-600 font-euclidlight text-center">
+                {card.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Mobile Carousel */}
+        <div className="sm:hidden flex overflow-x-auto space-x-4 pb-5">
+          {cardData.map((card, index) => (
+            <motion.div
+              key={index}
+              className="min-w-[80%] bg-gray-50 p-5 border border-gray-200 rounded-md"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.1 * index, duration: 0.5 }}
+            >
+              <img
+                src={card.image}
+                alt={card.title}
+                className="w-full h-48 object-contain mb-4"
+              />
+              <h3 className="text-xl text-center font-semibold mb-2 font-apfelregular">
+                {card.title}
+              </h3>
+              <p className="text-gray-600 font-euclidlight text-center">
+                {card.description}
+              </p>
             </motion.div>
           ))}
         </div>

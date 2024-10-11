@@ -63,48 +63,51 @@ const BenefitSection = () => {
   return (
     <motion.div
       ref={ref}
-      className="w-full my-14 px-4 py-4 flex flex-col mx-16 md:flex-row items-stretch justify-between gap-x-28"  // Adjusted gap-x-12 for horizontal spacing
+      className="w-full my-14 px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-12"
     >
       {/* Left side - Image fades in from the left */}
       <motion.div
         initial={{ opacity: 0, x: -100 }}
         animate={controlLeft}
-        className="md:w-2/5 w-full h-full"
+        className="w-full md:w-1/2 h-full flex justify-center"
       >
         <img
           src="/benefitimage.svg"
           alt="provider-benefit-image"
-          className="rounded-lg mx-12 w-full  h-auto object-cover"
+          className="object-contain "
         />
-        <img src="/Notifications.jpg" alt="notification-image"  className="relative bottom-[40rem]"/>
       </motion.div>
 
       {/* Right side - Header, Descriptive Paragraph and Text with Icons */}
       <motion.div
         initial={{ opacity: 0, x: 100 }}
         animate={controlRight}
-        className="md:w-3/5 w-full h-full flex flex-col space-y-4 mx-5"
+        className="w-full md:w-1/2 h-full flex flex-col space-y-6 justify-center text-center md:text-left"
       >
-        {/* <HeaderTip text="Features"/> */}
-       <div>
-        <TagHeader text="Our Benefit" position='left'/>
-       </div>
-        <h2 className="text-4xl font-bold max-w-lg font-apfelregular">Take your beauty business to the next level</h2>
-        <p className="text-lg text-gray-600 max-w-lg font-euclidlight">
-        Our all-in-one management software automates scheduling, manages customer data, processes payments, and more.
+        <div>
+          <TagHeader text="Our Benefit" position='left'/>
+        </div>
+        <h2 className="text-3xl md:text-4xl font-bold font-apfelregular max-w-lg leading-tight">
+          Take your beauty business to the next level
+        </h2>
+        <p className="text-base md:text-lg text-[#475467] font-euclidlight max-w-lg mx-auto md:mx-0">
+          Our all-in-one management software automates scheduling, manages customer data, processes payments, and more.
         </p>
 
-        {items.map((item, index) => (
-          <div key={index} className="flex flex-col space-y-1 max-w-[60%]">
-            <div className="flex items-center space-x-2">
-              <img src={item.imgSrc} alt={item.text} className="w-8 h-8" /> {/* Increased icon size */}
-              <p className="text-lg font-semibold font-apfelregular leading-7">{item.text}</p> {/* Adjusted line height */}
+        {/* Icons and text */}
+        <div className="space-y-6">
+          {items.map((item, index) => (
+            <div key={index} className="flex flex-col items-center md:items-start space-y-2 md:space-y-1">
+              <div className="flex items-center space-x-2">
+                <img src={item.imgSrc} alt={item.text} className="w-10 h-10" />
+                <p className="text-lg font-semibold font-apfelregular leading-7">{item.text}</p>
+              </div>
+              <p className="text-md text-[#475467] max-w-lg ml-10 md:ml-7 font-euclidlight leading-6">
+                {item.description}
+              </p>
             </div>
-            <p className="text-sm text-gray-500 ml-7 font-euclidlight leading-6"> {/* Adjusted line height */}
-              {item.description}
-            </p>
-          </div>
-        ))}
+          ))}
+        </div>
       </motion.div>
     </motion.div>
   );

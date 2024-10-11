@@ -4,7 +4,7 @@ import React from 'react';
 const ChiefButler: React.FC = () => {
   return (
     <div className="w-full mx-auto  p-6 rounded-t-3xl max-w-6xl my-5">
-      <h2 className="text-3xl font-bold mb-4 text-center my-5 py-5">Meet the Chief Butler</h2>
+      <h2 className="text-4xl font-bold  text-center my-10 py-5 font-apfelregular">Meet the Chief Butler</h2>
       <div className="flex flex-col md:flex-row justify-center items-start">
         <div className="w-full md:w-1/2 mb-6 md:mb-0">
           <img 
@@ -13,7 +13,7 @@ const ChiefButler: React.FC = () => {
             className="w-full h-auto rounded-lg"
           />
           <h3 className="text-4xl font-semibold mt-4 text-center font-apfelregular">Chinny Eze</h3>
-          <p className="text-md text-[#8878d8] text-center">CEO/Founder</p>
+          <p className="text-xl text-[#8878d8] text-center font-euclidmedium my-1">CEO/Founder</p>
         </div>
         <div className="w-full md:w-1/2 md:pl-8">
           <p className="text-lg max-w-2xl md:max-w-none leading-relaxed font-euclidmedium">
