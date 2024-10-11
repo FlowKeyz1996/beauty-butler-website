@@ -15,11 +15,11 @@ const BeautyBuzzyCards = () => {
   const cards: Card[] = [
     {
       id: 1,
-      header: 'Amazing Service!',
-      description: 'Beauty Butler made my life so much easier. I loved the personalized experience.',
+      header: 'A Must-Have for Every Beauty Enthusiast!',
+      description: 'I’ve been using Beauty Butler for a few weeks now, and I must say, it’s an absolute game-changer! As someone who juggles a busy work schedule and a social life, finding time to book beauty treatments was always a hassle. But with Beauty Butler, everything is just a tap away.',
       imageUrl: '/path/to/image1.jpg', // Replace with real image paths
       rating: 5,
-      userName: 'Jane Doe',
+      userName: 'Precious Adebayo',
     },
     {
       id: 2,
@@ -93,12 +93,12 @@ const BeautyBuzzyCards = () => {
             >
               {/* Small Image Above Header */}
               <div className="flex items-center mb-2">
-                <img src="/path/to/small/image.jpg" alt="Icon" className="w-6 h-6 mr-2" />
-                <h2 className="text-xl font-bold">{card.header}</h2>
+                
+                <h2 className="text-xl font-bold font-apfelregular">{card.header}</h2>
               </div>
 
               {/* Description */}
-              <p className="text-left text-sm mb-4">{card.description}</p>
+              <p className="text-left text-xl text-[#475467] mb-4 font-euclidlight">{card.description}</p>
 
               {/* User info and Rating */}
               <div className="flex items-center">

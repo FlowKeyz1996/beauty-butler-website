@@ -20,14 +20,21 @@ const features: FeatureCard[] = [
 
 const MainFeaturesCards: React.FC = () => {
   return (
-    <div className="container mx-auto px-4 py-8 rounded-xl relative z-10 bottom-43 ">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="container mx-auto px-4 py-8 rounded-xl relative z-10 bottom-43">
+      <div className="flex overflow-x-scroll sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 hide-scroll-bar">
         {features.map((feature, index) => (
-          <div key={index} className="bg-[#F8F9Fb] shadow-lg rounded-2xl border p-6 flex flex-col items-center justify-between">
+          <div 
+            key={index} 
+            className="min-w-[280px] sm:min-w-0 bg-[#F8F9Fb] shadow-lg rounded-2xl border p-4 sm:p-6 flex flex-col items-center justify-between"
+          >
             {/* Header and Description */}
             <div>
-              <h3 className="text-2xl sm:text-3xl font-semibold mb-2 text-center text-[#1D2939] font-apfelregular">{feature.title}</h3>
-              <p className="text-gray-600 text-center font-euclidmedium">{feature.description}</p>
+              <h3 className="text-lg sm:text-2xl lg:text-3xl font-semibold mb-2 text-center text-[#1D2939] font-apfelregular">
+                {feature.title}
+              </h3>
+              <p className="text-sm sm:text-base lg:text-lg text-gray-600 text-center font-euclidmedium">
+                {feature.description}
+              </p>
             </div>
 
             {/* Image at the bottom */}
@@ -35,7 +42,7 @@ const MainFeaturesCards: React.FC = () => {
               <img
                 src={feature.imageSrc}
                 alt={feature.title}
-                className="w-100 h-100 sm:w-42 sm:h-42 lg:w-100 lg:h-100 object-contain"
+                className="w-40 h-40 sm:w-48 sm:h-48 lg:w-52 lg:h-52 object-contain"
               />
             </div>
           </div>

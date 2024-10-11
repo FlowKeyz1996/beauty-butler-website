@@ -102,7 +102,7 @@ const BenefitSection = () => {
                 <img src={item.imgSrc} alt={item.text} className="w-10 h-10" />
                 <p className="text-lg font-semibold font-apfelregular leading-7">{item.text}</p>
               </div>
-              <p className="text-md text-[#475467] max-w-lg ml-10 md:ml-7 font-euclidlight leading-6">
+              <p className="text-md text-[#475467]  ml-10 md:ml-7 font-euclidlight leading-6">
                 {item.description}
               </p>
             </div>

@@ -6,3 +6,14 @@
 .epilogue{
     font-family: var(--font-epilogue);
   }
+
+  /* Hide scrollbar for horizontal scroll */
+.hide-scroll-bar {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
