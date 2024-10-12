@@ -1,22 +1,24 @@
 import React from 'react';
+import TagHeader from '../atoms/TagHeader';
 
 const GettingStarted: React.FC = () => {
   return (
     <section className="flex flex-col items-center py-10 px-4">
+      <TagHeader text="How it works"/>
       {/* Header */}
-      <h1 className="text-2xl md:text-4xl font-bold mb-4 text-center font-apfelregular">
+      <h1 className="text-5xl md:text-5xl font-bold my-4 text-center leading-[10rem] tracking-wider font-apfelregular">
         Getting Started with Beauty Butler
       </h1>
 
       {/* Description */}
-      <p className="text-center text-xl font-euclidlight font-semibold max-w-xl mb-10 text-[#667085]">
+      <p className="text-center text-xl font-euclidlight max-w-xl mb-10 text-[#667085]">
         Follow these simple steps to set up your account and start booking beauty and wellness treatments.
       </p>
 
       {/* Cards */}
       <div className="w-full max-w-5xl">
         {/* Top Card */}
-        <div className="w-full mb-8 bg-[#f8f9fb] shadow-lg rounded-lg justify-between flex flex-col md:flex-row p-6">
+        <div className="w-full mb-8 bg-[#f8f9fb] rounded-lg justify-between flex flex-col md:flex-row p-6">
           <div className="w-full md:w-1/2 mb-4 md:mb-0 flex flex-col items-center justify-center">
             {/* Left Div */}
             <h2 className="text-lg md:text-3xl font-semibold font-apfelregular text-[#1d2939] mb-2">
@@ -32,7 +34,8 @@ const GettingStarted: React.FC = () => {
 
         {/* Bottom Two Cards */}
         <div className="w-full flex flex-col md:flex-row space-y-4 md:space-y-0 gap-4">
-          <div className="w-full md:w-1/2 bg-[#f8f9fb] shadow-lg rounded-lg p-6 flex flex-col items-center">
+          <div className="w-full md:w-1/2 bg-[#f8f9fb] rounded-lg p-6 flex flex-col items-center">
+            
             {/* Text Above Images */}
             <h2 className="text-lg md:text-3xl font-semibold mb-2 font-apfelregular text-[#1d2939] ">
               Explore our extensive marketplace listings and categories.
@@ -43,7 +46,7 @@ const GettingStarted: React.FC = () => {
             </div>
           </div>
 
-          <div className="w-full md:w-1/2 bg-[#f8f9fb] shadow-lg rounded-lg p-6 flex flex-col items-center">
+          <div className="w-full md:w-1/2 bg-[#f8f9fb]  rounded-lg p-6 flex flex-col items-center">
             {/* Text Above Images */}
             <h2 className="text-lg md:text-3xl font-semibold mb-2 font-apfelregular text-[#1d2939] ">
               Get Salon services from the butler in the comfort of your home.

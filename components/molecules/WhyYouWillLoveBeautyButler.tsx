@@ -43,12 +43,12 @@ const cardData: CardData[] = [
 const WhyYouWillLoveBeautyButler: FC = () => {
   return (
     <motion.div
-      className="relative z-10 bg-white pb-10 px-6 rounded-t-[5rem] w-full mx-auto -mt-16 bottom-44 lg:mt-0"
+      className="relative z-10 bg-white  px-6 rounded-t-[5rem] w-full mx-auto -mt-16 bottom-44 lg:mt-0"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="p-5 md:p-10 mt-5 w-full bg-white">
+      <div className="p-5  mt-5 w-full bg-white">
         <h2 className="text-4xl md:text-4xl font-bold my-20 text-center text-[#101828] font-apfelregular">
           Why You Will Love Beauty Butler
         </h2>
@@ -58,7 +58,7 @@ const WhyYouWillLoveBeautyButler: FC = () => {
           {cardData.map((card, index) => (
             <motion.div
               key={index}
-              className={`bg-white p-5 border border-gray-200 first:border-l-0 last:border-r-0 ${index === 0 || index === 3 ? 'border-l-0' : ''} ${index === 2 || index === 5 ? 'border-r-0' : ''} ${index < 3 ? 'border-t-0' : ''} ${index >= 3 ? 'border-b-0' : ''}`}
+              className={`bg-white p-5 border border-gray-100 first:border-l-0 last:border-r-0 ${index === 0 || index === 3 ? 'border-l-0' : ''} ${index === 2 || index === 5 ? 'border-r-0' : ''} ${index < 3 ? 'border-t-0' : ''} ${index >= 3 ? 'border-b-0' : ''}`}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * index, duration: 0.5 }}

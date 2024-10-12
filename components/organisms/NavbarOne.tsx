@@ -67,7 +67,7 @@ const NavbarOne: React.FC = () => {
         {/* Button (outside the shadow div) */}
         <div className="hidden md:block">
           <Link href="/">
-            <button className="bg-[#FFC8F2] text-black p-5 px-7 rounded-2xl ml=5 font-euclid">
+            <button className="bg-[#FFC8F2] text-black p-5 px-7 rounded-2xl  font-euclidmedium text-2xl">
               For Business
             </button>
           </Link>

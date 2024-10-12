@@ -45,19 +45,19 @@ const BeautyCategories: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>('lashes'); 
 
   return (
-    <div className="container mx-auto p-5">
-      <header className="text-center my-8 mb-10">
+    <div className="container mx-auto ">
+      <header className="text-center mb-10">
         <h1 className="text-5xl  leading-10 tracking-normal font-semibold font-apfelregular text-[#101828]">Beauty Treatments At Your Doorstep</h1>
       </header>
 
-      <div className="flex justify-center space-x-4 mb-8 font-semibold font-euclidmedium">
+      <div className="flex justify-center space-x-4 mb-8 font-semibold font-euclidlight text-[#101828]">
         {['lashes', 'makeup', 'hair', 'nails', 'spa'].map((category) => (
           <button
           key={category}
           className={`px-4 py-2 rounded-xl transition-colors duration-300 ${
             activeCategory === category
-              ? 'bg-[#DADAFF] text-black' // Active button background and text color
-              : 'bg-transparent border border-black text-black' // Inactive button style
+              ? 'bg-[#DADAFF] ' // Active button background and text color
+              : 'bg-transparent text-[#98A2b3]' // Inactive button style
           }`}
             onClick={() => {
                 setSelectedCategory(imagesData[category]);
