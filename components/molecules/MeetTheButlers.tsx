@@ -54,7 +54,7 @@ const MeetTheButlers: React.FC = () => {
       <h2 className="text-4xl font-bold text-center mb-6 font-apfelregular tracking-wide">Meet The Butlers at Beauty Butler</h2>
       </div>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 px-4 ">
         {butlers.map((butler) => (
           <div
             key={butler.id}

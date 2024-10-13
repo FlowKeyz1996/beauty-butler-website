@@ -67,7 +67,7 @@ const NavbarOne: React.FC = () => {
         {/* Button (outside the shadow div) */}
         <div className="hidden md:block">
           <Link href="/">
-            <button className="bg-[#FFC8F2] text-black p-5 px-7 rounded-2xl  font-euclidmedium text-2xl">
+            <button className="bg-[#FFC8F2] text-[#101828] p-5 px-7 rounded-2xl  font-euclidmedium text-xl">
               For Business
             </button>
           </Link>
@@ -81,18 +81,18 @@ const NavbarOne: React.FC = () => {
             <Link href="/" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
               Home
             </Link>
-            <Link href="/about" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
-              About
+            <Link href="/features" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
+              features
             </Link>
-            <Link href="/services" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
-              Services
+            <Link href="/benefits" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
+              Benefits
             </Link>
-            <Link href="/contact" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
-              Contact
+            <Link href="/company" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
+              Company
             </Link>
             <button
               onClick={toggleMenu}
-              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+              className="bg-[] text-white px-4 py-2 rounded hover:bg-blue-600"
             >
               Get Started
             </button>

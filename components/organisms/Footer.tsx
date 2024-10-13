@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const Footer: React.FC = () => {
   return (
@@ -21,8 +22,8 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Description Section */}
-        <div className="w-full md:w-2/2 flex flex-col mx-4 items-center md:items-start">
-          <h2 className="text-[#101828] text-lg sm:text-xl md:text-4xl font-bold mb-4 font-apfelregular">
+        <div className="w-full md:w-2/3 flex flex-col mx-4 items-center md:items-start">
+          <h2 className="text-[#101828] text-lg sm:text-xl md:text-3xl font-bold mb-4 font-apfelregular">
             Shape the Future of Beauty, One Idea at a Time!
           </h2>
           <p className="text-[#475467] text-center md:text-left mb-4 font-euclidlight text-sm sm:text-base md:text-lg">
@@ -33,8 +34,8 @@ const Footer: React.FC = () => {
             className="w-full h-20 sm:h-24 p-2 border border-gray-300 rounded-md mb-4 md:w-[90%] lg:w-[90%] font-euclidlight"
             placeholder="Tell us the features you’d love to see on Beauty Butler"
           />
-          <div className="w-full flex mr-24">
-            <button className="bg-[#8877D8] font-euclidmedium text-white px-6 sm:px-10 py-2 sm:py-3 rounded-xl mr-9">
+          <div className="w-full flex mr-40 justify-end">
+            <button className="bg-[#8877D8] font-euclidmedium text-white px-6 sm:px-14 py-2 sm:py-3 rounded-xl mr-9">
               Submit
             </button>
           </div>
@@ -45,7 +46,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 mt-44 sm:mt-56 w-[90%] sm:w-[80%] lg:w-[90%] items-center">
         <div className="w-full max-w-6xl mx-auto text-center">
           
-          <div className="w-full lg:w-[90%] my-10">
+          <div className="w-full my-10">
             {/* Input Field */}
             <div>
             <h3 className="text-left ml-32 relative text-3xl font-bold top-12">For beauty tips and updates <span className="font-euclidmedium text-xl font-normal text-[#8FF1EC]">subscribe to our newsletter.</span></h3>
@@ -62,7 +63,7 @@ const Footer: React.FC = () => {
               Subscribe
             </button></div>
           </div>
-          <div className="flex flex-wrap justify-between text-left text-sm space-y-4 lg:space-y-0">
+          <div className="flex flex-wrap justify-between text-left text-sm space-y-4 lg:space-y-0 w-full" >
             
             {/* Product Section */}
             <div className="flex-1 font-euclidmedium">
@@ -85,7 +86,7 @@ const Footer: React.FC = () => {
               <h3 className="font-bold mb-2 text-[#C2C6e8]">LEGAL</h3>
               <ul className="font-euclidlight">
                 <li>Terms and Condition</li>
-                <li>Privacy Policy</li>
+                <Link href="/privacy"><li>Privacy Policy</li></Link>
               </ul>
             </div>
             {/* Contact Us Section */}

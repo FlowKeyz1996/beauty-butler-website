@@ -12,7 +12,7 @@ const ChiefButler: React.FC = () => {
             alt="Chief Butler" 
             className="w-full h-auto rounded-lg"
           />
-          <h3 className="text-4xl font-semibold mt-4 text-center font-apfelregular">Chinny Eze</h3>
+          <h3 className="text-4xl  mt-4 text-center font-apfelregular">Chinny Eze</h3>
           <p className="text-xl text-[#8878d8] text-center font-euclidmedium my-1">CEO/Founder</p>
         </div>
         <div className="w-full md:w-1/2 md:pl-8">
