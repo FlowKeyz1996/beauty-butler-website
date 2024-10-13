@@ -6,7 +6,7 @@ const GettingStarted: React.FC = () => {
     <section className="flex flex-col items-center py-10 px-4">
       <TagHeader text="How it works"/>
       {/* Header */}
-      <h1 className="text-5xl md:text-5xl font-bold my-4 text-center leading-[10rem] tracking-wider font-apfelregular">
+      <h1 className="text-5xl md:text-5xl font-semibold my-4 text-center leading-[10rem] tracking-wider font-apfelregular">
         Getting Started with Beauty Butler
       </h1>
 
@@ -16,7 +16,7 @@ const GettingStarted: React.FC = () => {
       </p>
 
       {/* Cards */}
-      <div className="w-full max-w-5xl">
+      <div className="w-[90%]">
         {/* Top Card */}
         <div className="w-full mb-8 bg-[#f8f9fb] rounded-lg justify-between flex flex-col md:flex-row p-6">
           <div className="w-full md:w-1/2 mb-4 md:mb-0 flex flex-col items-center justify-center">
@@ -24,7 +24,7 @@ const GettingStarted: React.FC = () => {
             <h2 className="text-lg md:text-3xl font-semibold font-apfelregular text-[#1d2939] mb-2">
               Download Beauty Butler: find the best beauty and wellness experts for you.
             </h2>
-            <img src="/01.svg" alt="Left Image" className="w-[50%] h-full object-contain rounded-lg" />
+            <img src="/01.svg" alt="Left Image" className="w-[70%] h-full object-contain rounded-lg " />
           </div>
           <div className="w-full md:w-1/2 flex items-center justify-center">
             {/* Right Div */}
@@ -42,7 +42,7 @@ const GettingStarted: React.FC = () => {
             </h2>
             <div className="flex w-full justify-between">
               <img src="/02.svg" alt="Left Image" className="w-[50%] h-full object-contain rounded-lg" />
-              <img src="/Device.svg" alt="Right Image" className="w-[50%] h-full object-contain rounded-lg" />
+              <img src="/Device2.svg" alt="Right Image" className="w-[50%] h-full object-contain rounded-lg" />
             </div>
           </div>
 
@@ -53,7 +53,7 @@ const GettingStarted: React.FC = () => {
             </h2>
             <div className="flex w-full justify-between">
               <img src="/03.svg" alt="Left Image" className="w-[50%] h-full object-contain rounded-lg" />
-              <img src="/Device.svg" alt="Right Image" className="w-[50%] h-full object-contain rounded-lg" />
+              <img src="/device3.svg" alt="Right Image" className="w-[50%] h-full object-contain rounded-lg" />
             </div>
           </div>
         </div>
@@ -61,7 +61,7 @@ const GettingStarted: React.FC = () => {
         {/* Button */}
         <div className="w-full flex justify-center mt-10">
   <button className="bg-[#8877D8] flex items-center px-14 py-3 rounded-xl shadow-md ">
-    <img src="/appleandgoogle.svg" alt="Download Icon" className="w-10 h-10 mr-4 fill-current text-white" />
+    <img src="/googleandapplepurple.svg" alt="Download Icon" className="w-20 h-10 mr-4 fill-current" />
     <span className="font-semibold text-white font-euclidmedium">Download App</span>
   </button>
 </div>

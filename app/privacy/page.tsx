@@ -4,7 +4,7 @@ import React from 'react'
 function page() {
   return (
     <div>
-        <Small/>
+        <SmallHero headerText="privacy" descriptionText='privacy description'/>
     </div>
   )
 }

@@ -19,36 +19,44 @@ const MarketplaceCard: React.FC<MarketplaceCardProps> = ({ imageUrl, title, desc
 
   const fadeInRightVariants = {
     hidden: { opacity: 0, x: 100 },
-    visible: { opacity: 1, x: 0, transition: { duration: 1.0} },
+    visible: { opacity: 1, x: 0, transition: { duration: 1.0 } },
   };
 
   return (
     <motion.div
-      className="flex justify-between items-center p-5 max-w-7xl mx-5 bg-white h-screen  rounded-lg my-5"
+      className="flex flex-col lg:flex-row justify-between items-center lg:items-start p-5 max-w-7xl mx-auto  bg-white rounded-lg my-28"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
     >
       {/* Left Side - Image */}
-      <motion.div className="w-1/2" variants={fadeInVariants}>
+      <motion.div className="w-full lg:w-1/2 mb-6 lg:mb-0" variants={fadeInVariants}>
         <Image
           src={imageUrl}
           alt={title}
           width={600}
           height={500}
-          className="rounded-lg ml-5"
+          className="rounded-lg mx-auto lg:ml-5"
         />
       </motion.div>
 
       {/* Right Side - Text */}
-      
-      <motion.div className=" px-6 max-w-lg" variants={fadeInRightVariants}>
-        
-        <h2 className="text-4xl font-bold mb-3 font-apfelregular">{title}</h2>
-        <p className="text-gray-600 mb-4 text-lg font-euclidlight">{description}</p>
-        <button className="bg-[#8878d7] text-white py-4 text-xl font-euclidmedium px-14 my-2 rounded-xl">
-          {buttonText}
-        </button>
+      <motion.div className="w-full lg:w-1/2 px-4 lg:px-6 max-w-lg" variants={fadeInRightVariants}>
+        <h2 className="text-3xl lg:text-4xl font-semibold text-[#101828] mb-3 font-apfelregular text-center lg:text-left">
+          {title}
+        </h2>
+        <p className="text-gray-600 mb-4 text-lg font-euclidlight text-center lg:text-left">
+          {description}
+        </p>
+        <p className="text-gray-600 mb-4 text-lg font-euclidlight text-center lg:text-left">
+        Give your clients easy access to your services, price list and calendar by creating a mini web page to take bookings. 
+        Clients can book via your social media or website. 
+        </p>
+        <div className="flex justify-center lg:justify-start">
+          <button className="bg-[#8878d7] text-white py-4 text-xl font-euclidmedium px-14 my-2 rounded-xl">
+            {buttonText}
+          </button>
+        </div>
       </motion.div>
     </motion.div>
   );
