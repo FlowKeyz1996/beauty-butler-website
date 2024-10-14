@@ -63,7 +63,7 @@ const BenefitSection = () => {
   return (
     <motion.div
       ref={ref}
-      className="w-full my-14 px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-12"
+      className="w-full my-14 px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-12  sm:flex-col-reverse"
     >
       {/* Left side - Image fades in from the left */}
       <motion.div

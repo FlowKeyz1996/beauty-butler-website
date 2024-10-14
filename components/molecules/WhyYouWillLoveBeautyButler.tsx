@@ -54,28 +54,40 @@ const WhyYouWillLoveBeautyButler: FC = () => {
         </h2>
 
         {/* Responsive Cards Grid */}
-        <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 bg-white">
-          {cardData.map((card, index) => (
-            <motion.div
-              key={index}
-              className={`bg-white p-4 sm:p-5 border border-gray-100 ${index === 0 || index === 3 ? 'border-l-0' : ''} ${index === 2 || index === 5 ? 'border-r-0' : ''} ${index < 3 ? 'border-t-0' : ''} ${index >= 3 ? 'border-b-0' : ''}`}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 * index, duration: 0.5 }}
-            >
-              <img
-                src={card.image}
-                alt={card.title}
-                className="w-full h-40 sm:h-48 object-contain mb-4"
-              />
-              <h3 className="text-lg sm:text-xl text-center font-semibold mb-2 font-apfelregular">
-                {card.title}
-              </h3>
-              <p className="text-sm sm:text-base text-gray-600 font-euclidlight text-center">
-                {card.description}
-              </p>
-            </motion.div>
-          ))}
+        <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-0 bg-white">
+          {cardData.map((card, index) => {
+            // Determine if the card is in the first row, last row, first column, or last column
+            const isFirstColumn = index % 3 === 0;
+            const isLastColumn = index % 3 === 2;
+            const isTopRow = index < 3;
+            const isBottomRow = index >= 3;
+
+            return (
+              <motion.div
+                key={index}
+                className={`bg-white p-4 sm:p-5 border border-gray-100
+                ${isFirstColumn ? 'border-l-0' : ''} 
+                ${isLastColumn ? 'border-r-0' : ''} 
+                ${isTopRow ? 'border-t-0' : ''} 
+                ${isBottomRow ? 'border-b-0' : ''}`}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 * index, duration: 0.5 }}
+              >
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className="w-full h-40 sm:h-48 object-contain mb-4"
+                />
+                <h3 className="text-lg sm:text-xl text-center font-semibold mb-2 font-apfelregular">
+                  {card.title}
+                </h3>
+                <p className="text-sm sm:text-base text-gray-600 font-euclidlight text-center">
+                  {card.description}
+                </p>
+              </motion.div>
+            );
+          })}
         </div>
 
         {/* Mobile Carousel */}

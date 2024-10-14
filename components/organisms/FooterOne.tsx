@@ -1,33 +1,33 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const FooterOne: React.FC = () => {
   return (
     <footer className="relative bg-[#8877D8] text-white py-24 mt-96 flex flex-col items-center">
       {/* Card positioned partially outside the footer */}
       <motion.div
-        className="bg-white shadow-lg border-2 border-[#8877D8] rounded-lg p-4 sm:p-6 md:p-8 w-[90%] sm:w-[80%] lg:w-[90%] absolute -top-90 sm:-top-11 md:-top-72 transform flex flex-col md:flex-row items-center justify-center"
+        className="bg-white shadow-lg border-2 border-[#8877D8] rounded-xl p-4 sm:p-6 md:p-8 w-[90%] sm:w-[80%] lg:w-[90%] absolute -top-80 sm:-top-48 transform flex flex-col md:flex-row items-center justify-center"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        style={{ marginTop: '100px' }} // Adds a huge margin on mobile
       >
         {/* Image Section */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-start mb-4 md:mb-0">
           <img
             src="/footertwoimg.svg"
             alt="Profile"
-            className="object-contain"
+            className="object-cover"
           />
         </div>
 
         {/* Description Section */}
-        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start">
-          <h2 className="text-[#101828] text-4xl sm:text-xl md:text-4xl font-bold mb-4 font-apfelregular">
-          Book your beauty and wellness needs in just a few clicks.
+        <div className="w-full md:w-2/3 flex flex-col mx-4 items-center md:items-start">
+          <h2 className="text-[#101828] text-lg sm:text-xl md:text-3xl font-bold mb-4 font-apfelregular">
+            Book your beauty and wellness needs in just a few clicks.
           </h2>
-          <p className="text-gray-700 text-center md:text-left mb-4 font-euclidlight text-sm sm:text-base md:text-lg">
-          Book on-demand beauty and wellness treatments delivered straight to your doorstep and manage your appointments efficiently!
+          <p className="text-[#475467] text-center md:text-left mb-4 font-euclidlight text-sm sm:text-base md:text-lg">
+            Book on-demand beauty and wellness treatments delivered straight to your doorstep and manage your appointments efficiently!
           </p>
           
           {/* Button with Image */}
@@ -42,9 +42,9 @@ const FooterOne: React.FC = () => {
 
       {/* Footer content */}
       <div className="container mx-auto px-4 mt-44 sm:mt-56 w-[90%] sm:w-[80%] lg:w-[90%] items-center">
-        <div className="w-[90%] sm:w-[80%] lg:w-[90%] mx-auto text-center">
+        <div className="w-full max-w-6xl mx-auto text-center">
           
-          <div className="my-10">
+          <div className="w-full my-10">
             {/* Input Field */}
             <div>
               <h3 className="text-left ml-6 sm:ml-32 text-2xl sm:text-3xl font-bold sm:top-12">

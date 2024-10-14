@@ -45,6 +45,11 @@ const FrequentlyAskedQuestions = () => {
           animate={formInView ? { x: 0, opacity: 1 } : {}}
           transition={{ duration: 1 }}
         >
+          <div className="my-5">
+          <h4 className="text-xl my-1 font-apfelregular font-semibold text-[#101828]">Have a question we have not answered? </h4>
+          <p className="font-euclidlight ">Your insights drive our evolution— ask us any question you have about Beauty Butler and we will answer them 😉.</p>
+          </div>
+          
           {/* Form Fields */}
           <form className="w-full space-y-4">
             <div className="flex flex-col md:flex-row md:space-x-4">
