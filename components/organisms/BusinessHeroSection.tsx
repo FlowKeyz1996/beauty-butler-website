@@ -3,13 +3,13 @@ import Image from "next/image";
 
 const BusinessHeroSection = () => {
   return (
-    <section className="relative flex flex-col justify-center items-center h-screen bg-[#8877D8]">
+    <section className="relative flex flex-col justify-center items-center h-screen lg:h-screen min-h-[90vh] bg-[#8877D8]">
       <div className="absolute bottom-0 left-0 w-full h-20 bg-white z-0"></div>
 
       <div className="relative z-10 container mx-auto p-8 flex flex-col lg:flex-row items-center lg:justify-between lg:space-x-8 h-full">
         {/* Left div with header and description */}
         <div className="lg:w-1/2 space-y-6 text-center lg:text-left text-white my-auto">
-          <h1 className="text-4xl lg:text-6xl  font-apfelregular leading-[3rem] lg:leading-[4rem]">
+          <h1 className="text-4xl lg:text-6xl font-apfelregular leading-[3rem] lg:leading-[4rem] mt-6 lg:mt-0">
             Unlock Your Beauty Concierge Experience
           </h1>
           <p className="text-xl lg:text-2xl font-normal font-euclidlight text-[#EAECF0]">
@@ -34,7 +34,7 @@ const BusinessHeroSection = () => {
 
         {/* Right div with an image */}
         <motion.div
-          className="lg:w-1/2 lg:mt-0 mt-5" // Adjust margin for small screens
+          className="lg:w-1/2 lg:mt-0 mt-5 mb-80 lg:mb-0" // Increased margin-bottom for mobile screens
           initial={{ y: 100, opacity: 0 }} // Slide from bottom to top
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -42,9 +42,9 @@ const BusinessHeroSection = () => {
           <Image
             src="/smallheroone.svg"
             alt="Business Growth"
-            width={700}
+            width={300}
             height={600}
-            className="mx-auto mb-3 lg:mb-0" // Reduce space between image and text
+            className="mx-auto w-full object-contain"
           />
         </motion.div>
 

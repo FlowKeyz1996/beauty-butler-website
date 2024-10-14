@@ -1,4 +1,3 @@
-// components/CoreValues.tsx
 import React from 'react';
 
 interface CoreValue {
@@ -46,7 +45,9 @@ const CoreValues: React.FC = () => {
     <section className="py-12 bg-[#F7F7ff]">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-10 font-apfelregular">Core Values</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        {/* For large screens, display in grid */}
+        <div className="hidden md:grid md:grid-cols-2 gap-8">
           {coreValuesData.slice(0, 2).map((value) => (
             <div
               key={value.id}
@@ -64,7 +65,8 @@ const CoreValues: React.FC = () => {
             </div>
           ))}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+        
+        <div className="hidden md:grid md:grid-cols-3 gap-8 mt-8">
           {coreValuesData.slice(2).map((value) => (
             <div
               key={value.id}
@@ -77,6 +79,26 @@ const CoreValues: React.FC = () => {
               />
               <div className="p-4">
                 <h3 className="text-xl font-semibold mb-2 font-apfelregular">{value.title}</h3>
+                <p className="text-[#475467] font-euclidlight">{value.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* For mobile view, display in flex row with horizontal scroll */}
+        <div className="md:hidden flex overflow-x-scroll space-x-4 pb-4">
+          {coreValuesData.map((value) => (
+            <div
+              key={value.id}
+              className="min-w-[250px] bg-white shadow-md overflow-hidden rounded-2xl flex flex-col justify-center items-center text-center"
+            >
+              <img
+                src={value.imageSrc}
+                alt={value.title}
+                className="w-24 h-24 object-contain my-4"
+              />
+              <div className="p-4">
+                <h3 className="text-2xl font-semibold mb-2 font-apfelregular">{value.title}</h3>
                 <p className="text-[#475467] font-euclidlight">{value.description}</p>
               </div>
             </div>
