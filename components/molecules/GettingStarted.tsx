@@ -36,7 +36,7 @@ const GettingStarted: React.FC = () => {
             <img
               src="/Device.svg"
               alt="Right Image"
-              className="w-[80%] md:w-[50%] h-full object-contain rounded-lg"
+              className="w-[80%] md:w-[59%] h-full object-contain rounded-lg relative top-7"
             />
           </div>
         </div>
@@ -45,38 +45,38 @@ const GettingStarted: React.FC = () => {
         <div className="w-full flex flex-col md:flex-row space-y-4 md:space-y-0 gap-4">
           <div className="w-full md:w-1/2 bg-[#f8f9fb] rounded-lg p-4 md:p-6 flex flex-col items-center">
             {/* Text Above Images */}
-            <h2 className="text-base md:text-2xl font-semibold mb-2 font-apfelregular text-[#1d2939] text-left">
+            <h2 className="text-base md:text-3xl font-semibold mb-2 font-apfelregular text-[#1d2939] text-left">
               Explore our extensive marketplace listings and categories.
             </h2>
             <div className="flex w-full">
               <img
                 src="/02.svg"
                 alt="Left Image"
-                className="w-[62%] h-full object-contain rounded-lg relative top-14"
+                className="w-[62%] h-full object-contain rounded-lg relative top-16"
               />
               <img
                 src="/Device2.svg"
                 alt="Right Image"
-                className="w-[55%] h-full object-contain rounded-lg"
+                className="w-[55%] h-full object-contain rounded-lg relative top-5"
               />
             </div>
           </div>
 
           <div className="w-full md:w-1/2 bg-[#f8f9fb] rounded-lg p-4 md:p-6 flex flex-col items-center">
             {/* Text Above Images */}
-            <h2 className="text-base md:text-2xl font-semibold mb-2 font-apfelregular text-[#1d2939] text-left">
+            <h2 className="text-base md:text-3xl font-semibold mb-2 font-apfelregular text-[#1d2939] text-left">
               Get Salon services from the butler in the comfort of your home.
             </h2>
             <div className="flex w-full justify-between">
               <img
                 src="/03.svg"
                 alt="Left Image"
-                className="w-[65%] h-full object-contain rounded-lg relative top-14"
+                className="w-[65%] h-full object-contain rounded-lg relative top-16"
               />
               <img
                 src="/device3.svg"
                 alt="Right Image"
-                className="w-[48%] h-full object-contain rounded-lg"
+                className="w-[48%] h-full object-contain rounded-lg relative top-5"
               />
             </div>
           </div>

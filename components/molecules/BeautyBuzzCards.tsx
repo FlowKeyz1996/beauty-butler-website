@@ -17,7 +17,7 @@ const BeautyBuzzyCards = () => {
       id: 1,
       header: 'A Must-Have for Every Beauty Enthusiast!',
       description: 'I’ve been using Beauty Butler for a few weeks now, and I must say, it’s an absolute game-changer! As someone who juggles a busy work schedule and a social life, finding time to book beauty treatments was always a hassle. But with Beauty Butler, everything is just a tap away.',
-      imageUrl: '/path/to/image1.jpg', // Replace with real image paths
+      imageUrl: '/iconhead.svg', // Replace with real image paths
       rating: 5,
       userName: 'Precious Adebayo',
     },
