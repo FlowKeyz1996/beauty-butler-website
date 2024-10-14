@@ -47,7 +47,7 @@ const BeautyCategories: React.FC = () => {
   return (
     <div className="container mx-auto ">
       <header className="text-center mb-10">
-        <h1 className="text-5xl  leading-10 tracking-normal font-semibold font-apfelregular text-[#101828]">Beauty Treatments At Your Doorstep</h1>
+        <h1 className="text-5xl  leading-10 tracking-normal  font-apfelregular text-[#101828]">Beauty Treatments At Your Doorstep</h1>
       </header>
 
       <div className="flex justify-center space-x-4 mb-8 font-semibold font-euclidlight text-[#101828]">
@@ -75,7 +75,7 @@ const BeautyCategories: React.FC = () => {
           <img
             src={selectedCategory.mainImage}
             alt="Main category"
-            className="w-full h-[100%] rounded-xl"
+            className="w-full h-[90%] object-cover rounded-2xl"
           />
         </div>
 

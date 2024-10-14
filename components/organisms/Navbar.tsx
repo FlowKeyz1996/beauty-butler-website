@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
           <button onClick={toggleMenu} className="text-gray-800 focus:outline-none">
             {/* Hamburger menu icon as an image */}
             <Image
-              src={isMenuOpen ? '/close-icon.svg' : '/menu-icon.svg'} // use appropriate image paths
+              src={isMenuOpen ? '/close-icon.svg' : '/hamburgermenu.svg'} // use appropriate image paths
               alt="Menu Icon"
               width={30}
               height={30}

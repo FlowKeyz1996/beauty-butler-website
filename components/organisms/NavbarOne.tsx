@@ -36,10 +36,11 @@ const NavbarOne: React.FC = () => {
             <div className="md:hidden flex items-center">
               <button onClick={toggleMenu} className="text-gray-800 focus:outline-none">
                 <Image
-                  src={isMenuOpen ? '/close-icon.svg' : '/menu-icon.svg'}
+                  src={isMenuOpen ? '/close-icon.svg' : '/hamburgermenu.svg'}
                   alt="Menu Icon"
                   width={25} // Reduced size for mobile
                   height={25}
+                  className='text-black'
                 />
               </button>
             </div>
