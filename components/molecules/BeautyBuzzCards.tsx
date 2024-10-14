@@ -66,7 +66,7 @@ const BeautyBuzzyCards = () => {
       </div>
 
       {/* Cards */}
-      <div className="relative w-2/3 h-3/4 flex items-center justify-center">
+      <div className="relative w-full max-w-xl sm:max-w-2xl md:max-w-3xl lg:max-w-4xl flex items-center justify-center">
         {cards.map((card, index) => {
           const isCurrent = index === currentIndex;
           const stackIndex = (index - currentIndex + cards.length) % cards.length;
@@ -74,7 +74,7 @@ const BeautyBuzzyCards = () => {
           return (
             <motion.div
               key={card.id}
-              className="absolute w-full h-2/3 bg-white rounded-lg shadow-lg p-6 flex flex-col items-start justify-between" // Changed h-full to h-2/3
+              className="absolute w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl h-auto bg-white rounded-lg shadow-lg p-6 flex flex-col items-start justify-between" // Ensuring responsiveness and auto height
               initial={{
                 scale: isCurrent ? 1 : 0.8 + 0.05 * stackIndex,
                 y: -10 * stackIndex,
@@ -93,7 +93,6 @@ const BeautyBuzzyCards = () => {
             >
               {/* Small Image Above Header */}
               <div className="flex items-center mb-2">
-                
                 <h2 className="text-xl font-bold font-apfelregular">{card.header}</h2>
               </div>
 
@@ -108,7 +107,7 @@ const BeautyBuzzyCards = () => {
                   alt={card.userName}
                   className="w-12 h-12 rounded-full mr-3"
                 />
-                
+
                 {/* User Name and Rating */}
                 <div className="text-left">
                   <p className="font-semibold">{card.userName}</p>
@@ -116,9 +115,7 @@ const BeautyBuzzyCards = () => {
                     {Array.from({ length: 5 }).map((_, i) => (
                       <FaStar
                         key={i}
-                        className={`mr-1 ${
-                          i < card.rating ? 'text-[#8877D8]' : 'text-gray-300'
-                        }`}
+                        className={`${i < card.rating ? 'text-[#8877D8]' : 'text-gray-300'} mr-1`}
                       />
                     ))}
                   </div>
@@ -131,7 +128,7 @@ const BeautyBuzzyCards = () => {
 
       {/* Left Arrow */}
       <button
-        className="absolute left-12 p-3 w-12 h-12 bg-gray-200 rounded-full shadow-md hover:bg-gray-300 z-20"
+        className="absolute left-4 sm:left-8 md:left-10 p-2 sm:p-3 w-10 h-10 sm:w-12 sm:h-12 bg-gray-200 rounded-full shadow-md hover:bg-gray-300 z-20"
         onClick={handlePrev}
       >
         <FaArrowLeft className="text-[#8877D8]" />
@@ -139,7 +136,7 @@ const BeautyBuzzyCards = () => {
 
       {/* Right Arrow */}
       <button
-        className="absolute right-12 p-3 w-12 h-12 bg-gray-200 rounded-full shadow-md hover:bg-gray-300 z-20"
+        className="absolute right-2 sm:right-8 md:right-2 p-2 sm:p-3 w-10 h-10 sm:w-12 sm:h-12 bg-gray-200 rounded-full shadow-md hover:bg-gray-300 z-20"
         onClick={handleNext}
       >
         <FaArrowRight className="text-[#8877D8]" />

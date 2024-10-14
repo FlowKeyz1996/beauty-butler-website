@@ -25,7 +25,7 @@ const MainFeaturesCards: React.FC = () => {
         {features.map((feature, index) => (
           <div 
             key={index} 
-            className="min-w-[280px] sm:min-w-0 bg-[#F8F9Fb] shadow-lg rounded-2xl border p-4 sm:p-6 flex flex-col items-center justify-between"
+            className="min-w-[280px] sm:min-w-0 bg-[#F8F9Fb]  rounded-2xl border p-4 sm:p-6 flex flex-col items-center justify-between"
           >
             {/* Header and Description */}
             <div>
@@ -42,7 +42,7 @@ const MainFeaturesCards: React.FC = () => {
               <img
                 src={feature.imageSrc}
                 alt={feature.title}
-                className="w-40 h-40 sm:w-48 sm:h-48 lg:w-52 lg:h-52 object-contain"
+                className="relative top-6 object-cover"
               />
             </div>
           </div>

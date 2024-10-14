@@ -23,8 +23,9 @@ const FeaturesSection = () => {
         <p className="text-xl max-w-lg text-[#475467] font-euclidlight">
           Beauty Butler helps you book appointments, retain <br />clients, get paid - all in one place.
         </p>
-       <div className="text-[#8878D8] my-5 font-euclidmedium">
+       <div className="text-[#8878D8] my-5 font-euclidmedium flex items-center ">
         <p className="text-xl">Learn More</p>
+        <img src="/arrow-right-02.svg" alt='arrow-image' className="mx-2"/>
        </div>
       </motion.div>
 

@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
     <footer className="relative bg-[#8877D8] text-white py-24 mt-96 flex flex-col items-center">
       {/* Card positioned partially outside the footer */}
       <motion.div
-        className="bg-white shadow-lg border-2 border-[#8877D8] rounded-xl p-4 sm:p-6 md:p-8 w-[90%] sm:w-[80%] lg:w-[90%] absolute -top-80 sm:-top-48 transform flex flex-col md:flex-row items-center justify-center"
+        className="bg-white border-2 border-[#8877D8] rounded-3xl p-4 sm:p-6 md:p-8 w-[95%] sm:w-[70%] md:w-[60%] lg:w-[80%]  absolute -top-80 sm:-top-48 transform flex flex-col md:flex-row items-center justify-center"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}

@@ -90,7 +90,7 @@ const CoreValues: React.FC = () => {
           {coreValuesData.map((value) => (
             <div
               key={value.id}
-              className="min-w-[250px] bg-white shadow-md overflow-hidden rounded-2xl flex flex-col justify-center items-center text-center"
+              className="min-w-[300px] bg-white shadow-md overflow-hidden rounded-2xl flex flex-col justify-center items-center text-center"
             >
               <img
                 src={value.imageSrc}

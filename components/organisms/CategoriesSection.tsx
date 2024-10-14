@@ -9,7 +9,7 @@ interface Category {
 
 const categories: Category[] = [
   { id: 1, imageSrc: '/heroimage.svg', text: 'Manicure & Pedicure' },
-  { id: 2, imageSrc: '/heroimage.svg', text: 'Hair Salons' },
+  { id: 2, imageSrc: '/categoriesimgtest.svg', text: 'Hair Salons' },
   { id: 3, imageSrc: '/heroimage.svg', text: 'Facials' },
   { id: 4, imageSrc: '/heroimage.svg', text: 'Waxing' },
   
