@@ -12,34 +12,38 @@ const categories: Category[] = [
   { id: 2, imageSrc: '/categoriesimgtest.svg', text: 'Hair Salons' },
   { id: 3, imageSrc: '/heroimage.svg', text: 'Facials' },
   { id: 4, imageSrc: '/heroimage.svg', text: 'Waxing' },
-  
+  { id: 5, imageSrc: '/heroimage.svg', text: 'Massage Therapy' },
+  { id: 6, imageSrc: '/categoriesimgtest.svg', text: 'Skincare Clinics' },
+  { id: 7, imageSrc: '/heroimage.svg', text: 'Spa Services' },
+  { id: 8, imageSrc: '/heroimage.svg', text: 'Body Treatments' },
+  { id: 9, imageSrc: '/categoriesimgtest.svg', text: 'Hair Removal' },
+  { id: 10, imageSrc: '/heroimage.svg', text: 'Makeup Artists' },
 ];
 
 const CategoriesSection: React.FC = () => {
   return (
-    
     <section className="my-9 py-9 bg-[#f7f7ff]">
       <div className="py-3 mx-auto max-w-[30%] sm:max-w-[80%] lg:max-w-[60%]">
-      <TagHeader text="Categories"/>
+        <TagHeader text="Categories" />
       </div>
-      
+
       {/* Animated Heading (Triggers when section is in view) */}
       <motion.h2
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        
-        className="text-5xl font-bold text-center my-5 font-apfelregular"
+        className="text-5xl font-semibold text-[#101828] text-center my-5 font-apfelregular tracking-wide"
       >
-       
         Elevating Businesses Like Yours
       </motion.h2>
-      <p className="font-euclidlight text-center text-2xl mb-7 text-[#475467]">Your One Stop Shop for Beauty and Wellness</p>
+      <p className="font-euclidlight text-center text-2xl mb-7 text-[#475467]">
+        Your One Stop Shop for Beauty and Wellness
+      </p>
 
       {/* Card and Text Container with Marquee Effect */}
       <motion.div
-        className="flex  overflow-hidden"
+        className="flex overflow-hidden"
         animate={{ x: ['100%', '-100%'] }}
         transition={{ repeat: Infinity, duration: 20, ease: 'linear', repeatType: 'mirror' }}
       >
@@ -47,7 +51,7 @@ const CategoriesSection: React.FC = () => {
           <div key={category.id} className="flex flex-col items-center min-w-[300px]">
             {/* Card */}
             <motion.div
-              className="bg-white rounded-t-full rounded-br-2xl rounded-bl-2xl overflow-hidden shadow-lg border-4 border-[#8877D8] w-[220px] h-[70%]" // Added rounded-b-md for bottom corners
+              className="bg-white rounded-t-full rounded-br-2xl rounded-bl-2xl overflow-hidden shadow-lg border-4 border-[#8877D8] w-[220px] h-[70%]"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >

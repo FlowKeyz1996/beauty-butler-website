@@ -3,9 +3,16 @@ import React from 'react';
 interface TagHeaderProps {
   text: string;
   position?: 'left' | 'center' | 'right';
+  paddingX?: string; // For horizontal padding (px-5)
+  paddingY?: string; // For vertical padding (py-1)
 }
 
-const TagHeader: React.FC<TagHeaderProps> = ({ text, position = 'center' }) => {
+const TagHeader: React.FC<TagHeaderProps> = ({
+  text,
+  position = 'center',
+  paddingX = 'px-5',
+  paddingY = 'py-1',
+}) => {
   let alignmentClass = 'mx-auto'; // Default is center
 
   if (position === 'left') {
@@ -15,7 +22,7 @@ const TagHeader: React.FC<TagHeaderProps> = ({ text, position = 'center' }) => {
   }
 
   return (
-    <div className={`bg-[#FFE8FA] text-center border border-[#FFC8F2] rounded-full items-center flex justify-center py-1 my-2 px-5 lg:max-w-[30%] ${alignmentClass}`}>
+    <div className={`bg-[#FFE8FA] text-center border border-[#FFC8F2] rounded-full items-center flex justify-center my-2 ${paddingX} ${paddingY} lg:max-w-[30%] ${alignmentClass}`}>
       <p className="font-euclidlight font-semibold text-[#475467]">{text}</p>
     </div>
   );

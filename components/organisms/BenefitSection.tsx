@@ -72,7 +72,7 @@ const BenefitSection = () => {
         className="w-full md:w-1/2 h-full flex justify-center"
       >
         <img
-          src="/benefitimage.svg"
+          src="/benefitlowimg.png"
           alt="provider-benefit-image"
           className="object-contain "
         />
@@ -97,10 +97,10 @@ const BenefitSection = () => {
         {/* Icons and text */}
         <div className="space-y-6">
           {items.map((item, index) => (
-            <div key={index} className="flex flex-col items-center md:items-start space-y-2 md:space-y-1">
-              <div className="flex items-center space-x-2">
+            <div key={index} className="flex flex-col items-center md:items-start space-y-2 md:space-y-1 max-w-lg">
+              <div className="flex items-center space-x-2 ">
                 <img src={item.imgSrc} alt={item.text} className="w-10 h-10" />
-                <p className="text-lg font-semibold font-apfelregular leading-7">{item.text}</p>
+                <p className="text-lg font-semibold font-apfelregular  leading-7">{item.text}</p>
               </div>
               <p className="text-md text-[#475467]  ml-10 md:ml-7 font-euclidlight leading-6">
                 {item.description}

@@ -9,6 +9,7 @@ const BusinessHeroSection = () => {
       <div className="relative z-10 container mx-auto p-4 sm:p-8 flex flex-col lg:flex-row items-center lg:justify-between lg:space-x-8 h-full">
         {/* Left div with header and description */}
         <div className="lg:w-1/2 space-y-4 sm:space-y-6 text-center lg:text-left text-white my-auto">
+        <div className="bg-white bg-opacity-20 backdrop-blur-lg rounded-full border w-[50%] font-euclidmedium py-2 px-5 items-center"><p className="text-white">Unlock your beauty bestie 💅🏾</p></div>
           <h1 className="text-3xl sm:text-4xl lg:text-6xl font-apfelregular leading-[2.5rem] sm:leading-[3rem] lg:leading-[4rem] mt-4 sm:mt-6 lg:mt-0">
             Unlock Your Beauty Concierge Experience
           </h1>

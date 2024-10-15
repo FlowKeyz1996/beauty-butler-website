@@ -17,13 +17,13 @@ const FooterOne: React.FC = () => {
           <img
             src="/footertwoimg.svg"
             alt="Profile"
-            className="object-cover"
+            className="object-contain h-[100%]"
           />
         </div>
 
         {/* Description Section */}
-        <div className="w-full md:w-2/3 flex flex-col mx-4 items-center md:items-start">
-          <h2 className="text-[#101828] text-lg sm:text-xl md:text-3xl font-bold mb-4 font-apfelregular">
+        <div className="w-full md:w-2/3 flex flex-col mx-2 items-center md:items-start">
+          <h2 className="text-[#101828] text-lg sm:text-xl md:text-4xl leading-[9rem] tracking-normal font-bold mb-4 font-apfelregular">
             Book your beauty and wellness needs in just a few clicks.
           </h2>
           <p className="text-[#475467] text-center md:text-left mb-4 font-euclidlight text-sm sm:text-base md:text-lg">
@@ -77,7 +77,7 @@ const FooterOne: React.FC = () => {
             
             <div className="flex-1 font-euclidmedium">
               <h3 className="font-bold mb-2 font-euclidlight text-[#C2C6e8]">PRODUCT</h3>
-              <ul>
+              <ul className="font-euclidlight">
                 <li>Customers</li>
                 <li>Service Provider</li>
               </ul>

@@ -19,7 +19,7 @@ export default function Home() {
   <WhyYouWillLoveBeautyButler />
   <BeautyCategories />
   <GettingStarted />
-  <BeautyBuzzyCards />
+  {/* <BeautyBuzzyCards /> */}
   <FrequentlyAskedQuestions />
   <FooterOne/>
 </div>

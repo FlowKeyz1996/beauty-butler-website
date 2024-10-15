@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
 
         {/* Description Section */}
         <div className="w-full md:w-2/3 flex flex-col mx-4 items-center md:items-start">
-          <h2 className="text-[#101828] text-lg sm:text-xl md:text-3xl font-bold mb-4 font-apfelregular">
+          <h2 className="text-[#101828] text-lg sm:text-xl md:text-2xl font-semibold mb-4 font-apfelregular">
             Shape the Future of Beauty, One Idea at a Time!
           </h2>
           <p className="text-[#475467] text-center md:text-left mb-4 font-euclidlight text-sm sm:text-base md:text-lg">
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
             {/* Product Section */}
             <div className="flex-1 font-euclidmedium">
               <h3 className="font-bold mb-2 font-euclidlight text-[#C2C6e8]">PRODUCT</h3>
-              <ul>
+              <ul className="font-euclidlight">
                 <li>Customers</li>
                 <li>Service Provider</li>
               </ul>
