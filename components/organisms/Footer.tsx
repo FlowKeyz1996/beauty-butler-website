@@ -116,7 +116,7 @@ const Footer: React.FC = () => {
             {/* Logos Section */}
             <div className="flex space-x-4 sm:space-x-8">
               <div className="w-10 h-10 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
-                <img src="/instagram.svg" alt="Logo 1" className="object-contain" />
+                <Link href="https://x.com/mybeautybutler?s=21&t=hj5cOxvYhYHM2OUwDyhVsA"><img src="/instagram.svg" alt="Logo 1" className="object-contain" /></Link>
               </div>
               <div className="w-10 h-10 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
                 <img src="/X.svg" alt="Logo 2" className="object-contain" />

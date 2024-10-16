@@ -23,15 +23,15 @@ const FooterOne: React.FC = () => {
 
         {/* Description Section */}
         <div className="w-full md:w-2/3 flex flex-col mx-2 items-center md:items-start">
-          <h2 className="text-[#101828] text-lg sm:text-xl md:text-4xl leading-[5rem] tracking-normal font-bold mb-4 font-apfelregular text-center md:text-left">
-            Book your beauty and wellness needs in just a few clicks.
+          <h2 className="text-[#101828] text-lg sm:text-xl md:text-2xl leading-8 sm:leading-[5rem] tracking-normal font-semibold mb-4 font-apfelregular text-center md:text-left">
+            Shape the Future of Beauty, One Idea at a Time!
           </h2>
           <p className="text-[#475467] text-center md:text-left mb-4 font-euclidlight text-sm sm:text-base md:text-lg">
-            Book on-demand beauty and wellness treatments delivered straight to your doorstep and manage your appointments efficiently!
+            Your insights drive our evolution—share your feature requests and help us create the ultimate beauty experience.
           </p>
-          
+
           {/* Button with Image */}
-          <div className="w-full flex justify-center md:justify-start mr-3 my-3">
+          <div className="w-full flex justify-center md:justify-start my-3">
             <button className="bg-[#8877D8] text-white px-6 sm:px-10 py-3 sm:py-5 rounded-xl flex items-center font-euclidlight font-semibold sm:text-base text-sm sm:w-auto w-full justify-center">
               <img src="/googleandapplepurple.svg" alt="Button Icon" className="mr-2 w-16" />
               Download App
@@ -47,7 +47,7 @@ const FooterOne: React.FC = () => {
           <div className="w-full my-10">
             {/* Input Field */}
             <div>
-              <h3 className="text-left ml-6 sm:ml-32 text-2xl sm:text-3xl font-apfelmittel sm:top-14 left-5 relative">
+              <h3 className="text-left ml-6 sm:ml-32 text-xl sm:text-2xl font-bold sm:top-14 relative">
                 For beauty tips and updates{' '}
                 <span className="font-euclidmedium text-xl font-normal text-[#8FF1EC]">
                   subscribe to our newsletter.
@@ -63,10 +63,10 @@ const FooterOne: React.FC = () => {
               <input
                 type="email"
                 placeholder="example@mail.com"
-                className="flex-grow p-3 border-t border-b border-l rounded-l-2xl border-gray-300 bg-[#8878D8] font-euclidmedium focus:outline-none"
+                className="flex-grow p-2 border-t border-b border-l rounded-l-2xl border-gray-300 bg-[#8878D8] font-euclidmedium focus:outline-none"
               />
               {/* Button with White Background */}
-              <button className="bg-white text-[#8877D8] px-9 font-euclidmedium py-3 border border-[#8877D8] rounded-r-xl">
+              <button className="bg-white text-[#8877D8] px-9 font-euclidmedium py-2 border border-[#8877D8] rounded-r-xl">
                 Subscribe
               </button>
             </div>
@@ -74,7 +74,6 @@ const FooterOne: React.FC = () => {
 
           {/* Footer Links */}
           <div className="flex flex-wrap justify-between text-left text-sm space-y-4 lg:space-y-0 w-[90%] sm:w-[80%] lg:w-[90%]">
-            
             <div className="flex-1 font-euclidmedium">
               <h3 className="font-bold mb-2 font-euclidlight text-[#C2C6e8]">PRODUCT</h3>
               <ul className="font-euclidlight">
@@ -94,7 +93,7 @@ const FooterOne: React.FC = () => {
             <div className="flex-1 font-euclidmedium">
               <h3 className="font-bold mb-2 text-[#C2C6e8]">LEGAL</h3>
               <ul className="font-euclidlight">
-               <Link href="/terms and condition"><li>Terms and Condition</li></Link> 
+                <Link href="/terms and condition"><li>Terms and Condition</li></Link> 
                 <Link href="/privacy"><li>Privacy Policy</li></Link>
               </ul>
             </div>
