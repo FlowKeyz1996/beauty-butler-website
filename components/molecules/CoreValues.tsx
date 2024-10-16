@@ -18,7 +18,7 @@ const coreValuesData: CoreValue[] = [
     id: 2,
     title: 'Ownership propels us forward',
     description: 'Owning your role means taking charge of your tasks and outcomes. We appreciate team members who are proactive, hold themselves accountable, and are dedicated to getting results, even when things get tough.',
-    imageSrc: '/corevaluetwo.svg',
+    imageSrc: '/self organization.svg',
   },
   {
     id: 3,
@@ -59,7 +59,7 @@ const CoreValues: React.FC = () => {
                 className="w-24 h-24 object-contain my-4"
               />
               <div className="p-4">
-                <h3 className="text-2xl font-semibold mb-2 font-apfelregular">{value.title}</h3>
+                <h3 className="text-2xl mb-2 font-apfelmittel">{value.title}</h3>
                 <p className="text-[#475467] font-euclidlight">{value.description}</p>
               </div>
             </div>
@@ -78,7 +78,7 @@ const CoreValues: React.FC = () => {
                 className="w-24 h-24 object-contain mb-4"
               />
               <div className="p-4">
-                <h3 className="text-xl font-semibold mb-2 font-apfelregular">{value.title}</h3>
+                <h3 className="text-xl  mb-2 font-apfelmittel">{value.title}</h3>
                 <p className="text-[#475467] font-euclidlight">{value.description}</p>
               </div>
             </div>

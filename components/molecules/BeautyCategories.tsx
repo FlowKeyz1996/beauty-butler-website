@@ -42,35 +42,39 @@ const imagesData: Record<string, ImageSet> = {
 
 const BeautyCategories: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<ImageSet>(imagesData.lashes);
-  const [activeCategory, setActiveCategory] = useState<string>('lashes'); 
+  const [activeCategory, setActiveCategory] = useState<string>('lashes');
 
   return (
-    <div className="container mx-auto ">
+    <div className="container mx-auto">
       <header className="text-center mb-10">
-        <h1 className="text-5xl  leading-10 tracking-normal  font-apfelmittel text-[#101828]">Beauty Treatments At Your Doorstep</h1>
+        <h1 className="text-5xl leading-10 tracking-normal font-apfelmittel text-[#101828]">
+          Beauty Treatments At Your Doorstep
+        </h1>
       </header>
 
+      {/* Category Buttons */}
       <div className="flex justify-center space-x-9 mb-8 font-euclidmedium text-[#101828]">
         {['lashes', 'makeup', 'hair', 'nails', 'spa'].map((category) => (
           <button
-          key={category}
-          className={`px-4 py-2 rounded-xl transition-colors duration-300 ${
-            activeCategory === category
-              ? 'bg-[#DADAFF] ' // Active button background and text color
-              : 'bg-transparent text-[#98A2b3]' // Inactive button style
-          }`}
+            key={category}
+            className={`px-4 py-2 rounded-xl transition-colors duration-300 ${
+              activeCategory === category
+                ? 'bg-[#DADAFF]'
+                : 'bg-transparent text-[#98A2b3]'
+            }`}
             onClick={() => {
-                setSelectedCategory(imagesData[category]);
-                setActiveCategory(category); // Set active category
-              }}
+              setSelectedCategory(imagesData[category]);
+              setActiveCategory(category);
+            }}
           >
             {category.charAt(0).toUpperCase() + category.slice(1)}
           </button>
         ))}
       </div>
 
+      {/* Main Image and Additional Images */}
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
-        {/* Main Image on the Left */}
+        {/* Main Image (Always Visible) */}
         <div className="lg:col-span-2">
           <img
             src={selectedCategory.mainImage}
@@ -79,9 +83,9 @@ const BeautyCategories: React.FC = () => {
           />
         </div>
 
-        {/* Three Images on the Right */}
-        <div className="lg:col-span-2 grid grid-cols-2 grid-rows-2 gap-4">
-          {/* Top image (Full width) */}
+        {/* Three Images on the Right (Hidden on Mobile) */}
+        <div className="hidden lg:grid lg:col-span-2 grid-cols-2 grid-rows-2 gap-4">
+          {/* Top Image */}
           <div className="col-span-2">
             <img
               src={selectedCategory.topImage}
@@ -89,7 +93,7 @@ const BeautyCategories: React.FC = () => {
               className="w-full h-auto rounded-lg"
             />
           </div>
-          {/* Bottom Left image */}
+          {/* Bottom Left Image */}
           <div>
             <img
               src={selectedCategory.bottomLeftImage}
@@ -97,7 +101,7 @@ const BeautyCategories: React.FC = () => {
               className="w-full h-auto rounded-lg"
             />
           </div>
-          {/* Bottom Right image */}
+          {/* Bottom Right Image */}
           <div>
             <img
               src={selectedCategory.bottomRightImage}

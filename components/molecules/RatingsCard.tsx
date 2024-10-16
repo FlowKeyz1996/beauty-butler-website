@@ -1,39 +1,33 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { FaStar } from "react-icons/fa";
 
 interface CardProps {
   id: number;
   rating: number;
+  title: string;
+  description: string;
   text: string;
+  imageUrl: string;
 }
 
 const cardsData: CardProps[] = [
-  { id: 1, rating: 5, text: "Amazing platform!" },
-  { id: 2, rating: 4, text: "Very useful for investments." },
-  { id: 3, rating: 3, text: "Good experience, but room for improvement." },
-  { id: 4, rating: 5, text: "Highly recommend!" },
-  { id: 5, rating: 4, text: "Reliable and easy to use." },
-  { id: 6, rating: 3, text: "Decent, but could be better." },
+  { id: 1, rating: 5, title: "A Must-Have for Every Beauty Enthusiast!", description: "I’ve been using Beauty Butler for a few weeks now, and I must say, it’s an absolute game-changer! As someone who juggles a busy work schedule and a social life, finding time to book beauty treatments was always a hassle. But with Beauty Butler, everything is just a tap away.", text: "Amazing platform!", imageUrl: "/iconhead.svg" },
+  { id: 2, rating: 4, title: "Very Useful", description: "Made investments much easier.", text: "Very useful for investments.", imageUrl: "https://via.placeholder.com/50" },
+  { id: 3, rating: 3, title: "Good, Needs Work", description: "There is some room for improvement.", text: "Good experience, but room for improvement.", imageUrl: "https://via.placeholder.com/50" },
+  { id: 4, rating: 5, title: "Highly Recommend", description: "This platform exceeded my expectations.", text: "Highly recommend!", imageUrl: "https://via.placeholder.com/50" },
+  { id: 5, rating: 4, title: "Reliable and Easy", description: "The platform is easy to use and reliable.", text: "Reliable and easy to use.", imageUrl: "https://via.placeholder.com/50" },
+  { id: 6, rating: 3, title: "Decent, but OK", description: "It’s decent but could be better.", text: "Decent, but could be better.", imageUrl: "https://via.placeholder.com/50" },
 ];
 
 const StarRating = ({ rating }: { rating: number }) => {
   return (
     <div className="flex space-x-1">
-      {[...Array(5)].map((_, i) => (
-        <svg
+      {Array.from({ length: 5 }).map((_, i) => (
+        <FaStar
           key={i}
-          xmlns="http://www.w3.org/2000/svg"
-          fill={i < rating ? "green" : "gray"} // Changed star color to green
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="w-8 h-8" // Larger star size
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M11.25 3.4l1.586 4.528 4.884.041c.356 0 .498.46.214.673l-3.842 2.925 1.267 4.702c.13.478-.411.875-.79.57L12 14.51l-3.568 2.929c-.378.305-.92-.092-.79-.57l1.268-4.702-3.842-2.925c-.283-.214-.141-.673.215-.673l4.884-.041L11.25 3.4z"
-          />
-        </svg>
+          className={`mr-1 ${i < rating ? 'text-[#8877D8]' : 'text-gray-300'}`}
+        />
       ))}
     </div>
   );
@@ -51,33 +45,72 @@ const RatingsCard = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      <h1 className="text-2xl font-bold mb-8">Customer Reviews</h1>
+    <div className="flex flex-col items-center justify-center h-[70%] my-24 bg-[#F7F7ff]">
+        <div className="flex items-center justify-center">
+      <h1 className="text-5xl my-9 font-apfelmittel text-[#101828]">Beauty Buzz</h1>
+      <img src="/beautybuzzicon.svg" alt="Icon" className="w-20 h-20 mr-2 mx-5" />
+      </div>
 
-      <div className="relative w-4/5 h-96 flex items-center justify-center"> {/* 80% of screen width */}
-        {/* Previous Button */}
+      <div className="relative w-4/5 h-full flex items-center justify-center">
+        {/* Previous Button (Left Image) */}
         <button
           onClick={handlePrev}
-          className="px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 mx-8" // Added margin for spacing
+          className="px-5 py-4 bg-[#Edecff]  rounded-full mx-8 flex items-center justify-center"
         >
-          Previous
+          <img
+            src="/reviewarrowleft.svg" // Replace this with your "previous" button image source
+            alt="Previous"
+            className="w-8 h-8"
+          />
         </button>
 
-        {/* Card */}
-        <div
+        {/* Animated Card */}
+        <motion.div
           key={cardsData[currentCard].id}
-          className="flex flex-col items-center justify-center bg-white p-8 rounded-lg shadow-lg w-full h-full transition-all duration-500 ease-in-out"
+          className="flex flex-col justify-center bg-white p-8 rounded-3xl mb-16  mt-8 w-full h-full transition-all"
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -100 }}
+          transition={{ duration: 0.5 }}
         >
-          <p className="text-lg mb-4 w-full text-center">{cardsData[currentCard].text}</p>
-          <StarRating rating={cardsData[currentCard].rating} />
-        </div>
+          {/* Header */}
+          <h2 className="text-3xl font-apfelmittel text-[#101828]">{cardsData[currentCard].title}</h2>
 
-        {/* Next Button */}
+          {/* Description */}
+          <p className="text-base my-4 font-euclidlight">{cardsData[currentCard].description}</p>
+
+          {/* Review Text */}
+          
+
+          {/* Image and Star Ratings in Flexbox */}
+          <div className="flex items-center space-x-4 my-7">
+            {/* Rounded Image */}
+            <img
+              src={cardsData[currentCard].imageUrl}
+              alt="User"
+              className="w-16 h-16 rounded-full"
+            />
+            
+
+            {/* Star Ratings */}
+            <div>
+            <p className="text-lg my-2 w-full text-center">{cardsData[currentCard].text}</p>
+            <StarRating rating={cardsData[currentCard].rating} />
+            </div>
+            
+          </div>
+        </motion.div>
+
+        {/* Next Button (Right Image) */}
         <button
           onClick={handleNext}
-          className="px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 mx-8" // Added margin for spacing
+          className="px-5 py-4 bg-[#Edecff]  rounded-full  mx-8 flex items-center justify-center"
         >
-          Next
+          <img
+            src="/reviewarrowright.svg" // Replace this with your "next" button image source
+            alt="Next"
+            className="w-8 h-8"
+          />
         </button>
       </div>
     </div>

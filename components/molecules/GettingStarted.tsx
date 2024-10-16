@@ -22,7 +22,7 @@ const GettingStarted: React.FC = () => {
         <div className="w-full mb-8 bg-[#f8f9fb] rounded-3xl border border-[#f2f4f7] flex flex-col p-4 md:p-6 md:flex-row md:justify-between">
           <div className="w-full flex flex-col items-center md:items-start mb-4 md:mb-0 md:w-1/2">
             {/* Left Div */}
-            <h2 className="text-base md:text-3xl font-semibold font-apfelregular text-[#1d2939] mb-2 text-center md:text-left">
+            <h2 className="text-base md:text-3xl  font-apfelregular text-[#1d2939] mb-2 text-center md:text-left">
               Download Beauty Butler: find the best beauty and wellness experts for you.
             </h2>
             <img
@@ -45,7 +45,7 @@ const GettingStarted: React.FC = () => {
         <div className="w-full flex flex-col md:flex-row space-y-4 md:space-y-0 gap-10 ">
           <div className="w-full md:w-1/2 bg-[#f8f9fb] rounded-3xl p-4 md:p-6 flex flex-col items-center border-[#f2f4f7]">
             {/* Text Above Images */}
-            <h2 className="text-base md:text-3xl font-semibold mb-2 font-apfelregular text-[#1d2939] text-center md:text-left">
+            <h2 className="text-base md:text-3xl  mb-2 font-apfelregular text-[#1d2939] text-center md:text-left">
               Explore our extensive marketplace listings and categories.
             </h2>
             <div className="flex w-full justify-between items-start rounded-3xl">
@@ -64,7 +64,7 @@ const GettingStarted: React.FC = () => {
 
           <div className="w-full md:w-1/2 bg-[#f8f9fb] rounded-3xl p-4 md:p-6 flex flex-col items-center border-[#f2f4f7]">
             {/* Text Above Images */}
-            <h2 className="text-base md:text-3xl font-semibold mb-2 font-apfelregular text-[#1d2939] text-center md:text-left">
+            <h2 className="text-base md:text-3xl mb-2 font-apfelregular text-[#1d2939] text-center md:text-left">
               Get Salon services from the butler in the comfort of your home.
             </h2>
             <div className="flex w-full justify-between items-start border-[#f2f4f7]">
