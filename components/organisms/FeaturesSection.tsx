@@ -14,7 +14,7 @@ const FeaturesSection = () => {
         viewport={{ once: false, amount: 0.2 }}  
       >
         <TagHeader text="Features" position="left"/>
-        <h2 className="text-5xl tracking-wide  leading-[3.5rem] font-semibold mb-4 font-apfelregular max-w-2xl">
+        <h2 className="text-5xl leading-[3.0rem] font-apfelmittel text-[#101828d] max-w-2xl my-2">
           A full solution to manage <br />and grow your business
         </h2>
         <p className="text-xl max-w-lg text-[#475467] font-euclidlight">
@@ -71,7 +71,7 @@ const FeaturesSection = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
           viewport={{ once: false, amount: 0.2 }}
         >
-          <div className="bg-[#8878d7] text-white p-5 min-w-[250px] rounded-2xl shadow-md">
+          <div className="bg-[#8878d7] text-white p-5 min-w-[250px] rounded-2xl">
             <h3 className="text-lg font-bold font-apfelregular my-2">Beauty Butler Marketplace</h3>
             <p className="text-sm font-euclidlight">Attract a flood of new customers with Beauty Butler. Your business will be effortlessly discoverable by your ideal clientele with our marketplace app and our clever algorithm.</p>
           </div>

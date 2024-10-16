@@ -43,13 +43,13 @@ const MarketplaceCard: React.FC<MarketplaceCardProps> = ({ imageUrl, title, desc
       {/* Right Side - Text */}
       <motion.div className="w-full lg:w-1/2 px-4 lg:px-6 max-w-lg" variants={fadeInRightVariants}>
         <TagHeader text="Our marketplace" position='left' paddingX=''/>
-        <h2 className="text-3xl lg:text-4xl font-semibold text-[#101828] mb-3 font-apfelregular text-center lg:text-left">
+        <h2 className="text-3xl lg:text-4xl text-[#101828] mb-3 font-apfelmittel text-center lg:text-left">
           {title}
         </h2>
-        <p className="text-[#101828] mb-4 text-lg font-euclidlight text-center lg:text-left">
+        <p className="text-[#475467] mb-4 text-lg font-euclidlight text-center lg:text-left">
           {description}
         </p>
-        <p className="text-gray-600 mb-4 text-lg font-euclidlight text-center lg:text-left">
+        <p className="text-[#475467] mb-4 text-lg font-euclidlight text-center lg:text-left">
         Give your clients easy access to your services, price list and calendar by creating a mini web page to take bookings. 
         Clients can book via your social media or website. 
         </p>

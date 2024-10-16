@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const FooterOne: React.FC = () => {
   return (
@@ -31,8 +32,8 @@ const FooterOne: React.FC = () => {
           
           {/* Button with Image */}
           <div className="w-full flex justify-center md:justify-start mr-3 my-3">
-            <button className="bg-[#8877D8] text-white px-6 sm:px-10 py-2 sm:py-3 rounded-xl flex items-center font-euclidlight font-semibold sm:text-base text-sm sm:w-auto w-full justify-center">
-              <img src="/googleandapplepurple.svg" alt="Button Icon" className="mr-2 w-10" />
+            <button className="bg-[#8877D8] text-white px-6 sm:px-10 py-3 sm:py-5 rounded-xl flex items-center font-euclidlight font-semibold sm:text-base text-sm sm:w-auto w-full justify-center">
+              <img src="/googleandapplepurple.svg" alt="Button Icon" className="mr-2 w-16" />
               Download App
             </button>
           </div>
@@ -46,7 +47,7 @@ const FooterOne: React.FC = () => {
           <div className="w-full my-10">
             {/* Input Field */}
             <div>
-              <h3 className="text-left ml-6 sm:ml-32 text-2xl sm:text-3xl font-bold sm:top-12">
+              <h3 className="text-left ml-6 sm:ml-32 text-2xl sm:text-3xl font-apfelmittel sm:top-14 left-5 relative">
                 For beauty tips and updates{' '}
                 <span className="font-euclidmedium text-xl font-normal text-[#8FF1EC]">
                   subscribe to our newsletter.
@@ -62,10 +63,10 @@ const FooterOne: React.FC = () => {
               <input
                 type="email"
                 placeholder="example@mail.com"
-                className="flex-grow p-2 border-t border-b border-gray-300 bg-[#8878D8] font-euclidmedium focus:outline-none"
+                className="flex-grow p-3 border-t border-b border-l rounded-l-2xl border-gray-300 bg-[#8878D8] font-euclidmedium focus:outline-none"
               />
               {/* Button with White Background */}
-              <button className="bg-white text-[#8877D8] px-9 font-euclidmedium py-2 border border-[#8877D8] rounded-r-xl">
+              <button className="bg-white text-[#8877D8] px-9 font-euclidmedium py-3 border border-[#8877D8] rounded-r-xl">
                 Subscribe
               </button>
             </div>
@@ -93,8 +94,8 @@ const FooterOne: React.FC = () => {
             <div className="flex-1 font-euclidmedium">
               <h3 className="font-bold mb-2 text-[#C2C6e8]">LEGAL</h3>
               <ul className="font-euclidlight">
-                <li>Terms and Condition</li>
-                <li>Privacy Policy</li>
+               <Link href="/terms and condition"><li>Terms and Condition</li></Link> 
+                <Link href="/privacy"><li>Privacy Policy</li></Link>
               </ul>
             </div>
 

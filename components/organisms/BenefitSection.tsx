@@ -87,7 +87,7 @@ const BenefitSection = () => {
         <div>
           <TagHeader text="Our Benefits" position='left'/>
         </div>
-        <h2 className="text-3xl md:text-4xl font-bold font-apfelregular max-w-lg leading-tight">
+        <h2 className="text-3xl md:text-4xl font-apfelmittel max-w-lg text-[#101828]">
           Take your beauty business to the next level
         </h2>
         <p className="text-base md:text-lg text-[#475467] font-euclidlight max-w-lg mx-auto md:mx-0">

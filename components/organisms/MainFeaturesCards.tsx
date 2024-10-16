@@ -20,7 +20,7 @@ const features: FeatureCard[] = [
 
 const MainFeaturesCards: React.FC = () => {
   return (
-    <div className="container mx-auto px-4 py-8 my-20 rounded-xl relative z-10 bottom-43">
+    <div className="container mx-auto px-4 py-8 my-20 rounded-3xl relative z-10 bottom-43">
       <div className="flex overflow-x-scroll sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 hide-scroll-bar">
         {features.map((feature, index) => (
           <div 

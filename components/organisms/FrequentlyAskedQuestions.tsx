@@ -48,7 +48,7 @@ const FrequentlyAskedQuestions = () => {
         >
           <div className="">
           <h4 className="text-xl my-1 font-apfelregular font-semibold text-[#101828]">Have a question we have not answered? </h4>
-          <p className="font-euclidlight my-2">Your insights drive our evolution— ask us any question you have about Beauty Butler and we will answer them 😉.</p>
+          <p className="font-euclidlight my-2 text-[#475467]">Your insights drive our evolution— ask us any question you have about Beauty Butler and we will answer them 😉.</p>
           </div>
           
           {/* Form Fields */}

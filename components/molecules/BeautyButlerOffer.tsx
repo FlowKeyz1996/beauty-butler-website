@@ -47,12 +47,12 @@ const BeautyButlerOffer: React.FC = () => {
         Beauty Butler is free to use. We only charge a small processing fee when you get paid.
       </p>
 
-      <div className="flex flex-col md:flex-row justify-start items-start w-full">
+      {/* <div className="flex flex-col md:flex-row justify-start items-start w-full">
         <h2 className="text-3xl font-semibold mt-5 mx-5 font-apfelregular text-center mb-2 md:mb-4">
           Beauty Butler Pro
         </h2>
        
-      </div>
+      </div> */}
     
       <div className="flex flex-col md:flex-row justify-center items-start gap-8 w-full h-[100%]">
         {/* Premium Butler Service */}

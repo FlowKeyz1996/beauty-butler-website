@@ -70,7 +70,7 @@ const HeroSection: React.FC = () => {
       <div className="relative top-7 z-10 h-full flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
         <div className="text-white px-6 md:px-16 max-w-[90%] md:max-w-2xl lg:max-w-4xl">
           <motion.h1
-            className="text-4xl md:text-6xl font-apfelregular font-bold w-full whitespace-nowrap my-6"
+            className="text-4xl md:text-6xl font-apfelmittel w-full whitespace-nowrap my-6"
             animate={controls}
             initial={{ opacity: 1, y: 0 }}
           >

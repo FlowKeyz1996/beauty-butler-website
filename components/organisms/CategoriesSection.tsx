@@ -52,7 +52,7 @@ const CategoriesSection: React.FC = () => {
             {/* Card */}
             <motion.div
               className="bg-white rounded-t-full rounded-br-2xl rounded-bl-2xl overflow-hidden shadow-lg border-4 border-[#8877D8] w-[220px] h-[70%]"
-              whileHover={{ scale: 1.05 }}
+              
               transition={{ duration: 0.3 }}
             >
               <img
