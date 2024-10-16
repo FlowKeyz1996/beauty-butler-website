@@ -13,6 +13,7 @@ const faqs: FAQ[] = [
   { question: 'Is Beauty Butler available in my area?', answer: 'Right now, we are available in Lagos, Nigeria! But don’t worry, we’re expanding to new cities soon. Subscribe to our newsletter to stay tuned for updates on our expansion plans.' },
   { question: 'How do I pay for services on Beauty Butler? ', answer: 'Once you’ve booked a service, the checkout page will show you a few simple payment options! You can pay using your in-app wallet, online via Paystack, or by card—whatever works best for you. Our payment structure is safe, simple and secure!'},
   { question: 'Is there a cancellation policy?', answer: 'Life happens, we feel you! If you need to cancel, just do it 24 hours in advance, and you’re all good. If you cancel within 24 hours, we’ll need to charge 80% of the service price. For no-shows, it’s the full price—so try not to miss out!' },
+  { question: 'Is there a cancellation policy?', answer: 'Life happens, we feel you! If you need to cancel, just do it 24 hours in advance, and you’re all good. If you cancel within 24 hours, we’ll need to charge 80% of the service price. For no-shows, it’s the full price—so try not to miss out!' },
 ];
 
 const FrequentlyAskedQuestions = () => {
@@ -45,9 +46,9 @@ const FrequentlyAskedQuestions = () => {
           animate={formInView ? { x: 0, opacity: 1 } : {}}
           transition={{ duration: 1 }}
         >
-          <div className="my-5">
+          <div className="">
           <h4 className="text-xl my-1 font-apfelregular font-semibold text-[#101828]">Have a question we have not answered? </h4>
-          <p className="font-euclidlight ">Your insights drive our evolution— ask us any question you have about Beauty Butler and we will answer them 😉.</p>
+          <p className="font-euclidlight my-2">Your insights drive our evolution— ask us any question you have about Beauty Butler and we will answer them 😉.</p>
           </div>
           
           {/* Form Fields */}
@@ -74,16 +75,16 @@ const FrequentlyAskedQuestions = () => {
             />
 
             {/* Image Inside the Form */}
-            <div className="w-full flex items-center mt-6">
+            <div className="w-full flex items-center mt-6 gap-32">
               <img
                 src="/faqimg.svg"
                 alt="Related Image"
-                className="w-full h-full object-cover"
+                className="w-[40%] h-[20%] object-contain"
               />
               {/* Button aligned with the start of the image */}
               <button
                 type="submit"
-                className="px-16 font-euclidmedium py-3 bg-[#8878d7] bottom-36 relative text-white rounded-xl transition"
+                className="px-16 font-euclidmedium py-3 bg-[#8878d7] bottom-14 relative text-white rounded-xl"
               >
                 Submit
               </button>

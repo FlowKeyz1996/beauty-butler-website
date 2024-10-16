@@ -49,7 +49,7 @@ const WhyYouWillLoveBeautyButler: FC = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="p-5 relative w-full bg-white top-8 sm:top-11">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl my-10 sm:my-10 text-center text-[#101828] font-apfelregular">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl my-10 sm:my-10 text-center text-[#101828] font-apfelmittel">
           Why You Will Love Beauty Butler
         </h2>
 

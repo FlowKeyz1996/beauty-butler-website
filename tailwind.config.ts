@@ -17,7 +17,8 @@ const config: Config = {
          euclidlight:["var(--font-euclid-light)"],
          euclidmedium:["var(--font-euclid-medium)"],
          euclidsemibold:["var(--font-euclid-semibold)"],
-         apfelregular:["var(--font-apfel-regular)"]
+         apfelregular:["var(--font-apfel-regular)"],
+         apfelmittel:["var(--font-apfel-mittel)"]
       }
     },
   },

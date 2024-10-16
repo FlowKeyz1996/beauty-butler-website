@@ -7,7 +7,7 @@ const GettingStarted: React.FC = () => {
       <TagHeader text="How it works" />
 
       {/* Header */}
-      <h1 className="text-3xl md:text-5xl text-[#101828] my-4 text-center md:leading-[rem] font-s font-apfelregular">
+      <h1 className="text-3xl md:text-5xl text-[#101828] my-4 text-center md:leading-[rem] font-s font-apfelmittel">
         Getting Started with Beauty Butler
       </h1>
 
@@ -19,7 +19,7 @@ const GettingStarted: React.FC = () => {
       {/* Cards */}
       <div className="w-[95%] md:w-[90%]">
         {/* Top Card */}
-        <div className="w-full mb-8 bg-[#f8f9fb] rounded-lg flex flex-col p-4 md:p-6 md:flex-row md:justify-between">
+        <div className="w-full mb-8 bg-[#f8f9fb] rounded-3xl border border-[#f2f4f7] flex flex-col p-4 md:p-6 md:flex-row md:justify-between">
           <div className="w-full flex flex-col items-center md:items-start mb-4 md:mb-0 md:w-1/2">
             {/* Left Div */}
             <h2 className="text-base md:text-3xl font-semibold font-apfelregular text-[#1d2939] mb-2 text-center md:text-left">
@@ -28,10 +28,10 @@ const GettingStarted: React.FC = () => {
             <img
               src="/01.svg"
               alt="Left Image"
-              className="w-[90%] md:w-[70%] h-auto object-contain rounded-lg relative top-5"
+              className="w-[90%] md:w-[50%] h-auto object-contain relative top-20"
             />
           </div>
-          <div className="w-full flex justify-center md:w-1/2">
+          <div className="w-full flex justify-center md:w-1/2 border border-[#f2f4f7]">
             {/* Right Div */}
             <img
               src="/Device.svg"
@@ -42,8 +42,8 @@ const GettingStarted: React.FC = () => {
         </div>
 
         {/* Bottom Two Cards */}
-        <div className="w-full flex flex-col md:flex-row space-y-4 md:space-y-0 gap-10">
-          <div className="w-full md:w-1/2 bg-[#f8f9fb] rounded-lg p-4 md:p-6 flex flex-col items-center">
+        <div className="w-full flex flex-col md:flex-row space-y-4 md:space-y-0 gap-10 ">
+          <div className="w-full md:w-1/2 bg-[#f8f9fb] rounded-3xl p-4 md:p-6 flex flex-col items-center border-[#f2f4f7]">
             {/* Text Above Images */}
             <h2 className="text-base md:text-3xl font-semibold mb-2 font-apfelregular text-[#1d2939] text-center md:text-left">
               Explore our extensive marketplace listings and categories.
@@ -62,12 +62,12 @@ const GettingStarted: React.FC = () => {
             </div>
           </div>
 
-          <div className="w-full md:w-1/2 bg-[#f8f9fb] rounded-lg p-4 md:p-6 flex flex-col items-center">
+          <div className="w-full md:w-1/2 bg-[#f8f9fb] rounded-3xl p-4 md:p-6 flex flex-col items-center border-[#f2f4f7]">
             {/* Text Above Images */}
             <h2 className="text-base md:text-3xl font-semibold mb-2 font-apfelregular text-[#1d2939] text-center md:text-left">
               Get Salon services from the butler in the comfort of your home.
             </h2>
-            <div className="flex w-full justify-between items-start">
+            <div className="flex w-full justify-between items-start border-[#f2f4f7]">
               <img
                 src="/03.svg"
                 alt="Left Image"
@@ -84,7 +84,7 @@ const GettingStarted: React.FC = () => {
 
         {/* Button */}
         <div className="w-full flex justify-center mt-10">
-          <button className="bg-[#8877D8] flex items-center px-6 py-3 rounded-xl shadow-md">
+          <button className="bg-[#8877D8] flex items-center px-6 py-3 rounded-xl">
             <img
               src="/googleandapplepurple.svg"
               alt="Download Icon"

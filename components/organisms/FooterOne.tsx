@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 
 const FooterOne: React.FC = () => {
   return (
@@ -23,7 +22,7 @@ const FooterOne: React.FC = () => {
 
         {/* Description Section */}
         <div className="w-full md:w-2/3 flex flex-col mx-2 items-center md:items-start">
-          <h2 className="text-[#101828] text-lg sm:text-xl md:text-4xl leading-[9rem] tracking-normal font-bold mb-4 font-apfelregular">
+          <h2 className="text-[#101828] text-lg sm:text-xl md:text-4xl leading-[5rem] tracking-normal font-bold mb-4 font-apfelregular text-center md:text-left">
             Book your beauty and wellness needs in just a few clicks.
           </h2>
           <p className="text-[#475467] text-center md:text-left mb-4 font-euclidlight text-sm sm:text-base md:text-lg">
@@ -31,8 +30,8 @@ const FooterOne: React.FC = () => {
           </p>
           
           {/* Button with Image */}
-          <div className="w-full flex justify-start mr-3 my-3">
-            <button className="bg-[#8877D8] text-white px-6 sm:px-10 py-2 sm:py-3 rounded-xl flex items-center font-euclidlight font-semibold">
+          <div className="w-full flex justify-center md:justify-start mr-3 my-3">
+            <button className="bg-[#8877D8] text-white px-6 sm:px-10 py-2 sm:py-3 rounded-xl flex items-center font-euclidlight font-semibold sm:text-base text-sm sm:w-auto w-full justify-center">
               <img src="/googleandapplepurple.svg" alt="Button Icon" className="mr-2 w-10" />
               Download App
             </button>

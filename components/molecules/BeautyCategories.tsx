@@ -47,10 +47,10 @@ const BeautyCategories: React.FC = () => {
   return (
     <div className="container mx-auto ">
       <header className="text-center mb-10">
-        <h1 className="text-5xl  leading-10 tracking-normal  font-apfelregular text-[#101828]">Beauty Treatments At Your Doorstep</h1>
+        <h1 className="text-5xl  leading-10 tracking-normal  font-apfelmittel text-[#101828]">Beauty Treatments At Your Doorstep</h1>
       </header>
 
-      <div className="flex justify-center space-x-4 mb-8 font-semibold font-euclidlight text-[#101828]">
+      <div className="flex justify-center space-x-9 mb-8 font-euclidmedium text-[#101828]">
         {['lashes', 'makeup', 'hair', 'nails', 'spa'].map((category) => (
           <button
           key={category}

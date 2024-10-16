@@ -40,6 +40,11 @@ const apfel = localFont({
   variable:"--font-apfel-regular",
   weight:"100, 300, 400, 500, 600"
 });
+const apfelmedium = localFont({
+  src:"./fonts/ApfelGrotezk-Mittel.otf",
+  variable:"--font-apfel-mittel",
+  weight:"100, 300, 400, 500, 600"
+});
 
 const epilogue = Epilogue({
   subsets:['latin'],
@@ -60,7 +65,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${epilogue.variable} ${euclidsemibold.variable} ${euclidlight.variable} ${euclidmedium.variable} ${euclid.variable} ${apfel.variable}  antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${epilogue.variable} ${euclidsemibold.variable} ${euclidlight.variable} ${euclidmedium.variable} ${euclid.variable} ${apfel.variable} ${apfelmedium.variable} antialiased`}
       >
         {children}
       </body>

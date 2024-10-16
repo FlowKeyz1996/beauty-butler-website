@@ -3,23 +3,25 @@ import Image from "next/image";
 
 const BusinessHeroSection = () => {
   return (
-    <section className="relative flex flex-col justify-center items-center h-screen lg:h-screen min-h-[90vh] bg-[#8877D8]">
+    <section className="relative flex flex-col justify-center items-center h-screen lg:h-screen min-h-screen bg-[#8877D8]">
       <div className="absolute bottom-0 left-0 w-full h-20 bg-white z-0"></div>
 
       <div className="relative z-10 container mx-auto p-4 sm:p-8 flex flex-col lg:flex-row items-center lg:justify-between lg:space-x-8 h-full">
         {/* Left div with header and description */}
-        <div className="lg:w-1/2 space-y-4 sm:space-y-6 text-center lg:text-left text-white my-auto">
-        <div className="bg-white bg-opacity-20 backdrop-blur-lg rounded-full border w-[50%] font-euclidmedium py-2 px-5 items-center"><p className="text-white">Unlock your beauty bestie 💅🏾</p></div>
-          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-apfelregular leading-[2.5rem] sm:leading-[3rem] lg:leading-[4rem] mt-4 sm:mt-6 lg:mt-0">
+        <div className="lg:w-1/2 space-y-4 sm:space-y-6 text-center lg:text-left text-white flex flex-col justify-center items-center lg:items-start lg:justify-center">
+          <div className="bg-white bg-opacity-20 backdrop-blur-lg rounded-full border w-[50%] sm:w-[45%] font-euclidmedium font- py-2 px-4 items-center text-center lg:text-left">
+            <p className="text-white text-sm sm:text-base">Your new beauty bestie💅🏾</p>
+          </div>
+          <h1 className="text-2xl sm:text-4xl lg:text-6xl font-apfelmittel leading-[2rem] sm:leading-[3rem] lg:leading-[4rem] mt-4 sm:mt-6 lg:mt-0">
             Unlock Your Beauty Concierge Experience
           </h1>
-          <p className="text-lg sm:text-xl lg:text-2xl font-normal font-euclidlight text-[#EAECF0]">
+          <p className="text-base sm:text-xl lg:text-2xl font-normal font-euclidlight text-[#EAECF0]">
             Your Personal Beauty Butler Awaits - Delivered Right To Your Doorstep
           </p>
 
-          {/* Call to action button for large screens */}
-          <div className="hidden lg:flex items-center justify-center lg:justify-start">
-            <button className="flex items-center justify-center bg-white text-[#8877D8] text-lg sm:text-xl font-euclidmedium py-3 sm:py-4 px-6 rounded-xl">
+          {/* Call to action button for all screens */}
+          <div className="flex items-center justify-center lg:justify-start">
+            <button className="flex items-center justify-center bg-white text-[#8877D8] text-base sm:text-lg font-euclidmedium py-3 sm:py-4 px-6 rounded-xl">
               <div className="flex items-center space-x-3">
                 <Image
                   src="/appleandgoogle.svg"
@@ -27,7 +29,7 @@ const BusinessHeroSection = () => {
                   width={80}
                   height={24}
                 />
-                <span className="ml-3 font-euclid">Download App</span>
+                <span className="ml-3 font-euclidmedium">Download App</span>
               </div>
             </button>
           </div>
@@ -35,7 +37,7 @@ const BusinessHeroSection = () => {
 
         {/* Right div with an image */}
         <motion.div
-          className="lg:w-1/2 lg:mt-0 mt-5 mb-20 sm:mb-40 lg:mb-0"
+          className="lg:w-1/2 lg:mt-0 mt-5 mb-10 lg:mb-0 flex justify-center"
           initial={{ y: 100, opacity: 0 }} // Slide from bottom to top
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -48,21 +50,6 @@ const BusinessHeroSection = () => {
             className="mx-auto w-full object-contain"
           />
         </motion.div>
-
-        {/* Call to action button for small screens (under the image) */}
-        <div className="lg:hidden mt-3 flex justify-center">
-          <button className="flex items-center justify-center bg-white text-[#8877D8] text-lg sm:text-xl font-euclidmedium py-3 sm:py-4 px-6 rounded-xl">
-            <div className="flex items-center space-x-3">
-              <Image
-                src="/appleandgoogle.svg"
-                alt="Icon"
-                width={80}
-                height={24}
-              />
-              <span className="ml-3">Download App</span>
-            </div>
-          </button>
-        </div>
       </div>
     </section>
   );
