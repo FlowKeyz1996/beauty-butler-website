@@ -1,4 +1,3 @@
-// components/MarketplaceCard.tsx
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
@@ -24,13 +23,13 @@ const MarketplaceCard: React.FC<MarketplaceCardProps> = ({ imageUrl, title, desc
 
   return (
     <motion.div
-      className="flex flex-col lg:flex-row justify-between items-center lg:items-start p-5 max-w-7xl mx-auto  bg-white rounded-lg my-28"
+      className="flex flex-col-reverse lg:flex-row justify-between items-center lg:items-start p-5 max-w-7xl mx-auto bg-white rounded-lg my-28"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
     >
       {/* Left Side - Image */}
-      <motion.div className="w-full lg:w-1/2 mb-6 lg:mb-0" variants={fadeInVariants}>
+      <motion.div className="w-full lg:w-1/2 mb-6 lg:mb-0 mt-10 lg:mt-0" variants={fadeInVariants}>
         <Image
           src={imageUrl}
           alt={title}

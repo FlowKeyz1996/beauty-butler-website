@@ -34,11 +34,11 @@ const Footer: React.FC = () => {
             className="w-full h-20 sm:h-24 p-2 border border-gray-300 rounded-md mb-4 md:w-[90%] lg:w-[90%] font-euclidlight"
             placeholder="Tell us the features you’d love to see on Beauty Butler"
           />
-          <div className="w-full flex mr-40 justify-end">
-            <button className="bg-[#8877D8] font-euclidmedium text-white px-6 sm:px-14 py-2 sm:py-3 rounded-xl mr-9">
-              Submit
-            </button>
-          </div>
+         <div className="w-full flex justify-center md:justify-end">
+  <button className="bg-[#8877D8] font-euclidmedium text-white px-6 sm:px-14 py-3 sm:py-4 rounded-xl w-full sm:w-auto">
+    Submit
+  </button>
+</div>
         </div>
       </motion.div>
 
@@ -63,41 +63,45 @@ const Footer: React.FC = () => {
               Subscribe
             </button></div>
           </div>
-          <div className="flex flex-wrap justify-between text-left text-sm space-y-4 lg:space-y-0 w-full" >
-            
-            {/* Product Section */}
-            <div className="flex-1 font-euclidmedium">
-              <h3 className="font-bold mb-2 font-euclidlight text-[#C2C6e8]">PRODUCT</h3>
-              <ul className="font-euclidlight">
-                <li>Customers</li>
-                <li>Service Provider</li>
-              </ul>
-            </div>
-            {/* Company Section */}
-            <div className="flex-1 font-euclidmedium">
-              <h3 className="font-bold mb-2  text-[#C2C6e8]">COMPANY</h3>
-              <ul className="font-euclidlight">
-                <li>About Us</li>
-                <li>Blog</li>
-              </ul>
-            </div>
-            {/* Legal Section */}
-            <div className="flex-1 font-euclidmedium">
-              <h3 className="font-bold mb-2 text-[#C2C6e8]">LEGAL</h3>
-              <ul className="font-euclidlight">
-               <Link href="/"><li>Terms and Condition</li></Link> 
-                <Link href="/privacy"><li>Privacy Policy</li></Link>
-              </ul>
-            </div>
-            {/* Contact Us Section */}
-            <div className="flex-1 font-euclidmedium">
-              <h3 className="font-bold mb-2 text-[#C2C6e8]">CONTACT US</h3>
-              <ul className="font-euclidlight">
-                <li>hello@mybeautybutler@gmail.com</li>
-               
-              </ul>
-            </div>
-          </div>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:flex lg:flex-wrap lg:justify-between text-left text-sm w-full">
+  
+  {/* Product Section */}
+  <div className="flex-1 font-euclidmedium">
+    <h3 className="font-bold mb-2 font-euclidlight text-[#C2C6e8]">PRODUCT</h3>
+    <ul className="font-euclidlight">
+      <li>Customers</li>
+      <li>Service Provider</li>
+    </ul>
+  </div>
+  
+  {/* Company Section */}
+  <div className="flex-1 font-euclidmedium">
+    <h3 className="font-bold mb-2 text-[#C2C6e8]">COMPANY</h3>
+    <ul className="font-euclidlight">
+      <li>About Us</li>
+      <li>Blog</li>
+    </ul>
+  </div>
+  
+  {/* Legal Section */}
+  <div className="flex-1 font-euclidmedium">
+    <h3 className="font-bold mb-2 text-[#C2C6e8]">LEGAL</h3>
+    <ul className="font-euclidlight">
+      <Link href="/"><li>Terms and Condition</li></Link> 
+      <Link href="/privacy"><li>Privacy Policy</li></Link>
+    </ul>
+  </div>
+  
+  {/* Contact Us Section */}
+  <div className="flex-1 font-euclidmedium">
+    <h3 className="font-bold mb-2 text-[#C2C6e8]">CONTACT US</h3>
+    <ul className="font-euclidlight">
+      <li>hello@mybeautybutler@gmail.com</li>
+    </ul>
+  </div>
+
+</div>
+
 
           {/* Faint Line */}
           <div className="mt-8 w-full h-[1px] bg-gray-400 mx-auto max-w-6xl"></div>

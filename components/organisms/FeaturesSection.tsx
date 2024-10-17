@@ -30,7 +30,7 @@ const FeaturesSection = () => {
 
       {/* Features Card */}
       <motion.div
-        className="md:w-1/2 bg-[#EDECFF] p-6 rounded-lg mt-10 md:mt-0 relative h-[420px] w-[500px] overflow-visible"
+        className="md:w-1/2 bg-[#EDECFF] p-6 rounded-lg mt-10 md:mt-0 relative md:h-[420px] h-[320px] w-[500px] overflow-visible mb-40 md:mb-0"
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.3 }}
@@ -80,7 +80,7 @@ const FeaturesSection = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
           viewport={{ once: false, amount: 0.2 }}
         >
-          <div className="bg-[#8878d7] text-white p-5 min-w-[90%] rounded-2xl shadow-md mr-10">
+          <div className="bg-[#8878d7] text-white p-5 min-w-[90%] rounded-2xl  mr-10 shadow-md ">
             <h3 className="text-lg font-bold font-apfelregular my-2">
               Beauty Butler Marketplace
             </h3>
@@ -88,7 +88,7 @@ const FeaturesSection = () => {
               Attract a flood of new customers with Beauty Butler. Your business will be effortlessly discoverable by your ideal clientele with our marketplace app and our clever algorithm.
             </p>
           </div>
-          <div className="bg-[#8878d7] text-white p-4 min-w-[90%] rounded-2xl shadow-md mr-10">
+          <div className="bg-[#8878d7] text-white p-4 min-w-[90%] rounded-2xl  ">
             <h3 className="text-xl font-bold font-apfelregular my-2">Online Booking</h3>
             <p className="text-sm font-euclidlight">
               Give your clients easy access to your services, price list and calendar by creating a mini web page to take bookings. Clients can book via your social media or website.
