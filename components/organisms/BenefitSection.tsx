@@ -63,7 +63,7 @@ const BenefitSection = () => {
   return (
     <motion.div
       ref={ref}
-      className="w-full my-14 px-4 py-4 flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-12  sm:flex-col-reverse"
+      className="w-full my-14 px-4 py-4 flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-12 sm:flex-col-reverse"
     >
       {/* Left side - Image fades in from the left */}
       <motion.div
@@ -82,10 +82,10 @@ const BenefitSection = () => {
       <motion.div
         initial={{ opacity: 0, x: 100 }}
         animate={controlRight}
-        className="w-full md:w-1/2 h-full flex flex-col space-y-2 justify-center text-center md:text-left"
+        className="w-full md:w-1/2 h-full flex flex-col space-y-3 justify-center text-left"
       >
-        <div  className="">
-          <TagHeader text="Our Benefits" position='left'/>
+        <div className="">
+          <TagHeader text="Our Benefits" position="left" />
         </div>
         <h2 className="text-3xl md:text-4xl font-apfelmittel max-w-lg text-[#101828]">
           Take your beauty business to the next level
@@ -94,24 +94,25 @@ const BenefitSection = () => {
           Our all-in-one management software automates scheduling, manages customer data, processes payments, and more.
         </p>
 
-        <div className="space-y-6">
-  {items.map((item, index) => (
-    <div 
-      key={index} 
-      className="flex flex-col items-center md:items-start text-center md:text-left space-y-2 md:space-y-1 max-w-lg"
-    >
-      <div className="flex items-center justify-center md:justify-start space-x-2 ">
-        <img src={item.imgSrc} alt={item.text} className="w-10 h-10" />
-        <p className="text-lg font-apfelmittel leading-7">
-          {item.text}
-        </p>
-      </div>
-      <p className="text-md text-[#475467] ml-0 md:ml-7 font-euclidlight leading-6">
-        {item.description}
-      </p>
-    </div>
-  ))}
-</div>
+        {/* Benefits List */}
+        <div className="space-y-6 md:space-y-0 overflow-x-auto">
+          <div className="flex flex-row md:flex-col items-start space-x-6 md:space-x-0">
+            {items.map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-shrink-0 flex-col items-start text-left space-y-2 md:space-y-1 max-w-lg"
+              >
+                <div className="flex items-center justify-start space-x-2 my-1">
+                  <img src={item.imgSrc} alt={item.text} className="w-10 h-10" />
+                  <p className="text-lg font-apfelmittel leading-7">{item.text}</p>
+                </div>
+                <p className="text-md text-[#475467] ml-10 font-euclidlight leading-6">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
       </motion.div>
     </motion.div>
   );

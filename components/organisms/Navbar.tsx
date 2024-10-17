@@ -29,10 +29,10 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">
-      <div className="container mx-auto px-4 flex justify-between items-center py-4">
-        {/* Logo, Nav Links and Hamburger Menu (inside the same border) */}
-        <div className="flex justify-between items-center w-full md:w-4/5 shadow-2xl rounded-full p-4 bg-white bg-opacity-20 backdrop-blur-lg border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent h-20"> {/* Set a height for the navbar */}
+      <div className="container mx-auto px-4 flex justify-between items-center h-full"> {/* Ensure the container uses the full navbar height */}
+        {/* Logo, Nav Links, and Hamburger Menu (inside the same border) */}
+        <div className="flex justify-between items-center w-full md:w-4/5 shadow-2xl rounded-full p-4 bg-white bg-opacity-20 backdrop-blur-lg border h-full">
           {/* Conditional Logo */}
           <div className="text-2xl font-bold">
             {isScrolled ? (
@@ -71,10 +71,10 @@ const Navbar: React.FC = () => {
           </div>
         </div>
 
-        {/* Button (outside the shadow div) */}
-        <div className="hidden md:block">
+        {/* Button (outside the shadow div, same height as navbar) */}
+        <div className="hidden md:block h-full flex items-center"> {/* Ensure the button wrapper has full height */}
           <Link href="/customers">
-            <button className="bg-[#FFC8F2] text-black p-5 px-7 rounded-xl font-euclid">
+            <button className="bg-[#FFC8F2] text-black px-7 rounded-2xl text-2xl font-euclidmedium h-full flex items-center justify-center"> {/* Use h-full for the button and flex for centering */}
               For Customers
             </button>
           </Link>

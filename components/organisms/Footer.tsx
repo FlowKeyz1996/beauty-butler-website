@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="relative bg-[#8877D8] text-white py-24 mt-96 flex flex-col items-center">
+    <footer className="relative bg-[#8877D8] text-white py-24 mt-28 flex flex-col items-center">
       {/* Card positioned partially outside the footer */}
       <motion.div
         className="bg-white border-2 border-[#8877D8] rounded-3xl p-4 sm:p-6 md:p-8 w-[95%] sm:w-[70%] md:w-[60%] lg:w-[80%]  absolute -top-80 sm:-top-48 transform flex flex-col md:flex-row items-center justify-center"
@@ -49,17 +49,17 @@ const Footer: React.FC = () => {
           <div className="w-full my-10">
             {/* Input Field */}
             <div>
-            <h3 className="text-left ml-32 relative text-3xl font-bold top-12">For beauty tips and updates <span className="font-euclidmedium text-xl font-normal text-[#8FF1EC]">subscribe to our newsletter.</span></h3>
+            <h3 className="text-left ml-32 relative text-3xl font-bold top-12">For beauty tips and updates <span className="font-euclidmedium text-3xl font-normal text-[#8FF1EC]">subscribe to our newsletter.</span></h3>
           </div>
           <div className=" flex items-center justify-center">
             <img src="/footerinputimg.svg" alt="footer_input_img"></img>
             <input
               type="email"
               placeholder="example@mail.com"
-              className="flex-grow p-2  border-t border-b border-gray-300 bg-[#8878D8] font-euclidmedium focus:outline-none"
+              className="flex-grow p-4  border-t border-b border-gray-300 bg-[#8878D8] font-euclidmedium focus:outline-none"
             />
             {/* Button with White Background */}
-            <button className="bg-white text-[#8877D8] px-9 font-euclidmedium py-2 border border-[#8877D8] rounded-r-xl">
+            <button className="bg-white text-[#8877D8] px-9 font-euclidmedium py-4 border border-[#8877D8] rounded-r-xl">
               Subscribe
             </button></div>
           </div>
@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
     <h3 className="font-bold mb-2 font-euclidlight text-[#C2C6e8]">PRODUCT</h3>
     <ul className="font-euclidlight">
       <li>Customers</li>
-      <li>Service Provider</li>
+      <li>Business</li>
     </ul>
   </div>
   
@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
   <div className="flex-1 font-euclidmedium">
     <h3 className="font-bold mb-2 text-[#C2C6e8]">LEGAL</h3>
     <ul className="font-euclidlight">
-      <Link href="/"><li>Terms and Condition</li></Link> 
+      <Link href="/"><li>Terms and Conditions</li></Link> 
       <Link href="/privacy"><li>Privacy Policy</li></Link>
     </ul>
   </div>
@@ -120,7 +120,7 @@ const Footer: React.FC = () => {
             {/* Logos Section */}
             <div className="flex space-x-4 sm:space-x-8">
               <div className="w-10 h-10 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
-                <Link href="https://x.com/mybeautybutler?s=21&t=hj5cOxvYhYHM2OUwDyhVsA"><img src="/instagram.svg" alt="Logo 1" className="object-contain" /></Link>
+                <Link href="https://www.instagram.com/mybeautybutler?igsh=MWw1YXdwOTQycjhxYw=="><img src="/instagram.svg" alt="Logo 1" className="object-contain" /></Link>
               </div>
               <div className="w-10 h-10 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
                 <img src="/X.svg" alt="Logo 2" className="object-contain" />

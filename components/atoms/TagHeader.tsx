@@ -22,7 +22,7 @@ const TagHeader: React.FC<TagHeaderProps> = ({
   }
 
   return (
-    <div className={`bg-[#FFE8FA] text-center border border-[#FFC8F2] rounded-full items-center flex justify-center my-2 ${paddingX} ${paddingY} lg:max-w-[30%] ${alignmentClass}`}>
+    <div className={`bg-[#FFE8FA] text-center border border-[#FFC8F2] rounded-full items-center flex justify-center  ${paddingX} ${paddingY} lg:max-w-[30%] ${alignmentClass}`}>
       <p className="font-euclidlight font-semibold text-[#475467]">{text}</p>
     </div>
   );

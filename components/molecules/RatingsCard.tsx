@@ -46,70 +46,60 @@ const RatingsCard = () => {
 
   return (
     <div className="flex flex-col items-center justify-center h-[70%] my-24 bg-[#F7F7ff]">
-        <div className="flex items-center justify-center">
-      <h1 className="text-5xl my-9 font-apfelmittel text-[#101828]">Beauty Buzz</h1>
-      <img src="/beautybuzzicon.svg" alt="Icon" className="w-20 h-20 mr-2 mx-5" />
+      <div className="flex items-center justify-center">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl my-9 font-apfelmittel text-[#101828] text-center">Beauty Buzz</h1>
+        <img src="/beautybuzzicon.svg" alt="Icon" className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 mr-2 mx-5" />
       </div>
 
-      <div className="relative w-4/5 h-full flex items-center justify-center">
-        {/* Previous Button (Left Image) */}
+      <div className="relative w-full sm:w-4/5 md:w-4/5 lg:w-3/5 xl:w-2/3 flex items-center justify-center">
+        {/* Previous Button */}
         <button
           onClick={handlePrev}
-          className="px-5 py-4 bg-[#Edecff]  rounded-full mx-8 flex items-center justify-center"
+          className="px-3 py-3 sm:px-5 sm:py-4 bg-[#Edecff] rounded-full mx-4 sm:mx-8 flex items-center justify-center"
         >
           <img
-            src="/reviewarrowleft.svg" // Replace this with your "previous" button image source
+            src="/reviewarrowleft.svg"
             alt="Previous"
-            className="w-8 h-8"
+            className="w-6 h-6 sm:w-8 sm:h-8"
           />
         </button>
 
         {/* Animated Card */}
         <motion.div
           key={cardsData[currentCard].id}
-          className="flex flex-col justify-center bg-white p-8 rounded-3xl mb-16  mt-8 w-full h-full transition-all"
+          className="flex flex-col justify-center bg-white p-4 sm:p-6 md:p-8 rounded-3xl mb-8 sm:mb-12 lg:mb-16 mt-4 w-[90%] sm:w-4/5 md:w-4/5 lg:w-full xl:w-full h-auto lg:h-auto transition-all"
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.5 }}
         >
-          {/* Header */}
-          <h2 className="text-3xl font-apfelmittel text-[#101828]">{cardsData[currentCard].title}</h2>
+          <h2 className="text-2xl sm:text-3xl font-apfelmittel text-[#101828]">{cardsData[currentCard].title}</h2>
+          <p className="text-sm sm:text-base my-4 font-euclidlight">{cardsData[currentCard].description}</p>
 
-          {/* Description */}
-          <p className="text-base my-4 font-euclidlight">{cardsData[currentCard].description}</p>
-
-          {/* Review Text */}
-          
-
-          {/* Image and Star Ratings in Flexbox */}
-          <div className="flex items-center space-x-4 my-7">
-            {/* Rounded Image */}
+          <div className="flex items-center space-x-4 my-4 sm:my-6">
             <img
               src={cardsData[currentCard].imageUrl}
               alt="User"
-              className="w-16 h-16 rounded-full"
+              className="w-12 h-12 sm:w-16 sm:h-16 rounded-full"
             />
-            
-
-            {/* Star Ratings */}
             <div>
-            <p className="text-lg my-1 w-full font-medium text-center font-apfelmittel text-[#101828]">{cardsData[currentCard].text}</p>
-            <StarRating rating={cardsData[currentCard].rating} />
+              <p className="text-base sm:text-lg font-medium text-center font-apfelmittel text-[#101828]">
+                {cardsData[currentCard].text}
+              </p>
+              <StarRating rating={cardsData[currentCard].rating} />
             </div>
-            
           </div>
         </motion.div>
 
-        {/* Next Button (Right Image) */}
+        {/* Next Button */}
         <button
           onClick={handleNext}
-          className="px-5 py-4 bg-[#Edecff]  rounded-full  mx-8 flex items-center justify-center"
+          className="px-3 py-3 sm:px-5 sm:py-4 bg-[#Edecff] rounded-full mx-4 sm:mx-8 flex items-center justify-center"
         >
           <img
-            src="/reviewarrowright.svg" // Replace this with your "next" button image source
+            src="/reviewarrowright.svg"
             alt="Next"
-            className="w-8 h-8"
+            className="w-6 h-6 sm:w-8 sm:h-8"
           />
         </button>
       </div>

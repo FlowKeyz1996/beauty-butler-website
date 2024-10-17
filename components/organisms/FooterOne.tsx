@@ -17,7 +17,7 @@ const FooterOne: React.FC = () => {
           <img
             src="/footertwoimg.svg"
             alt="Profile"
-            className="object-contain h-[100%]"
+            className="object-contain h-[100%] relative md:top-8 top-4"
           />
         </div>
 

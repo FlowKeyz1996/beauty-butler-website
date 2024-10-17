@@ -9,7 +9,7 @@ const Marquee: React.FC = () => {
         transition={{
           repeat: Infinity, // Infinite loop
           repeatType: 'mirror', // Makes it reverse (left to right, right to left)
-          duration: 15, // Adjust the speed by changing the duration
+          duration: 50, // Adjust the speed by changing the duration
           ease: 'linear', // Keeps the motion smooth and consistent
         }}
       >

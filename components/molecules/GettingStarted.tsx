@@ -7,7 +7,7 @@ const GettingStarted: React.FC = () => {
       <TagHeader text="How it works" />
 
       {/* Header */}
-      <h1 className="text-3xl md:text-5xl text-[#101828] my-4 text-center md:leading-[rem] font-s font-apfelmittel">
+      <h1 className="text-3xl md:text-5xl text-[#101828] mb-4 text-center md:leading-[rem] font-s font-apfelmittel">
         Getting Started with Beauty Butler
       </h1>
 

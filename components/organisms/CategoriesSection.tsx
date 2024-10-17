@@ -33,7 +33,7 @@ const CategoriesSection: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="text-5xl font-semibold text-[#101828] text-center my-5 font-apfelregular tracking-wide"
+        className="text-5xl font-semibold text-[#101828] text-center mb-5 font-apfelregular tracking-wide"
       >
         Elevating Businesses Like Yours
       </motion.h2>
