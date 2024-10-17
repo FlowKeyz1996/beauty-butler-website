@@ -41,7 +41,7 @@ const HowItWorks: React.FC = () => {
       >
         <video
           id="howItWorksVideo"
-          className="w-full h-full object-cover rounded-lg"
+          className="w-full h-full rounded-lg"
           controls={isPlaying}
           poster="/path-to-your-poster-image.jpg"
         >

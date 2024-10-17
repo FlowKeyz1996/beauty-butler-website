@@ -22,13 +22,13 @@ const GettingStarted: React.FC = () => {
         <div className="w-full mb-8 bg-[#f8f9fb] rounded-3xl border border-[#f2f4f7] flex flex-col p-4 md:p-6 md:flex-row md:justify-between">
           <div className="w-full flex flex-col items-center md:items-start mb-4 md:mb-0 md:w-1/2">
             {/* Left Div */}
-            <h2 className="text-base md:text-3xl  font-apfelregular text-[#1d2939] mb-2 text-center md:text-left">
+            <h2 className="text-base md:text-3xl font-apfelregular text-[#1d2939] mb-2 text-center md:text-left">
               Download Beauty Butler: find the best beauty and wellness experts for you.
             </h2>
             <img
               src="/01.svg"
               alt="Left Image"
-              className="w-[90%] md:w-[50%] h-auto object-contain relative top-20"
+              className="w-[90%] md:w-[50%] h-auto object-contain relative md:top-20 top-10"
             />
           </div>
           <div className="w-full flex justify-center md:w-1/2 border border-[#f2f4f7]">
@@ -45,14 +45,14 @@ const GettingStarted: React.FC = () => {
         <div className="w-full flex flex-col md:flex-row space-y-4 md:space-y-0 gap-10 ">
           <div className="w-full md:w-1/2 bg-[#f8f9fb] rounded-3xl p-4 md:p-6 flex flex-col items-center border-[#f2f4f7]">
             {/* Text Above Images */}
-            <h2 className="text-base md:text-3xl  mb-2 font-apfelregular text-[#1d2939] text-center md:text-left">
+            <h2 className="text-base md:text-3xl mb-2 font-apfelregular text-[#1d2939] text-center md:text-left">
               Explore our extensive marketplace listings and categories.
             </h2>
             <div className="flex w-full justify-between items-start rounded-3xl">
               <img
                 src="/02.svg"
                 alt="Left Image"
-                className="w-[55%] md:w-[62%] h-auto object-contain rounded-lg relative top-[7rem]"
+                className="w-[55%] md:w-[62%] h-auto object-contain rounded-lg relative md:top-[7rem] top-16"
               />
               <img
                 src="/Device2.svg"
@@ -71,7 +71,7 @@ const GettingStarted: React.FC = () => {
               <img
                 src="/03.svg"
                 alt="Left Image"
-                className="w-[60%] md:w-[65%] h-auto object-contain rounded-lg relative top-24"
+                className="w-[60%] md:w-[65%] h-auto object-contain rounded-lg relative md:top-24 top-14"
               />
               <img
                 src="/device3.svg"

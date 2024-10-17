@@ -12,12 +12,12 @@ const categories: Category[] = [
   { id: 2, imageSrc: '/categoriesimgtest.svg', text: 'Hair Salons' },
   { id: 3, imageSrc: '/heroimage.svg', text: 'Facials' },
   { id: 4, imageSrc: '/heroimage.svg', text: 'Waxing' },
-  { id: 5, imageSrc: '/heroimage.svg', text: 'Massage Therapy' },
-  { id: 6, imageSrc: '/categoriesimgtest.svg', text: 'Skincare Clinics' },
-  { id: 7, imageSrc: '/heroimage.svg', text: 'Spa Services' },
-  { id: 8, imageSrc: '/heroimage.svg', text: 'Body Treatments' },
-  { id: 9, imageSrc: '/categoriesimgtest.svg', text: 'Hair Removal' },
-  { id: 10, imageSrc: '/heroimage.svg', text: 'Makeup Artists' },
+  { id: 5, imageSrc: '/imagecategory.svg', text: 'Massage Therapy' },
+  { id: 6, imageSrc: '/categoriesimgtest.svg', text: 'Barber Shops' },
+  { id: 7, imageSrc: '/imagecategory.svg', text: 'Make Up' },
+  { id: 8, imageSrc: '/heroimage.svg', text: 'Lash Extension' },
+  { id: 9, imageSrc: '/categoriesimgtest.svg', text: 'Brows' },
+  { id: 10, imageSrc: '/heroimage.svg', text: 'Reflexology' },
 ];
 
 const CategoriesSection: React.FC = () => {
@@ -41,34 +41,39 @@ const CategoriesSection: React.FC = () => {
         Your One Stop Shop for Beauty and Wellness
       </p>
 
-      {/* Card and Text Container with Marquee Effect */}
-      <motion.div
-        className="flex overflow-hidden"
-        animate={{ x: ['100%', '-100%'] }}
-        transition={{ repeat: Infinity, duration: 20, ease: 'linear', repeatType: 'mirror' }}
-      >
-        {categories.map((category) => (
-          <div key={category.id} className="flex flex-col items-center min-w-[300px]">
-            {/* Card */}
-            <motion.div
-              className="bg-white rounded-t-full rounded-br-2xl rounded-bl-2xl overflow-hidden shadow-lg border-4 border-[#8877D8] w-[220px] h-[70%]"
-              
-              transition={{ duration: 0.3 }}
+      {/* Card and Text Container with Continuous Marquee Effect */}
+      <div className="relative overflow-hidden">
+        <motion.div
+          className="flex space-x-6"
+          animate={{ x: ['0%', '-100%'] }}
+          transition={{ repeat: Infinity, duration: 20, ease: 'linear' }}
+        >
+          {/* Repeat the category list to achieve continuous scrolling */}
+          {[...categories, ...categories].map((category) => (
+            <div
+              key={category.id}
+              className="flex flex-col items-center min-w-[220px] gap-4"
             >
-              <img
-                src={category.imageSrc}
-                alt={category.text}
-                className="w-full h-64 object-cover"
-              />
-            </motion.div>
+              {/* Card */}
+              <motion.div
+                className="bg-white rounded-t-full rounded-br-2xl rounded-bl-2xl overflow-hidden shadow-lg border-4 border-[#8877D8] w-[220px] h-[70%]"
+                transition={{ duration: 0.3 }}
+              >
+                <img
+                  src={category.imageSrc}
+                  alt={category.text}
+                  className="w-full h-64 object-cover"
+                />
+              </motion.div>
 
-            {/* Text */}
-            <p className="text-center text-xl font-bold text-black mt-4 font-apfelregular">
-              {category.text}
-            </p>
-          </div>
-        ))}
-      </motion.div>
+              {/* Text */}
+              <p className="text-center text-xl font-bold text-black mt-4 font-apfelregular">
+                {category.text}
+              </p>
+            </div>
+          ))}
+        </motion.div>
+      </div>
     </section>
   );
 };

@@ -82,9 +82,9 @@ const BenefitSection = () => {
       <motion.div
         initial={{ opacity: 0, x: 100 }}
         animate={controlRight}
-        className="w-full md:w-1/2 h-full flex flex-col space-y-6 justify-center text-center md:text-left"
+        className="w-full md:w-1/2 h-full flex flex-col space-y-2 justify-center text-center md:text-left"
       >
-        <div>
+        <div  className="">
           <TagHeader text="Our Benefits" position='left'/>
         </div>
         <h2 className="text-3xl md:text-4xl font-apfelmittel max-w-lg text-[#101828]">
@@ -102,7 +102,7 @@ const BenefitSection = () => {
     >
       <div className="flex items-center justify-center md:justify-start space-x-2 ">
         <img src={item.imgSrc} alt={item.text} className="w-10 h-10" />
-        <p className="text-lg font-semibold font-apfelregular leading-7">
+        <p className="text-lg font-apfelmittel leading-7">
           {item.text}
         </p>
       </div>
