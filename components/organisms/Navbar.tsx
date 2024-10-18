@@ -88,21 +88,23 @@ const Navbar: React.FC = () => {
             <Link href="/" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
               Home
             </Link>
-            <Link href="/about" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
-              About
+            <Link href="/features" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
+              features
             </Link>
-            <Link href="/services" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
-              Services
+            <Link href="#benefit" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
+              benefits
             </Link>
-            <Link href="/contact" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
-              Contact
+            <Link href="/company" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
+              Company
             </Link>
+            <Link href="/customers">
             <button
               onClick={toggleMenu}
-              className="bg-blue-500 text-white px-4 py-2 rounded h"
+              className="bg-[#FFC8F2] text-[#101828] px-4 py-2 rounded-xl"
             >
-              Get Started
+              For Customers
             </button>
+            </Link>
           </div>
         </div>
       )}

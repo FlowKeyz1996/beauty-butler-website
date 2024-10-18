@@ -59,7 +59,7 @@ const CoreValues: React.FC = () => {
                 className="w-24 h-24 object-contain my-4"
               />
               <div className="p-4">
-                <h3 className="text-2xl mb-2 font-apfelmittel">{value.title}</h3>
+                <h3 className="text-2xl mb-2 text-[#101828] font-apfelmittel">{value.title}</h3>
                 <p className="text-[#475467] font-euclidlight">{value.description}</p>
               </div>
             </div>

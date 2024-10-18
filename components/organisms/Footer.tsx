@@ -22,8 +22,8 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Description Section */}
-        <div className="w-full md:w-2/3 flex flex-col mx-4 items-center md:items-start">
-          <h2 className="text-[#101828] text-lg sm:text-xl md:text-2xl font-semibold mb-4 font-apfelregular">
+        <div className="w-full md:w flex flex-col mx-4 items-center md:items-start">
+          <h2 className="text-[#101828] text-lg sm:text-xl md:text-3xl font-semibold mb-4 font-apfelregular">
             Shape the Future of Beauty, One Idea at a Time!
           </h2>
           <p className="text-[#475467] text-center md:text-left mb-4 font-euclidlight text-sm sm:text-base md:text-lg">
@@ -31,11 +31,11 @@ const Footer: React.FC = () => {
           </p>
           {/* Text Area and Button */}
           <textarea
-            className="w-full h-20 sm:h-24 p-2 border border-gray-300 rounded-md mb-4 md:w-[90%] lg:w-[90%] font-euclidlight"
+            className="w-full h-20 sm:h-24 p-2 border border-gray-300 rounded-xl mb-4 md:w-[90%] lg:w-[100%] font-euclidlight"
             placeholder="Tell us the features you’d love to see on Beauty Butler"
           />
-         <div className="w-full flex justify-center md:justify-end">
-  <button className="bg-[#8877D8] font-euclidmedium text-white px-6 sm:px-14 py-3 sm:py-4 rounded-xl w-full sm:w-auto">
+         <div className="w-full flex justify-center md:mr-32 md:justify-end ">
+  <button className="bg-[#8877D8] text-xl font-euclidmedium text-white px-6 sm:px-14 py-3 sm:py-4 rounded-xl w-full sm:w-auto">
     Submit
   </button>
 </div>
@@ -133,8 +133,8 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="text-center mt-8">
-        <p>&copy; 2024 Your Company. All rights reserved.</p>
+      <div className="text-center mt-8  font-euclidlight">
+        <p>&copy; Beauty Butler 2024. All rights reserved.</p>
       </div>
     </footer>
   );
