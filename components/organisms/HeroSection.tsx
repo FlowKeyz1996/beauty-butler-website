@@ -1,6 +1,7 @@
 import { motion, useAnimation } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Marquee from '../molecules/Marquee';
+import Link from 'next/link';
 import Navbar from './Navbar'; // Import the navbar component
 
 const HeroSection: React.FC = () => {
@@ -82,9 +83,12 @@ const HeroSection: React.FC = () => {
             Empower Your Beauty Business with Beauty Butler.<br />Join the platform
             that brings beauty professionals <br />and clients together seamlessly.
           </p>
+          <Link href="https://airtable.com/appbyIQgO429LydxX/pagpJUqsZCrQzQcYg/form">
           <button className="mt-8 bg-[#8877D8] font-euclidmedium text-xl text-white px-12 py-4 rounded-xl">
             Book a Demo
           </button>
+          </Link>
+          
         </div>
       </div>
 

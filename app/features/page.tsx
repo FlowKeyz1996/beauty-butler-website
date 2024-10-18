@@ -4,6 +4,7 @@ import SmallHero from '@/components/molecules/SmallHero';
 import Footer from '@/components/organisms/Footer';
 import MainFeaturesCards from '@/components/organisms/MainFeaturesCards';
 import NavbarOne from '@/components/organisms/NavbarOne';
+import QualityGuaranteed from '@/components/organisms/QualityGuaranteed';
 import React from 'react'
 
 function page() {
@@ -14,6 +15,7 @@ function page() {
         descriptionText="Think bigger. Build your dream business with an easy-to-use platform purpose-built for you — and a support team that responds in minutes, not days."/>
         <MainFeaturesCards/>
         <BeautyButlerOffer/>
+        <QualityGuaranteed/>
         <Footer/>
     </div>
   )
