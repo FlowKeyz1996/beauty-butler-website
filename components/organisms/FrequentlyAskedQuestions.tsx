@@ -7,16 +7,11 @@ type FAQ = {
   answer: string;
 };
 
-const faqs: FAQ[] = [
-  { question: 'What is Beauty Butler?', answer: 'Beauty Butler is your beauty bestie in an app! Think of us as your go-to for all things beauty and wellness, delivering top-tier treatments right to your doorstep — so you can chill while we handle the rest.' },
-  { question: 'What services does Beauty Butler offer?', answer: 'From hair, makeup, and facials to massages, mani-pedis, and more — we’ve got all your self-care covered. Our professionals are certified and ready to provide top-quality services whenever you need them!.' },
-  { question: 'Is Beauty Butler available in my area?', answer: 'Right now, we are available in Lagos, Nigeria! But don’t worry, we’re expanding to new cities soon. Subscribe to our newsletter to stay tuned for updates on our expansion plans.' },
-  { question: 'How do I pay for services on Beauty Butler? ', answer: 'Once you’ve booked a service, the checkout page will show you a few simple payment options! You can pay using your in-app wallet, online via Paystack, or by card—whatever works best for you. Our payment structure is safe, simple and secure!'},
-  { question: 'Is there a cancellation policy?', answer: 'Life happens, we feel you! If you need to cancel, just do it 24 hours in advance, and you’re all good. If you cancel within 24 hours, we’ll need to charge 80% of the service price. For no-shows, it’s the full price—so try not to miss out!' },
-  { question: 'Is there a cancellation policy?', answer: 'Life happens, we feel you! If you need to cancel, just do it 24 hours in advance, and you’re all good. If you cancel within 24 hours, we’ll need to charge 80% of the service price. For no-shows, it’s the full price—so try not to miss out!' },
-];
+type FrequentlyAskedQuestionsProps = {
+  faqs: FAQ[];
+};
 
-const FrequentlyAskedQuestions = () => {
+const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faqs }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const formRef = useRef(null);
@@ -46,9 +41,9 @@ const FrequentlyAskedQuestions = () => {
           animate={formInView ? { x: 0, opacity: 1 } : {}}
           transition={{ duration: 1 }}
         >
-          <div className="">
-          <h4 className="text-xl my-1 font-apfelregular font-semibold text-[#101828]">Have a question we have not answered? </h4>
-          <p className="font-euclidlight my-2 text-[#475467]">Your insights drive our evolution— ask us any question you have about Beauty Butler and we will answer them 😉.</p>
+          <div>
+            <h4 className="text-xl my-1 font-apfelregular font-semibold text-[#101828]">Have a question we have not answered? </h4>
+            <p className="font-euclidlight my-2 text-[#475467]">Your insights drive our evolution— ask us any question you have about Beauty Butler and we will answer them 😉.</p>
           </div>
           
           {/* Form Fields */}

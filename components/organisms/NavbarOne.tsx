@@ -21,9 +21,9 @@ const NavbarOne: React.FC = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">
-      <div className="container mx-auto px-4 flex justify-between items-center py-3 md:py-4">
+      <div className="container mx-auto px-4 flex justify-between items-center py-2 md:py-4">
         {/* Logo and Nav Links */}
-        <div className="flex justify-between items-center w-full md:w-5/6 shadow-2xl rounded-full p-2 sm:p-4 bg-white bg-opacity-100 backdrop-blur-lg border h-[50px] md:h-[54px]">
+        <div className="flex justify-between items-center w-full md:w-5/6 shadow-2xl rounded-full p-2 sm:p-4 bg-white bg-opacity-100 backdrop-blur-lg border h-[50px] md:h-[64px]">
           {/* Logo and Hamburger */}
           <div className="flex items-center justify-between w-full md:w-auto">
             <Link href="/">
@@ -66,7 +66,7 @@ const NavbarOne: React.FC = () => {
         {/* Button */}
         <div className="hidden md:block">
           <Link href="/">
-            <button className="bg-[#FFC8F2] text-[#101828] py-3 px-4 sm:py-4 sm:px-7 rounded-2xl font-euclidmedium text-sm sm:text-xl h-[55px] md:h-[60px]">
+            <button className="bg-[#FFC8F2] text-[#101828] py-3 px-4 sm:py-4 sm:px-7 rounded-2xl font-euclidmedium text-sm sm:text-xl h-[50px] md:h-[64px]">
               For Business
             </button>
           </Link>

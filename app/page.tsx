@@ -12,6 +12,16 @@ import MarketplaceCard from "@/components/organisms/MarketPlace";
 import Navbar from "@/components/organisms/Navbar";
 import Image from "next/image";
 
+const faqs = [
+  { question: 'How can Beauty Butler help my salon or spa?', answer: 'Beauty Butler is your beauty bestie in an app...' },
+  { question: 'What services does Beauty Butler offer?', answer: 'From hair, makeup, and facials...' },
+  { question: 'What services does Beauty Butler offer?', answer: 'From hair, makeup, and facials...' },
+  { question: 'What services does Beauty Butler offer?', answer: 'From hair, makeup, and facials...' },
+  { question: 'What services does Beauty Butler offer?', answer: 'From hair, makeup, and facials...' },
+  { question: 'What services does Beauty Butler offer?', answer: 'From hair, makeup, and facials...' },
+  // Add more FAQs as needed
+];
+
 export default function Home() {
   return (
     <div className="w-full overflow-x-hidden">
@@ -29,7 +39,7 @@ export default function Home() {
      "
         buttonText="Book a Demo"
       />
-      <FrequentlyAskedQuestions/>
+       <FrequentlyAskedQuestions faqs={faqs} />
      
       <Footer/>
   

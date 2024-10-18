@@ -40,8 +40,8 @@ const MarketplaceCard: React.FC<MarketplaceCardProps> = ({ imageUrl, title, desc
       </motion.div>
 
       {/* Right Side - Text */}
-      <motion.div className="w-full lg:w-1/2 px-4 lg:px-6 max-w-lg" variants={fadeInRightVariants}>
-        <TagHeader text="Our marketplace" position='left' paddingX=''/>
+      <motion.div className="w-full lg:w-1/2 px-4 lg:px-9 max-w-xl" variants={fadeInRightVariants}>
+        <TagHeader text="Our marketplace" position='left' paddingX='px'/>
         <h2 className="text-3xl lg:text-4xl text-[#101828] mb-3 font-apfelmittel text-center lg:text-left">
           {title}
         </h2>

@@ -9,7 +9,7 @@ const BusinessHeroSection = () => {
       <div className="relative z-10 container mx-auto p-4 sm:p-8 flex flex-col lg:flex-row items-center lg:justify-between lg:space-x-8 h-full">
         {/* Left div with header and description */}
         <div className="lg:w-1/2 space-y-3 sm:space-y-5 text-center lg:text-left text-white flex flex-col justify-center items-center lg:items-start lg:justify-center">
-          <div className="bg-white bg-opacity-20 backdrop-blur-lg rounded-full border w-[80%] sm:w-[45%] font-euclidmedium py-1 px-3 sm:py-2 sm:px-4 text-sm sm:text-base items-center text-center lg:text-left mt-20 lg:mt-0">
+          <div className="bg-white bg-opacity-20 backdrop-blur-lg rounded-full border w-[80%] sm:w-[40%] font-euclidmedium py-1 px-3 sm:py-2 sm:px-4 text-sm sm:text-base items-center text-center lg:text-left mt-20 lg:mt-0">
             <p className="text-white">Your new beauty bestie    💅🏾</p>
           </div>
           <h1 className="text-2xl sm:text-3xl lg:text-6xl font-apfelmittel leading-[1.75rem] sm:leading-[2.5rem] lg:leading-[4rem] mt-4 sm:mt-6 lg:mt-0">

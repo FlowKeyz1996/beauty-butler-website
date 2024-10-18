@@ -13,6 +13,16 @@ import Navbar from "@/components/organisms/Navbar";
 import NavbarOne from "@/components/organisms/NavbarOne";
 import Image from "next/image";
 
+const faqs = [
+  { question: 'What is Beauty Butler?', answer: 'Beauty Butler is your beauty bestie in an app...' },
+  { question: 'What services does Beauty Butler offer?', answer: 'From hair, makeup, and facials...' },
+  { question: 'What services does Beauty Butler offer?', answer: 'From hair, makeup, and facials...' },
+  { question: 'What services does Beauty Butler offer?', answer: 'From hair, makeup, and facials...' },
+  { question: 'What services does Beauty Butler offer?', answer: 'From hair, makeup, and facials...' },
+  { question: 'What services does Beauty Butler offer?', answer: 'From hair, makeup, and facials...' },
+  // Add more FAQs as needed
+];
+
 export default function Home() {
   return (
     <div className="w-full overflow-x-hidden">
@@ -23,7 +33,8 @@ export default function Home() {
   <GettingStarted />
   {/* <BeautyBuzzyCards /> */}
   <RatingsCard/>
-  <FrequentlyAskedQuestions />
+  {/* <FrequentlyAskedQuestions /> */}
+  <FrequentlyAskedQuestions faqs={faqs} />
   <FooterOne/>
 </div>
 
