@@ -36,7 +36,7 @@ const NavbarOne: React.FC = () => {
             <div className="md:hidden flex items-center">
               <button onClick={toggleMenu} className="text-gray-800 focus:outline-none">
                 <Image
-                  src={isMenuOpen ? '/close-icon.svg' : '/hamburgermenu.svg'}
+                  src={isMenuOpen ? '/close.svg' : '/menu-02.svg'}
                   alt="Menu Icon"
                   width={25} // Reduced size for mobile
                   height={25}
@@ -91,9 +91,9 @@ const NavbarOne: React.FC = () => {
             </Link>
             <button
               onClick={toggleMenu}
-              className="bg-[#FFC8F2] text-[#101828] px-4 py-2 rounded hover:bg-blue-600"
+              className="bg-[#FFC8F2] text-[#101828] px-4 py-2 rounded "
             >
-              Get Started
+              For Business 
             </button>
           </div>
         </div>

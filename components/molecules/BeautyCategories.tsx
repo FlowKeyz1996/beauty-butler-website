@@ -45,19 +45,19 @@ const BeautyCategories: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>('lashes');
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto px-4">
       <header className="text-center mb-10">
-        <h1 className="text-5xl leading-10 tracking-normal font-apfelmittel text-[#101828]">
+        <h1 className="text-4xl sm:text-5xl leading-10 tracking-normal font-apfelmittel text-[#101828]">
           Beauty Treatments At Your Doorstep
         </h1>
       </header>
 
       {/* Category Buttons */}
-      <div className="flex justify-center space-x-9 mb-8 font-euclidmedium text-[#101828]">
+      <div className="flex justify-center space-x-4 sm:space-x-9 mb-8 font-euclidmedium text-[#101828]">
         {['lashes', 'makeup', 'hair', 'nails', 'spa'].map((category) => (
           <button
             key={category}
-            className={`px-4 py-2 rounded-xl transition-colors duration-300 ${
+            className={`px-3 py-1 sm:px-4 sm:py-2 rounded-xl transition-colors duration-300 ${
               activeCategory === category
                 ? 'bg-[#DADAFF]'
                 : 'bg-transparent text-[#98A2b3]'
@@ -79,7 +79,7 @@ const BeautyCategories: React.FC = () => {
           <img
             src={selectedCategory.mainImage}
             alt="Main category"
-            className="w-full h-[90%] object-cover rounded-2xl"
+            className="w-full h-auto lg:h-[90%] object-cover rounded-2xl"
           />
         </div>
 

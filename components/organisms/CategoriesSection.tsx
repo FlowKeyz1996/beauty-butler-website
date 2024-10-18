@@ -8,9 +8,9 @@ interface Category {
 }
 
 const categories: Category[] = [
-  { id: 1, imageSrc: '/heroimage.svg', text: 'Manicure & Pedicure' },
-  { id: 2, imageSrc: '/categoriesimgtest.svg', text: 'Hair Salons' },
-  { id: 3, imageSrc: '/heroimage.svg', text: 'Facials' },
+  { id: 1, imageSrc: '/manicureimg.svg', text: 'Manicure & Pedicure' },
+  { id: 2, imageSrc: '/hairsalonimg.svg', text: 'Hair Salons' },
+  { id: 3, imageSrc: '/facials.svg', text: 'Facials' },
   { id: 4, imageSrc: '/heroimage.svg', text: 'Waxing' },
   { id: 5, imageSrc: '/imagecategory.svg', text: 'Massage Therapy' },
   { id: 6, imageSrc: '/categoriesimgtest.svg', text: 'Barber Shops' },
@@ -37,7 +37,7 @@ const CategoriesSection: React.FC = () => {
       >
         Elevating Businesses Like Yours
       </motion.h2>
-      <p className="font-euclidlight text-center text-2xl mb-7 text-[#475467]">
+      <p className="font-euclidlight text-center text-2xl my-7 text-[#475467]">
         Your One Stop Shop for Beauty and Wellness
       </p>
 
@@ -52,28 +52,30 @@ const CategoriesSection: React.FC = () => {
           {[...categories, ...categories].map((category) => (
             <div
               key={category.id}
-              className="flex flex-col items-center min-w-[220px] gap-4"
+              className="flex flex-col items-center min-w-[220px]"
             >
               {/* Card */}
               <motion.div
-                className="bg-white rounded-t-full rounded-br-2xl rounded-bl-2xl overflow-hidden shadow-lg border-4 border-[#8877D8] w-[220px] h-[70%]"
+                className=""
                 transition={{ duration: 0.3 }}
               >
                 <img
                   src={category.imageSrc}
                   alt={category.text}
-                  className="w-full h-64 object-cover"
+                  className=" h-64 object-contain"
                 />
               </motion.div>
 
               {/* Text */}
-              <p className="text-center text-xl font-bold text-black mt-4 font-apfelregular">
+              <p className="text-center text-xl text-black font-apfelmittel">
                 {category.text}
               </p>
             </div>
+            
           ))}
         </motion.div>
       </div>
+     
     </section>
   );
 };
