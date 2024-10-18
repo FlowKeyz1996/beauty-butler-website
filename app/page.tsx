@@ -2,7 +2,6 @@
 import BeautyCategories from "@/components/molecules/BeautyCategories";
 import Marquee from "@/components/molecules/Marquee";
 import BenefitSection from "@/components/organisms/BenefitSection";
-import CategoriesImageSection from "@/components/organisms/CategoriesImageSection";
 import CategoriesSection from "@/components/organisms/CategoriesSection";
 import FeaturesSection from "@/components/organisms/FeaturesSection";
 import Footer from "@/components/organisms/Footer";
@@ -31,7 +30,6 @@ export default function Home() {
       <BenefitSection/>
       <FeaturesSection/>
       <CategoriesSection/>
-      <CategoriesImageSection/>
       <HowItWorks/>
       <MarketplaceCard
         imageUrl="/marketplaceimg.svg"

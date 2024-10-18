@@ -11,13 +11,13 @@ const categories: Category[] = [
   { id: 1, imageSrc: '/manicureimg.svg', text: 'Manicure & Pedicure' },
   { id: 2, imageSrc: '/hairsalonimg.svg', text: 'Hair Salons' },
   { id: 3, imageSrc: '/facials.svg', text: 'Facials' },
-  { id: 4, imageSrc: '/heroimage.svg', text: 'Waxing' },
-  { id: 5, imageSrc: '/imagecategory.svg', text: 'Massage Therapy' },
-  { id: 6, imageSrc: '/categoriesimgtest.svg', text: 'Barber Shops' },
+  { id: 4, imageSrc: '/waxing.svg', text: 'Waxing' },
+  { id: 5, imageSrc: '/massage.svg', text: 'Massage Therapy' },
+  { id: 6, imageSrc: '/barber.svg', text: 'Barber Shops' },
   { id: 7, imageSrc: '/imagecategory.svg', text: 'Make Up' },
-  { id: 8, imageSrc: '/heroimage.svg', text: 'Lash Extension' },
-  { id: 9, imageSrc: '/categoriesimgtest.svg', text: 'Brows' },
-  { id: 10, imageSrc: '/heroimage.svg', text: 'Reflexology' },
+  { id: 8, imageSrc: '/lashextension.svg', text: 'Lash Extension' },
+  { id: 9, imageSrc: '/brows.svg', text: 'Brows' },
+  { id: 10, imageSrc: '/reflexology.svg', text: 'Reflexology' },
 ];
 
 const CategoriesSection: React.FC = () => {
@@ -46,7 +46,7 @@ const CategoriesSection: React.FC = () => {
         <motion.div
           className="flex space-x-6"
           animate={{ x: ['0%', '-100%'] }}
-          transition={{ repeat: Infinity, duration: 20, ease: 'linear' }}
+          transition={{ repeat: Infinity, repeatType: 'mirror', duration: 20, ease: 'linear' }}
         >
           {/* Repeat the category list to achieve continuous scrolling */}
           {[...categories, ...categories].map((category) => (

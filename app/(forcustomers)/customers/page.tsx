@@ -4,7 +4,6 @@ import BeautyCategories from "@/components/molecules/BeautyCategories";
 import GettingStarted from "@/components/molecules/GettingStarted";
 import RatingsCard from "@/components/molecules/RatingsCard";
 import WhyYouWillLoveBeautyButler from "@/components/molecules/WhyYouWillLoveBeautyButler";
-import BeautyButlerOffer from "@/components/organisms/BeautyButlerOffer";
 import BusinessHeroSection from "@/components/organisms/BusinessHeroSection";
 import Footer from "@/components/organisms/Footer";
 import FooterOne from "@/components/organisms/FooterOne";

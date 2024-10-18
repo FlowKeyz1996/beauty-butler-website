@@ -88,9 +88,9 @@ const GettingStarted: React.FC = () => {
             <img
               src="/googleandapplepurple.svg"
               alt="Download Icon"
-              className="w-12 h-8 mr-4 fill-current"
+              className="w-16 h-14 mr-4 fill-current"
             />
-            <span className="font-semibold text-white font-euclidmedium text-base">
+            <span className=" text-white font-euclidmedium text-xl">
               Download App
             </span>
           </button>
