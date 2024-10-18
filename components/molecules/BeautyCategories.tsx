@@ -53,7 +53,7 @@ const BeautyCategories: React.FC = () => {
       </header>
 
       {/* Category Buttons */}
-      <div className="flex justify-center space-x-4 sm:space-x-9 mb-8 font-euclidmedium text-[#101828]">
+      <div className="flex justify-center space-x-4 sm:space-x-9 mb-8 font-euclidmedium text-2xl text-[#101828]">
         {['lashes', 'makeup', 'hair', 'nails', 'spa'].map((category) => (
           <button
             key={category}

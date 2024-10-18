@@ -67,7 +67,7 @@ const CategoriesSection: React.FC = () => {
               </motion.div>
 
               {/* Text */}
-              <p className="text-center text-xl text-black font-apfelmittel">
+              <p className="text-center text-lg text-[#101828] font-apfelmittel">
                 {category.text}
               </p>
             </div>

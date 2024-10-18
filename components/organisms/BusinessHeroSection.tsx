@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const BusinessHeroSection = () => {
   return (
-    <section className="relative flex flex-col justify-center items-center h-[110vh] sm:h-screen  lg:h-[109vh] min-h-screen bg-[#8877D8]">
+    <section className="relative flex flex-col justify-center items-center h-[110vh] sm:h-screen  lg:h-[110vh] min-h-screen bg-[#8877D8]">
       <div className="absolute bottom-0 left-0 w-full h-20 bg-white z-0"></div>
 
       <div className="relative z-10 container mx-auto p-4 sm:p-8 flex flex-col lg:flex-row items-center lg:justify-between lg:space-x-8 h-full">
@@ -15,21 +15,21 @@ const BusinessHeroSection = () => {
           <h1 className="text-2xl sm:text-3xl lg:text-6xl font-apfelmittel leading-[1.75rem] sm:leading-[2.5rem] lg:leading-[4rem] mt-4 sm:mt-6 lg:mt-0">
             Unlock Your Beauty Concierge Experience
           </h1>
-          <p className="text-sm sm:text-lg lg:text-2xl font-normal font-euclidlight text-[#EAECF0]">
+          <p className="text-sm sm:text-lg lg:text-2xl font-normal font-euclidlight text-[#EAECF0] pb-7">
             Your Personal Beauty Butler Awaits - Delivered Right To Your Doorstep
           </p>
 
           {/* Call to action button for all screens */}
           <div className="flex items-center justify-center lg:justify-start">
-            <button className="flex items-center justify-center bg-white text-[#8877D8] text-sm sm:text-lg font-euclidmedium py-2 sm:py-4 px-4 sm:px-6 rounded-lg sm:rounded-xl">
+            <button className="flex items-center justify-center bg-white text-[#8877D8] text-sm sm:text-lg font-euclidmedium py-5 sm:py-4 px-4 sm:px-10 rounded-lg sm:rounded-xl">
               <div className="flex items-center space-x-2 sm:space-x-3">
                 <Image
                   src="/appleandgoogle.svg"
                   alt="Icon"
-                  width={60} // Reduced for mobile
-                  height={18} // Reduced for mobile
+                  width={100} // Reduced for mobile
+                  height={8} // Reduced for mobile
                 />
-                <span className="ml-2 sm:ml-3 font-euclidmedium">Download App</span>
+                <span className="ml-2 sm:ml-3  text-2xl font-euclidmedium">Download App</span>
               </div>
             </button>
           </div>

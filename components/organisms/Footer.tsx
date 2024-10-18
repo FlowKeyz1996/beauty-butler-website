@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
             <input
               type="email"
               placeholder="example@mail.com"
-              className="flex-grow p-4  border-t border-b border-gray-300 bg-[#8878D8] font-euclidmedium focus:outline-none"
+              className="flex-grow p-4  border-t border-b border-l rounded-l-lg rounded border-gray-300 bg-[#8878D8] font-euclidmedium focus:outline-none"
             />
             {/* Button with White Background */}
             <button className="bg-white text-[#8877D8] px-9 font-euclidmedium py-4 border border-[#8877D8] rounded-r-xl">

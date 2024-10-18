@@ -7,7 +7,7 @@ const FooterOne: React.FC = () => {
     <footer className="relative bg-[#8877D8] text-white py-24 mt-96 flex flex-col items-center">
       {/* Card positioned partially outside the footer */}
       <motion.div
-        className="bg-white shadow-lg border-2 border-[#8877D8] rounded-3xl p-4 sm:p-6 md:p-8 w-[95%] sm:w-[70%] md:w-[60%] lg:w-[80%] absolute -top-80 sm:-top-48 transform flex flex-col md:flex-row items-center justify-center"
+        className="bg-white  border-2 border-[#8877D8] rounded-3xl p-4 sm:p-6 md:p-8 w-[95%] sm:w-[70%] md:w-[60%] lg:w-[80%] absolute -top-80 sm:-top-48 transform flex flex-col md:flex-row items-center justify-center"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -22,12 +22,12 @@ const FooterOne: React.FC = () => {
         </div>
 
         {/* Description Section */}
-        <div className="w-full md:w-2/3 flex flex-col mx-2 items-center md:items-start">
-          <h2 className="text-[#101828] text-lg sm:text-xl md:text-2xl leading-8 sm:leading-[5rem] tracking-normal font-semibold mb-4 font-apfelregular text-center md:text-left">
-            Shape the Future of Beauty, One Idea at a Time!
+        <div className="w-full md:w- flex flex-col mx-2 items-center md:items-start">
+          <h2 className="text-[#101828] text-lg sm:text-xl md:text-5xl leading-8 sm:leading-[5rem] tracking-normal font-semibold mb-4 font-apfelregular text-center md:text-left">
+          Book your beauty and wellness needs in just a few clicks.
           </h2>
           <p className="text-[#475467] text-center md:text-left mb-4 font-euclidlight text-sm sm:text-base md:text-lg">
-            Your insights drive our evolution—share your feature requests and help us create the ultimate beauty experience.
+          Book on-demand beauty and wellness treatments delivered straight to your doorstep and manage your appointments efficiently!
           </p>
 
           {/* Button with Image */}
@@ -41,26 +41,25 @@ const FooterOne: React.FC = () => {
       </motion.div>
 
       {/* Footer content */}
-      <div className="container mx-auto px-4 mt-44 sm:mt-56 w-[90%] sm:w-[80%] lg:w-[90%] items-center">
+      <div className="container mx-auto px-4 mt-24 sm:mt-16 w-[90%] sm:w-[80%] lg:w-[90%] items-center">
         <div className="w-full max-w-6xl mx-auto text-center">
           
           <div className="w-full my-10">
             {/* Input Field */}
             <div>
-              <h3 className="text-left ml-32 relative text-3xl font-bold top-12">For beauty tips and updates <span className="font-euclidmedium text-xl font-normal text-[#8FF1EC]">subscribe to our newsletter.</span></h3>
+              <h3 className="text-left ml-36 relative text-3xl font-bold top-12">For beauty tips and updates <span className="font-euclidmedium text-3xl font-normal text-[#8FF1EC]">subscribe to our newsletter.</span></h3>
             </div>
-            <div className="flex items-center justify-center">
-              <img src="/footerinputimg.svg" alt="footer_input_img" />
-              <input
-                type="email"
-                placeholder="example@mail.com"
-                className="flex-grow p-2 border-t border-b border-gray-300 bg-[#8878D8] font-euclidmedium focus:outline-none"
-              />
-              {/* Button with White Background */}
-              <button className="bg-white text-[#8877D8] px-9 font-euclidmedium py-2 border border-[#8877D8] rounded-r-xl">
-                Subscribe
-              </button>
-            </div>
+            <div className=" flex items-center justify-center">
+            <img src="/footerinputimg.svg" alt="footer_input_img"></img>
+            <input
+              type="email"
+              placeholder="example@mail.com"
+              className="flex-grow p-4  border-t border-b border-l rounded-l-lg rounded border-gray-300 bg-[#8878D8] font-euclidmedium focus:outline-none"
+            />
+            {/* Button with White Background */}
+            <button className="bg-white text-[#8877D8] px-9 font-euclidmedium py-4 border border-[#8877D8] rounded-r-xl">
+              Subscribe
+            </button></div>
           </div>
 
           {/* Footer Links */}
@@ -69,7 +68,7 @@ const FooterOne: React.FC = () => {
               <h3 className="font-bold mb-2 font-euclidlight text-[#C2C6e8]">PRODUCT</h3>
               <ul className="font-euclidlight">
                 <li>Customers</li>
-                <li>Service Provider</li>
+                <li>Business</li>
               </ul>
             </div>
 

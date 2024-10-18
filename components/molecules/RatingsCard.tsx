@@ -67,7 +67,7 @@ const RatingsCard = () => {
         {/* Animated Card */}
         <motion.div
           key={cardsData[currentCard].id}
-          className="flex flex-col justify-center bg-white p-4 sm:p-6 md:p-8 rounded-3xl mb-8 sm:mb-12 lg:mb-16 mt-4 w-[90%] sm:w-4/5 md:w-4/5 lg:w-full xl:w-full h-auto lg:h-auto transition-all"
+          className="flex flex-col justify-center bg-white p-4 sm:p-6 md:p-8 rounded-3xl mb-8 sm:mb-12 lg:mb-16 mt-4 w-[100%] sm:w-4/5 md:w-4/5 lg:w-full xl:w-full h-auto lg:h-auto transition-all"
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -100 }}
