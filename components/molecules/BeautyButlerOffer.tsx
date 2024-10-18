@@ -48,9 +48,9 @@ const BeautyButlerOffer: React.FC = () => {
       <div className="flex flex-col md:flex-row justify-center items-start gap-8 w-full h-[100%]">
         {/* Offer 1 Header */}
         <div className="flex flex-col items-center w-full md:max-w-[40%] my-5 h-[48.5rem]">
-          <h3 className="text-4xl my-5 text-center text-[#101828] font-apfelmittel">Beauty Butler Pro</h3>
+          <h3 className="text-4xl my-6 text-center text-[#101828] font-apfelmittel">Beauty Butler Pro</h3>
           {/* Premium Butler Service Card */}
-          <div className="text-left bg-white p-6 rounded-3xl flex flex-col justify-between flex-1 w-full h-full">
+          <div className="text-left bg-white p-6 rounded-3xl flex flex-col pt-10 justify-between flex-1 w-full h-full">
             <div className="flex flex-col items-start gap-2 mb-auto">
               {premiumFeatures.map((feature, index) => (
                 <div key={index} className="flex items-center gap-2 mb-2">
@@ -69,12 +69,12 @@ const BeautyButlerOffer: React.FC = () => {
 
         {/* Offer 2 Header */}
         <div className="flex flex-col items-center w-full md:max-w-[40%] my-5">
-          <h3 className="text-4xl font-apfelmittel my-5 text-center text-[#101828]">
+          <h3 className="text-4xl my-6 font-apfelmittel  text-center text-[#101828]">
             Beauty Butler Enterprise
           </h3>
           {/* Standard Butler Service Card */}
           <div
-            className="text-left bg-[#8877D8] p-6 rounded-3xl flex flex-col justify-between flex-1 w-full h-full relative"
+            className="text-left bg-[#8877D8] p-6 rounded-3xl flex flex-col pt-10 justify-between flex-1 w-full h-full relative"
             style={{ backgroundImage: 'url(/background-pattern.png)' }}
           >
             <div className="flex flex-col items-start gap-2 text-white">

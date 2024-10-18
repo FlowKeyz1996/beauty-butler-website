@@ -7,9 +7,9 @@ interface FeatureCard {
 }
 
 const features: FeatureCard[] = [
-  { title: 'Beauty Butler Marketplace', description: 'Attract a flood of new customers with Beauty Butler. Your business will be effortlessly discoverable by your ideal clientele with our marketplace app and our clever algorithm.', imageSrc: '/flexible Appointment.svg' },
-  { title: 'Flexible appointment scheduling', description: 'Make your schedule available anytime, anywhere. Never miss a booking, we automate appointment scheduling so you can focus on what’s important!', imageSrc: '/flexible Appointment.svg' },
-  { title: 'Payment Processing', description: ' Deliver a smooth, ultra-fast checkout experience your clients will love. We’re here to help with questions on transactions, and payment summaries too.', imageSrc: '/featureimgthree.svg' },
+  { title: 'Beauty Butler Marketplace', description: 'Attract a flood of new customers with Beauty Butler. Your business will be effortlessly discoverable by your ideal clientele with our marketplace app and our clever algorithm.', imageSrc: '/featureimgone.svg' },
+  { title: 'Flexible appointment scheduling', description: 'Make your schedule available anytime, anywhere. Never miss a booking, we automate appointment scheduling so you can focus on what’s important!', imageSrc: '/featureimgbold.svg' },
+  { title: 'Payment Processing', description: ' Deliver a smooth, ultra-fast checkout experience your clients will love. We’re here to help with questions on transactions, and payment summaries too.', imageSrc: '/featureimg3bold.svg' },
   { title: 'Marketing', description: 'Keep your clients coming back using out built-in marketing campaigns. Create discounts and promotions that can be sold online. Keep your clients coming back by making them feel special using our email marketing tools. ', imageSrc: '/featureimgouttwo.svg' },
   { title: 'Online Booking', description: 'Give your clients easy access to your services, price list and calendar by creating a mini web page to take bookings. Clients can book via your social media or website.', imageSrc: '/featureimgfive.svg' },
   { title: 'Reporting and Analytics', description: "Unlock the power of data with Beauty Butler's analytics tools. Gain valuable insights into your business performance, pinpointing what's working, what isn't, and how to enhance every aspect of your operation.", imageSrc: '/featureimgsix.svg' },

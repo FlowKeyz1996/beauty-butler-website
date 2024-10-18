@@ -44,14 +44,14 @@ const CoreValues: React.FC = () => {
   return (
     <section className="py-12 bg-[#F7F7ff]">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-10 font-apfelregular">Core Values</h2>
+        <h2 className="text-5xl text-center mb-10 font-apfelmittel">Core Values</h2>
 
         {/* For large screens, display in grid */}
         <div className="hidden md:grid md:grid-cols-2 gap-8">
           {coreValuesData.slice(0, 2).map((value) => (
             <div
               key={value.id}
-              className="h-auto bg-white shadow-md overflow-hidden rounded-2xl flex flex-col justify-center items-center text-center"
+              className="h-auto bg-white overflow-hidden rounded-2xl flex flex-col justify-center items-center text-center"
             >
               <img
                 src={value.imageSrc}
@@ -70,7 +70,7 @@ const CoreValues: React.FC = () => {
           {coreValuesData.slice(2).map((value) => (
             <div
               key={value.id}
-              className="h-auto bg-white shadow-md overflow-hidden rounded-lg flex flex-col justify-center items-center text-center"
+              className="h-auto bg-white overflow-hidden rounded-3xl flex flex-col justify-center items-center text-center"
             >
               <img
                 src={value.imageSrc}
@@ -90,7 +90,7 @@ const CoreValues: React.FC = () => {
           {coreValuesData.map((value) => (
             <div
               key={value.id}
-              className="min-w-[300px] bg-white shadow-md overflow-hidden rounded-2xl flex flex-col justify-center items-center text-center"
+              className="min-w-[300px] bg-white overflow-hidden rounded-2xl flex flex-col justify-center items-center text-center"
             >
               <img
                 src={value.imageSrc}

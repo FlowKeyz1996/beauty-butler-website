@@ -9,13 +9,13 @@ const ChiefButler: React.FC = () => {
 
   return (
     <div className="w-full mx-auto p-6 rounded-t-3xl max-w-6xl my-5">
-      <h2 className="text-4xl text-center my-5 py-5 font-apfelmittel">Meet the Chief Butler</h2>
+      <h2 className="text-5xl text-center py-5 font-apfelmittel mb-9">Meet the Chief Butler</h2>
       <div className="flex flex-col md:flex-row justify-center items-start">
         <div className="w-full md:w-1/2 mb-6 md:mb-0">
           <img 
             src="/chiefbutlerimg.svg" 
             alt="Chief Butler" 
-            className="w-full h-auto rounded-lg"
+            className="w-full h-auto rounded-lg pr-14"
           />
           <h3 className="text-4xl mt-4 text-center font-apfelmittel">Chinny Eze</h3>
           <p className="text-xl text-[#8878d8] text-center font-euclidmedium my-1">CEO/Founder</p>
