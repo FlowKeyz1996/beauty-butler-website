@@ -79,7 +79,7 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
               {/* Button aligned with the start of the image */}
               <button
                 type="submit"
-                className="px-16 font-euclidmedium py-3 bg-[#8878d7] bottom-14 relative text-white rounded-xl"
+                className="px-16 font-euclidmedium py-3 bg-[#8878d7] bottom-14 relative text-white rounded-2xl text-xl"
               >
                 Submit
               </button>
