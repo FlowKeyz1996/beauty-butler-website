@@ -59,7 +59,7 @@ const HowItWorks: React.FC = () => {
         )}
       </motion.div>
 
-      <button className="bg-white text-[#8877d8] py-3 px-10 sm:py-4 sm:px-24 rounded-xl font-euclidmedium">
+      <button className="bg-white text-[#8877d8] py-3 px-10 sm:py-4 sm:px-24 rounded-2xl text-2xl font-euclidmedium">
         Book a Demo
       </button>
     </div>
