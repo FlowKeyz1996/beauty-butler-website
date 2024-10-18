@@ -14,7 +14,7 @@ const features: FeatureCard[] = [
   { title: 'Online Booking', description: 'Give your clients easy access to your services, price list and calendar by creating a mini web page to take bookings. Clients can book via your social media or website.', imageSrc: '/featureimgfive.svg' },
   { title: 'Reporting and Analytics', description: "Unlock the power of data with Beauty Butler's analytics tools. Gain valuable insights into your business performance, pinpointing what's working, what isn't, and how to enhance every aspect of your operation.", imageSrc: '/featureimgsix.svg' },
   { title: 'Client Management', description: 'Customize appointments and improve retention with client profiles that include information on past visits & special accommodations. Take client communication to the next level with two-way texting built into your platform.', imageSrc: '/featureimgseven.svg' },
-  { title: 'Staff Management', description: 'Stay in control of your business and keep your team focused and organized with staff dashboards, rosters and automated appointment updatesand organized with staff dashboards, rosters and automated appointment updates.and organized with staff dashboards, rosters and automated appointment updates..', imageSrc: '/featureimgout.svg' },
+  { title: 'Staff Management', description: 'Stay in control of your business and keep your team focused and organized with staff dashboards, rosters and automated appointment updates', imageSrc: '/featureimgout.svg' },
   { title: 'Customer Support', description: 'Have a question, issue, or just want to touch base with some of our experts? Our knowledgeable support team cares about your experience and is here to help you within minutes, not days.', imageSrc: '/featureimgeight.svg' },
 ];
 
