@@ -14,9 +14,8 @@ const QualityGuaranteed: React.FC = () => {
             <h2 className="text-3xl md:text-5xl font-apfelmittel mb-4 max-w-xl mx-auto md:mx-0 text-[#101828] leading-[2.5rem] md:leading-[3rem]">
               A full solution to manage and grow your business
             </h2>
-            <p className="text-lg md:text-xl my-6 text-[#475467] font-euclidlight max-w-md mx-auto md:mx-0">
-              We pride ourselves on delivering the highest quality services. Our team
-              ensures every detail meets your expectations, providing you with peace of
+            <p className="text-lg md:text-xl my-6 text-[#475467] font-euclidlight max-w-xl mx-auto md:mx-0">
+            Packed with all the tools you need to boost sales, manage your calendar and retain clients so you can focus on what you do best.
               mind and guaranteed satisfaction.
             </p>
             <button className="bg-[#8877D8] text-white py-3 px-10 md:px-16 rounded-2xl font-euclidmedium text-xl md:text-2xl">
