@@ -47,7 +47,7 @@ const BeautyButlerOffer: React.FC = () => {
 
       <div className="flex flex-col md:flex-row justify-center items-start gap-8 w-full h-[100%]">
         {/* Offer 1 Header */}
-        <div className="flex flex-col items-center w-full md:max-w-[40%] my-5 h-[50.3rem] md:h-auto">
+        <div className="flex flex-col items-center w-full md:max-w-[40%] my-5 h-[50.3rem] md:h-[52.5rem]">
           <h3 className="text-4xl md:text-4xl my-6 md:my-10 text-center text-[#101828] font-apfelmittel">
             Beauty Butler Pro
           </h3>
