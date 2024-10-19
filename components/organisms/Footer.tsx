@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
               Subscribe
             </button></div>
           </div>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:flex lg:flex-wrap lg:justify-between text-left text-sm w-full">
+          <div className="grid grid-cols-2  sm:grid-cols-2 lg:flex lg:flex-wrap lg:justify-between text-left text-sm w-full">
   
   {/* Product Section */}
   <div className="flex-1 font-euclidmedium">

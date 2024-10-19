@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent"> {/* Set a height for the navbar */}
       <div className="container mx-auto px-4 flex justify-between items-center h-full py-2 md:py-2"> {/* Ensure the container uses the full navbar height */}
         {/* Logo, Nav Links, and Hamburger Menu (inside the same border) */}
-        <div className="flex justify-between items-center w-full md:w-4/5 shadow-2xl rounded-full p-4 bg-white bg-opacity-20 backdrop-blur-lg border h-[50px] md:h-[64px]">
+        <div className="flex justify-between items-center w-full md:w-5/6 shadow-2xl rounded-full p-2 bg-white bg-opacity-20 backdrop-blur-lg border h-[50px] md:h-[64px]">
           {/* Conditional Logo */}
           <div className="text-2xl font-bold">
             {isScrolled ? (
@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Nav Links (hidden on mobile) */}
-          <div className={`hidden md:flex space-x-6 gap-6 mx-5 font-euclidmedium font-semibold text-xl transition-colors duration-300 ${isScrolled ? 'text-black' : 'text-white'}`}>
+          <div className={`hidden md:flex space-x-6 gap-6 mx-5 font-euclidmedium text-xl transition-colors duration-300 ${isScrolled ? 'text-black' : 'text-white'}`}>
             <Link href="/features" className="hover:text-[#FF8AF4]">
               Features
             </Link>

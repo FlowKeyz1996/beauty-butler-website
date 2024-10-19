@@ -21,7 +21,7 @@ const NavbarOne: React.FC = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">
-      <div className="container mx-auto px-4 flex justify-between items-center py-2 md:py-4">
+      <div className="container mx-auto px-4 flex justify-between items-center py-2 md:py-2">
         {/* Logo and Nav Links */}
         <div className="flex justify-between items-center w-full md:w-5/6 shadow-2xl rounded-full p-2 sm:p-4 bg-white bg-opacity-100 backdrop-blur-lg border h-[50px] md:h-[64px]">
           {/* Logo and Hamburger */}
@@ -64,7 +64,7 @@ const NavbarOne: React.FC = () => {
         </div>
 
         {/* Button */}
-        <div className="hidden md:block">
+        <div className="hidden md:block h-full flex items-center">
           <Link href="/">
             <button className="bg-[#FFC8F2] text-[#101828] py-3 px-4 sm:py-4 sm:px-7 rounded-2xl font-euclidmedium text-sm sm:text-xl h-[50px] md:h-[64px]">
               For Business

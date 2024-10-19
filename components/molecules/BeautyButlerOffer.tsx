@@ -47,41 +47,41 @@ const BeautyButlerOffer: React.FC = () => {
 
       <div className="flex flex-col md:flex-row justify-center items-start gap-8 w-full h-[100%]">
         {/* Offer 1 Header */}
-        <div className="flex flex-col items-center w-full md:max-w-[40%] my-5 h-[50.3rem]">
-          <h3 className="text-4xl my-6 text-center text-[#101828] font-apfelmittel">Beauty Butler Pro</h3>
+        <div className="flex flex-col items-center w-full md:max-w-[40%] my-5 h-[50.3rem] md:h-auto">
+          <h3 className="text-4xl md:text-4xl my-6 md:my-10 text-center text-[#101828] font-apfelmittel">
+            Beauty Butler Pro
+          </h3>
           {/* Premium Butler Service Card */}
-          <div className="text-left bg-white p-6 rounded-3xl flex flex-col pt-10 justify-between flex-1 w-full h-full">
+          <div className="text-left bg-white p-6 rounded-3xl flex flex-col pt-10 justify-between flex-1 w-full h-full md:w-full md:h-full">
             <div className="flex flex-col items-start gap-2 mb-auto">
               {premiumFeatures.map((feature, index) => (
                 <div key={index} className="flex items-center gap-2 mb-2">
                   <Image src="/check.svg" alt="Check mark" width={20} height={20} />
-                  <span className="font-euclidlight text-lg text-[#475467]">
+                  <span className="font-euclidlight text-lg text-[#475467] md:text-lg text-sm">
                     {feature}
                   </span>
                 </div>
               ))}
             </div>
-            <div className="mt-auto">
-              {/* Add some space here for better height balancing */}
-            </div>
+            <div className="mt-auto"></div>
           </div>
         </div>
 
         {/* Offer 2 Header */}
-        <div className="flex flex-col items-center w-full md:max-w-[40%] my-5">
-          <h3 className="text-4xl my-6 font-apfelmittel  text-center text-[#101828]">
+        <div className="flex flex-col items-center w-full md:max-w-[40%] my-5 md:h-auto">
+          <h3 className="text-4xl md:text-4xl my-6 md:my-10 font-apfelmittel text-center text-[#101828]">
             Beauty Butler Enterprise
           </h3>
           {/* Standard Butler Service Card */}
           <div
-            className="text-left bg-[#8877D8] p-6 rounded-3xl flex flex-col pt-10 justify-between flex-1 w-full h-full relative"
+            className="text-left bg-[#8877D8] p-6 rounded-3xl flex flex-col pt-10 justify-between flex-1 w-full h-full md:w-full md:h-full relative"
             style={{ backgroundImage: 'url(/background-pattern.png)' }}
           >
             <div className="flex flex-col items-start gap-2 text-white">
               {standardFeatures.map((feature, index) => (
                 <div key={index} className="flex items-center gap-2 mb-2">
                   <Image src="/path.svg" alt="Check mark" width={20} height={20} />
-                  <span className="font-euclidlight text-lg text-[#ffffff]">
+                  <span className="font-euclidlight text-lg text-[#ffffff] md:text-lg text-sm">
                     {feature}
                   </span>
                 </div>
