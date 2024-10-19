@@ -1,19 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Epilogue } from "next/font/google";
 import "./globals.css";
 
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+
 const euclid = localFont({
   src:"./fonts/Euclid-Circular-A-Bold.ttf",
   variable:"--font-euclid",
@@ -46,11 +36,6 @@ const apfelmedium = localFont({
   weight:"100, 300, 400, 500, 600"
 });
 
-const epilogue = Epilogue({
-  subsets:['latin'],
-  weight:['100','300','400','500','600','700'],
-  variable:'--font-epilogue',
-});
 
 export const metadata: Metadata = {
   title: "Welcome to beauty butler",
@@ -65,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${epilogue.variable} ${euclidsemibold.variable} ${euclidlight.variable} ${euclidmedium.variable} ${euclid.variable} ${apfel.variable} ${apfelmedium.variable} antialiased`}
+        className={`$${euclidsemibold.variable} ${euclidlight.variable} ${euclidmedium.variable} ${euclid.variable} ${apfel.variable} ${apfelmedium.variable} antialiased`}
       >
         {children}
       </body>
