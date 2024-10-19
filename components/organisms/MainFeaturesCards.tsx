@@ -42,7 +42,7 @@ const MainFeaturesCards: React.FC = () => {
               <img
                 src={feature.imageSrc}
                 alt={feature.title}
-                className="relative top-6 object-contain h-[100%]"
+                className="relative top-6 object-contain "
               />
             </div>
           </div>
