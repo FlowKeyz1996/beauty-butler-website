@@ -70,7 +70,7 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
             />
 
             {/* Image Inside the Form */}
-            <div className="w-full flex items-center mt-6 gap-32">
+            <div className="w-full flex items-center mt-6 gap-32 relative">
               <img
                 src="/faqimg.svg"
                 alt="Related Image"
@@ -79,7 +79,7 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
               {/* Button aligned with the start of the image */}
               <button
                 type="submit"
-                className="px-16 font-euclidmedium py-3 bg-[#8878d7] bottom-14 relative text-white rounded-2xl text-xl"
+                className="px-16 font-euclidmedium py-3 bg-[#8878d7] top-9 -right-1 absolute text-white rounded-2xl text-xl"
               >
                 Submit
               </button>

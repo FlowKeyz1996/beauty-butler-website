@@ -5,13 +5,15 @@ interface TagHeaderProps {
   position?: 'left' | 'center' | 'right';
   paddingX?: string; // For horizontal padding (px-5)
   paddingY?: string; // For vertical padding (py-1)
+  maxWidth?: string; // Optional prop to control max width
 }
 
 const TagHeader: React.FC<TagHeaderProps> = ({
   text,
   position = 'center',
-  paddingX = 'px-5',
+  paddingX = 'px-4', // Default padding, customizable
   paddingY = 'py-1',
+  maxWidth = 'max-w-[300px]', // Default max width, customizable
 }) => {
   let alignmentClass = 'mx-auto'; // Default is center
 
@@ -22,8 +24,8 @@ const TagHeader: React.FC<TagHeaderProps> = ({
   }
 
   return (
-    <div className={`bg-[#FFE8FA] text-center border border-[#FFC8F2] rounded-full items-center flex justify-center  ${paddingX} ${paddingY} lg:max-w-[35%] ${alignmentClass}`}>
-      <p className="font-euclidlight font-semibold text-[#475467]">{text}</p>
+    <div className={`bg-[#FFE8FA] text-center border border-[#FFC8F2] rounded-full items-center flex justify-center ${paddingX} ${paddingY} w-full ${maxWidth} ${alignmentClass}`}>
+      <p className="font-euclidlight font-semibold text-[#475467] truncate">{text}</p>
     </div>
   );
 };

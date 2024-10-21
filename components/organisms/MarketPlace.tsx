@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
 import TagHeader from '../atoms/TagHeader';
+import Link from 'next/link';
 
 interface MarketplaceCardProps {
   imageUrl: string;
@@ -52,11 +53,13 @@ const MarketplaceCard: React.FC<MarketplaceCardProps> = ({ imageUrl, title, desc
         Give your clients easy access to your services, price list and calendar by creating a mini web page to take bookings. 
         Clients can book via your social media or website. 
         </p>
+        <Link href="https://airtable.com/appbyIQgO429LydxX/pagpJUqsZCrQzQcYg/form">
         <div className="flex justify-center lg:justify-start">
           <button className="bg-[#8878d7] text-white py-4 text-xl font-euclidmedium px-14 my-2 rounded-xl">
             {buttonText}
           </button>
         </div>
+        </Link>
       </motion.div>
     </motion.div>
   );

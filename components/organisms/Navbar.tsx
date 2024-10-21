@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
 
         {/* Button (outside the shadow div, same height as navbar) */}
         <div className="hidden md:block h-full flex items-center"> {/* Ensure the button wrapper has full height */}
-          <Link href="/customers">
+          <Link href="/">
           <button className="bg-[#FFC8F2] text-[#101828] py-3 px-4 sm:py-4 sm:px-7 rounded-2xl font-euclidmedium text-sm sm:text-xl h-[50px] md:h-[64px]">
               For customers
             </button>
@@ -97,7 +97,7 @@ const Navbar: React.FC = () => {
             <Link href="/company" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
               Company
             </Link>
-            <Link href="/customers">
+            <Link href="/business">
             <button
               onClick={toggleMenu}
               className="bg-[#FFC8F2] text-[#101828] px-4 py-2 rounded-xl"

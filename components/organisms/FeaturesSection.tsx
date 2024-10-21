@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import TagHeader from '../atoms/TagHeader';
+import Link from 'next/link';
 
 const FeaturesSection = () => {
   return (
@@ -22,10 +23,12 @@ const FeaturesSection = () => {
         <p className="text-base sm:text-lg md:text-xl max-w-lg text-[#475467] font-euclidlight">
           Beauty Butler helps you book appointments, retain <br />clients, get paid - all in one place.
         </p>
+        <Link href="/features">
         <div className="text-[#8878D8] my-5 font-euclidmedium flex items-center ">
           <p className="text-base sm:text-lg md:text-xl">Learn More</p>
           <img src="/arrow-right-02.svg" alt="arrow-image" className="mx-2" />
         </div>
+        </Link>
       </motion.div>
 
       {/* Features Card */}

@@ -26,7 +26,7 @@ const NavbarOne: React.FC = () => {
         <div className="flex justify-between items-center w-full md:w-5/6 shadow-2xl rounded-full p-2 sm:p-4 bg-white bg-opacity-100 backdrop-blur-lg border h-[50px] md:h-[64px]">
           {/* Logo and Hamburger */}
           <div className="flex items-center justify-between w-full md:w-auto">
-            <Link href="/">
+            <Link href="/business">
               <div className="text-xl sm:text-2xl font-bold">
                 <img src='/purplelogo.svg' alt="Logo" className="h-8 sm:h-10" /> {/* Adjusted logo size */}
               </div>
@@ -65,7 +65,7 @@ const NavbarOne: React.FC = () => {
 
         {/* Button */}
         <div className="hidden md:block h-full flex items-center">
-          <Link href="/">
+          <Link href="/business">
             <button className="bg-[#FFC8F2] text-[#101828] py-3 px-4 sm:py-4 sm:px-7 rounded-2xl font-euclidmedium text-sm sm:text-xl h-[50px] md:h-[64px]">
               For Business
             </button>
@@ -89,7 +89,7 @@ const NavbarOne: React.FC = () => {
             <Link href="/company" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
               Company
             </Link>
-            <Link href="/">
+            <Link href="/business">
             <button
               onClick={toggleMenu}
               className="bg-[#FFC8F2] text-[#101828] px-4 py-2 rounded "

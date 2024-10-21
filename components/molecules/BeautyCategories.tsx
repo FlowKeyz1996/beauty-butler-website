@@ -15,10 +15,10 @@ const imagesData: Record<string, ImageSet> = {
     bottomRightImage: '/lashesone.svg',
   },
   makeup: {
-    mainImage: '/images/makeup-main.jpg',
-    topImage: '/images/makeup-top.jpg',
-    bottomLeftImage: '/images/makeup-bottom-left.jpg',
-    bottomRightImage: '/images/makeup-bottom-right.jpg',
+    mainImage: '/lashesone.svg',
+    topImage: '/lashestwo.svg',
+    bottomLeftImage: '/lashesone.svg',
+    bottomRightImage: '/lashesone.svg',
   },
   hair: {
     mainImage: '/images/hair-main.jpg',

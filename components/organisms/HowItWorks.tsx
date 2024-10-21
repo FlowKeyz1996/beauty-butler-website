@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, useInView } from 'framer-motion';
+import Link from 'next/link';
 import { useRef } from 'react';
 
 const HowItWorks: React.FC = () => {
@@ -43,7 +44,7 @@ const HowItWorks: React.FC = () => {
           id="howItWorksVideo"
           className="w-full h-full rounded-lg"
           controls={isPlaying}
-          poster="/path-to-your-poster-image.jpg"
+          poster="/heroimage.svg"
         >
           <source src="/howitworks.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -58,10 +59,11 @@ const HowItWorks: React.FC = () => {
           </button>
         )}
       </motion.div>
-
+     <Link href="https://airtable.com/appbyIQgO429LydxX/pagpJUqsZCrQzQcYg/form">
       <button className="bg-white text-[#8877d8] py-3 px-10 sm:py-4 sm:px-24 rounded-2xl text-2xl font-euclidmedium">
         Book a Demo
       </button>
+      </Link>
     </div>
   );
 };
