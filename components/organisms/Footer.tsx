@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
             placeholder="Tell us the features you’d love to see on Beauty Butler"
           />
          <div className="w-full flex justify-center md:mr-32 md:justify-end ">
-  <button className="bg-[#8877D8] text-xl font-euclidmedium text-white px-6 sm:px-14 py-3 sm:py-4 rounded-xl w-full sm:w-auto">
+  <button className="bg-[#8877D8] text-xl font-euclidmedium text-white px-6 sm:px-14 py-3 sm:py-3 rounded-xl w-full sm:w-auto">
     Submit
   </button>
 </div>

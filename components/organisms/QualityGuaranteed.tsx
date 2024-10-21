@@ -5,12 +5,12 @@ import TagHeader from '../atoms/TagHeader';
 
 const QualityGuaranteed: React.FC = () => {
   return (
-    <div className="p-3">
-      <div className="flex justify-center items-center min-h-screen">
+    <div className="my-9">
+      <div className="flex justify-center items-center ">
         <div className="flex flex-col md:flex-row justify-between items-center max-w-6xl w-full">
           {/* Left Side */}
           <div className="flex-1 md:mr-8 mb-8 md:mb-0 text-center md:text-left">
-            <TagHeader text="Quality guaranteed" position='left' paddingX='px-5' paddingY='py-1' />
+            <TagHeader text="👌🏾 Quality guaranteed" position='left' paddingX='px-5' paddingY='py-1'maxWidth='max-w-[240px]' />
             <h2 className="text-3xl md:text-5xl font-apfelmittel mb-4 max-w-xl mx-auto md:mx-0 text-[#101828] leading-[2.5rem] md:leading-[3rem]">
               A full solution to manage and grow your business
             </h2>
@@ -18,7 +18,7 @@ const QualityGuaranteed: React.FC = () => {
             Packed with all the tools you need to boost sales, manage your calendar and retain clients so you can focus on what you do best.
               mind and guaranteed satisfaction.
             </p>
-            <button className="bg-[#8877D8] text-white py-3 px-10 md:px-16 rounded-2xl font-euclidmedium text-xl md:text-2xl">
+            <button className="bg-[#8877D8] text-white py-4 px-10 md:px-16 rounded-xl font-euclidmedium text-lg md:text-2xl">
               Book A Demo
             </button>
           </div>

@@ -85,13 +85,13 @@ const GettingStarted: React.FC = () => {
 
         {/* Button */}
         <div className="w-full flex justify-center mt-10">
-          <button className="bg-[#8877D8] flex items-center px-16 py-3 rounded-xl">
+          <button className="bg-[#8877D8] flex items-center px-16 py-2 rounded-2xl">
             <img
               src="/googleandapplepurple.svg"
               alt="Download Icon"
-              className="w-16 h-14 mr-4 fill-current"
+              className="w-20 h-14 mr-4 fill-current"
             />
-            <span className=" text-white font-euclidmedium text-xl">
+            <span className=" text-white font-euclidmedium text-2xl">
               Download App
             </span>
           </button>

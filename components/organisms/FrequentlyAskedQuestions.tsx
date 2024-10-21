@@ -26,7 +26,7 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
   };
 
   return (
-    <div className="max-w-7xl mx-auto p-5 md:p-8 h-auto min-h-screen md:h-auto my-10">
+    <div className="max-w-7xl mx-auto p-5 md:p-8 h-auto  md:h-auto my-10">
       <TagHeader text="Frequently Asked Questions" />
       <h2 className="text-4xl font-bold text-center mb-10 mt-5 font-apfelregular">
         Got questions? We’ve got answers
@@ -79,7 +79,7 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
               {/* Button aligned with the start of the image */}
               <button
                 type="submit"
-                className="px-16 font-euclidmedium py-3 bg-[#8878d7] top-9 -right-1 absolute text-white rounded-2xl text-xl"
+                className="px-16 font-euclidmedium py-3 bg-[#8878d7] top-2 -right-1 absolute text-white rounded-2xl text-xl"
               >
                 Submit
               </button>

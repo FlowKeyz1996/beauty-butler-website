@@ -42,7 +42,7 @@ const MarketplaceCard: React.FC<MarketplaceCardProps> = ({ imageUrl, title, desc
 
       {/* Right Side - Text */}
       <motion.div className="w-full lg:w-1/2 px-4 lg:px-9 max-w-xl" variants={fadeInRightVariants}>
-        <TagHeader text="Our marketplace" position='left' paddingX='px'/>
+        <TagHeader text="Our marketplace" position='left'maxWidth='max-w-[200px]'/>
         <h2 className="text-3xl lg:text-4xl text-[#101828] mb-3 font-apfelmittel text-center lg:text-left">
           {title}
         </h2>
@@ -55,7 +55,7 @@ const MarketplaceCard: React.FC<MarketplaceCardProps> = ({ imageUrl, title, desc
         </p>
         <Link href="https://airtable.com/appbyIQgO429LydxX/pagpJUqsZCrQzQcYg/form">
         <div className="flex justify-center lg:justify-start">
-          <button className="bg-[#8878d7] text-white py-4 text-xl font-euclidmedium px-14 my-2 rounded-xl">
+          <button className="bg-[#8878d7] text-white py-4 text-2xl font-euclidmedium px-14 my-2 rounded-xl">
             {buttonText}
           </button>
         </div>

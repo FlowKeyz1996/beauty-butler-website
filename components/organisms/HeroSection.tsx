@@ -84,7 +84,7 @@ const HeroSection: React.FC = () => {
             that brings beauty professionals <br />and clients together seamlessly.
           </p>
           <Link href="https://airtable.com/appbyIQgO429LydxX/pagpJUqsZCrQzQcYg/form">
-          <button className="mt-8 bg-[#8877D8] font-euclidmedium text-xl text-white px-12 py-4 rounded-xl">
+          <button className="mt-8 bg-[#8877D8] font-euclidmedium text-2xl text-white px-24 py-4 rounded-2xl">
             Book a Demo
           </button>
           </Link>

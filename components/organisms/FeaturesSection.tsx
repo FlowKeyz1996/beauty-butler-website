@@ -13,7 +13,7 @@ const FeaturesSection = () => {
         transition={{ duration: 0.5 }}
         viewport={{ once: false, amount: 0.2 }}
       >
-        <TagHeader text="Features" position="left" />
+        <TagHeader text="Features" position="left" maxWidth='max-w-[120px]'/>
         <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[2.5rem] sm:leading-[3.0rem] md:leading-[3.5rem] font-apfelmittel text-[#101828d] max-w-2xl my-2">
           A full solution to manage <br />and grow your business
         </h2>
