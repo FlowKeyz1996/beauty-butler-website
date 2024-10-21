@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface FeatureCard {
   title: string;
@@ -19,13 +19,40 @@ const features: FeatureCard[] = [
 ];
 
 const MainFeaturesCards: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const scrollLeft = e.currentTarget.scrollLeft;
+    const cardWidth = e.currentTarget.clientWidth / 2; // Adjust according to the number of visible cards
+    const newIndex = Math.round(scrollLeft / cardWidth);
+    setCurrentIndex(newIndex);
+  };
+
+  useEffect(() => {
+    const updateIndex = () => {
+      const scrollContainer = document.querySelector('.flex');
+      if (scrollContainer) {
+        const scrollLeft = scrollContainer.scrollLeft;
+        const cardWidth = scrollContainer.clientWidth / 2; // Adjust according to the number of visible cards
+        const newIndex = Math.round(scrollLeft / cardWidth);
+        setCurrentIndex(newIndex);
+      }
+    };
+
+    window.addEventListener('resize', updateIndex);
+    return () => window.removeEventListener('resize', updateIndex);
+  }, []);
+
   return (
     <div className="container mx-auto px-4 py-8 my-20 rounded-3xl relative z-10 bottom-43">
-      <div className="flex overflow-x-scroll sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 hide-scroll-bar">
+      <div 
+        className="flex overflow-x-scroll sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 hide-scroll-bar" 
+        onScroll={handleScroll}
+      >
         {features.map((feature, index) => (
           <div 
             key={index} 
-            className="min-w-[280px] sm:min-w-0 bg-[#F8F9Fb]  rounded-2xl border p-4 sm:p-6 flex flex-col items-center justify-between"
+            className="min-w-[280px] sm:min-w-0 bg-[#F8F9Fb] rounded-2xl border p-4 sm:p-6 flex flex-col items-center justify-between"
           >
             {/* Header and Description */}
             <div>
@@ -42,10 +69,20 @@ const MainFeaturesCards: React.FC = () => {
               <img
                 src={feature.imageSrc}
                 alt={feature.title}
-                className="relative top-6 object-contain "
+                className="relative top-6 object-contain"
               />
             </div>
           </div>
+        ))}
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="flex justify-center mt-4">
+        {features.map((_, index) => (
+          <div
+            key={index}
+            className={`h-3 rounded-full mx-1 ${currentIndex === index ? 'bg-[#101828] w-6' : 'bg-gray-300 w-3'}`}
+          />
         ))}
       </div>
     </div>

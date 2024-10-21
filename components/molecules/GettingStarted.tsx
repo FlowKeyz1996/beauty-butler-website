@@ -72,12 +72,12 @@ const GettingStarted: React.FC = () => {
               <img
                 src="/03.svg"
                 alt="Left Image"
-                className="w-[60%] md:w-[65%] h-auto object-contain rounded-lg absolute bottom-0"
+                className="w-[55%] md:w-[60%] h-auto object-contain rounded-lg absolute bottom-0 left-2"
               />
               <img
                 src="/device3.svg"
                 alt="Right Image"
-                className="w-[35%] md:w-[39%] rounded-lg relative -left-11"
+                className="w-[35%] md:w-[39%] rounded-lg relative -right-96 top-6"
               />
             </div>
           </div>
