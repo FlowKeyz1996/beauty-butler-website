@@ -69,8 +69,8 @@ const Footer: React.FC = () => {
   <div className="flex-1 font-euclidmedium">
     <h3 className="font-bold mb-2 font-euclidlight text-[#C2C6e8]">PRODUCT</h3>
     <ul className="font-euclidlight">
-      <li>Customers</li>
-      <li>Business</li>
+     <Link href="/"> <li>Customers</li></Link>
+     <Link href="/business"><li>Businesses</li></Link> 
     </ul>
   </div>
   

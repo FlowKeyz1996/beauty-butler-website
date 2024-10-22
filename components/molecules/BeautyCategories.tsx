@@ -23,8 +23,8 @@ const imagesData: Record<string, ImageSet> = {
   hair: {
     mainImage: '/haircategory.svg',
     topImage: '/haircategoryone.svg',
-    bottomLeftImage: '/haircategorytwo.svg',
-    bottomRightImage: '/images/hair-bottom-right.jpg',
+    bottomLeftImage: '/lashesone.svg',
+    bottomRightImage: '/braidstest.svg',
   },
   nails: {
     mainImage: '/nailscategory.svg',

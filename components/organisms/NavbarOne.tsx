@@ -67,7 +67,7 @@ const NavbarOne: React.FC = () => {
         <div className="hidden md:block h-full flex items-center">
           <Link href="/business">
             <button className="bg-[#FFC8F2] text-[#101828] py-3 px-4 sm:py-4 sm:px-7 rounded-2xl font-euclidmedium text-sm sm:text-xl h-[50px] md:h-[64px]">
-              For Business
+              For Businesses
             </button>
           </Link>
         </div>
@@ -94,7 +94,7 @@ const NavbarOne: React.FC = () => {
               onClick={toggleMenu}
               className="bg-[#FFC8F2] text-[#101828] px-4 py-2 rounded "
             >
-              For Business 
+              For Businesses 
             </button>
             </Link>
           </div>

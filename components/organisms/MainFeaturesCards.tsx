@@ -7,7 +7,7 @@ interface FeatureCard {
 }
 
 const features: FeatureCard[] = [
-  { title: 'Beauty Butler Marketplace', description: 'Attract a flood of new customers with Beauty Butler. Your business will be effortlessly discoverable by your ideal clientele with our marketplace app and our clever algorithm.', imageSrc: '/featureimgone.svg' },
+  { title: 'Beauty Butler Marketplace', description: 'Attract a flood of new clients! Your business will be effortlessly discoverable by your ideal clientele, with our marketplace app and clever algorithm.', imageSrc: '/featureimgone.svg' },
   { title: 'Flexible appointment scheduling', description: 'Make your schedule available anytime, anywhere. Never miss a booking, we automate appointment scheduling so you can focus on what’s important!', imageSrc: '/featureimgbold.svg' },
   { title: 'Payment Processing', description: ' Deliver a smooth, ultra-fast checkout experience your clients will love. We’re here to help with questions on transactions, and payment summaries too.', imageSrc: '/featureimg3bold.svg' },
   { title: 'Marketing', description: 'Keep your clients coming back using our built-in marketing campaigns and email marketing tools. Create discounts and promotions you can sell online.', imageSrc: '/featureimgouttwo.svg' },
@@ -76,12 +76,12 @@ const MainFeaturesCards: React.FC = () => {
         ))}
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="flex justify-center mt-4">
+      {/* Scroll Indicator - only on mobile screens */}
+      <div className="flex justify-center mt-6 sm:hidden">
         {features.map((_, index) => (
           <div
             key={index}
-            className={`h-3 rounded-full mx-1 ${currentIndex === index ? 'bg-[#101828] w-6' : 'bg-gray-300 w-3'}`}
+            className={`h-3 rounded-full mx-1 ${currentIndex === index ? 'bg-[#8878D8] w-12' : 'bg-gray-300 w-3'}`}
           />
         ))}
       </div>

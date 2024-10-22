@@ -25,7 +25,7 @@ const HowItWorks: React.FC = () => {
     >
       {/* Animate the heading coming from the top when in view */}
       <motion.h2
-        className="text-3xl sm:text-4xl font-semibold mb-5 sm:mb-7 text-white"
+        className="text-4xl sm:text-5xl  font-apfelmittel mb-5 sm:mb-7 text-white"
         initial={{ y: -100, opacity: 0 }}
         animate={isInView ? { y: 0, opacity: 1 } : {}}
         transition={{ duration: 2, ease: 'easeOut' }}
@@ -42,7 +42,7 @@ const HowItWorks: React.FC = () => {
       >
         <video
           id="howItWorksVideo"
-          className="w-full h-full rounded-lg"
+          className="w-full h-full rounded-lg object-"
           controls={isPlaying}
           poster="/heroimage.svg"
         >

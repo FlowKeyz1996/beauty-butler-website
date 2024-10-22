@@ -21,12 +21,12 @@ const BusinessHeroSection = () => {
 
           {/* Call to action button for all screens */}
           <div className="flex items-center justify-center lg:justify-start">
-            <button className="flex items-center justify-center bg-white text-[#8877D8] text-sm sm:text-lg font-euclidmedium py-3 sm:py-4 px-4 sm:px-16 rounded-xl sm:rounded-2xl">
-              <div className="flex items-center space-x-2 sm:space-x-3">
+            <button className="flex items-center justify-center bg-white text-[#8877D8] text-sm sm:text-lg font-euclidmedium py-3 sm:py-4 px-4 sm:px-10  rounded-xl sm:rounded-2xl">
+              <div className="flex items-center">
                 <Image
                   src="/appleandgoogle.svg"
                   alt="Icon"
-                  width={80} // Reduced for mobile
+                  width={90} // Reduced for mobile
                   height={20} // Reduced for mobile
                 />
                 <span className="ml-2 sm:ml-3  text-2xl font-euclidmedium">Download App</span>

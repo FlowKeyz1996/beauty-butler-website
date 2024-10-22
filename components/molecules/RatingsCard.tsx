@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { FaStar } from "react-icons/fa";
 
 interface CardProps {
@@ -65,31 +65,33 @@ const RatingsCard = () => {
         </button>
 
         {/* Animated Card */}
-        <motion.div
-          key={cardsData[currentCard].id}
-          className="flex flex-col justify-center bg-white p-4 sm:p-6 md:p-8 rounded-3xl mb-8 sm:mb-12 lg:mb-16 mt-4 w-[100%] sm:w-4/5 md:w-4/5 lg:w-full xl:w-full h-auto lg:h-auto transition-all"
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-2xl sm:text-3xl font-apfelmittel text-[#101828]">{cardsData[currentCard].title}</h2>
-          <p className="text-sm sm:text-base my-4 font-euclidlight">{cardsData[currentCard].description}</p>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={cardsData[currentCard].id}
+            className="flex flex-col justify-center bg-white p-4 sm:p-6 md:p-8 rounded-3xl mb-8 sm:mb-12 lg:mb-16 mt-4 w-[100%] sm:w-4/5 md:w-4/5 lg:w-full xl:w-full h-auto lg:h-auto transition-all"
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-2xl sm:text-3xl font-apfelmittel text-[#101828]">{cardsData[currentCard].title}</h2>
+            <p className="text-sm sm:text-base my-4 font-euclidlight">{cardsData[currentCard].description}</p>
 
-          <div className="flex items-center space-x-4 my-4 sm:my-6">
-            <img
-              src={cardsData[currentCard].imageUrl}
-              alt="User"
-              className="w-12 h-12 sm:w-16 sm:h-16 rounded-full"
-            />
-            <div>
-              <p className="text-base sm:text-lg font-medium text-center font-apfelmittel text-[#101828]">
-                {cardsData[currentCard].text}
-              </p>
-              <StarRating rating={cardsData[currentCard].rating} />
+            <div className="flex items-center space-x-4 my-4 sm:my-6">
+              <img
+                src={cardsData[currentCard].imageUrl}
+                alt="User"
+                className="w-12 h-12 sm:w-16 sm:h-16 rounded-full"
+              />
+              <div>
+                <p className="text-base sm:text-lg font-medium text-center font-apfelmittel text-[#101828]">
+                  {cardsData[currentCard].text}
+                </p>
+                <StarRating rating={cardsData[currentCard].rating} />
+              </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </AnimatePresence>
 
         {/* Next Button */}
         <button
