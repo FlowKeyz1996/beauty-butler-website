@@ -24,19 +24,19 @@ const imagesData: Record<string, ImageSet> = {
     mainImage: '/haircategory.svg',
     topImage: '/haircategoryone.svg',
     bottomLeftImage: '/lashesone.svg',
-    bottomRightImage: '/braidstest.svg',
+    bottomRightImage: '/lashesone.svg',
   },
   nails: {
     mainImage: '/nailscategory.svg',
-    topImage: '/images/nails-top.jpg',
-    bottomLeftImage: '/images/nails-bottom-left.jpg',
-    bottomRightImage: '/images/nails-bottom-right.jpg',
+    topImage: '/haircategoryone.svg',
+    bottomLeftImage: '/lashesone.svg',
+    bottomRightImage: '/lashesone.svg',
   },
   spa: {
     mainImage: '/spacategory.svg',
     topImage: '/spacategoryone.svg',
-    bottomLeftImage: '/spacategorytwo.svg',
-    bottomRightImage: '/images/spa-bottom-right.jpg',
+    bottomLeftImage: '/lashesone.svg',
+    bottomRightImage: '/lashesone.svg',
   },
 };
 
@@ -53,11 +53,11 @@ const BeautyCategories: React.FC = () => {
       </header>
 
       {/* Category Buttons */}
-      <div className="flex justify-center space-x-4 sm:space-x-9 mb-8 font-euclidmedium text-2xl text-[#101828]">
+      <div className="flex justify-center space-x-2 sm:space-x-9 mb-4 sm:mb-8 font-euclidmedium text-base sm:text-2xl text-[#101828]">
         {['lashes', 'makeup', 'hair', 'nails', 'spa'].map((category) => (
           <button
             key={category}
-            className={`px-3 py-1 sm:px-4 sm:py-2 rounded-xl transition-colors duration-300 ${
+            className={`px-2 py-1 sm:px-4 sm:py-2 rounded-xl transition-colors duration-300 ${
               activeCategory === category
                 ? 'bg-[#DADAFF]'
                 : 'bg-transparent text-[#98A2b3]'

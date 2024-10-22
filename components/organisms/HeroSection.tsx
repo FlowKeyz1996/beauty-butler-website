@@ -69,7 +69,7 @@ const HeroSection: React.FC = () => {
 
       {/* Text overlay */}
       <div className="relative top-7 z-10 h-full flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
-        <div className="text-white px-6 md:px-16 max-w-[90%] md:max-w-2xl lg:max-w-4xl">
+        <div className="text-white px-6 md:px-16 max-w-[90%] md:max-w-2xl lg:max-w-4xl mt-60 sm:mt-0">
           <motion.h1
             className="text-4xl md:text-6xl font-apfelmittel w-full whitespace-nowrap my-6"
             animate={controls}
@@ -79,12 +79,12 @@ const HeroSection: React.FC = () => {
             <span className="text-[#8878D7]">{firstWord}</span>
             {restOfPhrase}
           </motion.h1>
-          <p className="my-4 text-lg md:text-xl font-euclidlight">
-            Empower Your Beauty Business with Beauty Butler.<br />Join the platform
-            that brings beauty professionals <br />and clients together seamlessly.
+          <p className="my-4 text-2xl sm:text-xl font-euclidlight  sm:max-w-[30rem]">
+            Empower Your Beauty Business with Beauty Butler.<br></br>Join the platform
+            that brings beauty professionals and clients together seamlessly.
           </p>
           <Link href="https://airtable.com/appbyIQgO429LydxX/pagpJUqsZCrQzQcYg/form">
-          <button className="mt-8 bg-[#8877D8] font-euclidmedium text-2xl text-white px-24 py-4 rounded-2xl">
+          <button className="mt-8 bg-[#8877D8] font-euclidmedium text-lg sm:text-2xl text-white px-28 py-5 sm:px-24 sm:py-4 rounded-2xl">
             Book a Demo
           </button>
           </Link>

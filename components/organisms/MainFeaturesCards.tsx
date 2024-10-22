@@ -44,7 +44,7 @@ const MainFeaturesCards: React.FC = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 py-8 my-20 rounded-3xl relative z-10 bottom-43">
+    <div className="container mx-auto px-4 py-8 my-4 sm:my-20 rounded-3xl relative z-10 bottom-43">
       <div 
         className="flex overflow-x-scroll sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 hide-scroll-bar" 
         onScroll={handleScroll}
@@ -52,7 +52,7 @@ const MainFeaturesCards: React.FC = () => {
         {features.map((feature, index) => (
           <div 
             key={index} 
-            className="min-w-[280px] sm:min-w-0 bg-[#F8F9Fb] rounded-2xl border p-4 sm:p-6 flex flex-col items-center justify-between"
+            className="min-w-[350px] sm:min-w-0 bg-[#F8F9Fb] rounded-3xl sm:rounded-2xl  border p-4 sm:p-6 flex flex-col items-center justify-between"
           >
             {/* Header and Description */}
             <div>
@@ -69,7 +69,7 @@ const MainFeaturesCards: React.FC = () => {
               <img
                 src={feature.imageSrc}
                 alt={feature.title}
-                className="relative top-6 object-contain"
+                className="relative  top-4 sm:top-6 object-contain"
               />
             </div>
           </div>

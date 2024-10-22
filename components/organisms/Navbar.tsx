@@ -99,7 +99,7 @@ const Navbar: React.FC = () => {
             <Link href="/company" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
               Company
             </Link>
-            <Link href="/business">
+            <Link href="/">
             <button
               onClick={toggleMenu}
               className="bg-[#FFC8F2] text-[#101828] px-4 py-2 rounded-xl"
