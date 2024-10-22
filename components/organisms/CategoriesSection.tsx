@@ -23,8 +23,8 @@ const categories: Category[] = [
 const CategoriesSection: React.FC = () => {
   return (
     <section className="my-9 py-9 bg-[#f7f7ff]">
-      <div className="py-3 mx-auto max-w-[30%] sm:max-w-[80%] lg:max-w-[60%]">
-        <TagHeader text="Categories"  maxWidth='max-w-[150px]'/>
+      <div className="py-3 mx-auto max-w-[90%] sm:max-w-[80%] lg:max-w-[60%]">
+        <TagHeader text="Categories" maxWidth="max-w-[150px]" />
       </div>
 
       {/* Animated Heading (Triggers when section is in view) */}
@@ -33,11 +33,11 @@ const CategoriesSection: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="text-5xl font-semibold text-[#101828] text-center mb-5 font-apfelregular tracking-wide"
+        className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-[#101828] text-center mb-5 font-apfelregular tracking-wide"
       >
         Elevating Businesses Like Yours
       </motion.h2>
-      <p className="font-euclidlight text-center text-2xl my-7 text-[#475467]">
+      <p className="font-euclidlight text-center text-lg sm:text-xl md:text-2xl my-7 text-[#475467]">
         Your One Stop Shop for Beauty and Wellness
       </p>
 
@@ -52,30 +52,25 @@ const CategoriesSection: React.FC = () => {
           {[...categories, ...categories].map((category) => (
             <div
               key={category.id}
-              className="flex flex-col items-center min-w-[220px]"
+              className="flex flex-col items-center min-w-[150px] sm:min-w-[180px] md:min-w-[200px] lg:min-w-[220px]"
             >
               {/* Card */}
-              <motion.div
-                className=""
-                transition={{ duration: 0.3 }}
-              >
+              <motion.div className="" transition={{ duration: 0.3 }}>
                 <img
                   src={category.imageSrc}
                   alt={category.text}
-                  className=" h-64 object-contain"
+                  className="h-40 sm:h-48 md:h-56 lg:h-64 object-contain"
                 />
               </motion.div>
 
               {/* Text */}
-              <p className="text-center text-lg text-[#101828] font-apfelmittel">
+              <p className="text-center text-sm sm:text-base md:text-lg lg:text-lg text-[#101828] font-apfelmittel">
                 {category.text}
               </p>
             </div>
-            
           ))}
         </motion.div>
       </div>
-     
     </section>
   );
 };

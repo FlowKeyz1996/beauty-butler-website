@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
+p {
+  font-family: var(--font-euclid-light);
+}
+h1 {
+  font-family: var(--font-apfel-mittel);
+}
 .epilogue{
     font-family: var(--font-epilogue);
   }

@@ -21,7 +21,7 @@ const HowItWorks: React.FC = () => {
   return (
     <div
       ref={sectionRef}
-      className="flex flex-col items-center justify-center my-5 bg-[#8877d8] p-5 h-auto sm:h-screen rounded-3xl"
+      className="flex flex-col items-center justify-center my-5 bg-[#8877d8] p-5 h-[60vh] sm:h-screen rounded-lg sm:rounded-3xl"
     >
       {/* Animate the heading coming from the top when in view */}
       <motion.h2
@@ -35,7 +35,7 @@ const HowItWorks: React.FC = () => {
 
       {/* Animate the video container sliding in from the left when in view */}
       <motion.div
-        className="relative w-full sm:w-[70%] h-[30vh] sm:h-[60%] rounded-lg my-4 sm:my-6 bg-white"
+        className="relative w-full sm:w-[70%] h-[35vh] sm:h-[60%] rounded-lg my-4 sm:my-6 bg-white"
         initial={{ x: '-100vw', opacity: 0 }}
         animate={isInView ? { x: 0, opacity: 1 } : {}}
         transition={{ type: 'spring', duration: 2 }}

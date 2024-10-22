@@ -7,33 +7,39 @@ import "./globals.css";
 const euclid = localFont({
   src:"./fonts/Euclid-Circular-A-Bold.ttf",
   variable:"--font-euclid",
-  weight:"100, 300, 400, 500, 600"
+  weight:" 300, 400, 500, 600",
+  display:'swap'
 });
 const euclidlight = localFont({
   src:"./fonts/Euclid-Circular-A-Light.ttf",
   variable:"--font-euclid-light",
-  weight:"100, 300, 400, 500, 600"
+  weight:" 400, 500, 600",
+  display:'swap'
 });
 const euclidmedium = localFont({
   src:"./fonts/Euclid Circular A Medium.ttf",
   variable:"--font-euclid-medium",
-  weight:"100, 300, 400, 500, 600"
+  weight:"100, 300, 400, 500, 600",
+  display:'swap'
 });
 const euclidsemibold = localFont({
   src:"./fonts/Euclid Circular A SemiBold.ttf",
   variable:"--font-euclid-semibold",
-  weight:"100, 300, 400, 500, 600"
+  weight:"100, 300, 400, 500, 600",
+  display:'swap'
 });
 
 const apfel = localFont({
   src:"./fonts/ApfelGrotezk-Regular.otf",
   variable:"--font-apfel-regular",
-  weight:"100, 300, 400, 500, 600"
+  weight:" 400, 500, 600",
+  display:'swap'
 });
 const apfelmedium = localFont({
   src:"./fonts/ApfelGrotezk-Mittel.otf",
   variable:"--font-apfel-mittel",
-  weight:"100, 300, 400, 500, 600"
+  weight:"100, 300, 400, 500, 600",
+  display:'swap'
 });
 
 
@@ -50,7 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`$${euclidsemibold.variable} ${euclidlight.variable} ${euclidmedium.variable} ${euclid.variable} ${apfel.variable} ${apfelmedium.variable} antialiased`}
+        className={`${euclidsemibold.variable} ${euclidlight.variable} ${euclidmedium.variable} ${euclid.variable} ${apfel.variable} ${apfelmedium.variable} antialiased`}
       >
         {children}
       </body>

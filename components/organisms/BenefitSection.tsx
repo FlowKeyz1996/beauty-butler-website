@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import TagHeader from '../atoms/TagHeader';
@@ -16,6 +16,8 @@ const BenefitSection = () => {
     triggerOnce: true,
     threshold: 0.2,
   });
+
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const items: TextWithIcon[] = [
     { 
@@ -60,6 +62,18 @@ const BenefitSection = () => {
     }
   }, [controlLeft, controlRight, inView]);
 
+  // Adjusted handleScroll to update currentIndex when a card is fully on the screen
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const scrollLeft = e.currentTarget.scrollLeft;
+    const cardWidth = e.currentTarget.clientWidth; // Ensure full card width is considered
+    const newIndex = Math.round((scrollLeft + cardWidth / 2) / cardWidth);
+
+    // Update index only if it has changed to avoid unnecessary renders
+    if (newIndex !== currentIndex) {
+      setCurrentIndex(newIndex);
+    }
+  };
+
   return (
     <motion.div
       ref={ref}
@@ -74,7 +88,7 @@ const BenefitSection = () => {
         <img
           src="/benefitlowimg.png"
           alt="provider-benefit-image"
-          className="object-contain "
+          className="object-contain"
         />
       </motion.div>
 
@@ -94,8 +108,8 @@ const BenefitSection = () => {
           Our all-in-one management software automates scheduling, manages customer data, processes payments, and more.
         </p>
 
-        {/* Benefits List */}
-        <div className="space-y-6 md:space-y-0 overflow-x-auto">
+        {/* Benefits List - Horizontal scroll on mobile */}
+        <div className="space-y-6 md:space-y-0 overflow-x-auto hide-scroll-bar" onScroll={handleScroll}>
           <div className="flex flex-row md:flex-col items-start space-x-6 md:space-x-0">
             {items.map((item, index) => (
               <div
@@ -112,6 +126,16 @@ const BenefitSection = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Scroll Indicator - only on mobile screens */}
+        <div className="flex justify-center mt-6 sm:hidden">
+          {items.map((_, index) => (
+            <div
+              key={index}
+              className={`h-3 rounded-full mx-1 ${currentIndex === index ? 'bg-[#8878D8] w-12' : 'bg-gray-300 w-3'}`}
+            />
+          ))}
         </div>
       </motion.div>
     </motion.div>

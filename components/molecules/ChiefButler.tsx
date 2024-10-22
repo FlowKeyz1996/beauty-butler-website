@@ -9,16 +9,16 @@ const ChiefButler: React.FC = () => {
 
   return (
     <div className="w-full mx-auto p-6 rounded-t-3xl max-w-6xl my-5">
-      <h2 className="text-5xl text-center py-5 font-apfelmittel mb-9">Meet the Chief Butler</h2>
+      <h2 className="text-3xl sm:text-5xl text-center py-5 font-apfelmittel mb-9 ">Meet the Chief Butler</h2>
       <div className="flex flex-col md:flex-row justify-center items-start">
         <div className="w-full md:w-1/2 mb-6 md:mb-0">
           <img 
             src="/chiefbutlerimg.svg" 
             alt="Chief Butler" 
-            className="w-full h-auto rounded-lg pr-14"
+            className="w-full h-auto rounded-lg mx-auto md:pr-14"
           />
-          <h3 className="text-4xl mt-4 text-center font-apfelmittel">Chinny Eze</h3>
-          <p className="text-xl text-[#8878d8] text-center font-euclidmedium my-1">CEO/Founder</p>
+          <h3 className="text-2xl sm:text-4xl mt-4 text-center font-apfelmittel">Chinny Eze</h3>
+          <p className="text-lg sm:text-xl text-[#8878d8] text-center font-euclidmedium my-1">CEO/Founder</p>
         </div>
         <div className="w-full md:w-1/2 md:pl-8">
           <p className="text-lg max-w-2xl md:max-w-none text-[#475467] leading-relaxed font-euclidlight">
@@ -27,10 +27,11 @@ const ChiefButler: React.FC = () => {
             I remember thinking: Why is getting the beauty services we deserve such a struggle? Why can’t it be on our time, on our terms? I wanted a solution that was effortless, where looking amazing didn’t mean sacrificing everything else. That’s when the idea for <span className="font-euclidmedium text-black">Beauty Butler </span>came to life.
             <br /><br />
            
-                I wanted to create something for women like us—<span className="font-euclidmedium text-black">Gen Z and Millennial women </span>who juggle careers, side hustles, and self-care with ease but still want to look flawless. Beauty Butler is more than just a convenience—it’s the ultimate <span className="font-euclidmedium">on-demand beauty and wellness experience.</span> I wanted something that matched our hustle and glow-up energy—a way to book a beauty service as easily as ordering a latte.
-                <br /><br />
-                {isExpanded && (
+            I wanted to create something for women like us—<span className="font-euclidmedium text-black">Gen Z and Millennial women </span>who juggle careers, side hustles, and self-care with ease but still want to look flawless. Beauty Butler is more than just a convenience—it’s the ultimate <span className="font-euclidmedium">on-demand beauty and wellness experience.</span> I wanted something that matched our hustle and glow-up energy—a way to book a beauty service as easily as ordering a latte.
+            {isExpanded && (
               <>
+                <br /><br />
+                
                 Beauty Butler is more than just an app. <span className="font-euclidmedium text-black">It’s a lifestyle.</span> It’s about owning your self-care without ever compromising your grind. With Beauty Butler, you can access the top beauty services anytime, anywhere, because you deserve to feel incredible—on your terms.
                 <br /><br />
                 Here’s the real magic: Beauty Butler isn’t just about convenience; it’s about belonging. It’s about being part of a community of women who are out there smashing their goals just like you. Because beauty isn’t just skin deep—it’s about how you feel, and we’re here to make sure you feel <span className="font-euclidmedium text-black">unstoppable.</span>
@@ -40,15 +41,13 @@ const ChiefButler: React.FC = () => {
                 And trust me, we’re just getting started. Beauty Butler is a revolution. We’re building this for you, with you. Whether you’re a beauty enthusiast, a wellness warrior, or a dedicated beauty professional, this is your moment. <span className="font-euclidmedium text-black"> Welcome to the future of beauty and wellness.</span>
               </>
             )}
+            <button 
+              onClick={toggleExpansion} 
+              className="text-[#8878d8] ml-2 font-euclidmedium"
+            >
+              {isExpanded ? 'See Less' : 'See More'}
+            </button>
           </p>
-          <button 
-  onClick={toggleExpansion} 
-  className={`${
-    isExpanded ? 'text-left' : 'text-center'
-  } text-[#8878d8] mt-4 font-euclidmedium w-full md:w-auto`}
->
-  {isExpanded ? 'See Less' : 'See More'}
-</button>
         </div>
       </div>
     </div>
