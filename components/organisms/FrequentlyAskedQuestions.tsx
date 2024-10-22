@@ -99,11 +99,11 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
             <div key={index} className="mb-4 rounded-xl overflow-hidden">
               <button
                 onClick={() => toggleAccordion(index)}
-                className="w-full text-left p-4 font-light text-xl font-apfelregular flex justify-between bg-[#F7F7ff] text-[#101828] items-center rounded-lg"
+                className="w-full text-left p-4 font-light text-lg sm:text-xl font-apfelregular flex justify-between bg-[#F7F7ff] text-[#101828] items-center rounded-lg"
               >
                 {faq.question}
                 <span
-                  className={`flex items-center justify-center w-10 h-10 bg-[#8878d7] text-white rounded-full text-2xl`}
+                  className={`flex items-center justify-center w-10 h-10 bg-[#8878d7] text-white rounded-full text-xl`}
                 >
                   {activeIndex === index ? '-' : '+'}
                 </span>

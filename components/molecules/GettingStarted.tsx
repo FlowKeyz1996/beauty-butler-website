@@ -3,11 +3,11 @@ import TagHeader from '../atoms/TagHeader';
 
 const GettingStarted: React.FC = () => {
   return (
-    <section className="flex flex-col items-center py-10 px-4">
+    <section className="flex flex-col items-center py-20 sm:py-10 px-4">
       <TagHeader text="How it works" maxWidth="max-w-[150px]" />
 
       {/* Header */}
-      <h1 className="text-2xl md:text-5xl text-[#101828] mb-4 text-center md:leading-[4rem] font-s font-apfelmittel">
+      <h1 className="text-4xl md:text-5xl text-[#101828] my-4 sm:my-0 sm:mb-4 text-center md:leading-[4rem] font-s font-apfelmittel">
         Getting Started with Beauty Butler
       </h1>
 
@@ -19,10 +19,10 @@ const GettingStarted: React.FC = () => {
       {/* Cards */}
       <div className="w-full md:w-[90%]">
         {/* Top Card */}
-        <div className="w-full mb-16 bg-[#f8f9fb] rounded-3xl border border-[#f2f4f7] p-4 md:p-6 relative overflow-hidden">
+        <div className="w-full mb-10 sm:mb-16 bg-[#f8f9fb] rounded-3xl border border-[#f2f4f7] p-4 md:p-6 relative overflow-hidden">
           <div className="flex flex-col md:flex-row justify-between">
             <div className="w-full md:w-1/2 flex flex-col mb-4 md:mb-0">
-              <h2 className="text-base md:text-3xl font-apfelregular text-[#1d2939] mb-2 text-left sm:text-left md:text-left">
+              <h2 className="text-xl sm:text-3xl font-apfelregular text-[#1d2939] mb-2 text-left sm:text-left md:text-left">
                 Download Beauty Butler: find the best beauty and wellness experts for you.
               </h2>
             </div>
@@ -44,18 +44,18 @@ const GettingStarted: React.FC = () => {
         </div>
 
         {/* Bottom Two Cards with space */}
-        <div className="w-full flex flex-col md:flex-row gap-10">
+        <div className="w-full flex flex-col md:flex-row gap-10 ">
           <div className="w-full md:w-1/2 bg-[#f8f9fb] rounded-3xl p-4 md:p-6 relative border-[#f2f4f7] flex flex-col items-center justify-between">
             {/* Text Above Images */}
-            <h2 className="text-3xl md:text-3xl mb-4 font-apfelregular text-[#1d2939] text-left md:text-left sm:text-left">
+            <h2 className="text-xl md:text-3xl mb-4 font-apfelregular text-[#1d2939] text-left md:text-left sm:text-left">
               Explore our extensive marketplace listings and categories.
             </h2>
             {/* Images inside card container */}
-            <div className="relative w-full h-[200px] md:h-[250px]">
+            <div className="relative w-full h-[100px] md:h-[250px] sm:h-[250px]">
               <img
                 src="/02.svg"
                 alt="Left Image"
-                className="absolute -bottom-5  left-0 w-[50%] md:w-[60%] h-auto object-contain"
+                className="absolute -bottom-5  left-0 w-[65%] md:w-[60%] h-auto object-contain"
               />
               <img
                 src="/Device2.svg"
@@ -67,20 +67,20 @@ const GettingStarted: React.FC = () => {
 
           <div className="w-full md:w-1/2 bg-[#f8f9fb] rounded-3xl p-4 md:p-6 relative border-[#f2f4f7] flex flex-col items-center justify-between">
             {/* Text Above Images */}
-            <h2 className="text-base md:text-3xl mb-4 font-apfelregular text-[#1d2939] text-center md:text-left">
+            <h2 className="text-xl md:text-3xl mb-4 font-apfelregular text-[#1d2939] text-left md:text-left">
               Get Salon services from the butler in the comfort of your home.
             </h2>
             {/* Images inside card container */}
-            <div className="relative w-full h-[200px] md:h-[150px]">
+            <div className="relative w-full h-[100px] md:h-[250px] sm:h-[250px]">
               <img
                 src="/03.svg"
                 alt="Left Image"
-                className="absolute -bottom-5 left-0 w-[55%] md:w-[60%] h-auto object-contain"
+                className="absolute -bottom-5 left-0 w-[65%] md:w-[60%] h-auto object-contain"
               />
               <img
                 src="/device3.svg"
                 alt="Right Image"
-                className="absolute -bottom-5 right-0 w-[45%] md:w-[40%] h-auto object-contain rounded-lg"
+                className="absolute -bottom-5 right-0 w-[35%] md:w-[40%] h-auto object-contain rounded-lg"
               />
             </div>
           </div>

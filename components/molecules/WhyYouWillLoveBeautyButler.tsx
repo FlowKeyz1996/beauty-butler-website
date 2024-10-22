@@ -95,7 +95,7 @@ const WhyYouWillLoveBeautyButler: FC = () => {
           {cardData.map((card, index) => (
             <motion.div
               key={index}
-              className="min-w-[90%] bg-gray-50 p-4 sm:p-5 border border-gray-200 rounded-md"
+              className="min-w-[90%] p-4 sm:p-5 border-gray-200 rounded-md"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.1 * index, duration: 0.5 }}

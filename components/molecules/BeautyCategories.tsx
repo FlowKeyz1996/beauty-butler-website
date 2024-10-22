@@ -60,7 +60,7 @@ const BeautyCategories: React.FC = () => {
             className={`px-2 py-1 sm:px-4 sm:py-2 rounded-xl transition-colors duration-300 ${
               activeCategory === category
                 ? 'bg-[#DADAFF]'
-                : 'bg-transparent text-[#98A2b3]'
+                : 'bg-[#F2F4f7] text-[#98A2b3]'
             }`}
             onClick={() => {
               setSelectedCategory(imagesData[category]);
