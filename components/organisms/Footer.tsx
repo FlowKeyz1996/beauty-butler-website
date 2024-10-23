@@ -49,17 +49,17 @@ const Footer: React.FC = () => {
           <div className="w-full my-10 mx-10">
             {/* Input Field */}
             <div>
-            <h3 className="text-left sm:ml-32 relative sm:text-3xl text-xl mx-8 font-bold top-12">For beauty tips and updates <span className="font-euclidmedium  text-xl sm:text-3xl font-normal text-[#8FF1EC]">subscribe to our newsletter.</span></h3>
+            <h3 className="text-left sm:ml-32 relative sm:text-3xl text-xl mx-10 font-bold top-12">For beauty tips and updates <span className="font-euclidmedium  text-xl sm:text-3xl font-normal text-[#8FF1EC]">subscribe to our newsletter.</span></h3>
           </div>
           <div className=" flex items-center justify-center">
-            <img src="/footerinputimg.svg" alt="footer_input_img" className=""></img>
+            <img src="/footerinputimg.svg" alt="footer_input_img" className="sm:w- object-cover"></img>
             <input
               type="email"
               placeholder="example@mail.com"
-              className="flex-grow p-4  border-t border-b border-l rounded-l-lg rounded border-gray-300 bg-[#8878D8] font-euclidmedium focus:outline-none"
+              className="flex-grow sm:p-4  border-t border-b border-l rounded-l-lg rounded border-gray-300 bg-[#8878D8] font-euclidmedium focus:outline-none"
             />
             {/* Button with White Background */}
-            <button className="bg-white text-[#8877D8] px-9 font-euclidmedium text-xl py-4 border border-[#8877D8] rounded-r-xl">
+            <button className="bg-white text-[#8877D8] px-9 font-euclidmedium text-xl sm:py-4 border border-[#8877D8] rounded-r-xl">
               Subscribe
             </button></div>
           </div>

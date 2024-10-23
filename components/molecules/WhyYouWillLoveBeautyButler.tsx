@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 interface CardData {
@@ -41,6 +41,30 @@ const cardData: CardData[] = [
 ];
 
 const WhyYouWillLoveBeautyButler: FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const scrollLeft = e.currentTarget.scrollLeft;
+    const cardWidth = e.currentTarget.clientWidth / 1; // Adjust according to the number of visible cards
+    const newIndex = Math.round(scrollLeft / cardWidth);
+    setCurrentIndex(newIndex);
+  };
+
+  useEffect(() => {
+    const updateIndex = () => {
+      const scrollContainer = document.querySelector('.flex');
+      if (scrollContainer) {
+        const scrollLeft = scrollContainer.scrollLeft;
+        const cardWidth = scrollContainer.clientWidth / 1; // Adjust according to the number of visible cards
+        const newIndex = Math.round(scrollLeft / cardWidth);
+        setCurrentIndex(newIndex);
+      }
+    };
+
+    window.addEventListener('resize', updateIndex);
+    return () => window.removeEventListener('resize', updateIndex);
+  }, []);
+
   return (
     <motion.div
       className="relative z-10 bg-white px-4 sm:px-6 rounded-t-[2rem] sm:rounded-t-[5rem] w-full mx-auto -mt-14 bottom-20 sm:-mt-16 sm:bottom-40 lg:mt-0"
@@ -91,7 +115,7 @@ const WhyYouWillLoveBeautyButler: FC = () => {
         </div>
 
         {/* Mobile Carousel */}
-        <div className="sm:hidden flex overflow-x-auto space-x-4 pb-5">
+        <div className="sm:hidden flex overflow-x-auto space-x-4 pb-5" onScroll={handleScroll}>
           {cardData.map((card, index) => (
             <motion.div
               key={index}
@@ -112,6 +136,16 @@ const WhyYouWillLoveBeautyButler: FC = () => {
                 {card.description}
               </p>
             </motion.div>
+          ))}
+        </div>
+
+        {/* Scroll Indicator - only on mobile screens */}
+        <div className="flex justify-center mt-6 sm:hidden">
+          {cardData.map((_, index) => (
+            <div
+              key={index}
+              className={`h-3 rounded-full mx-1 ${currentIndex === index ? 'bg-[#8878D8] w-12' : 'bg-gray-300 w-3'}`}
+            />
           ))}
         </div>
       </div>
