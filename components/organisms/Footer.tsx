@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
                 placeholder="example@mail.com"
                 className="flex-grow p-3 sm:p-4 border-t border-b border-l border-r border-gray-300 sm:border-0 rounded-l-lg rounded-r-lg sm:rounded-none bg-[#8878D8] font-euclidmedium focus:outline-none w-[90%] sm:w-auto"
               />
-              <button className="bg-white text-[#8877D8] px-6 sm:px-9 font-euclidmedium py-3 sm:py-4 border border-[#8877D8] rounded-r-xl sm:rounded-r-xl mt-4 sm:mt-0 w-[90%] sm:w-auto">
+              <button className="bg-white text-[#8877D8] px-6 sm:px-9 font-euclidmedium py-3 sm:py-4 border border-[#8877D8] rounded-r-xl rounded-l-xl sm:rounded-l-none sm:rounded-r-xl mt-4 sm:mt-0 w-[90%] sm:w-auto">
                 Subscribe
               </button>
             </div>
@@ -117,7 +117,7 @@ const Footer: React.FC = () => {
           {/* Image and Logos Section */}
           <div className="flex justify-between items-center mt-8 space-x-4 sm:space-x-8">
             {/* Main Image */}
-            <div className="flex-shrink-0">
+            <div className="">
               <img
                 src="/footerlogo.svg"
                 alt="Footer Image"
@@ -127,14 +127,14 @@ const Footer: React.FC = () => {
 
             {/* Logos Section */}
             <div className="flex space-x-4 sm:space-x-8">
-              <div className="w-10 h-10 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
-                <Link href="https://www.instagram.com/mybeautybutler?igsh=MWw1YXdwOTQycjhxYw=="><img src="/instagram.svg" alt="Logo 1" className="object-contain" /></Link>
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
+                <Link href="https://www.instagram.com/mybeautybutler?igsh=MWw1YXdwOTQycjhxYw=="><img src="/instagram.svg" alt="Logo 1" className="object-cover" /></Link>
               </div>
-              <div className="w-10 h-10 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
-               <Link href="https://x.com/mybeautybutler?s=21&t=hj5cOxvYhYHM2OUwDyhVsA"><img src="/X.svg" alt="Logo 2" className="object-contain" /></Link> 
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
+               <Link href="https://x.com/mybeautybutler?s=21&t=hj5cOxvYhYHM2OUwDyhVsA"><img src="/X.svg" alt="Logo 2" className="object-cover" /></Link> 
               </div>
-              <div className="w-10 h-10 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
-                <Link href="https://substack.com/home"><img src="/socialicon.svg" alt="Logo 3" className="object-contain" /></Link>
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
+                <Link href="https://substack.com/home"><img src="/socialicon.svg" alt="Logo 3" className="object-cover" /></Link>
               </div>
             </div>
           </div>
