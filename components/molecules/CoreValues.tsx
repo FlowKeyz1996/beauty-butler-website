@@ -51,7 +51,7 @@ const CoreValues: React.FC = () => {
           {coreValuesData.slice(0, 2).map((value) => (
             <div
               key={value.id}
-              className="h-auto bg-white overflow-hidden rounded-2xl flex flex-col justify-center items-center text-center"
+              className=" h-[200px] sm:h-auto bg-white overflow-hidden rounded-2xl flex flex-col justify-center items-center text-center"
             >
               <img
                 src={value.imageSrc}

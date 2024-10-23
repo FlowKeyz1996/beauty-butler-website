@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Button (outside the shadow div, same height as navbar) */}
-        <div className="hidden md:block h-full flex items-center"> {/* Ensure the button wrapper has full height */}
+        <div className="hidden  md:block h-full  sm:flex items-center"> {/* Ensure the button wrapper has full height */}
           <Link href="/">
           <button className="bg-[#FFC8F2] text-[#101828] py-3 px-4 sm:py-4 sm:px-7 rounded-2xl font-euclidmedium text-sm sm:text-xl h-[50px] md:h-[64px]">
               For customers

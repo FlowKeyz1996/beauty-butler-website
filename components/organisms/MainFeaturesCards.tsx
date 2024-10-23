@@ -23,7 +23,7 @@ const MainFeaturesCards: React.FC = () => {
 
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
     const scrollLeft = e.currentTarget.scrollLeft;
-    const cardWidth = e.currentTarget.clientWidth / 2; // Adjust according to the number of visible cards
+    const cardWidth = e.currentTarget.clientWidth / 1; // Adjust according to the number of visible cards
     const newIndex = Math.round(scrollLeft / cardWidth);
     setCurrentIndex(newIndex);
   };
@@ -33,7 +33,7 @@ const MainFeaturesCards: React.FC = () => {
       const scrollContainer = document.querySelector('.flex');
       if (scrollContainer) {
         const scrollLeft = scrollContainer.scrollLeft;
-        const cardWidth = scrollContainer.clientWidth / 2; // Adjust according to the number of visible cards
+        const cardWidth = scrollContainer.clientWidth / 1; // Adjust according to the number of visible cards
         const newIndex = Math.round(scrollLeft / cardWidth);
         setCurrentIndex(newIndex);
       }

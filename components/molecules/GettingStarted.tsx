@@ -31,7 +31,7 @@ const GettingStarted: React.FC = () => {
               <img
                 src="/Device.svg"
                 alt="Right Image"
-                className="w-[40%] md:w-[59%] h-auto object-contain ml-56 sm:ml-0 rounded-lg"
+                className="w-[40%] md:w-[59%] lg:w-[59%] h-auto object-contain ml-56 sm:ml-0 rounded-lg"
               />
             </div>
           </div>

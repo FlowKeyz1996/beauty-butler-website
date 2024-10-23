@@ -21,7 +21,7 @@ const HowItWorks: React.FC = () => {
   return (
     <div
       ref={sectionRef}
-      className="flex flex-col items-center justify-center my-5 bg-[#8877d8] p-5 h-[60vh] sm:h-screen rounded-lg sm:rounded-3xl"
+      className="flex flex-col items-center justify-center my-5 bg-[#8877d8] p-5 h-[60vh] sm:h-screen rounded-2xl sm:rounded-3xl"
     >
       {/* Animate the heading coming from the top when in view */}
       <motion.h2

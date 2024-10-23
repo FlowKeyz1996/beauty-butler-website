@@ -46,13 +46,13 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 mt-44 sm:mt-56 w-[90%] sm:w-[80%] lg:w-[90%] items-center">
         <div className="w-full max-w-6xl mx-auto text-center">
           
-          <div className="w-full my-10">
+          <div className="w-full my-10 mx-10">
             {/* Input Field */}
             <div>
-            <h3 className="text-left ml-32 relative text-3xl font-bold top-12">For beauty tips and updates <span className="font-euclidmedium text-3xl font-normal text-[#8FF1EC]">subscribe to our newsletter.</span></h3>
+            <h3 className="text-left sm:ml-32 relative sm:text-3xl text-xl mx-8 font-bold top-12">For beauty tips and updates <span className="font-euclidmedium  text-xl sm:text-3xl font-normal text-[#8FF1EC]">subscribe to our newsletter.</span></h3>
           </div>
           <div className=" flex items-center justify-center">
-            <img src="/footerinputimg.svg" alt="footer_input_img"></img>
+            <img src="/footerinputimg.svg" alt="footer_input_img" className=""></img>
             <input
               type="email"
               placeholder="example@mail.com"

@@ -7,7 +7,7 @@ const FooterOne: React.FC = () => {
     <footer className="relative bg-[#8877D8] text-white py-24 mt-96 flex flex-col items-center">
       {/* Card positioned partially outside the footer */}
       <motion.div
-        className="bg-white  border-2 border-[#8877D8] rounded-3xl p-4 sm:p-6 md:p-8 w-[95%] sm:w-[70%] md:w-[60%] lg:w-[80%] absolute -top-80 sm:-top-48 transform flex flex-col md:flex-row items-center justify-center"
+        className="bg-white  border-2 border-[#8877D8] rounded-3xl p-4 sm:p-6 md:p-8 w-[95%] sm:w-[70%] md:w-[60%] lg:w-[80%] absolute -top-80 sm:-top-48 transform flex flex-col-reverse sm:flex sm:flex-col md:flex-row items-center justify-center"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -63,7 +63,7 @@ const FooterOne: React.FC = () => {
           </div>
 
           {/* Footer Links */}
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:flex lg:flex-wrap lg:justify-between text-left text-sm w-full">
+          <div className="grid grid-cols-2 gap-1 sm:gap-4 sm:grid-cols-2 lg:flex lg:flex-wrap lg:justify-between text-left text-sm w-full">
             <div className="flex-1 font-euclidmedium">
               <h3 className="font-bold mb-2 font-euclidlight text-[#C2C6e8]">PRODUCT</h3>
               <ul className="font-euclidlight">
@@ -102,23 +102,23 @@ const FooterOne: React.FC = () => {
           {/* Image and Logos Section */}
           <div className="flex justify-between items-center mt-8 space-x-4 sm:space-x-8">
             {/* Main Image */}
-            <div className="flex-shrink-0">
+            <div className="flex">
               <img
                 src="/footerlogo.svg"
                 alt="Footer Image"
-                className="object-cover"
+                className="object-contain"
               />
             </div>
 
             {/* Logos Section */}
-            <div className="flex space-x-4 sm:space-x-8">
-              <div className="w-10 h-10 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
+            <div className="flex space-x-2 sm:space-x-8">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
                 <Link href="https://www.instagram.com/mybeautybutler?igsh=MWw1YXdwOTQycjhxYw=="><img src="/instagram.svg" alt="Logo 1" className="object-contain" /></Link>
               </div>
-              <div className="w-10 h-10 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
                <Link href="https://x.com/mybeautybutler?s=21&t=hj5cOxvYhYHM2OUwDyhVsA"><img src="/X.svg" alt="Logo 2" className="object-contain" /></Link> 
               </div>
-              <div className="w-10 h-10 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
                 <Link href="/https://substack.com/home"><img src="/socialicon.svg" alt="Logo 3" className="object-contain" /></Link>
               </div>
             </div>

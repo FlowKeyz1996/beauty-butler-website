@@ -65,7 +65,7 @@ const BenefitSection = () => {
   // Adjusted handleScroll to update currentIndex when a card is fully on the screen
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
     const scrollLeft = e.currentTarget.scrollLeft;
-    const cardWidth = e.currentTarget.clientWidth; // Ensure full card width is considered
+    const cardWidth = e.currentTarget.clientWidth/1; // Ensure full card width is considered
     const newIndex = Math.round((scrollLeft + cardWidth / 2) / cardWidth);
 
     // Update index only if it has changed to avoid unnecessary renders
