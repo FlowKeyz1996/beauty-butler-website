@@ -38,17 +38,17 @@ const BeautyButlerOffer: React.FC = () => {
 
   return (
     <section className="p-8 flex flex-col my-20 items-center bg-[#F7f7ff]">
-      <h1 className="text-4xl text-center mb-4 font-apfelmittel mt-10">
+      <h1 className="text-2xl sm:text-4xl text-center mb-4 font-apfelmittel mt-0 sm:mt-10">
         Free booking platform for businesses
       </h1>
-      <p className="text-lg text-center semi-bold text-[#475467] mb-8 font-euclidlight">
+      <p className="text-sm sm:text-lg text-center semi-bold text-[#475467] sm:mb-8 font-euclidlight">
         Beauty Butler is free to use. We only charge a small processing fee when you get paid.
       </p>
 
-      <div className="flex flex-col md:flex-row justify-center items-start gap-8 w-full h-[100%]">
+      <div className="flex flex-col md:flex-row justify-center items-start sm:gap-8 w-full h-[100%]">
         {/* Offer 1 Header */}
-        <div className="flex flex-col items-center w-full md:max-w-[40%] my-5 h-[50.3rem] md:h-[52.5rem]">
-          <h3 className="text-4xl md:text-4xl my-6 md:my-10 text-center text-[#101828] font-apfelmittel">
+        <div className="flex flex-col items-center w-full md:max-w-[40%] sm:my-5 h-[50.3rem] md:h-[52.5rem]">
+          <h3 className="text-2xl md:text-4xl my-6 md:my-10 text-center text-[#101828] font-apfelmittel">
             Beauty Butler Pro
           </h3>
           {/* Premium Butler Service Card */}
@@ -69,7 +69,7 @@ const BeautyButlerOffer: React.FC = () => {
 
         {/* Offer 2 Header */}
         <div className="flex flex-col items-center w-full md:max-w-[40%] my-5 md:h-auto">
-          <h3 className="text-4xl md:text-4xl my-6 md:my-10 font-apfelmittel text-center text-[#101828]">
+          <h3 className="text-2xl md:text-4xl my-6 md:my-10 font-apfelmittel text-center text-[#101828]">
             Beauty Butler Enterprise
           </h3>
           {/* Standard Butler Service Card */}
