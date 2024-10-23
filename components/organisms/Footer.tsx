@@ -44,24 +44,32 @@ const Footer: React.FC = () => {
 
       {/* Footer content */}
       <div className="container mx-auto px-4 mt-44 sm:mt-56 w-[90%] sm:w-[80%] lg:w-[90%] items-center">
-        <div className="w-full max-w-6xl mx-auto text-center">
-          
-          <div className="w-full my-10 mx-10">
+      <div className="w-full max-w-6xl mx-auto text-center">
+          <div className="w-full my-10">
             {/* Input Field */}
             <div>
-            <h3 className="text-left sm:ml-32 relative sm:text-3xl text-xl mx-10 font-bold top-12">For beauty tips and updates <span className="font-euclidmedium  text-xl sm:text-3xl font-normal text-[#8FF1EC]">subscribe to our newsletter.</span></h3>
-          </div>
-          <div className=" flex items-center justify-center">
-            <img src="/footerinputimg.svg" alt="footer_input_img" className="sm:w- object-cover"></img>
-            <input
-              type="email"
-              placeholder="example@mail.com"
-              className="flex-grow sm:p-4  border-t border-b border-l rounded-l-lg rounded border-gray-300 bg-[#8878D8] font-euclidmedium focus:outline-none"
-            />
-            {/* Button with White Background */}
-            <button className="bg-white text-[#8877D8] px-9 font-euclidmedium text-xl sm:py-4 border border-[#8877D8] rounded-r-xl">
-              Subscribe
-            </button></div>
+              <h3 className="sm:text-left ml-6 sm:ml-36 relative text-xl sm:text-3xl font-bold top-12 mb-14">
+                For beauty tips and updates{' '}
+                <span className="font-euclidmedium text-xl sm:text-3xl font-normal text-[#8FF1EC]">
+                  subscribe to our newsletter.
+                </span>
+              </h3>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center justify-center">
+              <img
+                src="/footerinputimg.svg"
+                alt="footer_input_img"
+                className="w-12 sm:w-auto mb-4 sm:mb-0"
+              />
+              <input
+                type="email"
+                placeholder="example@mail.com"
+                className="flex-grow p-3 sm:p-4 border-t border-b border-l border-r border-gray-300 sm:border-0 rounded-l-lg rounded-r-lg sm:rounded-none bg-[#8878D8] font-euclidmedium focus:outline-none w-[90%] sm:w-auto"
+              />
+              <button className="bg-white text-[#8877D8] px-6 sm:px-9 font-euclidmedium py-3 sm:py-4 border border-[#8877D8] rounded-r-xl sm:rounded-r-xl mt-4 sm:mt-0 w-[90%] sm:w-auto">
+                Subscribe
+              </button>
+            </div>
           </div>
           <div className="grid grid-cols-2  sm:grid-cols-2 lg:flex lg:flex-wrap lg:justify-between text-left text-sm w-full">
   

@@ -33,7 +33,7 @@ const FeaturesSection = () => {
 
       {/* Features Card */}
       <motion.div
-        className="md:w-1/2 bg-[#EDECFF] p-6 rounded-lg  md:mt-0 relative md:h-[420px] h-[320px] w-[500px] overflow-visible mb-40 md:mb-0"
+        className="md:w-1/2 bg-[#EDECFF] p-6 rounded-lg  md:mt-0 relative md:h-[420px] h-[320px] w-[500px] overflow- mb-40 md:mb-0"
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.3 }}
@@ -41,7 +41,7 @@ const FeaturesSection = () => {
       >
         {/* Smaller Cards Container for Desktop */}
         <motion.div
-          className="hidden md:grid grid-cols-2 gap-4 sm:absolute -top-5 -left-10 w-full"
+          className="hidden md:grid grid-cols-2 gap-4 sm:absolute sm:-top-5 sm:-left-10 w-full"
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
