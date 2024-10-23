@@ -67,7 +67,7 @@ const WhyYouWillLoveBeautyButler: FC = () => {
 
   return (
     <motion.div
-      className="relative z-10 bg-white px-4 sm:px-6 rounded-t-[2rem] sm:rounded-t-[5rem] w-full mx-auto -mt-14 bottom-20 sm:-mt-16 sm:bottom-40 lg:mt-0"
+      className="relative z-10 bg-white px-4 sm:px-6 rounded-t-[2rem] sm:rounded-t-[5rem] w-full mx-auto -mt-10 bottom-20 sm:-mt-16 sm:bottom-40 lg:mt-0"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}

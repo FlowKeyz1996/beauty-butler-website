@@ -42,7 +42,7 @@ const MarketplaceCard: React.FC<MarketplaceCardProps> = ({ imageUrl, title, desc
 
       {/* Right Side - Text */}
       <motion.div className="w-full lg:w-1/2 px-4 lg:px-9 max-w-xl" variants={fadeInRightVariants}>
-        <TagHeader text="Our marketplace" position='left'maxWidth='max-w-[200px]'/>
+        <TagHeader text="Our marketplace" position='left'maxWidth=' sm:max-w-[200px]'/>
         <h2 className="text-2xl sm:text-4xl lg:text-4xl text-[#101828] mb-3 font-apfelmittel text-center lg:text-left">
           {title}
         </h2>

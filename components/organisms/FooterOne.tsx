@@ -23,7 +23,7 @@ const FooterOne: React.FC = () => {
 
         {/* Description Section */}
         <div className="w-full md:w- flex flex-col mx-2 items-center md:items-start">
-          <h2 className="text-[#101828] text-2xl sm:text-xl md:text-5xl leading-8 sm:leading-[5rem] tracking-normal font-semibold mb-4 font-apfelregular text-center md:text-left">
+          <h2 className="text-[#101828] text-xl sm:text-xl md:text-5xl leading-8 sm:leading-[5rem] tracking-normal font-semibold mb-4 font-apfelregular text-center md:text-left">
             Book your beauty and wellness needs in just a few clicks.
           </h2>
           <p className="text-[#475467] text-center md:text-left mb-4 font-euclidlight text-sm sm:text-base md:text-lg">
