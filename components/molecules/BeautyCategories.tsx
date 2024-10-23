@@ -47,7 +47,7 @@ const BeautyCategories: React.FC = () => {
   return (
     <div className="container mx-auto px-4">
       <header className="text-center mb-10">
-        <h1 className="text-4xl sm:text-5xl leading-10 tracking-normal font-apfelmittel text-[#101828]">
+        <h1 className="text-2xl sm:text-5xl  sm:leading-10 tracking-normal font-apfelmittel text-[#101828]">
           Beauty Treatments At Your Doorstep
         </h1>
       </header>
@@ -57,7 +57,7 @@ const BeautyCategories: React.FC = () => {
         {['lashes', 'makeup', 'hair', 'nails', 'spa'].map((category) => (
           <button
             key={category}
-            className={`px-2 py-1 sm:px-4 sm:py-2 rounded-xl transition-colors duration-300 ${
+            className={`px-1 py-1 sm:px-4 sm:py-2 rounded-xl transition-colors duration-300 ${
               activeCategory === category
                 ? 'bg-[#DADAFF]'
                 : 'bg-[#F2F4f7] text-[#98A2b3]'

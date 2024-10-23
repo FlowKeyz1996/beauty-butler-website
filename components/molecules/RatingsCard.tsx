@@ -68,17 +68,17 @@ const RatingsCard = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={cardsData[currentCard].id}
-            className="flex flex-col justify-center bg-white p-4 sm:p-6 md:p-8 rounded-3xl mb-8 sm:mb-12 lg:mb-16 mt-4 w-[100%] sm:w-4/5 md:w-4/5 lg:w-full xl:w-full h-auto lg:h-auto"
+            className="flex flex-col justify-center bg-white p-2 sm:p-6 md:p-8 rounded-3xl mb-8 sm:mb-12 lg:mb-16 mt-4 w-[100%] sm:w-4/5 md:w-4/5 lg:w-full xl:w-full lg:h-auto"
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 100 }}
             transition={{ duration: 0.4 }}
             layout
           >
-            <h2 className="text-2xl sm:text-3xl font-apfelmittel text-[#101828]">{cardsData[currentCard].title}</h2>
+            <h2 className="text-xl sm:text-3xl font-apfelmittel text-[#101828]">{cardsData[currentCard].title}</h2>
             <p className="text-sm sm:text-base my-4 font-euclidlight">{cardsData[currentCard].description}</p>
 
-            <div className="flex items-center space-x-4 my-4 sm:my-6">
+            <div className="flex items-center space-x-2 my-4 sm:my-6">
               <img
                 src={cardsData[currentCard].imageUrl}
                 alt="User"

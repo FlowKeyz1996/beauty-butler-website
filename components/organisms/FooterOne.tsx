@@ -90,7 +90,7 @@ const FooterOne: React.FC = () => {
 
             <div className="flex-1 font-euclidmedium">
               <h3 className="font-bold mb-2 text-[#C2C6e8]">CONTACT US</h3>
-              <ul className="font-euclidlight">
+              <ul className="font-euclidlight sm:text-center">
                 <li>hello@mybeautybutler@gmail.com</li>
               </ul>
             </div>

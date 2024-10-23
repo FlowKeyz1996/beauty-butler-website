@@ -26,7 +26,7 @@ const NavbarOne: React.FC = () => {
         <div className="flex justify-between items-center w-full md:w-5/6 shadow-2xl rounded-full p-2 sm:p-4 bg-white bg-opacity-100 backdrop-blur-lg border h-[50px] md:h-[64px]">
           {/* Logo and Hamburger */}
           <div className="flex items-center justify-between w-full md:w-auto">
-            <Link href="/business">
+            <Link href="/">
               <div className="text-xl sm:text-2xl font-bold">
                 <img src='/purplelogo.svg' alt="Logo" className="h-8 sm:h-10" /> {/* Adjusted logo size */}
               </div>

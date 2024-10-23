@@ -44,7 +44,7 @@ const CoreValues: React.FC = () => {
   return (
     <section className="py-12 bg-[#F7F7ff]">
       <div className="container mx-auto px-4">
-        <h2 className="text-5xl text-center mb-10 font-apfelmittel">Core Values</h2>
+        <h2 className=" text-3xl sm:text-5xl text-center mb-10 font-apfelmittel">Core Values</h2>
 
         {/* For large screens, display in grid */}
         <div className="hidden md:grid md:grid-cols-2 gap-8">

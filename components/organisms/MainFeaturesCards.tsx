@@ -52,7 +52,7 @@ const MainFeaturesCards: React.FC = () => {
         {features.map((feature, index) => (
           <div 
             key={index} 
-            className="min-w-[350px] sm:min-w-0 bg-[#F8F9Fb] rounded-3xl sm:rounded-2xl  border p-4 sm:p-6 flex flex-col items-center justify-between"
+            className="min-w-[300px] sm:min-w-0 bg-[#F8F9Fb] rounded-3xl sm:rounded-2xl  border p-4 sm:p-6 flex flex-col items-center justify-between"
           >
             {/* Header and Description */}
             <div>

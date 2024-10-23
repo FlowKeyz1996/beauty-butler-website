@@ -28,7 +28,7 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
   return (
     <div className="max-w-7xl mx-auto p-5 md:p-8 h-auto  md:h-auto my-10">
       <TagHeader text="Frequently Asked Questions" />
-      <h2 className="text-4xl font-bold text-center mb-10 mt-5 font-apfelregular">
+      <h2 className="text-3xl sm:text-4xl text-center mb-10 mt-5 text-[#101828] font-apfelmittel">
         Got questions? We’ve got answers
       </h2>
 

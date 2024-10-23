@@ -17,12 +17,12 @@ const QualityGuaranteed: React.FC = () => {
             <h2 className="text-3xl md:text-5xl font-apfelmittel mb-4 max-w-xl mx-auto md:mx-0 text-[#101828] leading-[2.5rem] md:leading-[3rem]">
               A full solution to manage and grow your business
             </h2>
-            <p className="text-lg md:text-xl my-6 text-[#475467] font-euclidlight max-w-xl mx-auto md:mx-0">
+            <p className="text-md sm:text-xl md:text-xl my-6 text-[#475467] font-euclidlight max-w-xl mx-auto md:mx-0">
             Packed with all the tools you need to boost sales, manage your calendar and retain clients so you can focus on what you do best.
               mind and guaranteed satisfaction.
             </p>
             <Link href="https://airtable.com/appbyIQgO429LydxX/pagpJUqsZCrQzQcYg/form">
-            <button className="bg-[#8877D8] text-white py-4 px-10 md:px-16 rounded-xl font-euclidmedium text-lg md:text-2xl">
+            <button className="bg-[#8877D8] text-white py-4 px-14 sm:px-10 md:px-16 rounded-xl font-euclidmedium text-lg md:text-2xl">
               Book A Demo
             </button>
             </Link>

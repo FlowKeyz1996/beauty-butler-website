@@ -48,10 +48,10 @@ const butlers: Butler[] = [
 
 const MeetTheButlers: React.FC = () => {
   return (
-    <section className="my-24">
+    <section className="my-12 pb-24 sm:pb-0">
       <div className="flex flex-col items-center text-center mb-6">
         <img src="/meetbutlerheaderimg.svg" alt="Meet The Butlers" className="mb-4" />
-        <h2 className="text-4xl font-apfelmittel text-[#101828] tracking-wide">Meet The Butlers at Beauty Butler</h2>
+        <h2 className=" text-3xl sm:text-4xl font-apfelmittel text-[#101828] tracking-wide">Meet The Butlers at Beauty Butler</h2>
       </div>
       
       {/* Wrapper with horizontal scroll on mobile */}
