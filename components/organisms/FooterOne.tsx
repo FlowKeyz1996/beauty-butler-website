@@ -4,16 +4,16 @@ import Link from 'next/link';
 
 const FooterOne: React.FC = () => {
   return (
-    <footer className="relative bg-[#8877D8] text-white py-24 mt-96 flex flex-col items-center">
+    <footer className="relative bg-[#8877D8] text-white py-24 mt-36 sm:mt-96 flex flex-col items-center">
       {/* Card positioned partially outside the footer */}
       <motion.div
-        className="bg-white  border-2 border-[#8877D8] rounded-3xl p-4 sm:p-6 md:p-8 w-[95%] sm:w-[70%] md:w-[60%] lg:w-[80%] absolute -top-80 sm:-top-48 transform flex flex-col-reverse sm:flex sm:flex-col md:flex-row items-center justify-center"
+        className="bg-white  border-2 border-[#8877D8] rounded-3xl p-4 sm:p-6 md:p-8 w-[90%] sm:w-[70%] md:w-[90%] lg:w-[80%] absolute -top-40 sm:-top-48 transform flex flex-col-reverse sm:flex sm:flex-col md:flex-row items-center justify-center"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        {/* Image Section */}
-        <div className="w-full md:w-1/2 flex justify-center md:justify-start mb-4 md:mb-0">
+        {/* Image Section, hidden on small screens */}
+        <div className="w-full md:w-1/2 flex justify-center md:justify-start mb-4 md:mb-0 hidden sm:flex">
           <img
             src="/footertwoimg.svg"
             alt="Profile"
@@ -23,11 +23,11 @@ const FooterOne: React.FC = () => {
 
         {/* Description Section */}
         <div className="w-full md:w- flex flex-col mx-2 items-center md:items-start">
-          <h2 className="text-[#101828] text-lg sm:text-xl md:text-5xl leading-8 sm:leading-[5rem] tracking-normal font-semibold mb-4 font-apfelregular text-center md:text-left">
-          Book your beauty and wellness needs in just a few clicks.
+          <h2 className="text-[#101828] text-2xl sm:text-xl md:text-5xl leading-8 sm:leading-[5rem] tracking-normal font-semibold mb-4 font-apfelregular text-center md:text-left">
+            Book your beauty and wellness needs in just a few clicks.
           </h2>
           <p className="text-[#475467] text-center md:text-left mb-4 font-euclidlight text-sm sm:text-base md:text-lg">
-          Book on-demand beauty and wellness treatments delivered straight to your doorstep and manage your appointments efficiently!
+            Book on-demand beauty and wellness treatments delivered straight to your doorstep and manage your appointments efficiently!
           </p>
 
           {/* Button with Image */}
@@ -50,16 +50,17 @@ const FooterOne: React.FC = () => {
               <h3 className="text-left ml-36 relative text-3xl font-bold top-12">For beauty tips and updates <span className="font-euclidmedium text-3xl font-normal text-[#8FF1EC]">subscribe to our newsletter.</span></h3>
             </div>
             <div className=" flex items-center justify-center">
-            <img src="/footerinputimg.svg" alt="footer_input_img"></img>
-            <input
-              type="email"
-              placeholder="example@mail.com"
-              className="flex-grow p-4  border-t border-b border-l rounded-l-lg rounded border-gray-300 bg-[#8878D8] font-euclidmedium focus:outline-none"
-            />
-            {/* Button with White Background */}
-            <button className="bg-white text-[#8877D8] px-9 font-euclidmedium py-4 border border-[#8877D8] rounded-r-xl">
-              Subscribe
-            </button></div>
+              <img src="/footerinputimg.svg" alt="footer_input_img"></img>
+              <input
+                type="email"
+                placeholder="example@mail.com"
+                className="flex-grow p-4  border-t border-b border-l rounded-l-lg rounded border-gray-300 bg-[#8878D8] font-euclidmedium focus:outline-none"
+              />
+              {/* Button with White Background */}
+              <button className="bg-white text-[#8877D8] px-9 font-euclidmedium py-4 border border-[#8877D8] rounded-r-xl">
+                Subscribe
+              </button>
+            </div>
           </div>
 
           {/* Footer Links */}
@@ -116,7 +117,7 @@ const FooterOne: React.FC = () => {
                 <Link href="https://www.instagram.com/mybeautybutler?igsh=MWw1YXdwOTQycjhxYw=="><img src="/instagram.svg" alt="Logo 1" className="object-contain" /></Link>
               </div>
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
-               <Link href="https://x.com/mybeautybutler?s=21&t=hj5cOxvYhYHM2OUwDyhVsA"><img src="/X.svg" alt="Logo 2" className="object-contain" /></Link> 
+                <Link href="https://x.com/mybeautybutler?s=21&t=hj5cOxvYhYHM2OUwDyhVsA"><img src="/X.svg" alt="Logo 2" className="object-contain" /></Link> 
               </div>
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
                 <Link href="/https://substack.com/home"><img src="/socialicon.svg" alt="Logo 3" className="object-contain" /></Link>

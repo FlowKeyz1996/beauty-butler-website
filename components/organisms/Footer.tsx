@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="relative bg-[#8877D8] text-white py-24 mt-80 md:mt-96 flex flex-col items-center">
+    <footer className="relative bg-[#8877D8] text-white py-24 mt-80 md:mt-72 flex flex-col items-center">
       {/* Card positioned partially outside the footer */}
       <motion.div
         className="bg-white border-2 border-[#8877D8] rounded-3xl p-4 sm:p-6 md:p-8 w-[95%] sm:w-[70%] md:w-[60%] lg:w-[80%]  absolute -top-80 sm:-top-48 transform flex flex-col md:flex-row items-center justify-center"

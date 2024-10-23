@@ -22,7 +22,7 @@ const categories: Category[] = [
 
 const CategoriesSection: React.FC = () => {
   return (
-    <section className="my-9 py-9 bg-[#f7f7ff]">
+    <section className="sm:my-9 sm:py-9 bg-[#f7f7ff]">
       <div className="py-3 mx-auto max-w-[90%] sm:max-w-[80%] lg:max-w-[60%]">
         <TagHeader text="Categories" maxWidth="max-w-[150px]" />
       </div>
@@ -33,7 +33,7 @@ const CategoriesSection: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-[#101828] text-center mb-5 font-apfelregular tracking-wide"
+        className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl f text-[#101828] text-center mb-5 font-apfelmittel tracking-wide"
       >
         Elevating Businesses Like Yours
       </motion.h2>

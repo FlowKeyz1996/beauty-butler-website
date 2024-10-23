@@ -24,7 +24,7 @@ const MarketplaceCard: React.FC<MarketplaceCardProps> = ({ imageUrl, title, desc
 
   return (
     <motion.div
-      className="flex flex-col-reverse lg:flex-row justify-between items-center lg:items-start p-5 max-w-7xl mx-auto bg-white rounded-lg my-28"
+      className="flex flex-col-reverse lg:flex-row justify-between items-center lg:items-start p-5 max-w-7xl mx-auto bg-white rounded-lg sm:my-28"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -43,19 +43,19 @@ const MarketplaceCard: React.FC<MarketplaceCardProps> = ({ imageUrl, title, desc
       {/* Right Side - Text */}
       <motion.div className="w-full lg:w-1/2 px-4 lg:px-9 max-w-xl" variants={fadeInRightVariants}>
         <TagHeader text="Our marketplace" position='left'maxWidth='max-w-[200px]'/>
-        <h2 className="text-3xl lg:text-4xl text-[#101828] mb-3 font-apfelmittel text-center lg:text-left">
+        <h2 className="text-2xl sm:text-4xl lg:text-4xl text-[#101828] mb-3 font-apfelmittel text-center lg:text-left">
           {title}
         </h2>
-        <p className="text-[#475467] mb-4 text-lg font-euclidlight text-center lg:text-left">
+        <p className="text-[#475467] mb-4 text-md font-euclidlight text-center lg:text-left">
           {description}
         </p>
-        <p className="text-[#475467] mb-4 text-lg font-euclidlight text-center lg:text-left">
+        {/* <p className="text-[#475467] mb-4 text-lg font-euclidlight text-center lg:text-left">
         Give your clients easy access to your services, price list and calendar by creating a mini web page to take bookings. 
         Clients can book via your social media or website. 
-        </p>
+        </p> */}
         <Link href="https://airtable.com/appbyIQgO429LydxX/pagpJUqsZCrQzQcYg/form">
         <div className="flex justify-center lg:justify-start">
-          <button className="bg-[#8878d7] text-white py-4 text-2xl font-euclidmedium px-14 my-2 rounded-xl">
+          <button className="bg-[#8878d7] text-white py-4  tex-xl sm:text-2xl font-euclidmedium px-14 my-2 rounded-xl">
             {buttonText}
           </button>
         </div>

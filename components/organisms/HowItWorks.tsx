@@ -25,7 +25,7 @@ const HowItWorks: React.FC = () => {
     >
       {/* Animate the heading coming from the top when in view */}
       <motion.h2
-        className="text-4xl sm:text-5xl  font-apfelmittel mb-5 sm:mb-7 text-white"
+        className="text-3xl sm:text-4xl  font-apfelmittel mb-5 sm:mb-7 text-white"
         initial={{ y: -100, opacity: 0 }}
         animate={isInView ? { y: 0, opacity: 1 } : {}}
         transition={{ duration: 2, ease: 'easeOut' }}
@@ -60,7 +60,7 @@ const HowItWorks: React.FC = () => {
         )}
       </motion.div>
      <Link href="https://airtable.com/appbyIQgO429LydxX/pagpJUqsZCrQzQcYg/form">
-      <button className="bg-white text-[#8877d8] py-3 px-10 sm:py-4 sm:px-24 rounded-2xl text-2xl font-euclidmedium">
+      <button className="bg-white text-[#8877d8] py-3 px-10 sm:py-4 sm:px-24 rounded-2xl sm:text-2xl text-xl font-euclidmedium">
         Book a Demo
       </button>
       </Link>

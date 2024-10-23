@@ -26,7 +26,7 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
   };
 
   return (
-    <div className="max-w-7xl mx-auto p-5 md:p-8 h-auto  md:h-auto my-10">
+    <div className="max-w-7xl mx-auto p-5 md:p-8 h-auto  md:h-auto sm:my-10">
       <TagHeader text="Frequently Asked Questions" />
       <h2 className="text-3xl sm:text-4xl text-center mb-10 mt-5 text-[#101828] font-apfelmittel">
         Got questions? We’ve got answers
@@ -99,11 +99,11 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
             <div key={index} className="mb-4 rounded-xl overflow-hidden">
               <button
                 onClick={() => toggleAccordion(index)}
-                className="w-full text-left p-4 font-light text-lg sm:text-xl font-apfelregular flex justify-between bg-[#F7F7ff] text-[#101828] items-center rounded-lg"
+                className="w-full text-left p-4 font-light text-md sm:text-xl font-apfelregular flex justify-between bg-[#F7F7ff] text-[#101828] items-center rounded-lg"
               >
                 {faq.question}
                 <span
-                  className={`flex items-center justify-center w-10 h-10 bg-[#8878d7] text-white rounded-full text-xl`}
+                  className={`flex items-center justify-center w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] bg-[#8878d7] text-white rounded-full text-xl`}
                 >
                   {activeIndex === index ? '-' : '+'}
                 </span>

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const FeaturesSection = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center my-10 h-screen px-5 max-w-7xl mx-auto">
+    <div className="flex flex-col md:flex-row justify-between items-center sm:my-10 h-screen px-5 max-w-7xl mx-auto">
       {/* Features Description */}
       <motion.div
         className="md:w-1/2 text-left"
@@ -41,7 +41,7 @@ const FeaturesSection = () => {
       >
         {/* Smaller Cards Container for Desktop */}
         <motion.div
-          className="hidden md:grid grid-cols-2 gap-4 absolute -top-5 -left-10 w-full"
+          className="hidden md:grid grid-cols-2 gap-4 sm:absolute -top-5 -left-10 w-full"
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
