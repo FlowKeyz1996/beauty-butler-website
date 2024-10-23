@@ -21,7 +21,7 @@ const GettingStarted: React.FC = () => {
         {/* Top Card */}
         <div className="w-full mb-10 sm:mb-16 bg-[#f8f9fb] rounded-3xl border border-[#f2f4f7] p-4 md:p-6 relative overflow-hidden">
           <div className="flex flex-col md:flex-row justify-between">
-            <div className="w-full md:w-1/2 flex flex-col mb-4 md:mb-0">
+            <div className="w-full md:w-1/2 flex flex-col mb-10 sm:mb-4 md:mb-0">
               <h2 className="text-xl sm:text-3xl font-apfelregular text-[#1d2939] mb-2 text-left sm:text-left md:text-left">
                 Download Beauty Butler: find the best beauty and wellness experts for you.
               </h2>
@@ -31,7 +31,7 @@ const GettingStarted: React.FC = () => {
               <img
                 src="/Device.svg"
                 alt="Right Image"
-                className="w-[40%] md:w-[59%] lg:w-[59%] h-auto object-contain ml-56 sm:ml-0 rounded-lg"
+                className="w-[45%] md:w-[59%] lg:w-[59%] h-auto object-contain ml-48 sm:ml-0 rounded-lg"
               />
             </div>
           </div>
@@ -55,12 +55,12 @@ const GettingStarted: React.FC = () => {
               <img
                 src="/02.svg"
                 alt="Left Image"
-                className="absolute -bottom-5  left-0 w-[65%] md:w-[60%] h-auto object-contain"
+                className="absolute -bottom-4  left-0 w-[65%] md:w-[60%] h-auto object-contain"
               />
               <img
                 src="/Device2.svg"
                 alt="Right Image"
-                className="absolute -bottom-5 right-0 w-[35%] md:w-[40%] h-auto object-contain rounded-lg"
+                className="absolute -bottom-4 right-0 w-[35%] md:w-[40%] h-auto object-contain rounded-lg"
               />
             </div>
           </div>
@@ -75,12 +75,12 @@ const GettingStarted: React.FC = () => {
               <img
                 src="/03.svg"
                 alt="Left Image"
-                className="absolute -bottom-5 left-0 w-[65%] md:w-[60%] h-auto object-contain"
+                className="absolute -bottom-4 left-0 w-[65%] md:w-[60%] h-auto object-contain"
               />
               <img
                 src="/device3.svg"
                 alt="Right Image"
-                className="absolute -bottom-5 right-0 w-[35%] md:w-[40%] h-auto object-contain rounded-lg"
+                className="absolute -bottom-4 right-0 w-[35%] md:w-[40%] h-auto object-contain rounded-lg"
               />
             </div>
           </div>

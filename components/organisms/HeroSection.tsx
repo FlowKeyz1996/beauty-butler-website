@@ -12,7 +12,7 @@ const HeroSection: React.FC = () => {
   const phrases = [
     "Connect with clients",
     "Empower your business",
-    "Enhance your beauty services",
+    "Enhance your services",
   ];
 
   // Function to split the first word and rest of the phrase
