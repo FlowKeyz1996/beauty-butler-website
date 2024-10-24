@@ -31,7 +31,7 @@ const QualityGuaranteed: React.FC = () => {
           {/* Right Side */}
           <div className="flex-1 flex justify-center md:justify-end">
             <Image
-              src="/qualityguaranteedimg.svg" // Replace with your image path
+              src="/qualityguranteeimg.png" // Replace with your image path
               alt="Quality Guaranteed"
               width={700}
               height={650}

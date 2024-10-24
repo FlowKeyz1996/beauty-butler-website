@@ -64,7 +64,7 @@ const FooterOne: React.FC = () => {
   placeholder="example@mail.com"
   className="flex-grow p-3 sm:p-4 border border-gray-300 rounded-l-lg rounded-r-lg sm:rounded-lg bg-[#8878D8] font-euclidmedium focus:outline-none w-[90%] sm:w-auto"
 />
-              <button className="bg-white text-[#8877D8] px-6 sm:px-9 font-euclidmedium py-3 sm:py-4 border border-[#8877D8] rounded-r-xl sm:rounded-r-xl mt-4 sm:mt-0 w-[90%] sm:w-auto">
+              <button className="bg-white text-[#8877D8] px-6 sm:px-9 font-euclidmedium py-3 sm:py-4 border border-[#8877D8] rounded-r-xl rounded-l-xl sm:rounded-r-xl sm:rounded-l-none mt-4 sm:mt-0 w-[90%] sm:w-auto">
                 Subscribe
               </button>
             </div>
@@ -75,15 +75,15 @@ const FooterOne: React.FC = () => {
             <div className="flex-1 font-euclidmedium">
               <h3 className="font-bold mb-2 font-euclidlight text-[#C2C6e8]">PRODUCT</h3>
               <ul className="font-euclidlight">
-                <li>Customers</li>
-                <li>Business</li>
+                <Link href="/"><li>Customers</li></Link>
+                <Link href="/business"><li>Business</li></Link>
               </ul>
             </div>
 
             <div className="flex-1 font-euclidmedium">
               <h3 className="font-bold mb-2 text-[#C2C6e8]">COMPANY</h3>
               <ul className="font-euclidlight">
-                <li>About Us</li>
+                <Link href="/company"><li>About Us</li></Link>
                 <li>Blog</li>
               </ul>
             </div>
@@ -99,7 +99,7 @@ const FooterOne: React.FC = () => {
             <div className="flex-1 font-euclidmedium">
               <h3 className="font-bold mb-2 text-[#C2C6e8]">CONTACT US</h3>
               <ul className="font-euclidlight">
-                <li>hello@mybeautybutler@gmail.com</li>
+                <li>hello@mybeautybutler.com</li>
               </ul>
             </div>
           </div>
@@ -108,24 +108,26 @@ const FooterOne: React.FC = () => {
           <div className="mt-8 w-full h-[1px] bg-gray-400 mx-auto max-w-6xl"></div>
 
           {/* Image and Logos Section */}
-          <div className="flex flex-row sm:flex-row justify-between items-center mt-8 space-y-4 sm:space-y-0 space-x-0 sm:space-x-8">
-            <div className="flex">
+          <div className="flex justify-between items-center mt-8 space-x-4 sm:space-x-8">
+            {/* Main Image */}
+            <div className="">
               <img
                 src="/footerlogo.svg"
                 alt="Footer Image"
-                className="object-contain"
+                className="object-cover"
               />
             </div>
 
-            <div className="flex space-x-2 sm:space-x-8">
-              <div className="w-10 h-10 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
-                <Link href="https://www.instagram.com/mybeautybutler?igsh=MWw1YXdwOTQycjhxYw=="><img src="/instagram.svg" alt="Logo 1" className="object-contain" /></Link>
+            {/* Logos Section */}
+            <div className="flex space-x-4 sm:space-x-8">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
+                <Link href="https://x.com/mybeautybutler?s=21&t=hj5cOxvYhYHM2OUwDyhVsA"><img src="/X.svg " alt="Logo 1" className="object-cover" /></Link>
               </div>
-              <div className="w-10 h-10 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
-                <Link href="https://x.com/mybeautybutler?s=21&t=hj5cOxvYhYHM2OUwDyhVsA"><img src="/X.svg" alt="Logo 2" className="object-contain" /></Link> 
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
+               <Link href="https://www.instagram.com/mybeautybutler?igsh=MWw1YXdwOTQycjhxYw== "><img src="/instagram.svg" alt="Logo 2" className="object-cover" /></Link> 
               </div>
-              <div className="w-10 h-10 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
-                <Link href="/https://substack.com/home"><img src="/socialicon.svg" alt="Logo 3" className="object-contain" /></Link>
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
+                <Link href="https://substack.com/home"><img src="/socialicon.svg" alt="Logo 3" className="object-cover" /></Link>
               </div>
             </div>
           </div>

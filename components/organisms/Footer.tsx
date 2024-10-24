@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
           <div className="grid grid-cols-2  sm:grid-cols-2 lg:flex lg:flex-wrap lg:justify-between text-left text-sm w-full">
   
   {/* Product Section */}
-  <div className="flex-1 font-euclidmedium">
+  <div className="flex-1">
     <h3 className="font-bold mb-2 font-euclidlight text-[#C2C6e8]">PRODUCT</h3>
     <ul className="font-euclidlight">
      <Link href="/"> <li>Customers</li></Link>
@@ -83,28 +83,28 @@ const Footer: React.FC = () => {
   </div>
   
   {/* Company Section */}
-  <div className="flex-1 font-euclidmedium">
-    <h3 className="font-bold mb-2 text-[#C2C6e8]">COMPANY</h3>
+  <div className="flex-1">
+    <h3 className="font-bold mb-2 text-[#C2C6e8] font-euclidlight">COMPANY</h3>
     <ul className="font-euclidlight">
-      <li>About Us</li>
-      <li>Blog</li>
+     <Link href="/company"> <li>About Us</li></Link>
+      <Link href="/"><li>Blog</li></Link>
     </ul>
   </div>
   
   {/* Legal Section */}
-  <div className="flex-1 font-euclidmedium">
-    <h3 className="font-bold mb-2 text-[#C2C6e8]">LEGAL</h3>
+  <div className="flex-1 ">
+    <h3 className="font-bold mb-2 text-[#C2C6e8] font-euclidlight">LEGAL</h3>
     <ul className="font-euclidlight">
-      <Link href="/"><li>Terms and Conditions</li></Link> 
+      <Link href="/termsandcondition"><li>Terms and Conditions</li></Link> 
       <Link href="/privacy"><li>Privacy Policy</li></Link>
     </ul>
   </div>
   
   {/* Contact Us Section */}
-  <div className="flex-1 font-euclidmedium">
-    <h3 className="font-bold mb-2 text-[#C2C6e8]">CONTACT US</h3>
+  <div className="flex-1 ">
+    <h3 className="font-bold mb-2 text-[#C2C6e8] font-euclidlight">CONTACT US</h3>
     <ul className="font-euclidlight ">
-      <li className="text-sm">hello@mybeautybutler@gmail.com</li>
+      <li className="text-sm">hello@mybeautybutler.com</li>
     </ul>
   </div>
 
@@ -128,10 +128,10 @@ const Footer: React.FC = () => {
             {/* Logos Section */}
             <div className="flex space-x-4 sm:space-x-8">
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
-                <Link href="https://www.instagram.com/mybeautybutler?igsh=MWw1YXdwOTQycjhxYw=="><img src="/instagram.svg" alt="Logo 1" className="object-cover" /></Link>
+                <Link href="https://x.com/mybeautybutler?s=21&t=hj5cOxvYhYHM2OUwDyhVsA"><img src="/X.svg " alt="Logo 1" className="object-cover" /></Link>
               </div>
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
-               <Link href="https://x.com/mybeautybutler?s=21&t=hj5cOxvYhYHM2OUwDyhVsA"><img src="/X.svg" alt="Logo 2" className="object-cover" /></Link> 
+               <Link href="https://www.instagram.com/mybeautybutler?igsh=MWw1YXdwOTQycjhxYw== "><img src="/instagram.svg" alt="Logo 2" className="object-cover" /></Link> 
               </div>
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
                 <Link href="https://substack.com/home"><img src="/socialicon.svg" alt="Logo 3" className="object-cover" /></Link>
