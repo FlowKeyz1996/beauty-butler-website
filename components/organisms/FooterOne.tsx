@@ -121,13 +121,13 @@ const FooterOne: React.FC = () => {
             {/* Logos Section */}
             <div className="flex space-x-4 sm:space-x-8">
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
-                <Link href="https://x.com/mybeautybutler?s=21&t=hj5cOxvYhYHM2OUwDyhVsA"><img src="/X.svg " alt="Logo 1" className="object-cover" /></Link>
+                <Link href="https://x.com/mybeautybutler?s=21&t=hj5cOxvYhYHM2OUwDyhVsA"><img src="/X.svg " alt="Logo 1" className="object-cover h-5" /></Link>
               </div>
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
-               <Link href="https://www.instagram.com/mybeautybutler?igsh=MWw1YXdwOTQycjhxYw== "><img src="/instagram.svg" alt="Logo 2" className="object-cover" /></Link> 
+               <Link href="https://www.instagram.com/mybeautybutler?igsh=MWw1YXdwOTQycjhxYw== "><img src="/instagram.svg" alt="Logo 2" className="object-cover h-5" /></Link> 
               </div>
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
-                <Link href="https://substack.com/home"><img src="/socialicon.svg" alt="Logo 3" className="object-cover" /></Link>
+                <Link href="https://substack.com/home"><img src="/socialicon.svg" alt="Logo 3" className="object-cover h-5" /></Link>
               </div>
             </div>
           </div>

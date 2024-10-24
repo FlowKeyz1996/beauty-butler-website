@@ -30,7 +30,7 @@ const MarketplaceCard: React.FC<MarketplaceCardProps> = ({ imageUrl, title, desc
       viewport={{ once: true }}
     >
       {/* Left Side - Image */}
-      <motion.div className="w-full lg:w-1/2 mb-6 lg:mb-0 mt-10 lg:mt-0" variants={fadeInVariants}>
+      <motion.div className="w-full lg:w-1/2 mb-6 lg:mb-0 mt-10 lg:mt-0" variants={fadeInVariants}>{/*left side image*/}
         <Image
           src={imageUrl}
           alt={title}

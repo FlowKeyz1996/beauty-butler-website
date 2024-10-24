@@ -32,7 +32,7 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
         Got questions? We’ve got answers
       </h2>
 
-      <div className="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-8">
+      <div className="flex flex-col md:flex-row justify-between space-y-2 md:space-y-0 md:space-x-8">
         {/* Form Section - Visible only on desktop */}
         <motion.div
           ref={formRef}
