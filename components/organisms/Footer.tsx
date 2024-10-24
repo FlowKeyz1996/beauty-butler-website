@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
           <div className="w-full my-10">
             {/* Input Field */}
             <div>
-              <h3 className="sm:text-left ml-6 sm:ml-36 relative text-xl sm:text-3xl font-bold top-12 mb-14 sm:mb-0">
+              <h3 className="sm:text-left text-center sm:ml-36 relative text-xl sm:text-3xl font-bold top-12 mb-14 sm:mb-0">
                 For beauty tips and updates{' '}
                 <span className="font-euclidmedium text-xl sm:text-3xl font-normal text-[#8FF1EC]">
                   subscribe to our newsletter.
@@ -56,11 +56,11 @@ const Footer: React.FC = () => {
               </h3>
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center">
-              <img
-                src="/footerinputimg.svg"
-                alt="footer_input_img"
-                className="w-12 sm:w-auto mb-4 sm:mb-0"
-              />
+            <img
+  src="/footerinputimg.svg"
+  alt="footer_input_img"
+  className="hidden sm:block sm:w-auto sm:mb-0"
+/>
              <input
   type="email"
   placeholder="example@mail.com"
@@ -104,7 +104,7 @@ const Footer: React.FC = () => {
   <div className="flex-1 font-euclidmedium">
     <h3 className="font-bold mb-2 text-[#C2C6e8]">CONTACT US</h3>
     <ul className="font-euclidlight ">
-      <li className="text-end">hello@mybeautybutler@gmail.com</li>
+      <li className="text-sm">hello@mybeautybutler@gmail.com</li>
     </ul>
   </div>
 
