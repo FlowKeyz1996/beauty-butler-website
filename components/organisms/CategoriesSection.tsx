@@ -24,7 +24,7 @@ const CategoriesSection: React.FC = () => {
   return (
     <section className="sm:my-9 sm:py-9 bg-[#f7f7ff]">
       <div className="py-3 mx-auto max-w-[90%] sm:max-w-[80%] lg:max-w-[60%]">
-        <TagHeader text="Categories" maxWidth="max-w-[150px]" />
+        <TagHeader text="Categories" maxWidth="max-w-[150px]" mobilePosition='center' />
       </div>
 
       {/* Animated Heading (Triggers when section is in view) */}
