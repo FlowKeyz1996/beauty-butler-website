@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const FeaturesSection = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center sm:my-10 h-screen px-5 max-w-7xl mx-auto">
+    <div className="flex flex-col md:flex-row justify-between items-center sm:my-10 sm:h-screen px-5 max-w-7xl mx-auto">
       {/* Features Description */}
       <motion.div
         className="md:w-1/2 text-left"
@@ -33,7 +33,7 @@ const FeaturesSection = () => {
 
       {/* Features Card */}
       <motion.div
-        className="md:w-1/2 bg-[#EDECFF] p-6 rounded-lg  md:mt-0 relative md:h-[420px] h-[320px] w-[500px] overflow- mb-40 md:mb-0"
+        className="md:w-1/2 bg-[#EDECFF] p-6 rounded-lg  mt- sm:mt-0 relative md:h-[420px] sm:h-[320px] h-[130px] sm:w-[500px] w-[426px] overflow- mb-40 md:mb-0"
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.3 }}
@@ -41,13 +41,13 @@ const FeaturesSection = () => {
       >
         {/* Smaller Cards Container for Desktop */}
         <motion.div
-          className="hidden md:grid grid-cols-2 gap-4 sm:absolute sm:-top-5 sm:-left-10 w-full"
+          className="hidden md:grid grid-cols-2 gap-4 sm:absolute sm:-top-5 sm:-left-10   w-full"
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
           viewport={{ once: false, amount: 0.2 }}
         >
-          <div className="bg-[#8878d7] text-white p-5 rounded-2xl shadow-md">
+          <div className="bg-[#8878d7] text-white p-5 rounded-2xl shadow-md ml sm:ml-0">
             <h3 className="text-base sm:text-lg md:text-xl font-bold font-apfelregular my-2">
               Beauty Butler Marketplace
             </h3>
@@ -85,7 +85,7 @@ const FeaturesSection = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
           viewport={{ once: false, amount: 0.2 }}
         >
-          <div className="bg-[#8878d7] text-white p-5 min-w-[90%] rounded-2xl  mr-10 shadow-md ">
+          <div className="bg-[#8878d7] text-white p-5 min-w-[90%] rounded-2xl shadow-md ml-12 md:ml-0">
             <h3 className="text-base sm:text-lg font-bold font-apfelregular my-2">
               Beauty Butler Marketplace
             </h3>
@@ -93,19 +93,19 @@ const FeaturesSection = () => {
               Attract a flood of new customers with Beauty Butler. Your business will be effortlessly discoverable by your ideal clientele with our marketplace app and our clever algorithm.
             </p>
           </div>
-          <div className="bg-[#8878d7] text-white p-4 min-w-[90%] rounded-2xl  ">
+          <div className="bg-[#8878d7] text-white p-4 min-w-[90%] rounded-2xl  mr-10 shadow-md ml-4 md:ml-0">
             <h3 className="text-base sm:text-lg font-bold font-apfelregular my-2">Online Booking</h3>
             <p className="text-sm font-euclidlight">
               Give your clients easy access to your services, price list and calendar by creating a mini web page to take bookings. Clients can book via your social media or website.
             </p>
           </div>
-          <div className="bg-[#8878d7] text-white p-4 min-w-[90%] rounded-2xl shadow-md mr-10">
+          <div className="bg-[#8878d7] text-white p-4 min-w-[90%] rounded-2xl shadow-md ml-4 md:ml-0">
             <h3 className="text-base sm:text-lg font-bold font-apfelregular my-2">Payment Processing</h3>
             <p className="text-sm font-euclidlight">
               Deliver a silky-smooth, ultra-fast checkout and tipping experience your clients will love. We’re here to help with questions on refunds, transactions, and payment summaries too.
             </p>
           </div>
-          <div className="bg-[#8878d7] text-white p-4 min-w-[90%] rounded-2xl shadow-md mr-10">
+          <div className="bg-[#8878d7] text-white p-4 min-w-[90%] rounded-2xl shadow-md ml-4 md:ml-0">
             <h3 className="text-base sm:text-lg font-bold font-apfelregular">
               Flexible appointment scheduling
             </h3>

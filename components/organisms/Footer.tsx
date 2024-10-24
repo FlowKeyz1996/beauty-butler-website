@@ -43,12 +43,12 @@ const Footer: React.FC = () => {
       </motion.div>
 
       {/* Footer content */}
-      <div className="container mx-auto px-4 mt-44 sm:mt-56 w-[90%] sm:w-[80%] lg:w-[90%] items-center">
+      <div className="container sm:mx-auto sm:px-4 mt-44 sm:mt-16 w-[90%] sm:w-[80%] lg:w-[90%] items-center">
       <div className="w-full max-w-6xl mx-auto text-center">
           <div className="w-full my-10">
             {/* Input Field */}
             <div>
-              <h3 className="sm:text-left ml-6 sm:ml-36 relative text-xl sm:text-3xl font-bold top-12 mb-14">
+              <h3 className="sm:text-left ml-6 sm:ml-36 relative text-xl sm:text-3xl font-bold top-12 mb-14 sm:mb-0">
                 For beauty tips and updates{' '}
                 <span className="font-euclidmedium text-xl sm:text-3xl font-normal text-[#8FF1EC]">
                   subscribe to our newsletter.
@@ -61,12 +61,12 @@ const Footer: React.FC = () => {
                 alt="footer_input_img"
                 className="w-12 sm:w-auto mb-4 sm:mb-0"
               />
-              <input
-                type="email"
-                placeholder="example@mail.com"
-                className="flex-grow p-3 sm:p-4 border-t border-b border-l border-r border-gray-300 sm:border-0 rounded-l-lg rounded-r-lg sm:rounded-none bg-[#8878D8] font-euclidmedium focus:outline-none w-[90%] sm:w-auto"
-              />
-              <button className="bg-white text-[#8877D8] px-6 sm:px-9 font-euclidmedium py-3 sm:py-4 border border-[#8877D8] rounded-r-xl rounded-l-xl sm:rounded-l-none sm:rounded-r-xl mt-4 sm:mt-0 w-[90%] sm:w-auto">
+             <input
+  type="email"
+  placeholder="example@mail.com"
+  className="flex-grow p-3 sm:p-4 border border-gray-300 rounded-l-lg rounded-r-lg sm:rounded-lg bg-[#8878D8] font-euclidmedium focus:outline-none w-[90%] sm:w-auto"
+/>
+              <button className="bg-white text-[#8877D8] px-6 sm:px-9 font-euclidmedium py-3 sm:py-4 border border-[#8877D8] rounded-r-xl sm:rounded-r-xl mt-4 sm:mt-0 w-[90%] sm:w-auto">
                 Subscribe
               </button>
             </div>
@@ -103,8 +103,8 @@ const Footer: React.FC = () => {
   {/* Contact Us Section */}
   <div className="flex-1 font-euclidmedium">
     <h3 className="font-bold mb-2 text-[#C2C6e8]">CONTACT US</h3>
-    <ul className="font-euclidlight">
-      <li>hello@mybeautybutler@gmail.com</li>
+    <ul className="font-euclidlight ">
+      <li className="text-end">hello@mybeautybutler@gmail.com</li>
     </ul>
   </div>
 
