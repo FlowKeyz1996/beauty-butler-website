@@ -12,12 +12,12 @@ const QualityGuaranteed: React.FC = () => {
           {/* Left Side */}
           <div className="flex-1 md:mr-8 mb-8 md:mb-0 text-center md:text-left">
             <div className="">
-            <TagHeader text="👌🏾 Quality guaranteed" position='left' paddingX='' paddingY='py-1'maxWidth=' sm:max-w-[240px] ' />
+            <TagHeader text="👌🏾 Quality guaranteed" position='left' mobilePosition="center" paddingX='px-1' paddingY='py-1' />
             </div>
             <h2 className="text-3xl md:text-5xl font-apfelmittel mb-4 max-w-xl mx-auto md:mx-0 text-[#101828] leading-[2.5rem] md:leading-[3rem]">
               A full solution to manage and grow your business
             </h2>
-            <p className="text-md sm:text-xl md:text-xl my-6 text-[#475467] font-euclidlight max-w-xl mx-auto md:mx-0">
+            <p className="text-md sm:text-xl md:text-xl my-6 text-[#475467] font-euclidlight max-w-xl mx-auto md:mx-0 px-3 sm:px-0">
             Packed with all the tools you need to boost sales, manage your calendar and retain clients so you can focus on what you do best.
               mind and guaranteed satisfaction.
             </p>

@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
         {/* Logo, Nav Links, and Hamburger Menu (inside the same border) */}
         <div className="flex justify-between items-center w-full md:w-5/6 shadow-2xl rounded-full p-2 bg-white bg-opacity-20 backdrop-blur-lg border h-[50px] md:h-[64px]">
           {/* Conditional Logo */}
-          <Link href="/business">
+          <Link href="/">
           <div className="text-2xl font-bold">
             {isScrolled ? (
               <img src='/purplelogo.svg' alt="Scrolled Logo" /> // Small logo for scrolled state

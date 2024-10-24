@@ -8,7 +8,7 @@ function page() {
   return (
     <div>
       <NavbarOne/>
-        <SmallHero headerText="terms and conditions" descriptionText="Here is our terms and conditions at beauty butler"/>
+        <SmallHero headerText="Terms and Conditions" descriptionText="Our terms and conditions at beauty butler"/>
         <TermsandConditions/>
     </div>
   )
