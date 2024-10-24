@@ -12,7 +12,7 @@ interface TagHeaderProps {
 const TagHeader: React.FC<TagHeaderProps> = ({
   text,
   position = 'center',
-  mobilePosition = 'center', // Default mobile position is center
+  mobilePosition = 'left', // Default mobile position is center
   paddingX = 'px-4 md:px-5', // Adjust padding for mobile (default is px-4 on mobile and px-5 on larger screens)
   paddingY = 'py-1 md:py-2', // Adjust padding for mobile (default is py-1 on mobile and py-2 on larger screens)
   maxWidth = 'max-w-[300px] md:max-w-[400px]', // Default max width, customizable
