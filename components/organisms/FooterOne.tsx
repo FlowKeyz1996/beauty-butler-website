@@ -73,7 +73,7 @@ const FooterOne: React.FC = () => {
 
           {/* Footer Links */}
           <div className="grid grid-cols-2 gap-1 sm:gap-4 sm:grid-cols-2 lg:flex lg:flex-wrap lg:justify-between text-left text-sm w-full">
-            <div className="flex-1 font-euclidmedium">
+            <div className="flex-1">
               <h3 className="font-bold mb-2 font-euclidlight text-[#C2C6e8]">PRODUCT</h3>
               <ul className="font-euclidlight">
                 <Link href="/"><li>Customers</li></Link>
@@ -81,7 +81,7 @@ const FooterOne: React.FC = () => {
               </ul>
             </div>
 
-            <div className="flex-1 font-euclidmedium">
+            <div className="flex-1">
               <h3 className="font-bold mb-2 text-[#C2C6e8]">COMPANY</h3>
               <ul className="font-euclidlight">
                 <Link href="/company"><li>About Us</li></Link>
@@ -89,7 +89,7 @@ const FooterOne: React.FC = () => {
               </ul>
             </div>
 
-            <div className="flex-1 font-euclidmedium">
+            <div className="flex-1">
               <h3 className="font-bold mb-2 text-[#C2C6e8]">LEGAL</h3>
               <ul className="font-euclidlight">
                 <Link href="/termsandcondition"><li>Terms and Condition</li></Link> 
@@ -97,7 +97,7 @@ const FooterOne: React.FC = () => {
               </ul>
             </div>
 
-            <div className="flex-1 font-euclidmedium">
+            <div className="flex-1">
               <h3 className="font-bold mb-2 text-[#C2C6e8]">CONTACT US</h3>
               <ul className="font-euclidlight">
                 <li>hello@mybeautybutler.com</li>
