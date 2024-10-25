@@ -126,7 +126,7 @@ const Footer: React.FC = () => {
             </div>
 
             {/* Logos Section */}
-            <div className="flex space-x-4 sm:space-x-8">
+            <div className="flex space-x-2 sm:space-x-8">
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
                 <Link href="https://x.com/mybeautybutler?s=21&t=hj5cOxvYhYHM2OUwDyhVsA"><img src="/X.svg " alt="Logo 1" className="object-cover h-5" /></Link>
               </div>
@@ -141,7 +141,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="text-center mt-8  font-euclidlight">
+      <div className="text-center mt-16 sm:mt-8 text-sm sm:text-md font-euclidlight">
         <p>&copy; Beauty Butler 2024. All rights reserved.</p>
       </div>
     </footer>

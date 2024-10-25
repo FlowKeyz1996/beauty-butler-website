@@ -33,7 +33,7 @@ const FeaturesSection = () => {
 
       {/* Features Card */}
       <motion.div
-        className="md:w-1/2 bg-[#EDECFF] p-6 rounded-lg  mt- sm:mt-0 relative md:h-[420px] sm:h-[320px] h-[130px] sm:w-[500px] w-[426px] overflow- mb-40 md:mb-0"
+        className="md:w-1/2 bg-[#EDECFF] p-6 rounded-lg  mt- sm:mt-0 relative md:h-[420px] sm:h-[320px] h-[hidden] sm:w-[500px] w-[400px] overflow- mb-40 md:mb-0"
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.3 }}
@@ -85,7 +85,7 @@ const FeaturesSection = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
           viewport={{ once: false, amount: 0.2 }}
         >
-          <div className="bg-[#8878d7] text-white p-5 min-w-[90%] rounded-2xl shadow-md ml-12 md:ml-0">
+          <div className="bg-[#8878d7] text-white p-5 min-w-[90%] rounded-2xl shadow-md ml-5 md:ml-0">
             <h3 className="text-base sm:text-lg font-bold font-apfelregular my-2">
               Beauty Butler Marketplace
             </h3>

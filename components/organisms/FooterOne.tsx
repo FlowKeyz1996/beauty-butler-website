@@ -41,8 +41,9 @@ const FooterOne: React.FC = () => {
       </motion.div>
 
       {/* Footer content */}
-      <div className="container sm:mx-auto sm:px-4 sm:mt-16 w-[90%] sm:w-[80%] lg:w-[90%] items-center">
-        <div className="w-full max-w-6xl mx-auto text-center">
+     {/* Footer content */}
+     <div className="container sm:mx-auto sm:px-4 mt-5 sm:mt-16 w-[90%] sm:w-[80%] lg:w-[90%] items-center">
+      <div className="w-full max-w-6xl mx-auto text-center">
           <div className="w-full my-10">
             {/* Input Field */}
             <div>
@@ -64,7 +65,7 @@ const FooterOne: React.FC = () => {
   placeholder="example@mail.com"
   className="flex-grow p-3 sm:p-4 border border-gray-300 rounded-l-lg rounded-r-lg sm:rounded-lg bg-[#8878D8] font-euclidmedium focus:outline-none w-[90%] sm:w-auto"
 />
-              <button className="bg-white text-[#8877D8] px-6 sm:px-9 font-euclidmedium py-3 sm:py-4 border border-[#8877D8] rounded-r-xl rounded-l-xl sm:rounded-r-xl sm:rounded-l-none mt-4 sm:mt-0 w-[90%] sm:w-auto">
+              <button className="bg-white text-[#8877D8] px-6 sm:px-9 font-euclidmedium py-3 sm:py-4 border border-[#8877D8] rounded-r-xl sm:rounded-r-xl rounded-l-xl sm:rounded-l-none mt-4 sm:mt-0 w-[90%] sm:w-auto">
                 Subscribe
               </button>
             </div>
