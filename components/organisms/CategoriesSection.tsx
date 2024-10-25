@@ -33,11 +33,11 @@ const CategoriesSection: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl f text-[#101828] text-center mb-5 font-apfelmittel tracking-wide"
+        className="text-4xl sm:text-4xl md:text-4xl lg:text-5xl f text-[#101828] text-center mb-5 font-apfelmittel tracking-wide"
       >
         Elevating Businesses Like Yours
       </motion.h2>
-      <p className="font-euclidlight text-center text-lg sm:text-xl md:text-2xl my-7 text-[#475467]">
+      <p className="font-euclidlight text-center text-xl sm:text-xl md:text-2xl my-7 text-[#475467]">
         Your One Stop Shop for Beauty and Wellness
       </p>
 
