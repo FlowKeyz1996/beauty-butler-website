@@ -28,7 +28,7 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
   return (
     <div className="max-w-7xl mx-auto p-5 md:p-8 h-auto  md:h-auto sm:my-10">
       <div className="text-center md:flex md:justify-center">
-  <TagHeader text="Frequently Asked Questions" position="center" />
+  <TagHeader text="Frequently Asked Questions" position="center" mobilePosition='center'/>
 </div>
       <h2 className="text-3xl sm:text-4xl text-center mb-10 mt-5 text-[#101828] font-apfelmittel">
         Got questions? We’ve got answers
