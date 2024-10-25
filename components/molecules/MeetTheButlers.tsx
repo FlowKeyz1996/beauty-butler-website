@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 type Butler = {
   id: number;
@@ -47,16 +47,43 @@ const butlers: Butler[] = [
 ];
 
 const MeetTheButlers: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const scrollLeft = e.currentTarget.scrollLeft;
+    const cardWidth = e.currentTarget.clientWidth / 1;
+    const newIndex = Math.round(scrollLeft / cardWidth);
+    setCurrentIndex(newIndex);
+  };
+
+  useEffect(() => {
+    const updateIndex = () => {
+      const scrollContainer = document.querySelector('.butlers-scroll-container');
+      if (scrollContainer) {
+        const scrollLeft = scrollContainer.scrollLeft;
+        const cardWidth = scrollContainer.clientWidth / 1;
+        const newIndex = Math.round(scrollLeft / cardWidth);
+        setCurrentIndex(newIndex);
+      }
+    };
+
+    window.addEventListener('resize', updateIndex);
+    return () => window.removeEventListener('resize', updateIndex);
+  }, []);
+
   return (
     <section className="my-12 pb-24 sm:pb-0">
       <div className="flex flex-col items-center text-center mb-6">
         <img src="/meetbutlerheaderimg.svg" alt="Meet The Butlers" className="mb-4" />
-        <h2 className=" text-3xl sm:text-4xl font-apfelmittel text-[#101828] tracking-wide">Meet The Butlers at Beauty Butler</h2>
+        <h2 className="text-3xl sm:text-4xl font-apfelmittel text-[#101828] tracking-wide">Meet The Butlers at Beauty Butler</h2>
       </div>
-      
+
       {/* Wrapper with horizontal scroll on mobile */}
       <div className="px-4">
-        <div className="flex gap-4 overflow-x-auto sm:grid sm:grid-cols-2 md:grid-cols-3 md:gap-6">
+        <div 
+          className="butlers-scroll-container flex gap-4 overflow-x-auto sm:grid sm:grid-cols-2 md:grid-cols-3 md:gap-6 hide-scroll-bar"
+          onScroll={handleScroll}
+        >
           {butlers.map((butler) => (
             <div
               key={butler.id}
@@ -70,6 +97,16 @@ const MeetTheButlers: React.FC = () => {
               <h3 className="text-2xl font-apfelmittel text-[#101828]">{butler.name}</h3>
               <p className="text-md text-[#475467] font-euclidlight">{butler.position}</p>
             </div>
+          ))}
+        </div>
+
+        {/* Scroll Indicator - only on mobile screens */}
+        <div className="flex justify-center mt-6 sm:hidden">
+          {butlers.map((_, index) => (
+            <div
+              key={index}
+              className={`h-3 rounded-full mx-1 ${currentIndex === index ? 'bg-[#8878D8] w-12' : 'bg-gray-300 w-3'}`}
+            />
           ))}
         </div>
       </div>

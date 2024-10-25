@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface CoreValue {
   id: number;
@@ -12,7 +12,7 @@ const coreValuesData: CoreValue[] = [
     id: 1,
     title: 'Transparency illuminates our journey',
     description: 'We believe in keeping it real with each other. Open and honest communication is key—sharing what’s going on, how decisions are made, and the processes we follow helps build trust and accountability across our team.',
-    imageSrc: '/corevalueiconone.svg', // Replace with your image path
+    imageSrc: '/corevalueiconone.svg',
   },
   {
     id: 2,
@@ -41,6 +41,30 @@ const coreValuesData: CoreValue[] = [
 ];
 
 const CoreValues: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const scrollLeft = e.currentTarget.scrollLeft;
+    const cardWidth = e.currentTarget.clientWidth / 1;
+    const newIndex = Math.round(scrollLeft / cardWidth);
+    setCurrentIndex(newIndex);
+  };
+
+  useEffect(() => {
+    const updateIndex = () => {
+      const scrollContainer = document.querySelector('.core-values-scroll');
+      if (scrollContainer) {
+        const scrollLeft = scrollContainer.scrollLeft;
+        const cardWidth = scrollContainer.clientWidth / 1;
+        const newIndex = Math.round(scrollLeft / cardWidth);
+        setCurrentIndex(newIndex);
+      }
+    };
+
+    window.addEventListener('resize', updateIndex);
+    return () => window.removeEventListener('resize', updateIndex);
+  }, []);
+
   return (
     <section className="py-12 bg-[#F7F7ff]">
       <div className="container mx-auto px-4">
@@ -86,7 +110,7 @@ const CoreValues: React.FC = () => {
         </div>
 
         {/* For mobile view, display in flex row with horizontal scroll */}
-        <div className="md:hidden flex overflow-x-scroll space-x-4 pb-4">
+        <div className="md:hidden flex overflow-x-scroll space-x-4 pb-4 core-values-scroll" onScroll={handleScroll}>
           {coreValuesData.map((value) => (
             <div
               key={value.id}
@@ -102,6 +126,16 @@ const CoreValues: React.FC = () => {
                 <p className="text-[#475467] font-euclidlight">{value.description}</p>
               </div>
             </div>
+          ))}
+        </div>
+
+        {/* Scroll Indicator - only on mobile screens */}
+        <div className="flex justify-center mt-6 md:hidden">
+          {coreValuesData.map((_, index) => (
+            <div
+              key={index}
+              className={`h-3 rounded-full mx-1 ${currentIndex === index ? 'bg-[#8878D8] w-12' : 'bg-gray-300 w-3'}`}
+            />
           ))}
         </div>
       </div>
