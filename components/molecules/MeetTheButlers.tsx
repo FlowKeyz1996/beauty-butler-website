@@ -50,10 +50,20 @@ const MeetTheButlers: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
-    const scrollLeft = e.currentTarget.scrollLeft;
-    const cardWidth = e.currentTarget.clientWidth / 1;
+    const scrollContainer = e.currentTarget;
+    const scrollLeft = scrollContainer.scrollLeft;
+    const cardWidth = scrollContainer.clientWidth;
+    const totalScrollWidth = scrollContainer.scrollWidth - cardWidth;
+
+    // Calculate the index based on the scroll position
     const newIndex = Math.round(scrollLeft / cardWidth);
-    setCurrentIndex(newIndex);
+
+    // If at the end of the scroll, activate the last indicator
+    if (scrollLeft >= totalScrollWidth - 5) {
+      setCurrentIndex(butlers.length - 1);
+    } else {
+      setCurrentIndex(newIndex);
+    }
   };
 
   useEffect(() => {
@@ -61,9 +71,16 @@ const MeetTheButlers: React.FC = () => {
       const scrollContainer = document.querySelector('.butlers-scroll-container');
       if (scrollContainer) {
         const scrollLeft = scrollContainer.scrollLeft;
-        const cardWidth = scrollContainer.clientWidth / 1;
+        const cardWidth = scrollContainer.clientWidth;
+        const totalScrollWidth = scrollContainer.scrollWidth - cardWidth;
         const newIndex = Math.round(scrollLeft / cardWidth);
-        setCurrentIndex(newIndex);
+
+        // Check if it's the last card
+        if (scrollLeft >= totalScrollWidth - 5) {
+          setCurrentIndex(butlers.length - 1);
+        } else {
+          setCurrentIndex(newIndex);
+        }
       }
     };
 
