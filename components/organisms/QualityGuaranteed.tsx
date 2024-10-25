@@ -6,12 +6,12 @@ import Link from 'next/link';
 
 const QualityGuaranteed: React.FC = () => {
   return (
-    <div className="my-9">
+    <div className="my-9 mb-30">
       <div className="flex justify-center items-center ">
         <div className="flex flex-col md:flex-row justify-between items-center max-w-6xl w-full">
           {/* Left Side */}
           <div className="flex-1 md:mr-8 mb-8 md:mb-0 text-center md:text-left">
-            <div className="">
+            <div className="my-2">
             <TagHeader text="👌🏾 Quality guaranteed" position='left' mobilePosition="center" paddingX='px-1' paddingY='py-1' />
             </div>
             <h2 className="text-3xl md:text-5xl font-apfelmittel mb-4 max-w-xl mx-auto md:mx-0 text-[#101828] leading-[2.5rem] md:leading-[3rem]">
