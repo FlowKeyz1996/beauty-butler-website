@@ -101,6 +101,7 @@ const FooterOne: React.FC = () => {
               <h3 className="font-bold mb-2 text-[#C2C6e8]">CONTACT US</h3>
               <ul className="font-euclidlight">
                 <li>hello@mybeautybutler.com</li>
+                <Link href="/"><li>support</li></Link>
               </ul>
             </div>
           </div>
