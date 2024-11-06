@@ -32,7 +32,7 @@ const DeleteAccount: React.FC = () => {
         your information from our systems.
       </p>
 
-      <Link href="/delete-request">
+      <Link href="https://forms.gle/aiDJfpNpytNYb2QV8">
       <button className="w-full block text-center bg-red-600 hover:bg-red-700 text-white py-2 rounded-md font-medium">
           Initiate Account Deletion
           </button>  
