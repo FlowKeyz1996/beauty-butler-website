@@ -115,7 +115,7 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
             {/* Image and Submit Button */}
             <div className="w-full flex items-center mt-6 gap-32 relative">
               <Image
-                src="/faqimg.svg"
+                src="/Faqimg.svg"
                 alt="Related Image"
                 width={200}  // Adjust width
                 height={100}  // Adjust height
