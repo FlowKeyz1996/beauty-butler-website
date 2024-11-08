@@ -1,5 +1,6 @@
 import { useState, useRef, ChangeEvent, FormEvent } from "react";
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 import TagHeader from "../atoms/TagHeader";
 
 type FAQ = {
@@ -113,10 +114,12 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
 
             {/* Image and Submit Button */}
             <div className="w-full flex items-center mt-6 gap-32 relative">
-              <img
+              <Image
                 src="/faqimg.svg"
                 alt="Related Image"
-                className="w-[40%] h-[20%] object-contain"
+                width={200}  // Adjust width
+                height={100}  // Adjust height
+                className="object-contain"
               />
               <button
                 type="submit"

@@ -80,7 +80,7 @@ const BeautyButlerOffer: React.FC = () => {
             <div className="flex flex-col items-start gap-2 text-white">
               {standardFeatures.map((feature, index) => (
                 <div key={index} className="flex items-center gap-2 mb-2">
-                  <Image src="/check.svg" alt="Check mark" width={20} height={20} />
+                  <Image src="/check.svg" alt="Check-mark" width={20} height={20} />
                   <span className="font-euclidlight text-lg text-[#ffffff] md:text-lg text-sm">
                     {feature}
                   </span>
