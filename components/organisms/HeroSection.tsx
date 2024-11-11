@@ -1,5 +1,6 @@
 import { motion, useAnimation } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import Image from 'next/image'; // Import Next.js Image component
 import Marquee from '../molecules/Marquee';
 import Link from 'next/link';
 import Navbar from './Navbar'; // Import the navbar component
@@ -58,12 +59,15 @@ const HeroSection: React.FC = () => {
 
   return (
     <div className="relative w-full h-screen">
-      {/* Background image */}
+      {/* Optimized Background image */}
       <div className="absolute top-0 left-0 w-full h-full">
-        <img
-          src="/heroimage.svg" // Replace with your image path
+        <Image
+          src="/heroimage.svg" // Replace with your WebP optimized image path
           alt="Background Image"
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          layout="fill"
+          objectFit="cover"
+          quality={75} // Adjust quality for balance between quality and performance
+          priority // Preloads image for faster initial load
         />
       </div>
 
