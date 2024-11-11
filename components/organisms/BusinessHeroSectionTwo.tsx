@@ -9,7 +9,7 @@ const BusinessHeroSectionTwo = () => {
       <div className="relative z-10 container mx-auto px-4 sm:px-8 flex flex-col lg:flex-row items-center lg:justify-between lg:space-x-8 h-full">
         {/* Left Section */}
         <div className="lg:w-1/2 space-y-4 text-center lg:text-left text-white flex flex-col justify-center lg:items-start items-center">
-          <div className="bg-white bg-opacity-20 backdrop-blur-lg rounded-full border w-full max-w-[250px] sm:max-w-[400px] px-4 py-2 text-sm sm:text-base">
+          <div className="bg-white bg-opacity-20 backdrop-blur-lg rounded-full border w-full max-w-[250px] sm:max-w-[100px] px-4 py-2 text-sm sm:text-base">
             <p className="text-white">Your new beauty bestie 💅🏾</p>
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-6xl font-apfelmittel leading-tight lg:leading-[4rem] mt-4 lg:mt-0">
