@@ -16,7 +16,7 @@ const categories: Category[] = [
   { id: 6, imageSrc: '/barber.svg', text: 'Barber Shops' },
   { id: 7, imageSrc: '/imagecategory.svg', text: 'Make Up' },
   { id: 8, imageSrc: '/lashextension.svg', text: 'Lash Extension' },
-  { id: 9, imageSrc: '/brows.svg', text: 'Brows' },
+  { id: 9, imageSrc: '/Brows.svg', text: 'Brows' },
   { id: 10, imageSrc: '/reflexology.svg', text: 'Reflexology' },
 ];
 
