@@ -31,12 +31,14 @@ const FooterOne: React.FC = () => {
           </p>
 
           {/* Button with Image */}
+          <Link href="/waitlist">
           <div className="w-full flex justify-center md:justify-start my-3">
             <button className="bg-[#8877D8] text-white px-6 sm:px-10 py-3 sm:py-5 rounded-xl flex items-center font-euclidmedium sm:text-2xl text-sm sm:w-auto w-full justify-center">
-              <img src="/googleandapplepurple.svg" alt="Button Icon" className="mr-2 w-12 sm:w-20" />
-              Download App
+              {/* <img src="/googleandapplepurple.svg" alt="Button Icon" className="mr-2 w-12 sm:w-20" /> */}
+              Join our waitlist
             </button>
           </div>
+          </Link>
         </div>
       </motion.div>
 
