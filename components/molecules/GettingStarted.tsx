@@ -1,5 +1,6 @@
 import React from 'react';
 import TagHeader from '../atoms/TagHeader';
+import Link from 'next/link';
 
 const GettingStarted: React.FC = () => {
   return (
@@ -87,18 +88,20 @@ const GettingStarted: React.FC = () => {
         </div>
 
         {/* Button */}
+        <Link href="/waitlist">
         <div className="w-full flex justify-center mt-10">
           <button className="bg-[#8877D8] flex items-center px-10 md:px-16 py-4 rounded-2xl">
-            <img
+            {/* <img
               src="/googleandapplepurple.svg"
               alt="Download Icon"
               className="w-12 md:w-20 h-auto mr-4 fill-current"
-            />
+            /> */}
             <span className="text-white font-euclidmedium text-xl md:text-2xl">
-              Download App
+              Join our waitlist
             </span>
           </button>
         </div>
+        </Link>
       </div>
     </section>
   );

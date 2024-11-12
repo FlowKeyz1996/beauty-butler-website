@@ -54,9 +54,9 @@ const NavbarOne: React.FC = () => {
             <Link href="/benefit" className={`hover:text-[#FF8AF4]`}>
               Benefits
             </Link>
-            <Link href="/company" className={`hover:text-[#FF8AF4]`}>
+            {/* <Link href="/company" className={`hover:text-[#FF8AF4]`}>
               Company
-            </Link>
+            </Link> */}
             <Link href="/contact" className={`hover:text-[#FF8AF4]`}>
               Blog
             </Link>
@@ -86,9 +86,9 @@ const NavbarOne: React.FC = () => {
             <Link href="/benefits" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
               Benefits
             </Link>
-            <Link href="/company" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
+            {/* <Link href="/company" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
               Company
-            </Link>
+            </Link> */}
             <Link href="/business">
             <button
               onClick={toggleMenu}
