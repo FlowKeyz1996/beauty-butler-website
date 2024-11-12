@@ -2,6 +2,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import LaunchListWidget from "../atoms/LaunchListWidget";
+import Script from 'next/script';
+
 
 const BusinessHeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,6 +25,7 @@ const BusinessHeroSection = () => {
 
   return (
     <section className="relative flex flex-col justify-center items-center h-[117vh] md:[110vh] lg:h-[110vh] min-h-screen bg-[#8877D8]">
+      
       <div className="relative z-10 container mx-auto p-4 sm:p-4 flex flex-col lg:flex-row items-center lg:justify-between lg:space-x-8 h-full">
         {/* Left div with header and description */}
         <div className="lg:w-1/2 space-y-3 sm:space-y-4 text-center lg:text-left text-white flex flex-col justify-center items-center lg:items-start lg:justify-center">

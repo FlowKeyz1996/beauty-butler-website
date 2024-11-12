@@ -16,27 +16,27 @@ const imagesData: Record<string, ImageSet> = {
   },
   makeup: {
     mainImage: '/makeup.svg',
-    topImage: '/lashestwo.svg',
-    bottomLeftImage: '/lashesone.svg',
-    bottomRightImage: '/lashesone.svg',
+    topImage: '/beautycategory-make-up.svg',
+    bottomLeftImage: '/makeup.svg',
+    bottomRightImage: '/makeup.svg',
   },
   hair: {
     mainImage: '/haircategory.svg',
     topImage: '/haircategoryone.svg',
-    bottomLeftImage: '/lashesone.svg',
-    bottomRightImage: '/lashesone.svg',
+    bottomLeftImage: '/haircategory.svg',
+    bottomRightImage: '/haircategory.svg',
   },
   nails: {
     mainImage: '/nailscategory.svg',
-    topImage: '/haircategoryone.svg',
-    bottomLeftImage: '/lashesone.svg',
-    bottomRightImage: '/lashesone.svg',
+    topImage: '/nail-category-top-img.svg',
+    bottomLeftImage: '/nailscategory.svg',
+    bottomRightImage: '/nailscategory.svg',
   },
   spa: {
     mainImage: '/spacategory.svg',
     topImage: '/spacategoryone.svg',
-    bottomLeftImage: '/lashesone.svg',
-    bottomRightImage: '/lashesone.svg',
+    bottomLeftImage: '/spacategory.svg',
+    bottomRightImage: '/spacategory.svg',
   },
 };
 
@@ -98,7 +98,7 @@ const BeautyCategories: React.FC = () => {
             <img
               src={selectedCategory.bottomLeftImage}
               alt="Bottom left image"
-              className="w-full h-auto rounded-lg"
+              className="w-full object-contain rounded-lg"
             />
           </div>
           {/* Bottom Right Image */}

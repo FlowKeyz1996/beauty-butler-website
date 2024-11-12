@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TagHeader from '../atoms/TagHeader';
 import Link from 'next/link';
+import LaunchListWidget from '../atoms/LaunchListWidget';
 
 const GettingStarted: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  const handleOverlayClick = (e: React.MouseEvent) => {
+    if ((e.target as HTMLElement).id === 'modal-overlay') {
+      closeModal();
+    }
+  };
+
   return (
     <section className="flex flex-col items-center py-20 sm:py-10 px-4">
       <TagHeader text="How it works" maxWidth="max-w-[150px]" />
@@ -56,12 +68,12 @@ const GettingStarted: React.FC = () => {
               <img
                 src="/02.svg"
                 alt="Left Image"
-                className="absolute -bottom-4  left-0 w-[65%] md:w-[60%] h-auto object-contain"
+                className="absolute -bottom-4  left-0 w-[65%] md:w-[60%] lg:h-[70%]  object-contain"
               />
               <img
                 src="/Device2.svg"
                 alt="Right Image"
-                className="absolute -bottom-4 right-0 w-[35%] md:w-[40%] h-auto object-contain rounded-lg"
+                className="absolute -bottom-4 right-0 w-[35%] md:w-[40%] sm:w-[20%] sm:h-[97%] object-contain rounded-lg"
               />
             </div>
           </div>
@@ -76,33 +88,40 @@ const GettingStarted: React.FC = () => {
               <img
                 src="/03.svg"
                 alt="Left Image"
-                className="absolute -bottom-4 left-0 w-[65%] md:w-[60%] h-auto object-contain"
+                className="absolute -bottom-4 md:left-0 w-[65%] md:w-[60%]  lg:h-[70%]  object-contain"
               />
               <img
                 src="/device3.svg"
                 alt="Right Image"
-                className="absolute -bottom-4 right-0 w-[35%] md:w-[40%] h-auto object-contain rounded-lg"
+                className="absolute -bottom-4 right-0 w-[35%] md:w-[40%] sm:w-[20%] sm:h-[97%] object-contain rounded-lg"
               />
             </div>
           </div>
         </div>
 
         {/* Button */}
-        <Link href="/waitlist">
         <div className="w-full flex justify-center mt-10">
-          <button className="bg-[#8877D8] flex items-center px-10 md:px-16 py-4 rounded-2xl">
-            {/* <img
-              src="/googleandapplepurple.svg"
-              alt="Download Icon"
-              className="w-12 md:w-20 h-auto mr-4 fill-current"
-            /> */}
+          <button onClick={openModal} className="bg-[#8877D8] flex items-center px-10 md:px-16 py-4 rounded-2xl">
             <span className="text-white font-euclidmedium text-xl md:text-2xl">
               Join our waitlist
             </span>
           </button>
         </div>
-        </Link>
       </div>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div
+          id="modal-overlay"
+          className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+          onClick={handleOverlayClick}
+        >
+          <div className="bg-white p-8 rounded-lg max-w-md w-full">
+            <h2 className="text-2xl font-semibold mb-4">Join Our Waitlist</h2>
+            <LaunchListWidget/>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
