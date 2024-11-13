@@ -5,11 +5,28 @@ import { useRouter } from 'next/navigation';
 
 const NavbarOne: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const router = useRouter();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -20,56 +37,66 @@ const NavbarOne: React.FC = () => {
   }, [isMenuOpen]);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">
-      <div className="container mx-auto px-4 flex justify-between items-center py-2 md:py-2">
-        {/* Logo and Nav Links */}
-        <div className="flex justify-between items-center w-full md:w-5/6 shadow-2xl rounded-full p-2 sm:p-4 bg-white bg-opacity-100 backdrop-blur-lg border h-[50px] md:h-[64px]">
-          {/* Logo and Hamburger */}
-          <div className="flex items-center justify-between w-full md:w-auto">
-            <Link href="/">
-              <div className="text-xl sm:text-2xl font-bold">
-                <img src='/purplelogo.svg' alt="Logo" className="h-8 sm:h-10" /> {/* Adjusted logo size */}
-              </div>
-            </Link>
+    <nav className="fixed top-0 left-0 right-0 z-50">
+      <div className="container mx-auto px-4 flex justify-between items-center h-full py-2 md:py-2">
+        <div className="flex justify-between items-center w-full shadow-2xl rounded-full p-2 bg-white bg-opacity-100 backdrop-blur-lg border h-[50px] md:h-[64px]">
+          {/* Logo */}
+          <Link href="/">
+            <div className="text-2xl font-bold">
+              <img src="/purplelogo.svg" alt="Logo" className="h-8 sm:h-10" />
+            </div>
+          </Link>
 
-            {/* Hamburger Menu Icon */}
-            <div className="md:hidden flex items-center">
-              <button onClick={toggleMenu} className="text-gray-800 focus:outline-none">
-                <Image
-                  src={isMenuOpen ? '/close.svg' : '/menu-02.svg'}
-                  alt="Menu Icon"
-                  width={25} // Reduced size for mobile
-                  height={25}
-                  className='text-black'
-                />
-              </button>
+          {/* Dropdown Button with Nav Links (desktop only) */}
+          <div className="relative hidden md:block">
+            <button
+              onClick={toggleDropdown}
+              className="flex items-center bg-[#FFC8F2] text-[#101828] py-2 px-4 sm:py-2 sm:px-5 mx-5 rounded-xl font-euclidmedium text-sm sm:text-lg"
+            >
+              Menu
+              <span className="ml-2">▼</span>
+            </button>
+            <div
+              className={`absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg transition-all duration-300 transform ${
+                isDropdownOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
+              }`}
+            >
+              <Link href="/features" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
+                <Image src="/icons/features-icon.svg" alt="Features Icon" width={20} height={20} className="mr-3" />
+                Features
+              </Link>
+              <Link href="/benefit" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
+                <Image src="/icons/benefits-icon.svg" alt="Benefits Icon" width={20} height={20} className="mr-3" />
+                Benefits
+              </Link>
+              <Link href="/company" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
+                <Image src="/icons/company-icon.svg" alt="Company Icon" width={20} height={20} className="mr-3" />
+                Company
+              </Link>
+              <Link href="/contact" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
+                <Image src="/icons/blog-icon.svg" alt="Blog Icon" width={20} height={20} className="mr-3" />
+                Blog
+              </Link>
+              {/* Divider */}
+              <hr className="my-1 border-gray-200" />
+              <Link href="/customers" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
+                <Image src="/icons/customers-icon.svg" alt="Customers Icon" width={20} height={20} className="mr-3" />
+                For Customers
+              </Link>
             </div>
           </div>
 
-          {/* Nav Links */}
-          <div className={`hidden md:flex space-x-4 md:space-x-6 gap-2 md:gap-6 mx-2 md:mx-5 font-euclidmedium  text-[#475467] text-base md:text-xl transition-colors duration-300`}>
-            <Link href="/features" className={`hover:text-[#FF8AF4]`}>
-              Features
-            </Link>
-            <Link href="/benefit" className={`hover:text-[#FF8AF4]`}>
-              Benefits
-            </Link>
-            {/* <Link href="/company" className={`hover:text-[#FF8AF4]`}>
-              Company
-            </Link> */}
-            <Link href="/contact" className={`hover:text-[#FF8AF4]`}>
-              Blog
-            </Link>
-          </div>
-        </div>
-
-        {/* Button */}
-        <div className="hidden md:block h-full flex items-center">
-          <Link href="/business">
-            <button className="bg-[#FFC8F2] text-[#101828] py-3 px-4 sm:py-4 sm:px-7 rounded-2xl font-euclidmedium text-sm sm:text-xl h-[50px] md:h-[64px]">
-              For Businesses
+          {/* Hamburger Menu Icon (for mobile) */}
+          <div className="md:hidden flex items-center">
+            <button onClick={toggleMenu} className="text-gray-800 focus:outline-none">
+              <Image
+                src={isMenuOpen ? '/close.svg' : '/hamburgermenu.svg'}
+                alt="Menu Icon"
+                width={30}
+                height={30}
+              />
             </button>
-          </Link>
+          </div>
         </div>
       </div>
 
@@ -86,16 +113,12 @@ const NavbarOne: React.FC = () => {
             <Link href="/benefits" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
               Benefits
             </Link>
-            {/* <Link href="/company" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
-              Company
-            </Link> */}
-            <Link href="/business">
-            <button
-              onClick={toggleMenu}
-              className="bg-[#FFC8F2] text-[#101828] px-4 py-2 rounded "
-            >
-              For Businesses 
-            </button>
+            <Link href="/contact" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
+              Blog
+            </Link>
+            <hr className="my-1 border-gray-200 w-full" />
+            <Link href="/customers" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
+              For Customers
             </Link>
           </div>
         </div>
