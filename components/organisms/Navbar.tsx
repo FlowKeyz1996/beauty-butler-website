@@ -83,8 +83,8 @@ const Navbar: React.FC = () => {
           <div className="flex flex-col items-center py-4 space-y-4">
             <Link href="/features" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>Features</Link>
             <Link href="/benefit" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>Benefits</Link>
-            <Link href="/company" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>Company</Link>
-            <Link href="/contact" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>Blog</Link>
+            {/* <Link href="/company" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>Company</Link>
+            <Link href="/contact" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>Blog</Link> */}
           </div>
         </div>
       )}
