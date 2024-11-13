@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import LaunchListWidget from '../atoms/LaunchListWidget';
 
 const FooterOne: React.FC = () => {
+  // State for managing modal visibility
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Toggle modal function
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
   return (
     <footer className="relative bg-[#8877D8] text-white py-24 mt-36 sm:mt-96 flex flex-col items-center">
       {/* Card positioned partially outside the footer */}
@@ -12,7 +21,7 @@ const FooterOne: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        {/* Image Section, visible only on medium screens and above */}
+        {/* Image Section */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-start mb-4 md:mb-0 hidden sm:flex">
           <img
             src="/footertwoimg.svg"
@@ -22,8 +31,8 @@ const FooterOne: React.FC = () => {
         </div>
 
         {/* Description Section */}
-        <div className="w-full md:w- flex flex-col mx-2 items-center md:items-start">
-          <h2 className="text-[#101828] text-2xl sm:text-xl md:text-5xl leading-8 sm:leading-[5rem] tracking-normal  mb-4 font-apfelmittel text-center md:text-left">
+        <div className="w-full flex flex-col mx-2 items-center md:items-start">
+          <h2 className="text-[#101828] text-2xl sm:text-xl md:text-5xl leading-8 sm:leading-[5rem] tracking-normal mb-4 font-apfelmittel text-center md:text-left">
             Book your beauty and wellness needs in just a few clicks.
           </h2>
           <p className="text-[#475467] text-center md:text-left mb-4 font-euclidlight text-sm sm:text-base md:text-lg">
@@ -31,21 +40,38 @@ const FooterOne: React.FC = () => {
           </p>
 
           {/* Button with Image */}
-          <Link href="/waitlist">
           <div className="w-full flex justify-center md:justify-start my-3">
-            <button className="bg-[#8877D8] text-white px-6 sm:px-10 py-3 sm:py-5 rounded-xl flex items-center font-euclidmedium sm:text-2xl text-sm sm:w-auto w-full justify-center">
-              {/* <img src="/googleandapplepurple.svg" alt="Button Icon" className="mr-2 w-12 sm:w-20" /> */}
+            <button
+              onClick={toggleModal}
+              className="bg-[#8877D8] text-white px-6 sm:px-10 py-3 sm:py-5 rounded-xl flex items-center font-euclidmedium sm:text-2xl text-sm sm:w-auto w-full justify-center"
+            >
               Join our waitlist
             </button>
           </div>
-          </Link>
         </div>
       </motion.div>
 
+      {/* Modal */}
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+          onClick={toggleModal}
+        >
+          <div
+            className="bg-white rounded-xl p-8 w-[90%] sm:w-[50%] md:w-[40%] lg:w-[30%] relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 className="text-2xl font-bold mb-4 text-center">Join Waitlist</h2>
+            <p className="text-gray-600 text-center mb-8">Enter your details to be added to our waitlist!</p>
+             <LaunchListWidget/>
+            
+          </div>
+        </div>
+      )}
+
       {/* Footer content */}
-     {/* Footer content */}
-     <div className="container sm:mx-auto sm:px-4 mt-5 sm:mt-16 w-[90%] sm:w-[80%] lg:w-[90%] items-center">
-      <div className="w-full max-w-6xl mx-auto text-center">
+      <div className="container sm:mx-auto sm:px-4 mt-5 sm:mt-16 w-[90%] sm:w-[80%] lg:w-[90%] items-center">
+        <div className="w-full max-w-6xl mx-auto text-center">
           <div className="w-full my-10">
             {/* Input Field */}
             <div>
@@ -57,16 +83,16 @@ const FooterOne: React.FC = () => {
               </h3>
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center">
-            <img
-  src="/footerinputimg.svg"
-  alt="footer_input_img"
-  className="hidden sm:block sm:w-auto sm:mb-0"
-/>
-             <input
-  type="email"
-  placeholder="example@mail.com"
-  className="flex-grow p-3 sm:p-4 border border-gray-300 rounded-l-lg rounded-r-lg sm:rounded-lg bg-[#8878D8] font-euclidmedium focus:outline-none w-[90%] sm:w-auto"
-/>
+              <img
+                src="/footerinputimg.svg"
+                alt="footer_input_img"
+                className="hidden sm:block sm:w-auto sm:mb-0"
+              />
+              <input
+                type="email"
+                placeholder="example@mail.com"
+                className="flex-grow p-3 sm:p-4 border border-gray-300 rounded-l-lg rounded-r-lg sm:rounded-lg bg-[#8878D8] font-euclidmedium focus:outline-none w-[90%] sm:w-auto"
+              />
               <button className="bg-white text-[#8877D8] px-6 sm:px-9 font-euclidmedium py-3 sm:py-4 border border-[#8877D8] rounded-r-xl sm:rounded-r-xl rounded-l-xl sm:rounded-l-none mt-4 sm:mt-0 w-[90%] sm:w-auto">
                 Subscribe
               </button>
@@ -128,7 +154,7 @@ const FooterOne: React.FC = () => {
                 <Link href="https://x.com/mybeautybutler?s=21&t=hj5cOxvYhYHM2OUwDyhVsA"><img src="/X.svg " alt="Logo 1" className="object-cover h-5" /></Link>
               </div>
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
-               <Link href="https://www.instagram.com/mybeautybutler?igsh=MWw1YXdwOTQycjhxYw== "><img src="/instagram.svg" alt="Logo 2" className="object-cover h-5" /></Link> 
+                <Link href="https://www.instagram.com/mybeautybutler?igsh=MWw1YXdwOTQycjhxYw=="><img src="/instagram.svg" alt="Logo 2" className="object-cover h-5" /></Link>
               </div>
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
                 <Link href="https://substack.com/home"><img src="/socialicon.svg" alt="Logo 3" className="object-cover h-5" /></Link>
