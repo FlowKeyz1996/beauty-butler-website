@@ -85,7 +85,7 @@ const NavbarOne: React.FC = () => {
               <hr className="my-1 border-gray-300" />
               <Link href="/business" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
                 <Image src="/for-customer-nav-img.svg" alt="Customers Icon" width={20} height={20} className="mr-3" />
-                For Customers
+                For Businesses
               </Link>
             </div>
           </div>
