@@ -49,7 +49,8 @@ const Navbar: React.FC = () => {
               className="flex items-center bg-[#FFC8F2] text-[#101828] py-2 px-4 sm:py-2 sm:px-5 mx-5 rounded-xl font-euclidmedium text-sm sm:text-lg"
             >
               Menu
-              <span className="ml-2">▼</span> {/* Arrow icon */}
+             
+              <Image src="/arrow-down.svg" alt="Benefits Icon" width={20} height={20} className="ml-2" />
             </button>
             <div
               className={`absolute right-0 mt-4 p-4 w-56 bg-white rounded-lg shadow-lg transition-all duration-300 transform ${
