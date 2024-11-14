@@ -121,7 +121,7 @@ const NavbarOne: React.FC = () => {
               Blog
             </Link>
             <hr className="my-1 border-gray-200 w-full" />
-            <Link href="/customers" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
+            <Link href="/business" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>
               For Customers
             </Link>
           </div>

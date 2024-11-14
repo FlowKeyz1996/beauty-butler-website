@@ -107,6 +107,12 @@ const Navbar: React.FC = () => {
             <Link href="/benefit" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>Benefits</Link>
             <Link href="/company" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>Company</Link>
             <Link href="/contact" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>Blog</Link>
+            {/* Divider */}
+            <hr className="my-1 border-gray-300" />
+              <Link href="/" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
+                <Image src="/for-customer-nav-img.svg" alt="Customers Icon" width={20} height={20} className="mr-3" />
+                For Businesses
+              </Link>
           </div>
         </div>
       )}
