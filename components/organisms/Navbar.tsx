@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
                 Blog
               </Link>
               <Link href="/contact" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
-                <Image src="/download-nav-img.svg" alt="Blog Icon" width={20} height={20} className="mr-3" />
+                <Image src="/download-nav-img.svg" alt="Download Icon" width={20} height={20} className="mr-3" />
                 Download the App
               </Link>
               {/* Divider */}
@@ -99,21 +99,39 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu starting just below the navbar */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg absolute top-full left-0 w-full">
-          <div className="flex flex-col items-center py-4 space-y-4">
-            <Link href="/features" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>Features</Link>
-            <Link href="/benefit" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>Benefits</Link>
-            <Link href="/company" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>Company</Link>
-            <Link href="/contact" className="text-gray-600 hover:text-gray-800" onClick={toggleMenu}>Blog</Link>
-            {/* Divider */}
-            <hr className="my-1 border-gray-300" />
-              <Link href="/" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
-                <Image src="/for-customer-nav-img.svg" alt="Customers Icon" width={20} height={20} className="mr-3" />
-                For Businesses
-              </Link>
-          </div>
+        <div className="md:hidden gap-3 fixed top-[70px] left-0 w-full h-[calc(100%-70px)] bg-white flex flex-col items-center py-4 z-40">
+          <Link href="/features" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
+            <Image src="/features-nav-img.svg" alt="Features Icon" width={20} height={20} className="mr-3" />
+            <span className="flex-1 text-gray-600">Features</span>
+          </Link>
+          <hr className="w-full border-gray-200" />
+          <Link href="/benefit" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
+            <Image src="/benefit-nav-img.svg" alt="Benefits Icon" width={20} height={20} className="mr-3" />
+            <span className="flex-1 text-gray-600">Benefits</span>
+          </Link>
+          <hr className="w-full border-gray-200" />
+          <Link href="/company" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
+            <Image src="/company-nav-img.svg" alt="Company Icon" width={20} height={20} className="mr-3" />
+            <span className="flex-1 text-gray-600">Company</span>
+          </Link>
+          <hr className="w-full border-gray-200" />
+          <Link href="/contact" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
+            <Image src="/blog-nav-img.svg" alt="Blog Icon" width={20} height={20} className="mr-3" />
+            <span className="flex-1 text-gray-600">Blog</span>
+          </Link>
+          <hr className="w-full border-gray-200" />
+          <Link href="/contact" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
+            <Image src="/download-nav-img.svg" alt="Blog Icon" width={20} height={20} className="mr-3" />
+            <span className="flex-1 text-gray-600">Download the App</span>
+          </Link>
+          <hr className="w-full border-gray-200" />
+          <Link href="/" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
+            <Image src="/for-customer-nav-img.svg" alt="Customers Icon" width={20} height={20} className="mr-3" />
+            <span className="flex-1 text-gray-600">For Customers</span>
+          </Link>
+          <hr className="w-full border-gray-200" />
         </div>
       )}
     </nav>
