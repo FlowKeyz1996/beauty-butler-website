@@ -57,30 +57,34 @@ const NavbarOne: React.FC = () => {
               <span className="ml-2">▼</span>
             </button>
             <div
-              className={`absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg transition-all duration-300 transform ${
+              className={`absolute right-0 mt-4 p-4 w-56 bg-white rounded-lg shadow-lg transition-all duration-300 transform ${
                 isDropdownOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
               }`}
             >
               <Link href="/features" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
-                <Image src="/icons/features-icon.svg" alt="Features Icon" width={20} height={20} className="mr-3" />
+                <Image src="/features-nav-img.svg" alt="Features Icon" width={20} height={20} className="mr-3" />
                 Features
               </Link>
               <Link href="/benefit" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
-                <Image src="/icons/benefits-icon.svg" alt="Benefits Icon" width={20} height={20} className="mr-3" />
+                <Image src="/benefit-nav-img.svg" alt="Benefits Icon" width={20} height={20} className="mr-3" />
                 Benefits
               </Link>
               <Link href="/company" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
-                <Image src="/icons/company-icon.svg" alt="Company Icon" width={20} height={20} className="mr-3" />
+                <Image src="/company-nav-img.svg" alt="Company Icon" width={20} height={20} className="mr-3" />
                 Company
               </Link>
               <Link href="/contact" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
-                <Image src="/icons/blog-icon.svg" alt="Blog Icon" width={20} height={20} className="mr-3" />
+                <Image src="/blog-nav-img.svg" alt="Blog Icon" width={20} height={20} className="mr-3" />
                 Blog
               </Link>
+              <Link href="/contact" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
+                <Image src="/download-nav-img.svg" alt="Blog Icon" width={20} height={20} className="mr-3" />
+                Download the App
+              </Link>
               {/* Divider */}
-              <hr className="my-1 border-gray-200" />
-              <Link href="/customers" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
-                <Image src="/icons/customers-icon.svg" alt="Customers Icon" width={20} height={20} className="mr-3" />
+              <hr className="my-1 border-gray-300" />
+              <Link href="/business" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
+                <Image src="/for-customer-nav-img.svg" alt="Customers Icon" width={20} height={20} className="mr-3" />
                 For Customers
               </Link>
             </div>
