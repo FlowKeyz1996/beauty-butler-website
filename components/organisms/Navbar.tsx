@@ -131,7 +131,7 @@ const Navbar: React.FC = () => {
             <Image src="/for-customer-nav-img.svg" alt="Customers Icon" width={20} height={20} className="mr-3" />
             <span className="flex-1 text-gray-600">For Customers</span>
           </Link>
-          <hr className="w-full border-gray-200" />
+          
         </div>
       )}
     </nav>
