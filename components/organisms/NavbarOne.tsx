@@ -94,7 +94,7 @@ const NavbarOne: React.FC = () => {
           <div className="md:hidden flex items-center">
             <button onClick={toggleMenu} className="text-gray-800 focus:outline-none">
               <Image
-                src={isMenuOpen ? '/close.svg' : '/hamburgermenu.svg'}
+                src={isMenuOpen ? '/close.svg' : '/burger.svg'}
                 alt="Menu Icon"
                 width={30}
                 height={30}
@@ -133,9 +133,9 @@ const NavbarOne: React.FC = () => {
             <span className="flex-1 text-gray-600">Download the App</span>
           </Link>
           <hr className="w-full border-gray-200" />
-          <Link href="/" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
+          <Link href="/business" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
             <Image src="/for-businesses-nav-img.svg" alt="Customers Icon" width={20} height={20} className="mr-3" />
-            <span className="flex-1 text-gray-600">For Customers</span>
+            <span className="flex-1 text-gray-600">For Businesses</span>
           </Link>
           
         </div>
