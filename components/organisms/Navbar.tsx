@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
               <Image src="/arrow-down.svg" alt="Benefits Icon" width={20} height={20} className="ml-2" />
             </button>
             <div
-              className={`absolute right-0 mt-4 p-4 w-56 bg-white rounded-lg shadow-lg transition-all duration-300 transform ${
+              className={`absolute right-0 mt-4 p-4 w-56 bg-white font-euclidlight rounded-lg shadow-lg transition-all duration-300 transform ${
                 isDropdownOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
               }`}
             >
@@ -102,7 +102,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu starting just below the navbar */}
       {isMenuOpen && (
-        <div className="md:hidden gap-3 fixed top-[70px] left-0 w-full h-[calc(100%-70px)] bg-white flex flex-col items-center py-4 z-40">
+        <div className="md:hidden gap-3 fixed top-[70px] font-euclidlight left-0 w-full h-[calc(100%-70px)] bg-white flex flex-col items-center py-4 z-40">
           <Link href="/features" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
             <Image src="/features-nav-img.svg" alt="Features Icon" width={20} height={20} className="mr-3" />
             <span className="flex-1 text-gray-600">Features</span>
