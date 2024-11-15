@@ -117,7 +117,7 @@ const NavbarOne: React.FC = () => {
             <Image src="/benefit-nav-img.svg" alt="Benefits Icon" width={20} height={20} className="mr-3" />
             <span className="flex-1 text-gray-600">Benefits</span>
           </Link> */}
-          <hr className="w-full border-gray-200" />
+          {/* <hr className="w-full border-gray-200" /> */}
           {/* <Link href="/company" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
             <Image src="/company-nav-img.svg" alt="Company Icon" width={20} height={20} className="mr-3" />
             <span className="flex-1 text-gray-600">Company</span>
