@@ -13,9 +13,9 @@ const ChiefButler: React.FC = () => {
       <div className="flex flex-col md:flex-row justify-center items-start">
         <div className="w-full md:w-1/2 mb-6 md:mb-0">
           <img 
-            src="/chiefbutlerimg.svg" 
+            src="/chief-butler-img-chinny.jpg" 
             alt="Chief Butler" 
-            className="w-full h-auto rounded-lg mx-auto md:pr-14"
+            className="w-full h-auto rounded-xl mx-auto md:pr-14"
           />
           <h3 className="text-2xl sm:text-4xl mt-4 text-center font-apfelmittel">Chinny Eze</h3>
           <p className="text-lg sm:text-xl text-[#8878d8] text-center font-euclidmedium my-1">CEO/Founder</p>
