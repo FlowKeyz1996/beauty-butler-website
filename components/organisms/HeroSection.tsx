@@ -95,9 +95,9 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 z-20">
+      {/* <div className="absolute bottom-0 left-0 right-0 z-20">
         <Marquee />
-      </div>
+      </div> */}
     </div>
   );
 };
