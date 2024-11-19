@@ -120,7 +120,7 @@ const FooterOne: React.FC = () => {
             <div className="flex-1">
               <h3 className="font-bold mb-2 text-[#C2C6e8]">LEGAL</h3>
               <ul className="font-euclidlight">
-                <Link href="/termsandcondition"><li>Terms and Condition</li></Link> 
+                <Link href="/termsandcondition"><li>Terms and Conditions</li></Link> 
                 <Link href="/privacy"><li>Privacy Policy</li></Link>
               </ul>
             </div>
