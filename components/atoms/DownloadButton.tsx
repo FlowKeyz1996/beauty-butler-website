@@ -1,46 +1,80 @@
 import React from "react";
 import Image from "next/image";
 
+interface ImageProps {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  link?: string; // Optional for images without links
+}
+
 interface DownloadButtonProps {
-  backgroundColor: string;
-  textColor: string;
-  images: {
-    src: string;
-    alt: string;
-    width: number;
-    height: number;
-    link: string;
-  }[];
+  backgroundColor: string; // CSS class name for background color
+  textColor: string; // CSS class name for text color
   text: string;
+  images: ImageProps[];
 }
 
 const DownloadButton: React.FC<DownloadButtonProps> = ({
   backgroundColor,
   textColor,
-  images,
   text,
+  images,
 }) => {
+  const handleButtonClick = () => {
+    if (typeof window === "undefined") return; // Ensure code runs only on the client-side
+
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    if (/android/i.test(userAgent)) {
+      // Redirect to Google Play Store
+      window.location.href = "https://play.google.com/store";
+    } else if (/iPad|iPhone|iPod|Macintosh/.test(userAgent) && !window.MSStream) {
+      // Redirect to Apple App Store for iOS devices and MacBooks
+      window.location.href = "https://apps.apple.com";
+    } else if (/Windows NT|Win64/.test(userAgent)) {
+      // Redirect Windows laptops to Apple App Store
+      window.location.href = "https://apps.apple.com";
+    } else {
+      // Handle other platforms (optional)
+      alert("Unsupported platform. Please visit the app store manually.");
+    }
+  };
+
   return (
     <div className="flex justify-center lg:justify-start mt-6">
       <button
         className={`flex items-center ${backgroundColor} ${textColor} text-sm lg:text-lg font-euclidmedium py-3 lg:py-4 px-8 lg:px-10 rounded-xl`}
+        onClick={handleButtonClick}
       >
         {images.map((image, index) => (
-          <a
-            href={image.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            key={index}
-            className={`flex items-center ${index > 0 ? "ml-4 lg:ml-6" : ""}`}
-          >
-            <Image
-              src={image.src}
-              alt={image.alt}
-              width={image.width}
-              height={image.height}
-              className="w-6 lg:w-10 h-auto"
-            />
-          </a>
+          <div key={index} className={`flex items-center ${index > 0 ? "ml-1 lg:ml-2" : ""}`}>
+            {index === 1 && !image.link ? (
+              <Image
+                src={image.src}
+                alt={image.alt}
+                width={image.width}
+                height={image.height}
+                className="w-6 lg:w-10 h-auto"
+              />
+            ) : (
+              <a
+                href={image.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center"
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={image.width}
+                  height={image.height}
+                  className="w-6 lg:w-10 h-auto"
+                />
+              </a>
+            )}
+          </div>
         ))}
         <span className="ml-2 lg:ml-4">{text}</span>
       </button>

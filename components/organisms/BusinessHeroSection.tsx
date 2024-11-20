@@ -1,31 +1,10 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import LaunchListWidget from "../atoms/LaunchListWidget";
-import Script from 'next/script';
-
+import DownloadButton from "../atoms/DownloadButton";
 
 const BusinessHeroSection = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  // Function to handle modal opening with a loader
-  const openModal = () => {
-    setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-      setIsModalOpen(true);
-    }, 1000); // 1-second delay to simulate loading
-  };
-
-  // Function to handle modal closing
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
   return (
     <section className="relative flex flex-col justify-center items-center h-[117vh] md:[110vh] lg:h-[110vh] min-h-screen bg-[#8877D8]">
-      
       <div className="relative z-10 container mx-auto p-4 sm:p-4 flex flex-col lg:flex-row items-center lg:justify-between lg:space-x-8 h-full">
         {/* Left div with header and description */}
         <div className="lg:w-1/2 space-y-3 sm:space-y-4 text-center lg:text-left text-white flex flex-col justify-center items-center lg:items-start lg:justify-center">
@@ -39,23 +18,36 @@ const BusinessHeroSection = () => {
             Your Personal Beauty Butler Awaits - Delivered Right To Your Doorstep
           </p>
 
-          {/* Call to action button with loader */}
+          {/* Call to action button with DownloadButton */}
           <div className="flex items-center justify-center lg:justify-start">
-            <button
-              onClick={openModal}
-              className="flex items-center justify-center bg-white text-[#8877D8] text-xs sm:text-lg font-euclidmedium py-3 sm:py-5 px-12 sm:px-10 rounded-xl sm:rounded-2xl relative"
-              disabled={isLoading}
-            >
-              {isLoading ? (
-                <div className="rounded-full w-5 h-5 border-4 border-t-transparent border-[#8877D8] animate-spin"></div>
-              ) : (
-                <div className="flex items-center">
-                  <span className="ml-1 sm:ml-2 text-sm sm:text-xl font-euclidmedium">
-                    Join our waitlist
-                  </span>
-                </div>
-              )}
-            </button>
+          <DownloadButton
+  backgroundColor="bg-white"
+  textColor="text-[#8877D8]"
+  text="Download App"
+  images={[
+    {
+      src: "/apple.svg",
+      alt: "Apple Store",
+      width: 12,
+      height: 12,
+      link: "https://apps.apple.com/app/beauty-butler-pro/id6608976623",
+    },
+    {
+      src: "/hero-line.svg", // Middle image without a link
+      alt: "Google Play",
+      width: 12,
+      height: 2,
+    },
+    {
+      src: "/google.svg",
+      alt: "Google Play",
+      width: 12,
+      height: 12,
+      link: "https://play.google.com/store",
+    },
+  ]}
+/>
+
           </div>
         </div>
 
@@ -75,30 +67,6 @@ const BusinessHeroSection = () => {
           />
         </motion.div>
       </div>
-
-      {/* Modal */}
-      {isModalOpen && (
-        <motion.div
-          className="fixed inset-0 z-20 flex items-center justify-center bg-black bg-opacity-50"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          onClick={closeModal}
-        >
-          <div
-            className="bg-white rounded-lg p-8 w-[90%] max-w-lg"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <LaunchListWidget />
-            {/* <button
-              onClick={closeModal}
-              className="w-full py-2 px-4 bg-[#8877D8] text-white rounded-lg"
-            >
-              Close
-            </button> */}
-          </div>
-        </motion.div>
-      )}
     </section>
   );
 };
