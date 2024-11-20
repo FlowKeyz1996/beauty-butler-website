@@ -44,7 +44,7 @@ const HowItWorks: React.FC = () => {
           id="howItWorksVideo"
           className="w-full h-full rounded-lg object-fill"
           controls={isPlaying}
-          poster="/cover-img-video.svg"
+          poster="/image-cover-video.svg"
         >
           <source src="/website-demo.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -53,7 +53,7 @@ const HowItWorks: React.FC = () => {
         {!isPlaying && (
           <button
             onClick={handlePlay}
-            className="absolute inset-0 flex items-center justify-center text-[#8877D8] text-5xl sm:text-6xl"
+            className="absolute inset-0 flex items-center justify-center text-white text-5xl sm:text-6xl"
           >
             &#9654; {/* Play button */}
           </button>
