@@ -38,13 +38,13 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({
 
     if (/android/i.test(userAgent)) {
       // Redirect to Google Play Store
-      window.location.href = "https://play.google.com/store";
+      window.location.href = "https://play.google.com/store/apps/details?id=com.beautybutler.provider";
     } else if (/iPad|iPhone|iPod|Macintosh/.test(userAgent) && !window.MSStream) {
       // Redirect to Apple App Store for iOS devices and MacBooks
-      window.location.href = "https://apps.apple.com";
+      window.location.href = "https://apps.apple.com/app/beauty-butler-pro/id6608976623";
     } else if (/Windows NT|Win64/.test(userAgent)) {
       // Redirect Windows laptops to Apple App Store
-      window.location.href = "https://apps.apple.com";
+      window.location.href = "https://apps.apple.com/app/beauty-butler-pro/id6608976623";
     } else {
       // Handle other platforms (optional)
       alert("Unsupported platform. Please visit the app store manually.");

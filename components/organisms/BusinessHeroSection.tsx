@@ -43,7 +43,7 @@ const BusinessHeroSection = () => {
       alt: "Google Play",
       width: 12,
       height: 12,
-      link: "https://play.google.com/store",
+      link: "https://play.google.com/store/apps/details?id=com.beautybutler.provider",
     },
   ]}
 />

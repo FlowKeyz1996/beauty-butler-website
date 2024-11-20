@@ -44,7 +44,7 @@ const HowItWorks: React.FC = () => {
           id="howItWorksVideo"
           className="w-full h-full rounded-lg object-fill"
           controls={isPlaying}
-          poster="/heroimage.svg"
+          poster="/cover-img-video.svg"
         >
           <source src="/website-demo.mp4" type="video/mp4" />
           Your browser does not support the video tag.

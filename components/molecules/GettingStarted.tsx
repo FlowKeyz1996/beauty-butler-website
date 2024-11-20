@@ -108,24 +108,24 @@ const GettingStarted: React.FC = () => {
   text="Download App"
   images={[
     {
-      src: "/apple.svg",
+      src: "/apple-white.svg",
       alt: "Apple Store",
       width: 12,
       height: 12,
       link: "https://apps.apple.com/app/beauty-butler-pro/id6608976623",
     },
     {
-      src: "/hero-line.svg", // Middle image without a link
+      src: "/white-line.svg", // Middle image without a link
       alt: "Google Play",
       width: 12,
       height: 2,
     },
     {
-      src: "/google.svg",
+      src: "/google-white.svg",
       alt: "Google Play",
       width: 12,
       height: 12,
-      link: "https://play.google.com/store",
+      link: "https://play.google.com/store/apps/details?id=com.beautybutler.provider",
     },
   ]}
 />

@@ -65,22 +65,22 @@ const NavbarOne: React.FC = () => {
                 <Image src="/features-nav-img.svg" alt="Features Icon" width={20} height={20} className="mr-3" />
                 Features
               </Link>
-              {/* <Link href="/benefit" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
+               {/* <Link href="/benefit" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
                 <Image src="/benefit-nav-img.svg" alt="Benefits Icon" width={20} height={20} className="mr-3" />
                 Benefits
-              </Link> */}
-              {/* <Link href="/company" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
+              </Link>  */}
+               {/* <Link href="/company" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
                 <Image src="/company-nav-img.svg" alt="Company Icon" width={20} height={20} className="mr-3" />
                 Company
-              </Link>
-              <Link href="/contact" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
+              </Link> */}
+              <Link href="https://substack.com/home" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
                 <Image src="/blog-nav-img.svg" alt="Blog Icon" width={20} height={20} className="mr-3" />
                 Blog
               </Link>
-              <Link href="/contact" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
+              <Link href="https://apps.apple.com/app/beauty-butler-pro/id6608976623" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
                 <Image src="/download-nav-img.svg" alt="Blog Icon" width={20} height={20} className="mr-3" />
-                Download the App */}
-              {/* </Link> */}
+                Download App 
+              </Link>
               {/* Divider */}
               <hr className="my-1 border-gray-300" />
               <Link href="/business" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import LaunchListWidget from '../atoms/LaunchListWidget';
+import DownloadButton from '../atoms/DownloadButton';
 
 const FooterOne: React.FC = () => {
   // State for managing modal visibility
@@ -41,12 +42,33 @@ const FooterOne: React.FC = () => {
 
           {/* Button with Image */}
           <div className="w-full flex justify-center md:justify-start my-3">
-            <button
-              onClick={toggleModal}
-              className="bg-[#8877D8] text-white px-6 sm:px-10 py-3 sm:py-5 rounded-xl flex items-center font-euclidmedium sm:text-2xl text-sm sm:w-auto w-full justify-center"
-            >
-              Join our waitlist
-            </button>
+          <DownloadButton
+  backgroundColor="bg-[#8877D8]"
+  textColor="text-white"
+  text="Download App"
+  images={[
+    {
+      src: "/apple-white.svg",
+      alt: "Apple Store",
+      width: 12,
+      height: 12,
+      link: "https://apps.apple.com/app/beauty-butler-pro/id6608976623",
+    },
+    {
+      src: "/white-line.svg", // Middle image without a link
+      alt: "Google Play",
+      width: 12,
+      height: 2,
+    },
+    {
+      src: "/google-white.svg",
+      alt: "Google Play",
+      width: 12,
+      height: 12,
+      link: "https://play.google.com/store/apps/details?id=com.beautybutler.provider",
+    },
+  ]}
+/>
           </div>
         </div>
       </motion.div>

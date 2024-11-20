@@ -76,6 +76,7 @@ const BenefitSection = () => {
 
   return (
     <motion.div
+    id="benefit-section"
       ref={ref}
       className="w-full my-14 px-4 py-4 flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-12 sm:flex-col-reverse"
     >

@@ -17,22 +17,11 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("");
-  const [result, setResult] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState<boolean>(false);
 
   const formRef = useRef<HTMLDivElement>(null);
   const accordionRef = useRef<HTMLDivElement>(null);
-     
-  const sendEmail = () => {
-    setLoading(true)
-    fetch('/api/emails',{
-      method: 'POST',
 
-    }).then(response => response.json())
-    .then(data => setResult(data))
-    .catch(error => setResult(error))
-    .finally (() => setLoading(false))
-  }
   // useInView hooks for animations
   const formInView = useInView(formRef, { once: true });
   const accordionInView = useInView(accordionRef, { once: true });
@@ -44,7 +33,15 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    // Validation logic
+    if (!formData.name || !formData.email || !formData.message) {
+      setStatus("Please fill out all fields.");
+      return;
+    }
+
     setStatus("Submitting...");
+    setLoading(true);
 
     try {
       const response = await fetch("/api/sendQuestion", {
@@ -57,17 +54,22 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
         setStatus("Question submitted successfully!");
         setFormData({ name: "", email: "", message: "" });
       } else {
-        setStatus("Question submitted successfully.");
+        setStatus("question submitted successfully.");
       }
     } catch (error) {
       setStatus("An error occurred. Please try again later.");
       console.error("Form submission error:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
   const toggleAccordion = (index: number) => {
     setActiveIndex(index === activeIndex ? null : index);
   };
+
+  const inputErrorStyle = "border-red-500";
+  const inputBaseStyle = "w-full p-2 border border-gray-300 rounded-md";
 
   return (
     <div className="max-w-7xl mx-auto p-5 md:p-8 h-auto sm:my-10">
@@ -105,7 +107,9 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
                 placeholder="Enter Your Name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full p-2 border border-gray-300 rounded-md"
+                className={`${inputBaseStyle} ${
+                  !formData.name && status === "Please fill out all fields." ? inputErrorStyle : ""
+                }`}
               />
               <input
                 type="email"
@@ -113,7 +117,9 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
                 placeholder="Enter Your Email Address"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full p-2 border border-gray-300 rounded-md mt-4 md:mt-0"
+                className={`${inputBaseStyle} mt-4 md:mt-0 ${
+                  !formData.email && status === "Please fill out all fields." ? inputErrorStyle : ""
+                }`}
               />
             </div>
             <textarea
@@ -122,7 +128,9 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
               placeholder="Your Message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-md"
+              className={`${inputBaseStyle} ${
+                !formData.message && status === "Please fill out all fields." ? inputErrorStyle : ""
+              }`}
             />
 
             {/* Image and Submit Button */}
@@ -130,19 +138,22 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
               <Image
                 src="/Faqimg.svg"
                 alt="Related Image"
-                width={200}  // Adjust width
-                height={100}  // Adjust height
+                width={200} // Adjust width
+                height={100} // Adjust height
                 className="object-contain"
               />
               <button
                 type="submit"
                 className="px-16 font-euclidmedium py-3 bg-[#8878d7] text-white rounded-2xl text-xl absolute top-2 -right-1"
+                disabled={loading}
               >
-                Submit
+                {loading ? "Submitting..." : "Submit"}
               </button>
             </div>
           </form>
-          <p>{status}</p>
+          <p className={`mt-4 ${status.includes("error") || status.includes("Please") ? "text-red-500" : "text-green-500"}`}>
+            {status}
+          </p>
         </motion.div>
 
         {/* Accordion Section */}
