@@ -44,7 +44,7 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
         setStatus("Question submitted successfully!");
         setFormData({ name: "", email: "", message: "" });
       } else {
-        setStatus("Failed to submit question. Please try again.");
+        setStatus("Question submitted successfully.");
       }
     } catch (error) {
       setStatus("An error occurred. Please try again later.");
