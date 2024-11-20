@@ -17,26 +17,26 @@ const imagesData: Record<string, ImageSet> = {
   makeup: {
     mainImage: '/makeup.svg',
     topImage: '/beautycategory-make-up.svg',
-    bottomLeftImage: '/makeup.svg',
-    bottomRightImage: '/makeup.svg',
+    bottomLeftImage: '/makeup-cat-one.svg',
+    bottomRightImage: '/makeup-cat-two.svg',
   },
   hair: {
     mainImage: '/haircategory.svg',
     topImage: '/haircategoryone.svg',
-    bottomLeftImage: '/haircategory.svg',
-    bottomRightImage: '/haircategory.svg',
+    bottomLeftImage: '/hair-cat-one.svg',
+    bottomRightImage: '/hair-cat-two.svg',
   },
   nails: {
     mainImage: '/nailscategory.svg',
     topImage: '/nail-category-top-img.svg',
-    bottomLeftImage: '/nailscategory.svg',
-    bottomRightImage: '/nailscategory.svg',
+    bottomLeftImage: '/nails-cat-one.svg',
+    bottomRightImage: '/nails-cat-two.svg',
   },
   spa: {
     mainImage: '/spacategory.svg',
     topImage: '/spacategoryone.svg',
-    bottomLeftImage: '/spacategory.svg',
-    bottomRightImage: '/spacategory.svg',
+    bottomLeftImage: '/massage-cat-one.svg',
+    bottomRightImage: '/massage-cat-two.svg',
   },
 };
 
