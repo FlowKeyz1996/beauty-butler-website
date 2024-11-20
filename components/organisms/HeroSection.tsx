@@ -62,7 +62,7 @@ const HeroSection: React.FC = () => {
       {/* Optimized Background image */}
       <div className="absolute top-0 left-0 w-full h-full">
         <Image
-          src="/heroimage.svg" // Replace with your WebP optimized image path
+          src="/heroimgforbusiness.png" // Replace with your WebP optimized image path
           alt="Background Image"
           layout="fill"
           objectFit="cover"
