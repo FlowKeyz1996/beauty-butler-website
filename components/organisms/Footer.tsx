@@ -146,6 +146,7 @@ const Footer: React.FC = () => {
               </h3>
               <ul className="font-euclidlight ">
                 <li className="text-sm">hello@mybeautybutler.com</li>
+                <Link href="/support"><li>support</li></Link>
               </ul>
             </div>
           </div>
