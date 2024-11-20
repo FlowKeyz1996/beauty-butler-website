@@ -108,25 +108,25 @@ const Navbar: React.FC = () => {
             <span className="flex-1 text-gray-600">Features</span>
           </Link>
           <hr className="w-full border-gray-200" />
-          {/* <Link href="/benefit" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
+          <Link href="#benefit-section" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
             <Image src="/benefit-nav-img.svg" alt="Benefits Icon" width={20} height={20} className="mr-3" />
             <span className="flex-1 text-gray-600">Benefits</span>
-          </Link> */}
+          </Link>
           {/* <hr className="w-full border-gray-200" />
           <Link href="/company" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
             <Image src="/company-nav-img.svg" alt="Company Icon" width={20} height={20} className="mr-3" />
             <span className="flex-1 text-gray-600">Company</span>
           </Link> */}
-          {/* <hr className="w-full border-gray-200" />
+          <hr className="w-full border-gray-200" />
           <Link href="/contact" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
             <Image src="/blog-nav-img.svg" alt="Blog Icon" width={20} height={20} className="mr-3" />
             <span className="flex-1 text-gray-600">Blog</span>
-          </Link> */}
-          {/* <hr className="w-full border-gray-200" />
+          </Link>
+          <hr className="w-full border-gray-200" />
           <Link href="/contact" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
             <Image src="/download-nav-img.svg" alt="Blog Icon" width={20} height={20} className="mr-3" />
-            <span className="flex-1 text-gray-600">Download the App</span>
-          </Link> */}
+            <span className="flex-1 text-gray-600">Download App</span>
+          </Link>
           <hr className="w-full border-gray-200" />
           <Link href="/" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
             <Image src="/for-customer-nav-img.svg" alt="Customers Icon" width={20} height={20} className="mr-3" />
