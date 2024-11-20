@@ -73,7 +73,7 @@ const NavbarOne: React.FC = () => {
                 <Image src="/company-nav-img.svg" alt="Company Icon" width={20} height={20} className="mr-3" />
                 Company
               </Link> */}
-              <Link href="https://substack.com/home" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
+              <Link href="https://substack.com/@beautybutler?r=46sczw&utm_campaign=profile&utm_medium=profile-page" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
                 <Image src="/blog-nav-img.svg" alt="Blog Icon" width={20} height={20} className="mr-3" />
                 Blog
               </Link>
@@ -123,7 +123,7 @@ const NavbarOne: React.FC = () => {
             <span className="flex-1 text-gray-600">Company</span>
           </Link> */}
           <hr className="w-full border-gray-200" />
-          <Link href="https://substack.com/home" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
+          <Link href="https://substack.com/@beautybutler?r=46sczw&utm_campaign=profile&utm_medium=profile-page" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
             <Image src="/blog-nav-img.svg" alt="Blog Icon" width={20} height={20} className="mr-3" />
             <span className="flex-1 text-gray-600">Blog</span>
           </Link>

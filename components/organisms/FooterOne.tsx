@@ -135,7 +135,7 @@ const FooterOne: React.FC = () => {
               <h3 className="font-bold mb-2 text-[#C2C6e8]">COMPANY</h3>
               <ul className="font-euclidlight">
                 <Link href="/company"><li>About Us</li></Link>
-                <Link href="https://substack.com/home"><li>Blog</li></Link>
+                <Link href="https://substack.com/@beautybutler?r=46sczw&utm_campaign=profile&utm_medium=profile-page"><li>Blog</li></Link>
               </ul>
             </div>
 

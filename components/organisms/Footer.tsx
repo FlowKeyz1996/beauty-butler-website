@@ -118,7 +118,7 @@ const Footer: React.FC = () => {
                 <Link href="/company">
                   <li>About Us</li>
                 </Link>
-                <Link href="https://substack.com/home">
+                <Link href="https://substack.com/@beautybutler?r=46sczw&utm_campaign=profile&utm_medium=profile-page">
                   <li>Blog</li>
                 </Link>
               </ul>

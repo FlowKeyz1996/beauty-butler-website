@@ -69,14 +69,14 @@ const Navbar: React.FC = () => {
                 <Image src="/company-nav-img.svg" alt="Company Icon" width={20} height={20} className="mr-3" />
                 Company
               </Link> */}
-              {/* <Link href="/contact" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
+              <Link href="https://substack.com/@beautybutler?r=46sczw&utm_campaign=profile&utm_medium=profile-page" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
                 <Image src="/blog-nav-img.svg" alt="Blog Icon" width={20} height={20} className="mr-3" />
                 Blog
-              </Link> */}
-              <Link href="https://apps.apple.com/app/beauty-butler-pro/id6608976623" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
+              </Link>
+              {/* <Link href="https://apps.apple.com/app/beauty-butler-pro/id6608976623" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
                 <Image src="/download-nav-img.svg" alt="Download Icon" width={20} height={20} className="mr-3" />
                 Download  App
-              </Link>
+              </Link> */}
               {/* Divider */}
               <hr className="my-1 border-gray-300" />
               <Link href="/" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
@@ -118,16 +118,16 @@ const Navbar: React.FC = () => {
             <span className="flex-1 text-gray-600">Company</span>
           </Link> */}
           <hr className="w-full border-gray-200" />
-          <Link href="https://substack.com/home" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
+          <Link href="https://substack.com/@beautybutler?r=46sczw&utm_campaign=profile&utm_medium=profile-page" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
             <Image src="/blog-nav-img.svg" alt="Blog Icon" width={20} height={20} className="mr-3" />
             <span className="flex-1 text-gray-600">Blog</span>
           </Link>
           <hr className="w-full border-gray-200" />
-          <Link href="https://apps.apple.com/app/beauty-butler-pro/id6608976623" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
+          {/* <Link href="https://apps.apple.com/app/beauty-butler-pro/id6608976623" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
             <Image src="/download-nav-img.svg" alt="Blog Icon" width={20} height={20} className="mr-3" />
             <span className="flex-1 text-gray-600">Download App</span>
           </Link>
-          <hr className="w-full border-gray-200" />
+          <hr className="w-full border-gray-200" /> */}
           <Link href="/" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
             <Image src="/for-customer-nav-img.svg" alt="Customers Icon" width={20} height={20} className="mr-3" />
             <span className="flex-1 text-gray-600">For Customers</span>
