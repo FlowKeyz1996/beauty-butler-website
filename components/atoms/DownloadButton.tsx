@@ -1,6 +1,14 @@
 import React from "react";
 import Image from "next/image";
 
+// Extend the Window interface to include MSStream and opera
+declare global {
+  interface Window {
+    MSStream?: unknown;
+    opera?: string; // Specify the type explicitly
+  }
+}
+
 interface ImageProps {
   src: string;
   alt: string;
@@ -25,7 +33,8 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({
   const handleButtonClick = () => {
     if (typeof window === "undefined") return; // Ensure code runs only on the client-side
 
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    const userAgent =
+      navigator.userAgent || navigator.vendor || (window.opera as string) || "";
 
     if (/android/i.test(userAgent)) {
       // Redirect to Google Play Store
