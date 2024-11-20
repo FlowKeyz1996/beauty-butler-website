@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import TagHeader from '../atoms/TagHeader';
 import Link from 'next/link';
 import LaunchListWidget from '../atoms/LaunchListWidget';
+import DownloadButton from '../atoms/DownloadButton';
 
 const GettingStarted: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -101,11 +102,33 @@ const GettingStarted: React.FC = () => {
 
         {/* Button */}
         <div className="w-full flex justify-center mt-10">
-          <button onClick={openModal} className="bg-[#8877D8] flex items-center px-10 md:px-16 py-4 rounded-2xl">
-            <span className="text-white font-euclidmedium text-xl md:text-2xl">
-              Join our waitlist
-            </span>
-          </button>
+        <DownloadButton
+  backgroundColor="bg-[#8877D8]"
+  textColor="text-white"
+  text="Download App"
+  images={[
+    {
+      src: "/apple.svg",
+      alt: "Apple Store",
+      width: 12,
+      height: 12,
+      link: "https://apps.apple.com/app/beauty-butler-pro/id6608976623",
+    },
+    {
+      src: "/hero-line.svg", // Middle image without a link
+      alt: "Google Play",
+      width: 12,
+      height: 2,
+    },
+    {
+      src: "/google.svg",
+      alt: "Google Play",
+      width: 12,
+      height: 12,
+      link: "https://play.google.com/store",
+    },
+  ]}
+/>
         </div>
       </div>
 

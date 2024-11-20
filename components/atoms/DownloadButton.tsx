@@ -57,23 +57,10 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({
         className={`flex items-center ${backgroundColor} ${textColor} text-sm lg:text-lg font-euclidmedium py-3 lg:py-4 px-8 lg:px-10 rounded-xl`}
         onClick={handleButtonClick}
       >
-        {images.map((image, index) => (
-          <div key={index} className={`flex items-center ${index > 0 ? "ml-1 lg:ml-2" : ""}`}>
-            {index === 1 && !image.link ? (
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={image.width}
-                height={image.height}
-                className="w-6 lg:w-10 h-auto"
-              />
-            ) : (
-              <a
-                href={image.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center"
-              >
+        <div className="flex items-center space-x-0">
+          {images.map((image, index) => (
+            <div key={index} className="flex items-center">
+              {index === 1 && !image.link ? (
                 <Image
                   src={image.src}
                   alt={image.alt}
@@ -81,11 +68,26 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({
                   height={image.height}
                   className="w-6 lg:w-10 h-auto"
                 />
-              </a>
-            )}
-          </div>
-        ))}
-        <span className="ml-2 lg:ml-4">{text}</span>
+              ) : (
+                <a
+                  href={image.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={image.width}
+                    height={image.height}
+                    className="w-6 lg:w-10 h-auto"
+                  />
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+        <span className="ml-2 lg:ml-4 text-xl font-euclidmedium">{text}</span>
       </button>
     </div>
   );

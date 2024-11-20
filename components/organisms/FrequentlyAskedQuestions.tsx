@@ -1,3 +1,4 @@
+"use client";
 import { useState, useRef, ChangeEvent, FormEvent } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
@@ -16,10 +17,22 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("");
+  const [result, setResult] = useState<Record<string, string>>({});
+  const [loading, setLoading] = useState<boolean>(false);
 
   const formRef = useRef<HTMLDivElement>(null);
   const accordionRef = useRef<HTMLDivElement>(null);
+     
+  const sendEmail = () => {
+    setLoading(true)
+    fetch('/api/emails',{
+      method: 'POST',
 
+    }).then(response => response.json())
+    .then(data => setResult(data))
+    .catch(error => setResult(error))
+    .finally (() => setLoading(false))
+  }
   // useInView hooks for animations
   const formInView = useInView(formRef, { once: true });
   const accordionInView = useInView(accordionRef, { once: true });

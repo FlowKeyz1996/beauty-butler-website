@@ -31,12 +31,12 @@ const Footer: React.FC = () => {
           </p>
           {/* Text Area and Button */}
           <textarea
-            className="w-full h-20 sm:h-24 p-2 border border-gray-300 rounded-xl mb-4 md:w-[90%] lg:w-[100%] font-euclidlight"
+            className="w-full h-20 sm:h-24 p-2 border border-gray-300 rounded-xl mb-4 md:w-[90%] text-black lg:w-[100%] font-euclidlight"
             placeholder="Tell us the features you’d love to see on Beauty Butler"
           />
          <div className="w-full flex justify-center md:mr-32 md:justify-end ">
   <button className="bg-[#8877D8] text-xl font-euclidmedium text-white px-6 sm:px-14 py-3 sm:py-3 rounded-xl w-full sm:w-auto">
-    Submit
+    Submit one 
   </button>
 </div>
         </div>
