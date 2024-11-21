@@ -61,10 +61,10 @@ const NavbarOne: React.FC = () => {
                 isDropdownOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
               }`}
             >
-              <Link href="/features" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
+              {/* <Link href="/features" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
                 <Image src="/features-nav-img.svg" alt="Features Icon" width={20} height={20} className="mr-3" />
                 Features
-              </Link>
+              </Link> */}
                {/* <Link href="/benefit" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
                 <Image src="/benefit-nav-img.svg" alt="Benefits Icon" width={20} height={20} className="mr-3" />
                 Benefits
@@ -108,10 +108,10 @@ const NavbarOne: React.FC = () => {
       {/* Mobile Menu starting just below the navbar */}
       {isMenuOpen && (
         <div className="md:hidden gap-3 fixed top-[70px] font-euclidlight left-0 w-full h-[calc(100%-70px)] bg-white flex flex-col items-center py-4 z-40">
-          <Link href="/features" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
+          {/* <Link href="/features" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
             <Image src="/features-nav-img.svg" alt="Features Icon" width={20} height={20} className="mr-3" />
             <span className="flex-1 text-gray-600">Features</span>
-          </Link>
+          </Link> */}
           {/* <hr className="w-full border-gray-200" />
           <Link href="/benefit" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
             <Image src="/benefit-nav-img.svg" alt="Benefits Icon" width={20} height={20} className="mr-3" />
