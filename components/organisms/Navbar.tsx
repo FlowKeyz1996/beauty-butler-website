@@ -35,9 +35,9 @@ const Navbar: React.FC = () => {
           <Link href="/">
             <div className="text-2xl font-bold">
               {isScrolled ? (
-                <img src='/purplelogo.svg' alt="Scrolled Logo" />
+                <img src="/purplelogo.svg" alt="Scrolled Logo" />
               ) : (
-                <img src='/beautyicon.svg' alt="Main Logo" />
+                <img src="/beautyicon.svg" alt="Main Logo" />
               )}
             </div>
           </Link>
@@ -49,38 +49,72 @@ const Navbar: React.FC = () => {
               className="flex items-center bg-[#FFC8F2] text-[#101828] py-2 px-4 sm:py-2 sm:px-5 mx-5 rounded-xl font-euclidmedium text-sm sm:text-lg"
             >
               Menu
-             
-              <Image src="/arrow-down.svg" alt="Benefits Icon" width={20} height={20} className="ml-2" />
+              <Image
+                src="/arrow-down.svg"
+                alt="Benefits Icon"
+                width={20}
+                height={20}
+                className="ml-2"
+              />
             </button>
             <div
               className={`absolute right-0 mt-4 p-4 w-56 bg-white font-euclidlight rounded-lg shadow-lg transition-all duration-300 transform ${
-                isDropdownOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
+                isDropdownOpen
+                  ? 'opacity-100 scale-100 translate-y-0'
+                  : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
               }`}
             >
-              <Link href="/features" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
-                <Image src="/features-nav-img.svg" alt="Features Icon" width={20} height={20} className="mr-3" />
+              <Link
+                href="/features"
+                className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
+                <Image
+                  src="/features-nav-img.svg"
+                  alt="Features Icon"
+                  width={20}
+                  height={20}
+                  className="mr-3"
+                />
                 Features
               </Link>
-              <Link href="#benefit-section" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
-                <Image src="/benefit-nav-img.svg" alt="Benefits Icon" width={20} height={20} className="mr-3" />
+              <Link
+                href="#benefit-section"
+                className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
+                <Image
+                  src="/benefit-nav-img.svg"
+                  alt="Benefits Icon"
+                  width={20}
+                  height={20}
+                  className="mr-3"
+                />
                 Benefits
               </Link>
-              {/* <Link href="/company" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
-                <Image src="/company-nav-img.svg" alt="Company Icon" width={20} height={20} className="mr-3" />
-                Company
-              </Link> */}
-              <Link href="https://substack.com/@beautybutler?r=46sczw&utm_campaign=profile&utm_medium=profile-page" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
-                <Image src="/blog-nav-img.svg" alt="Blog Icon" width={20} height={20} className="mr-3" />
+              <Link
+                href="https://substack.com/@beautybutler?r=46sczw&utm_campaign=profile&utm_medium=profile-page"
+                className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
+                <Image
+                  src="/blog-nav-img.svg"
+                  alt="Blog Icon"
+                  width={20}
+                  height={20}
+                  className="mr-3"
+                />
                 Blog
               </Link>
-              {/* <Link href="https://apps.apple.com/app/beauty-butler-pro/id6608976623" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
-                <Image src="/download-nav-img.svg" alt="Download Icon" width={20} height={20} className="mr-3" />
-                Download  App
-              </Link> */}
-              {/* Divider */}
               <hr className="my-1 border-gray-300" />
-              <Link href="/" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100">
-                <Image src="/for-customer-nav-img.svg" alt="Customers Icon" width={20} height={20} className="mr-3" />
+              <Link
+                href="/"
+                className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
+                <Image
+                  src="/for-customer-nav-img.svg"
+                  alt="Customers Icon"
+                  width={20}
+                  height={20}
+                  className="mr-3"
+                />
                 For Customers
               </Link>
             </div>
@@ -89,12 +123,29 @@ const Navbar: React.FC = () => {
           {/* Hamburger Menu Icon (for mobile) */}
           <div className="md:hidden flex items-center">
             <button onClick={toggleMenu} className="text-gray-800 focus:outline-none">
-              <Image
-                src={isMenuOpen ? '/close.svg' : '/hamburgermenu.svg'}
-                alt="Menu Icon"
-                width={30}
-                height={30}
-              />
+              {isMenuOpen ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#8877D8"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              ) : (
+                <Image
+                  src="/hamburgermenu.svg"
+                  alt="Menu Icon"
+                  width={30}
+                  height={30}
+                />
+              )}
             </button>
           </div>
         </div>
@@ -103,36 +154,61 @@ const Navbar: React.FC = () => {
       {/* Mobile Menu starting just below the navbar */}
       {isMenuOpen && (
         <div className="md:hidden gap-3 fixed top-[70px] font-euclidlight left-0 w-full h-[calc(100%-70px)] bg-white flex flex-col items-center py-4 z-40">
-          <Link href="/features" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
-            <Image src="/features-nav-img.svg" alt="Features Icon" width={20} height={20} className="mr-3" />
+          <Link
+            href="/features"
+            className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100"
+          >
+            <Image
+              src="/features-nav-img.svg"
+              alt="Features Icon"
+              width={20}
+              height={20}
+              className="mr-3"
+            />
             <span className="flex-1 text-gray-600">Features</span>
           </Link>
           <hr className="w-full border-gray-200" />
-          <Link href="#benefit-section" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
-            <Image src="/benefit-nav-img.svg" alt="Benefits Icon" width={20} height={20} className="mr-3" />
+          <Link
+            href="#benefit-section"
+            className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100"
+          >
+            <Image
+              src="/benefit-nav-img.svg"
+              alt="Benefits Icon"
+              width={20}
+              height={20}
+              className="mr-3"
+            />
             <span className="flex-1 text-gray-600">Benefits</span>
           </Link>
-          {/* <hr className="w-full border-gray-200" />
-          <Link href="/company" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
-            <Image src="/company-nav-img.svg" alt="Company Icon" width={20} height={20} className="mr-3" />
-            <span className="flex-1 text-gray-600">Company</span>
-          </Link> */}
           <hr className="w-full border-gray-200" />
-          <Link href="https://substack.com/@beautybutler?r=46sczw&utm_campaign=profile&utm_medium=profile-page" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
-            <Image src="/blog-nav-img.svg" alt="Blog Icon" width={20} height={20} className="mr-3" />
+          <Link
+            href="https://substack.com/@beautybutler?r=46sczw&utm_campaign=profile&utm_medium=profile-page"
+            className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100"
+          >
+            <Image
+              src="/blog-nav-img.svg"
+              alt="Blog Icon"
+              width={20}
+              height={20}
+              className="mr-3"
+            />
             <span className="flex-1 text-gray-600">Blog</span>
           </Link>
           <hr className="w-full border-gray-200" />
-          {/* <Link href="https://apps.apple.com/app/beauty-butler-pro/id6608976623" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
-            <Image src="/download-nav-img.svg" alt="Blog Icon" width={20} height={20} className="mr-3" />
-            <span className="flex-1 text-gray-600">Download App</span>
-          </Link>
-          <hr className="w-full border-gray-200" /> */}
-          <Link href="/" className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100">
-            <Image src="/for-customer-nav-img.svg" alt="Customers Icon" width={20} height={20} className="mr-3" />
+          <Link
+            href="/"
+            className="flex items-center px-4 py-2 text-gray-700 w-full hover:bg-gray-100"
+          >
+            <Image
+              src="/for-customer-nav-img.svg"
+              alt="Customers Icon"
+              width={20}
+              height={20}
+              className="mr-3"
+            />
             <span className="flex-1 text-gray-600">For Customers</span>
           </Link>
-          
         </div>
       )}
     </nav>
