@@ -13,9 +13,9 @@ interface CardProps {
 
 const cardsData: CardProps[] = [
   { id: 1, rating: 5, title: "A Must-Have for Every Beauty Enthusiast!", description: "I’ve been using Beauty Butler for a few weeks now, and I must say, it’s an absolute game-changer! As someone who juggles a busy work schedule and a social life, finding time to book beauty treatments was always a hassle. But with Beauty Butler, everything is just a tap away.", text: "Precious Adebayo", imageUrl: "/iconhead.svg" },
-  { id: 2, rating: 5, title: "So Convenient", description: "Everything about this app makes booking beauty treatments so much simpler. No complaints.", text: "Wura jimoh", imageUrl: "/iconhead.svg" },
-  { id: 3, rating: 4, title: " Really useful app ", description: "The services are great, and I’ve had some lovely experiences with the butlers. Definitely recommend trying it out.", text: "Olorunishola bukola", imageUrl: "/https://via.placeholder.com/50"},
-  { id: 4, rating: 5, title: "Highly Recommend", description: "This platform exceeded my expectations.", text: "onyebuchi amarachi", imageUrl: "/https://via.placeholder.com/50" },
+  { id: 2, rating: 5, title: "So Convenient", description: "Everything about this app makes booking beauty treatments so much simpler. No complaints.", text: "Wura jimoh", imageUrl: "https://via.placeholder.com/50" },
+  { id: 3, rating: 4, title: " Really useful app ", description: "The services are great, and I’ve had some lovely experiences with the butlers. Definitely recommend trying it out.", text: "Olorunishola bukola", imageUrl: "https://via.placeholder.com/50"},
+  { id: 4, rating: 5, title: "Highly Recommend", description: "This platform exceeded my expectations.", text: "onyebuchi amarachi", imageUrl: "https://via.placeholder.com/50" },
   { id: 5, rating: 4, title: "Reliable and Easy", description: "The platform is easy to use and reliable.", text: "Ogbu Ene", imageUrl: "https://via.placeholder.com/50" },
   { id: 6, rating: 5, title: "Quick and Easy ", description: "The convenience of booking beauty services from my phone is unbeatable. I’m hooked.", text: "Precious Godwin", imageUrl: "https://via.placeholder.com/50" },
 ];
