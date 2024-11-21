@@ -20,7 +20,7 @@ const HowItWork: React.FC = () => {
   return (
     <div
       ref={sectionRef}
-      className="relative flex flex-col items-center justify-start bg-[#8877d8] h-auto sm:h-screen sm:w-screen px-4 sm:px-8 py-12"
+      className="relative flex flex-col items-center justify-start bg-[#8877d8] rounded-3xl h-auto sm:h-screen sm:w-screen px-4 sm:px-8 py-12"
     >
       {/* Animate the video sliding in from the left when in view */}
       <motion.div
