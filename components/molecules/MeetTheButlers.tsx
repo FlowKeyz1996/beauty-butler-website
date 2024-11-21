@@ -22,7 +22,7 @@ const butlers: Butler[] = [
   },
   {
     id: 3,
-    name: 'Boluwatife Oratokhai',
+    name: 'Damilola Okhumoya ',
     position: 'Marketing Lead',
     imageSrc: '/meetbutlerone.svg',
   },
@@ -40,7 +40,7 @@ const butlers: Butler[] = [
   },
   {
     id: 6,
-    name: 'Adedotun',
+    name: 'Adedotun Ajiboye',
     position: 'Senior BackEnd Engineer',
     imageSrc: '/butlerimgthree.svg',
   },

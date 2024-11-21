@@ -10,7 +10,8 @@ import HeroSection from "@/components/organisms/HeroSection";
 // import HowItWorks from "@/components/organisms/HowItWorks";
 import MarketplaceCard from "@/components/organisms/MarketPlace";
 import Navbar from "@/components/organisms/Navbar";
-// import HowItWork from "@/components/organisms/HowItWork";
+import HowItWork from "@/components/organisms/HowItWork";
+import VideoComponent from "@/components/molecules/VideoComponent";
 import Image from "next/image";
 
 const faqs = [
@@ -32,7 +33,8 @@ export default function Home() {
       <FeaturesSection/>
       <CategoriesSection/>
       {/* <HowItWorks/> */}
-      {/* <HowItWork/> */}
+      <HowItWork/>
+      {/* <VideoComponent/> */}
       <MarketplaceCard
         imageUrl="/marketplaceimg.svg"
         title="Acquiring new clients has never been so simple!"
