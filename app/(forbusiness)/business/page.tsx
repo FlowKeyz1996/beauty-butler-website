@@ -7,9 +7,10 @@ import FeaturesSection from "@/components/organisms/FeaturesSection";
 import Footer from "@/components/organisms/Footer";
 import FrequentlyAskedQuestions from "@/components/organisms/FrequentlyAskedQuestions";
 import HeroSection from "@/components/organisms/HeroSection";
-import HowItWorks from "@/components/organisms/HowItWorks";
+// import HowItWorks from "@/components/organisms/HowItWorks";
 import MarketplaceCard from "@/components/organisms/MarketPlace";
 import Navbar from "@/components/organisms/Navbar";
+import HowItWork from "@/components/organisms/HowItWork";
 import Image from "next/image";
 
 const faqs = [
@@ -30,7 +31,8 @@ export default function Home() {
       <BenefitSection/>
       <FeaturesSection/>
       <CategoriesSection/>
-      <HowItWorks/>
+      {/* <HowItWorks/> */}
+      <HowItWork/>
       <MarketplaceCard
         imageUrl="/marketplaceimg.svg"
         title="Acquiring new clients has never been so simple!"
