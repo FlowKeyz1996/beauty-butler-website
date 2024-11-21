@@ -3,6 +3,7 @@ import { useState, useRef, ChangeEvent, FormEvent } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import TagHeader from "../atoms/TagHeader";
+import emailjs from "@emailjs/browser";
 
 type FAQ = {
   question: string;
@@ -15,15 +16,16 @@ type FrequentlyAskedQuestionsProps = {
 
 const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faqs }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({ user_name: "", user_email: "", message: "" });
   const [status, setStatus] = useState("");
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState(false);
 
-  const formRef = useRef<HTMLDivElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+  const formContainerRef = useRef<HTMLDivElement>(null);
   const accordionRef = useRef<HTMLDivElement>(null);
 
   // useInView hooks for animations
-  const formInView = useInView(formRef, { once: true });
+  const formInView = useInView(formContainerRef, { once: true });
   const accordionInView = useInView(accordionRef, { once: true });
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -31,34 +33,28 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    // Validation logic
-    if (!formData.name || !formData.email || !formData.message) {
-      setStatus("Please fill out all fields.");
-      return;
-    }
-
     setStatus("Submitting...");
     setLoading(true);
 
     try {
-      const response = await fetch("/api/sendQuestion", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const result = await emailjs.sendForm(
+        "service_bn20igc", // Replace with your EmailJS service ID
+        "template_66fiamb", // Replace with your EmailJS template ID
+        formRef.current!,
+        "hFiwbDMjuxUCuv5yv" // Replace with your EmailJS public key
+      );
 
-      if (response.ok) {
-        setStatus("Question submitted successfully!");
-        setFormData({ name: "", email: "", message: "" });
+      if (result.text === "OK") {
+        setStatus("Message sent successfully!");
+        setFormData({ user_name: "", user_email: "", message: "" });
       } else {
-        setStatus("question submitted successfully.");
+        setStatus("Failed to send message. Please try again.");
       }
     } catch (error) {
       setStatus("An error occurred. Please try again later.");
-      console.error("Form submission error:", error);
+      console.error("EmailJS error:", error);
     } finally {
       setLoading(false);
     }
@@ -83,7 +79,7 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
       <div className="flex flex-col md:flex-row justify-between space-y-2 md:space-y-0 md:space-x-8">
         {/* Form Section */}
         <motion.div
-          ref={formRef}
+          ref={formContainerRef}
           className="w-full md:w-1/2 flex flex-col max-w-lg hidden md:flex"
           initial={{ x: "-100%", opacity: 0 }}
           animate={formInView ? { x: 0, opacity: 1 } : {}}
@@ -99,27 +95,29 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
           </div>
 
           {/* Form Fields */}
-          <form onSubmit={handleSubmit} className="w-full space-y-4">
+          <form onSubmit={sendEmail} ref={formRef} className="w-full space-y-4">
             <div className="flex flex-col md:flex-row md:space-x-4">
               <input
                 type="text"
-                name="name"
+                name="user_name"
                 placeholder="Enter Your Name"
-                value={formData.name}
+                value={formData.user_name}
                 onChange={handleChange}
                 className={`${inputBaseStyle} ${
-                  !formData.name && status === "Please fill out all fields." ? inputErrorStyle : ""
+                  !formData.user_name && status === "Please fill out all fields." ? inputErrorStyle : ""
                 }`}
+                required
               />
               <input
                 type="email"
-                name="email"
+                name="user_email"
                 placeholder="Enter Your Email Address"
-                value={formData.email}
+                value={formData.user_email}
                 onChange={handleChange}
                 className={`${inputBaseStyle} mt-4 md:mt-0 ${
-                  !formData.email && status === "Please fill out all fields." ? inputErrorStyle : ""
+                  !formData.user_email && status === "Please fill out all fields." ? inputErrorStyle : ""
                 }`}
+                required
               />
             </div>
             <textarea
@@ -131,6 +129,7 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
               className={`${inputBaseStyle} ${
                 !formData.message && status === "Please fill out all fields." ? inputErrorStyle : ""
               }`}
+              required
             />
 
             {/* Image and Submit Button */}
@@ -151,7 +150,7 @@ const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ faq
               </button>
             </div>
           </form>
-          <p className={`mt-4 ${status.includes("error") || status.includes("Please") ? "text-red-500" : "text-green-500"}`}>
+          <p className={`mt-4 ${status.includes("error") || status.includes("Failed") ? "text-red-500" : "text-green-500"}`}>
             {status}
           </p>
         </motion.div>

@@ -7,6 +7,7 @@ import WhyYouWillLoveBeautyButler from "@/components/molecules/WhyYouWillLoveBea
 import BusinessHeroSection from "@/components/organisms/BusinessHeroSection";
 import Footer from "@/components/organisms/Footer";
 import FooterOne from "@/components/organisms/FooterOne";
+import FrequentlyAsked from "@/components/organisms/FrequentlyAsked";
 import FrequentlyAskedQuestions from "@/components/organisms/FrequentlyAskedQuestions";
 import Navbar from "@/components/organisms/Navbar";
 import NavbarOne from "@/components/organisms/NavbarOne";
@@ -34,6 +35,7 @@ export default function Home() {
   <RatingsCard/>
   {/* <FrequentlyAskedQuestions /> */}
   <FrequentlyAskedQuestions faqs={faqs} />
+  <FrequentlyAsked/>
   <FooterOne/>
 </div>
 
