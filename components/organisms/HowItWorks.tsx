@@ -42,7 +42,7 @@ const HowItWorks: React.FC = () => {
       >
         <video
           id="howItWorksVideo"
-          className="w-full h-full rounded-lg object-cover"
+          className="w-full h-full rounded-lg object-contain"
           controls={isPlaying}
           poster="/cover-img-for-video.png"
         >
