@@ -7,11 +7,27 @@ import DownloadButton from '../atoms/DownloadButton';
 const FooterOne: React.FC = () => {
   // State for managing modal visibility
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
+  const [buttonText, setButtonText] = useState('Subscribe');
+   
+  
+    const handleSubscribe = () => {
+      if (!email) {
+        setError('Please enter a valid email address.');
+        setButtonText('Subscribe'); // Reset to initial text in case of an error
+      } else {
+        setError(''); // Clear the error message
+        setButtonText('Subscribed'); // Update button text
+        setEmail(''); // Clear the input field
+      }
+    };
 
   // Toggle modal function
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
+  
 
   return (
     <footer className="relative bg-[#8877D8] text-white py-24 mt-36 sm:mt-96 flex flex-col items-center">
@@ -105,20 +121,27 @@ const FooterOne: React.FC = () => {
               </h3>
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center">
-              <img
-                src="/footerinputimg.svg"
-                alt="footer_input_img"
-                className="hidden sm:block sm:w-auto sm:mb-0"
-              />
-              <input
-                type="email"
-                placeholder="example@mail.com"
-                className="flex-grow p-3 sm:p-4 border border-gray-300 rounded-l-lg rounded-r-lg sm:rounded-lg bg-[#8878D8] font-euclidmedium focus:outline-none w-[90%] sm:w-auto"
-              />
-              <button className="bg-white text-[#8877D8] px-6 sm:px-9 font-euclidmedium py-3 sm:py-4 border border-[#8877D8] rounded-r-xl sm:rounded-r-xl rounded-l-xl sm:rounded-l-none mt-4 sm:mt-0 w-[90%] sm:w-auto">
-                Subscribe
-              </button>
-            </div>
+      <img
+        src="/footerinputimg.svg"
+        alt="footer_input_img"
+        className="hidden sm:block sm:w-auto sm:mb-0"
+      />
+      <input
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="example@mail.com"
+        className="flex-grow p-3 sm:p-4 border border-gray-300 rounded-l-lg rounded-r-lg sm:rounded-lg bg-[#8878D8] font-euclidmedium focus:outline-none w-[90%] sm:w-auto"
+      />
+      <button
+        onClick={handleSubscribe}
+        className="bg-white text-[#8877D8] px-6 sm:px-9 font-euclidmedium py-3 sm:py-4 border border-[#8877D8] rounded-r-xl sm:rounded-r-xl rounded-l-xl sm:rounded-l-none mt-4 sm:mt-0 w-[90%] sm:w-auto"
+      >
+        {buttonText}
+      </button>
+      
+    </div>
+    {error && <p className="text-red-500 ">{error}</p>}
           </div>
 
           {/* Footer Links */}
