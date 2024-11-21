@@ -2,7 +2,7 @@
 import BeautyBuzzyCards from "@/components/molecules/BeautyBuzzCards";
 import BeautyCategories from "@/components/molecules/BeautyCategories";
 import GettingStarted from "@/components/molecules/GettingStarted";
-// import RatingsCard from "@/components/molecules/RatingsCard";
+import RatingsCard from "@/components/molecules/RatingsCard";
 import WhyYouWillLoveBeautyButler from "@/components/molecules/WhyYouWillLoveBeautyButler";
 import BusinessHeroSection from "@/components/organisms/BusinessHeroSection";
 import Footer from "@/components/organisms/Footer";
@@ -31,7 +31,7 @@ export default function Home() {
   <BeautyCategories />
   <GettingStarted />
   {/* <BeautyBuzzyCards /> */}
-  {/* <RatingsCard/> */}
+  <RatingsCard/>
   {/* <FrequentlyAskedQuestions /> */}
   <FrequentlyAskedQuestions faqs={faqs} />
   
