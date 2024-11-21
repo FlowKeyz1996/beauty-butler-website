@@ -35,7 +35,7 @@ const HowItWorks: React.FC = () => {
 
       {/* Animate the video container sliding in from the left when in view */}
       <motion.div
-        className="relative w-full sm:w-[70%] h-[35vh] sm:h-[60%] rounded-lg my-4 sm:my-6 bg-white"
+        className="relative w-full sm:w-[70%] h-[35vh] sm:h-[60%] rounded-lg my-4 sm:my-6 bg-white border"
         initial={{ x: '-100vw', opacity: 0 }}
         animate={isInView ? { x: 0, opacity: 1 } : {}}
         transition={{ type: 'spring', duration: 2 }}

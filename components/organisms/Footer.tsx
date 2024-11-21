@@ -112,7 +112,7 @@ const Footer: React.FC = () => {
       </button>
       
     </div>
-    {error && <p className="text-red-500 ">{error}</p>}
+    {error && <p className="text-black ">{error}</p>}
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:flex lg:justify-between text-left text-sm w-full">
             {/* Product Section */}

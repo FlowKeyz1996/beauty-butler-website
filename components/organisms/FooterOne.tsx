@@ -68,7 +68,7 @@ const FooterOne: React.FC = () => {
       alt: "Apple Store",
       width: 12,
       height: 12,
-      link: "https://apps.apple.com/app/beauty-butler-pro/id6608976623",
+      link: "https://apps.apple.com/app/beauty-butler-app/id6608976314",
     },
     {
       src: "/white-line.svg", // Middle image without a link
@@ -81,7 +81,7 @@ const FooterOne: React.FC = () => {
       alt: "Google Play",
       width: 12,
       height: 12,
-      link: "https://play.google.com/store/apps/details?id=com.beautybutler.provider",
+      link: "https://apps.apple.com/app/beauty-butler-app/id6608976314",
     },
   ]}
 />
@@ -141,7 +141,7 @@ const FooterOne: React.FC = () => {
       </button>
       
     </div>
-    {error && <p className="text-red-500 ">{error}</p>}
+    {error && <p className="text-black ">{error}</p>}
           </div>
 
           {/* Footer Links */}
