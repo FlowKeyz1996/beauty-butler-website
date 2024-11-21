@@ -30,7 +30,7 @@ const BusinessHeroSection = () => {
       alt: "Apple Store",
       width: 12,
       height: 12,
-      link: "https://apps.apple.com/app/beauty-butler-pro/id6608976623",
+      link: "https://apps.apple.com/app/beauty-butler-app/id6608976314",
     },
     {
       src: "/hero-line.svg", // Middle image without a link
@@ -43,7 +43,7 @@ const BusinessHeroSection = () => {
       alt: "Google Play",
       width: 12,
       height: 12,
-      link: "https://play.google.com/store/apps/details?id=com.beautybutler.provider",
+      link: "https://apps.apple.com/app/beauty-butler-app/id6608976314",
     },
   ]}
 />
