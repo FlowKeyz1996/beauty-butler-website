@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
         <div className="w-full max-w-6xl mx-auto text-center">
           <div className="w-full my-10">
             {/* Input Field */}
-            <div>
+            <div className="">
               <h3 className="sm:text-left text-center sm:ml-36 relative text-xl sm:text-3xl font-bold top-12 mb-14 sm:mb-0">
                 For beauty tips and updates{' '}
                 <span className="font-euclidmedium text-xl sm:text-3xl font-normal text-[#8FF1EC]">
