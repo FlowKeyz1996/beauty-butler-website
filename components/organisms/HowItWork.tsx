@@ -58,7 +58,7 @@ const HowItWork: React.FC = () => {
       >
         <Link href="https://airtable.com/appbyIQgO429LydxX/pagpJUqsZCrQzQcYg/form">
           <button
-            className="bg-white text-[#8877d8] py-2 px-6 sm:py-3 sm:px-10 rounded-lg sm:rounded-2xl text-lg sm:text-xl md:text-2xl font-euclidmedium"
+            className="bg-white text-[#8877d8] py-2 px-6 sm:py-4 sm:px-20 rounded-lg sm:rounded-2xl text-lg sm:text-xl md:text-2xl font-euclidmedium"
           >
             Book a Demo
           </button>
