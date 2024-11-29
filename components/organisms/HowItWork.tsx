@@ -36,7 +36,7 @@ const HowItWork: React.FC = () => {
           poster="/cover-img-for-video.png"
         >
           <source src="/website-demo.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
+          Your browser does not support the videos tag.
         </video>
 
         {!isPlaying && (
