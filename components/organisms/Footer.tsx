@@ -207,7 +207,7 @@ const Footer: React.FC = () => {
                 </Link>
               </div>
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center">
-                <Link href="https://substack.com/home">
+                <Link href="https://substack.com/@beautybutler?r=46sczw&utm_campaign=profile&utm_medium=profile-page">
                   <img
                     src="/socialicon.svg"
                     alt="Logo 3"

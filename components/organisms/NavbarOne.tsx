@@ -43,7 +43,7 @@ const NavbarOne: React.FC = () => {
           {/* Logo */}
           <Link href="/">
             <div className="text-2xl font-bold">
-              <img src="/purplelogo.svg" alt="Logo" className="h-8 sm:h-10" />
+              <img src="/christmaslogoone.svg" alt="Logo" className="h-8 sm:h-10" />
             </div>
           </Link>
 

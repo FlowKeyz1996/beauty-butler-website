@@ -35,9 +35,9 @@ const Navbar: React.FC = () => {
           <Link href="/">
             <div className="text-2xl font-bold">
               {isScrolled ? (
-                <img src="/purplelogo.svg" alt="Scrolled Logo" />
+                <img src="/christmaslogoone.svg" alt="Scrolled Logo" />
               ) : (
-                <img src="/beautyicon.svg" alt="Main Logo" />
+                <img src="/christmaslogo.svg" alt="Main Logo" />
               )}
             </div>
           </Link>
